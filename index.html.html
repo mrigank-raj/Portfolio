@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Mrigank Raj Chouhan — Product</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --cream:#EEEADE;
+  --cream2:#E5E1D5;
+  --burg:#7B1E4A;
+  --text:#1A1410;
+  --muted:#6B6560;
+  --border:#D0CCC0;
+  --salmon:#E8815A;
+}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+
+/* GRID TEXTURE */
+.grid-bg{position:relative}
+.grid-bg::before{content:'';position:absolute;inset:0;
+  background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);
+  background-size:80px 80px;opacity:0.45;pointer-events:none;z-index:0}
+
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.65s cubic-bezier(.4,0,.2,1),transform 0.65s cubic-bezier(.4,0,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+
+/* NAV — 3 column */
+.nav-wrap{position:fixed;top:1rem;left:50%;transform:translateX(-50%);z-index:200;width:calc(100% - 3rem);max-width:940px}
+nav{border:1.5px solid var(--border);border-radius:100px;padding:0.6rem 0.7rem 0.6rem 1.4rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;background:rgba(238,234,222,0.93);backdrop-filter:blur(16px)}
+.nav-name{font-family:'Playfair Display',serif;font-size:0.58rem;font-weight:700;line-height:1.3;color:var(--text);letter-spacing:0.02em}
+.nav-name em{font-style:italic;color:var(--burg)}
+.nav-links{display:flex;gap:1.6rem;justify-content:center}
+.nav-links a{font-size:0.78rem;color:var(--muted);letter-spacing:0.03em;transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.nav-right{display:flex;justify-content:flex-end}
+.nav-cta{background:var(--burg);color:#fff;font-size:0.76rem;font-weight:500;padding:0.45rem 1.1rem;border-radius:100px;transition:opacity 0.2s;white-space:nowrap}
+.nav-cta:hover{opacity:0.85}
+
+/* BUTTONS */
+.btn-burg{background:var(--burg);color:#fff;font-size:0.82rem;font-weight:500;padding:0.65rem 1.5rem;border-radius:100px;display:inline-flex;align-items:center;gap:0.4rem;transition:opacity 0.2s}
+.btn-burg:hover{opacity:0.85}
+.btn-outline{border:1.5px solid rgba(26,20,16,0.25);color:var(--text);font-size:0.82rem;padding:0.65rem 1.5rem;border-radius:100px;display:inline-flex;align-items:center;gap:0.4rem;transition:border-color 0.2s;background:transparent}
+.btn-outline:hover{border-color:var(--muted)}
+.btn-twotone{display:inline-flex;align-items:stretch;border-radius:10px;overflow:hidden;border:2.5px solid var(--text);font-weight:600;font-size:0.85rem;cursor:pointer;text-decoration:none;line-height:1}
+.btn-twotone .bt-text{background:var(--salmon);color:var(--text);padding:0.78rem 1.4rem;display:flex;align-items:center;border-right:2.5px solid var(--text);white-space:nowrap}
+.btn-twotone .bt-icon{background:var(--text);color:#fff;padding:0.78rem 1rem;display:flex;align-items:center;justify-content:center;font-size:1rem;min-width:44px}
+.btn-twotone:hover{opacity:0.88}
+
+section{position:relative;overflow:hidden}
+.sec-inner{position:relative;z-index:1}
+.sec-label{font-size:0.68rem;letter-spacing:0.14em;color:var(--muted);text-transform:uppercase;display:flex;align-items:center;gap:0.6rem;margin-bottom:1.25rem}
+.sec-label::before{content:'';width:1.2rem;height:1px;background:var(--muted)}
+.sec-h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3rem);line-height:1.1;margin-bottom:0.75rem}
+.sec-h2 em{font-style:italic;color:var(--burg);position:relative}
+.sec-h2 em::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:2px;background:var(--burg);opacity:0.4;border-radius:2px}
+
+/* ═══ HERO ═══ */
+#hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;text-align:center;padding:7rem 5% 0;background:var(--cream)}
+.hero-eyebrow{font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);display:inline-flex;align-items:center;gap:0.65rem;margin-bottom:1.3rem}
+.hero-eyebrow::before,.hero-eyebrow::after{content:'';width:1.2rem;height:1px;background:var(--border)}
+#hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.2vw,3rem);line-height:1.12;margin-bottom:0.5rem}
+#hero h1 em{font-style:italic;position:relative}
+#hero h1 em::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2.5px;background:var(--text);border-radius:2px}
+.hero-sub{font-size:0.88rem;color:var(--muted);max-width:420px;margin:1.75rem auto 1.75rem;line-height:1.8}
+.hero-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
+/* PHOTO STRIP */
+.photo-strip{width:100%;overflow:hidden;padding:2rem 0 0;position:relative;z-index:1}
+.photo-strip-inner{display:flex;gap:1rem;width:max-content;animation:stripLeft 50s linear infinite}
+.photo-strip:hover .photo-strip-inner{animation-play-state:paused}
+.photo-card{flex-shrink:0;width:240px;border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 20px rgba(26,20,16,0.08);background:#fff}
+.photo-card img{width:240px;height:200px;object-fit:cover;object-position:center top;display:block}
+.photo-card-cap{padding:0.55rem 0.85rem 0.65rem;background:#fff;border-top:1px solid var(--border)}
+.photo-card-cap p{font-size:0.71rem;color:var(--muted);font-style:italic;line-height:1.4}
+@keyframes stripLeft{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ═══ MARQUEE ═══ */
+.mq-wrap{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:0.85rem 0;overflow:hidden;background:var(--burg);position:relative;z-index:1}
+.mq-inner{display:flex;width:max-content;animation:goLeft 30s linear infinite}
+.mq-wrap:hover .mq-inner{animation-play-state:paused}
+.skill-chip{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.72);white-space:nowrap;display:flex;align-items:center;padding:0 1.2rem}
+.skill-chip::after{content:'·';margin-left:1.2rem;color:rgba(255,255,255,0.35)}
+@keyframes goLeft{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ═══ WHAT I BRING ═══ */
+#bring{background:var(--burg);padding:6rem 8%;position:relative;overflow:hidden}
+#bring::before{content:'MRC';position:absolute;font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:28vw;color:rgba(255,255,255,0.04);line-height:1;bottom:-4vw;right:-2vw;pointer-events:none;z-index:0;letter-spacing:-0.04em;user-select:none}
+#bring::after{content:'';position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='104'%3E%3Cpolygon points='60,2 118,32 118,72 60,102 2,72 2,32' fill='none' stroke='rgba(255,255,255,0.055)' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-size:120px 104px;pointer-events:none;z-index:0}
+#bring .sec-inner{position:relative;z-index:1}
+#bring .sec-label{color:rgba(255,255,255,0.45)}
+#bring .sec-label::before{background:rgba(255,255,255,0.2)}
+#bring .sec-h2{color:#fff}
+#bring .sec-h2 em{color:rgba(255,255,255,0.65)}
+#bring .sec-h2 em::after{background:rgba(255,255,255,0.35)}
+.bring-sub{color:rgba(255,255,255,0.5);font-size:0.88rem;max-width:440px;margin-bottom:2.75rem;line-height:1.8}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.pillar{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.75rem;transition:background 0.2s;backdrop-filter:blur(4px)}
+.pillar:hover{background:rgba(255,255,255,0.11)}
+.p-num{font-family:'Playfair Display',serif;font-size:2rem;color:rgba(255,255,255,0.08);line-height:1;margin-bottom:1rem;font-weight:700}
+.p-title{font-weight:500;font-size:0.9rem;color:#fff;margin-bottom:0.6rem}
+.p-desc{font-size:0.81rem;color:rgba(255,255,255,0.5);line-height:1.8}
+
+/* ═══ WORK ═══ */
+#work{padding:6rem 8%;background:var(--cream)}
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1.5rem}
+.case-card{position:relative;border-radius:16px;padding:1.75rem;transition:transform 0.25s,box-shadow 0.25s;background:rgba(238,234,222,0.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.7);box-shadow:0 4px 24px rgba(26,20,16,0.06)}
+.case-card.live{cursor:pointer}
+.case-card.live:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,20,16,0.12)}
+.case-card.dim{opacity:0.38;cursor:default;pointer-events:none}
+.card-tags{display:flex;gap:0.45rem;flex-wrap:wrap;margin-bottom:1rem}
+.ctag{font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.26rem 0.65rem;border-radius:100px;border:1px solid var(--border);color:var(--muted);background:rgba(238,234,222,0.8)}
+.ctag.hi{border-color:rgba(123,30,74,0.3);color:var(--burg);background:rgba(123,30,74,0.06)}
+.case-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:0.6rem;line-height:1.25}
+.case-card p{font-size:0.82rem;color:var(--muted);line-height:1.72;margin-bottom:1rem}
+.outcome{background:rgba(123,30,74,0.06);border-left:2px solid var(--burg);border-radius:0 8px 8px 0;padding:0.65rem 0.9rem;font-size:0.78rem;color:var(--text);line-height:1.65}
+.outcome strong{color:var(--burg);font-weight:500}
+.soon-badge{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-top:0.75rem}
+.soon-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--border)}
+.card-read{display:inline-flex;align-items:center;gap:0.35rem;font-size:0.75rem;color:var(--burg);font-weight:500;margin-top:1rem;letter-spacing:0.03em;transition:gap 0.2s}
+.card-read::after{content:'→';transition:transform 0.2s}
+.case-card.live:hover .card-read::after{transform:translateX(4px)}
+
+/* ═══ MODAL ═══ */
+.modal-overlay{position:fixed;inset:0;background:rgba(26,20,16,0.65);backdrop-filter:blur(6px);z-index:500;display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity 0.3s}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal-box{background:var(--cream);border-radius:20px;max-width:780px;width:100%;max-height:85vh;overflow-y:auto;padding:2.5rem;position:relative;transform:translateY(24px);transition:transform 0.3s;box-shadow:0 24px 80px rgba(26,20,16,0.2)}
+.modal-overlay.open .modal-box{transform:translateY(0)}
+.modal-close{position:sticky;top:0;float:right;background:var(--text);color:#fff;border:none;border-radius:100px;padding:0.4rem 0.9rem;font-size:0.78rem;cursor:pointer;font-family:'Inter',sans-serif;margin-bottom:1.5rem;z-index:10}
+.modal-tag{font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--burg);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem}
+.modal-tag::before{content:'';width:1rem;height:1px;background:var(--burg)}
+.modal-h{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,2rem);line-height:1.15;margin-bottom:1.25rem;color:var(--text)}
+.modal-section{margin-bottom:1.5rem}
+.modal-section h4{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.6rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}
+.modal-section p,.modal-section li{font-size:0.86rem;color:var(--muted);line-height:1.8}
+.modal-section ul{padding-left:1.2rem}
+.modal-section li{margin-bottom:0.35rem}
+.modal-outcome{background:rgba(123,30,74,0.06);border-left:2px solid var(--burg);border-radius:0 8px 8px 0;padding:0.75rem 1rem;font-size:0.83rem;color:var(--text);line-height:1.7}
+.modal-outcome strong{color:var(--burg)}
+.modal-metric{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-top:0.75rem}
+.metric-pill{background:var(--cream2);border:1px solid var(--border);border-radius:10px;padding:0.75rem;text-align:center}
+.metric-pill .mv{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--burg);font-weight:700}
+.metric-pill .ml{font-size:0.68rem;color:var(--muted);letter-spacing:0.05em;text-transform:uppercase;margin-top:0.2rem}
+
+/* ═══ TOOLS — FULL WIDTH ═══ */
+#tools{background:var(--cream);position:relative;isolation:isolate;overflow:hidden}
+#tools::before{content:'';position:absolute;inset:0;
+  background-image:linear-gradient(#B8B4AA 1px,transparent 1px),linear-gradient(90deg,#B8B4AA 1px,transparent 1px);
+  background-size:160px 160px;opacity:0.55;pointer-events:none;z-index:0}
+.tools-stage{
+  position:relative;z-index:1;
+  display:grid;
+  grid-template-columns:repeat(9,1fr);
+  grid-template-rows:repeat(5,160px);
+  width:100%;
+}
+.tools-cell{
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid #B8B4AA;
+  background:var(--cream);
+  min-height:160px;
+}
+.tool-logo{display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center}
+.tool-logo img{width:32px;height:32px;object-fit:contain}
+.tool-logo span{font-size:0.75rem;font-weight:600;font-family:'Inter',sans-serif;white-space:nowrap}
+/* center text block spans 3 cols × 3 rows */
+.tools-center-cell{
+  grid-column:4/7;grid-row:2/5;
+  background:var(--cream);
+  border:1.5px solid #B8B4AA;
+  display:flex;align-items:center;justify-content:center;
+  z-index:2;
+}
+.tools-center-text{text-align:center;padding:2.5rem 2rem}
+.tc-eyebrow{font-size:0.63rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-bottom:1rem}
+.tc-eyebrow::before,.tc-eyebrow::after{content:'';width:1rem;height:1px;background:var(--border)}
+.tools-center-text h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,1.8vw,1.9rem);line-height:1.15;margin-bottom:0.75rem;color:var(--text)}
+.tools-center-text h2 em{font-style:italic;color:var(--burg);position:relative}
+.tools-center-text h2 em::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:2px;background:var(--burg);opacity:0.4;border-radius:2px}
+.tools-center-text p{font-size:0.82rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;max-width:240px;margin-left:auto;margin-right:auto}
+
+/* ═══ ABOUT ═══ */
+#about{padding:6rem 8%;background:var(--cream2)}
+.about-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:6rem;align-items:center;margin-top:1rem}
+.about-text p{color:var(--muted);line-height:1.88;margin-bottom:1rem;font-size:0.9rem}
+.about-text p strong{color:var(--text);font-weight:500}
+.stat-cards{display:flex;flex-direction:column}
+.stat-card{border:1px solid var(--border);border-bottom:none;padding:0.88rem 1.2rem;display:flex;justify-content:space-between;align-items:center;background:var(--cream)}
+.stat-card:first-child{border-radius:12px 12px 0 0}
+.stat-card:last-child{border-bottom:1px solid var(--border);border-radius:0 0 12px 12px}
+.sc-label{font-size:0.67rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--muted)}
+.sc-val{font-family:'Playfair Display',serif;font-size:0.9rem;color:var(--burg);font-weight:700}
+
+/* COUNTER */
+.counter{display:inline-block}
+
+/* ═══ EXPERIENCE ═══ */
+#experience{padding:6rem 8%;background:var(--cream)}
+.exp-list{border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:1.5rem}
+.exp-row{background:var(--cream);border-bottom:1px solid var(--border);padding:1.4rem 1.75rem;display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:start;transition:background 0.2s}
+.exp-row:last-child{border-bottom:none}
+.exp-row:hover{background:var(--cream2)}
+.exp-role{font-weight:500;font-size:0.9rem;margin-bottom:0.2rem;color:var(--text)}
+.exp-co{font-size:0.78rem;color:var(--burg);margin-bottom:0.45rem}
+.exp-desc{font-size:0.8rem;color:var(--muted);line-height:1.72;max-width:560px}
+.exp-date{font-size:0.73rem;color:var(--muted);text-align:right;white-space:nowrap}
+.exp-type{font-size:0.63rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);margin-top:0.3rem;text-align:right}
+
+/* ═══ CONTACT ═══ */
+#contact{padding:6rem 8%;background:var(--cream2)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.contact-left p{color:var(--muted);font-size:0.9rem;line-height:1.88;margin-bottom:2rem}
+.clinks{display:flex;flex-direction:column;gap:0.7rem}
+.clink{display:flex;justify-content:space-between;align-items:center;padding:0.95rem 1.2rem;border:1px solid var(--border);border-radius:10px;background:var(--cream);transition:border-color 0.2s,background 0.2s}
+.clink:hover{border-color:var(--muted);background:var(--cream2)}
+.cl-label{font-size:0.65rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--muted);margin-bottom:0.12rem}
+.cl-val{color:var(--text);font-size:0.83rem}
+
+/* ═══ FOOTER ═══ */
+footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify-content:space-between;align-items:center;background:var(--cream)}
+.fl{display:flex;flex-direction:column}
+.fl-name{font-family:'Playfair Display',serif;font-size:0.88rem;font-weight:700}
+.fl-name em{color:var(--burg);font-style:italic}
+.fl-note{font-size:0.7rem;color:var(--muted);margin-top:0.2rem}
+.footer-socials{display:flex;gap:1rem;align-items:center}
+.social-icon{width:34px;height:34px;border:1px solid var(--border);border-radius:100px;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:border-color 0.2s,color 0.2s}
+.social-icon:hover{border-color:var(--burg);color:var(--burg)}
+.social-icon svg{width:15px;height:15px}
+
+@media(max-width:900px){
+  .nav-links{display:none}
+  nav{grid-template-columns:1fr 1fr}
+  .nav-right{grid-column:2;justify-content:flex-end}
+  .pillars,.work-grid{grid-template-columns:1fr}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:2.5rem}
+  .tools-stage{grid-template-columns:repeat(3,1fr);grid-template-rows:auto}
+  .tools-center-cell{grid-column:1/4;grid-row:auto}
+  footer{flex-direction:column;gap:1rem;text-align:center}
+  .modal-metric{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <nav>
+    <div class="nav-name">Mrigank<br>Raj<br><em>Chouhan</em></div>
+    <div class="nav-links">
+      <a href="#bring">About</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:mrigankrajchouhan@gmail.com" class="nav-cta">Hire me ↗</a>
+    </div>
+  </nav>
+</div>
+
+<!-- HERO -->
+<section id="hero" class="grid-bg">
+  <div class="sec-inner" style="display:flex;flex-direction:column;align-items:center;text-align:center">
+    <div class="hero-eyebrow reveal">Product · Finance · Business</div>
+    <h1 class="reveal reveal-delay-1">Finance brain. Product heart.<br><em>Business soul.</em></h1>
+    <p class="hero-sub reveal reveal-delay-2">CS undergrad · FMVA certified · Building products that solve real problems for real people.</p>
+    <div class="hero-btns reveal reveal-delay-3">
+      <a href="#work" class="btn-burg">See my work ↗</a>
+      <a href="#contact" class="btn-outline">Let's connect</a>
+    </div>
+  </div>
+  <div class="photo-strip">
+    <div class="photo-strip-inner" id="photo-strip-inner"></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq-wrap">
+  <div class="mq-inner" id="mq-skills"></div>
+</div>
+
+<!-- WHAT I BRING -->
+<section id="bring">
+  <div class="sec-inner">
+    <div class="sec-label reveal">What I bring</div>
+    <h2 class="sec-h2 reveal reveal-delay-1">Three lenses.<br><em>One product mind.</em></h2>
+    <p class="bring-sub reveal reveal-delay-2">Most PM candidates pick one strength. I refused to. Here's what I bring to every product decision.</p>
+    <div class="pillars">
+      <div class="pillar reveal reveal-delay-1">
+        <div class="p-num">01</div>
+        <div class="p-title">Business & Finance</div>
+        <div class="p-desc">FMVA certified. Built DCF models, read annual reports as case studies, worked inside a CA firm. I connect product decisions to revenue impact — not just engagement numbers.</div>
+      </div>
+      <div class="pillar reveal reveal-delay-2">
+        <div class="p-num">02</div>
+        <div class="p-title">Product & UX</div>
+        <div class="p-desc">I study apps the way most people just use them. Friction mapping, user journey analysis, wireframing — then writing feature proposals a real PM would actually ship.</div>
+      </div>
+      <div class="pillar reveal reveal-delay-3">
+        <div class="p-num">03</div>
+        <div class="p-title">Tech Fluency</div>
+        <div class="p-desc">CS background means I understand what's feasible and what's a three-sprint nightmare. I write specs engineers respect and assess tradeoffs without hand-waving.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="grid-bg">
+  <div class="sec-inner" style="padding:6rem 8%">
+    <div class="sec-label reveal">Work</div>
+    <h2 class="sec-h2 reveal reveal-delay-1">Case studies &<br><em>teardowns</em></h2>
+    <div class="work-grid">
+      <div class="case-card live reveal reveal-delay-1" onclick="openModal('myjio')">
+        <div class="card-tags">
+          <span class="ctag hi">Product Teardown</span>
+          <span class="ctag">UX</span>
+          <span class="ctag">Feature Proposal</span>
+          <span class="ctag">A/B Testing</span>
+        </div>
+        <h3>MyJio: Data Usage in 3 Seconds</h3>
+        <p>Identified 5-tap friction causing 2-minute time-to-data. Proposed a home screen widget using Android deep-link intent and cached data — zero new server calls.</p>
+        <div class="outcome"><strong>Target:</strong> &gt;5% widget adoption · 10–15% drop in app opens · 20% fewer support tickets</div>
+        <div class="card-read">Read full teardown</div>
+      </div>
+      <div class="case-card live reveal reveal-delay-2" onclick="openModal('zomato')">
+        <div class="card-tags">
+          <span class="ctag hi">Product Teardown</span>
+          <span class="ctag">UX</span>
+          <span class="ctag">Feature Proposal</span>
+          <span class="ctag">Decision Design</span>
+        </div>
+        <h3>Zomato: Hungry. Open Zomato. Still Can't Decide.</h3>
+        <p>Teardown of decision paralysis in food discovery. 500+ options, no signal for "what's best right now" — a product gap, not a user failure.</p>
+        <div class="outcome"><strong>Proposed:</strong> "Help Me Decide" — one tap, three curated picks, personalized to history and time of day</div>
+        <div class="card-read">Read full teardown</div>
+      </div>
+      <div class="case-card dim reveal reveal-delay-1">
+        <div class="card-tags"><span class="ctag">Coming Soon</span></div>
+        <h3>Onboarding Friction in Fintech</h3>
+        <p>Drop-off analysis at each onboarding step with redesign proposal.</p>
+        <div class="soon-badge">In progress</div>
+      </div>
+      <div class="case-card dim reveal reveal-delay-2">
+        <div class="card-tags"><span class="ctag">Coming Soon</span></div>
+        <h3>Growth & Retention Analysis</h3>
+        <p>Retention curve analysis and churn hypothesis for a consumer app.</p>
+        <div class="soon-badge">In progress</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS — FULL WIDTH 9-COL GRID -->
+<section id="tools">
+  <div class="tools-stage">
+
+    <!-- ROW 1: 9 cells -->
+    <div class="tools-cell"></div>
+    <div class="tools-cell">
+      <div class="tool-logo reveal">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/figma.svg" style="filter:invert(40%) sepia(90%) saturate(2000%) hue-rotate(340deg)" alt="Figma"/>
+        <span style="color:#F24E1E">Figma</span>
+      </div>
+    </div>
+    <div class="tools-cell"></div>
+    <div class="tools-cell"></div><!-- center col 4 row 1 -->
+    <div class="tools-cell"></div><!-- center col 5 row 1 -->
+    <div class="tools-cell"></div><!-- center col 6 row 1 -->
+    <div class="tools-cell">
+      <div class="tool-logo reveal">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg" alt="Notion"/>
+        <span style="color:#000">Notion</span>
+      </div>
+    </div>
+    <div class="tools-cell"></div>
+    <div class="tools-cell"></div>
+
+    <!-- ROW 2: cols 1-3, center cell (4-6), cols 7-9 -->
+    <div class="tools-cell">
+      <div class="tool-logo reveal">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftexcel.svg" style="filter:invert(28%) sepia(80%) saturate(500%) hue-rotate(100deg)" alt="Excel"/>
+        <span style="color:#217346">Excel</span>
+      </div>
+    </div>
+    <div class="tools-cell"></div>
+    <div class="tools-cell"></div>
+    <!-- CENTER spans cols 4-6, rows 2-4 -->
+    <div class="tools-center-cell">
+      <div class="tools-center-text">
+        <div class="tc-eyebrow">Tools I think with</div>
+        <h2>The toolkit behind<br><em>the thinking</em></h2>
+        <p>Every product decision needs the right tools. These are the ones I use to research, wireframe, analyze, and ship.</p>
+        <a href="#work" class="btn-twotone">
+          <span class="bt-text">See how I use them</span>
+          <span class="bt-icon">↗</span>
+        </a>
+      </div>
+    </div>
+    <div class="tools-cell"></div>
+    <div class="tools-cell">
+      <div class="tool-logo reveal">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/canva.svg" style="filter:invert(60%) sepia(80%) saturate(400%) hue-rotate(140deg)" alt="Canva"/>
+        <span style="color:#00C4CC">Canva</span>
+      </div>
+    </div>
+    <div class="tools-cell"></div>
+
+    <!-- ROW 3: cols 1-3, center continues, cols 7-9 -->
+    <div class="tools-cell"></div>
+    <div class="tools-cell">
+      <div class="tool-logo reveal">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googleanalytics.svg" style="filter:invert(50%) sepia(90%) saturate(800%) hue-rotate(10deg)" alt="Google Analytics"/>
+        <span style="color:#E37400">Google Analytics</span>
+      </div>
+    </div>
+    <div class="tools-cell"></div>
+    <!-- center continues (no new cells needed for col 4-6) -->
+    <div class="tools-cell">
+      <div class="tool-logo reveal">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jira.svg" style="filter:invert(20%) sepia(90%) saturate(1500%) hue-rotate(205deg)" alt="Jira"/>
+        <span style="color:#0052CC">Jira</span>
+      </div>
+    </div>
+    <div class="tools-cell"></div>
+
+    <!-- ROW 4: cols 1-3, center continues, cols 7-9 -->
+    <div class="tools-cell">
+      <div class="tool-logo reveal">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/visualstudiocode.svg" style="filter:invert(35%) sepia(80%) saturate(1000%) hue-rotate(180deg)" alt="VS Code"/>
+        <span style="color:#007ACC">VS Code</span>
+      </div>
+    </div>
+    <div class="tools-cell"></div>
+    <div class="tools-cell"></div>
+    <!-- center continues -->
+    <div class="tools-cell"></div>
+    <div class="tools-cell">
+      <div class="tool-logo reveal">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anthropic.svg" style="filter:invert(55%) sepia(60%) saturate(600%) hue-rotate(340deg)" alt="Claude"/>
+        <span style="color:#D97757">Claude</span>
+      </div>
+    </div>
+    <div class="tools-cell"></div>
+
+    <!-- ROW 5: 9 cells all empty -->
+    <div class="tools-cell"></div>
+    <div class="tools-cell"></div>
+    <div class="tools-cell"></div>
+    <div class="tools-cell"></div>
+    <div class="tools-cell"></div>
+    <div class="tools-cell"></div>
+    <div class="tools-cell"></div>
+    <div class="tools-cell"></div>
+    <div class="tools-cell"></div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="grid-bg">
+  <div class="sec-inner" style="padding:6rem 8%">
+    <div class="sec-label reveal">About me</div>
+    <h2 class="sec-h2 reveal reveal-delay-1">The story<br><em>behind the work</em></h2>
+    <div class="about-grid">
+      <div class="about-text reveal reveal-delay-1">
+        <p>I'm a third-year CS student at <strong>KIIT Bhubaneswar</strong> who got obsessed with why some products stick and others don't. That curiosity led me deep into both sides — financial modeling, DCF valuations, equity research on one hand, and user flows, friction mapping, and feature proposals on the other.</p>
+        <p>My <strong>FMVA certification</strong> and hands-on experience at a CA firm gave me a rare lens: I can read a P&L and translate it into product decisions that move revenue metrics, not just engagement numbers.</p>
+        <p>I'm currently seeking <strong>product roles</strong> — with a strong pull toward fintech, but equally excited about any product with a complex business model, real user pain, and room to think.</p>
+      </div>
+      <div class="stat-cards reveal reveal-delay-2">
+        <div class="stat-card"><span class="sc-label">Institution</span><span class="sc-val">KIIT Bhubaneswar</span></div>
+        <div class="stat-card"><span class="sc-label">Degree</span><span class="sc-val">B.Tech CSE</span></div>
+        <div class="stat-card"><span class="sc-label">CGPA</span><span class="sc-val"><span class="counter" data-target="8.32" data-decimal="2">0</span> / 10</span></div>
+        <div class="stat-card"><span class="sc-label">Certification</span><span class="sc-val">FMVA — CFI</span></div>
+        <div class="stat-card"><span class="sc-label">Graduating</span><span class="sc-val"><span class="counter" data-target="2027" data-decimal="0">2023</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="sec-inner" style="padding:6rem 8%">
+    <div class="sec-label reveal">Experience</div>
+    <h2 class="sec-h2 reveal reveal-delay-1">Where I've<br><em>learned by doing</em></h2>
+    <div class="exp-list reveal reveal-delay-2">
+      <div class="exp-row">
+        <div>
+          <div class="exp-role">Finance Intern</div>
+          <div class="exp-co">Rahul Singh & Associates · CA Firm</div>
+          <div class="exp-desc">Worked on client financial records, invoice reconciliation, and compliance documentation. First-hand exposure to SME financial workflows — the exact pain points fintech products are built to solve.</div>
+        </div>
+        <div><div class="exp-date">2023</div><div class="exp-type">Finance · Ops</div></div>
+      </div>
+      <div class="exp-row">
+        <div>
+          <div class="exp-role">Equity Research · Valuation</div>
+          <div class="exp-co">Independent · HDFC, Reliance Industries</div>
+          <div class="exp-desc">Built DCF models and sensitivity tables for Reliance. Wrote equity research notes on HDFC — structured thinking PMs need for business-case roadmap arguments.</div>
+        </div>
+        <div><div class="exp-date">2024</div><div class="exp-type">Finance · Research</div></div>
+      </div>
+      <div class="exp-row">
+        <div>
+          <div class="exp-role">B.Tech Computer Science Engineering</div>
+          <div class="exp-co">KIIT Bhubaneswar · CGPA 8.32</div>
+          <div class="exp-desc">Coursework in data structures, ML, and software engineering. Projects at the intersection of NLP and finance. Graduating 2027.</div>
+        </div>
+        <div><div class="exp-date">2023–2027</div><div class="exp-type">Education</div></div>
+      </div>
+      <div class="exp-row">
+        <div>
+          <div class="exp-role">FMVA Certification</div>
+          <div class="exp-co">Corporate Finance Institute (CFI)</div>
+          <div class="exp-desc">Financial Modeling & Valuation Analyst. Covers DCF modeling, comparable company analysis, LBO, and financial statement analysis.</div>
+        </div>
+        <div><div class="exp-date">2024</div><div class="exp-type">Certification</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="grid-bg">
+  <div class="sec-inner" style="padding:6rem 8%">
+    <div class="sec-label reveal">Get in touch</div>
+    <div class="contact-grid">
+      <div class="contact-left reveal reveal-delay-1">
+        <h2 class="sec-h2">Let's build<br><em>something real</em></h2>
+        <p>If you made it here, you're probably the kind of person I want to work with. I'm actively looking for product roles — fintech, SaaS, consumer, anything with a hard problem at its core.</p>
+        <a href="mailto:mrigankrajchouhan@gmail.com" class="btn-burg">Send me an email ↗</a>
+      </div>
+      <div class="clinks reveal reveal-delay-2">
+        <a href="https://www.linkedin.com/in/mrigankraj" target="_blank" class="clink">
+          <div><div class="cl-label">LinkedIn</div><div class="cl-val">linkedin.com/in/mrigankraj</div></div><span>↗</span>
+        </a>
+        <a href="mailto:mrigankrajchouhan@gmail.com" class="clink">
+          <div><div class="cl-label">Email</div><div class="cl-val">mrigankrajchouhan@gmail.com</div></div><span>↗</span>
+        </a>
+        <a href="#" class="clink">
+          <div><div class="cl-label">Resume</div><div class="cl-val">Download PDF</div></div><span>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fl">
+    <div class="fl-name">Mrigank Raj <em>Chouhan</em></div>
+    <div class="fl-note">KIIT · B.Tech CSE · Product × Finance × Business</div>
+  </div>
+  <div class="footer-socials">
+    <a href="#" class="social-icon" title="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/mrigankk.raj/" target="_blank" class="social-icon" title="Instagram">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+    </a>
+    <a href="#" class="social-icon" title="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModalOutside(event)">
+  <div class="modal-box" id="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕ Close</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script>
+// ── MARQUEE ──
+const skills=['Product Thinking','User Research','Wireframing','A/B Testing','Financial Modeling','DCF Valuation','Python','SQL','Go-To-Market Strategy','Roadmapping','FMVA Certified'];
+const mq=document.getElementById('mq-skills');
+mq.innerHTML=[...skills,...skills].map(s=>`<div class="skill-chip">${s}</div>`).join('');
+
+// ── SCROLL REVEAL ──
+const revealObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      revealObserver.unobserve(e.target);
+    }
+  });
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+
+// ── COUNTER ANIMATION ──
+function animateCounter(el){
+  const target = parseFloat(el.dataset.target);
+  const decimals = parseInt(el.dataset.decimal||0);
+  const start = parseFloat(el.dataset.start||0);
+  const duration = 1800;
+  const startTime = performance.now();
+  function update(now){
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed/duration, 1);
+    // ease out cubic
+    const eased = 1 - Math.pow(1-progress, 3);
+    const current = start + (target-start)*eased;
+    el.textContent = current.toFixed(decimals);
+    if(progress<1) requestAnimationFrame(update);
+    else el.textContent = target.toFixed(decimals);
+  }
+  requestAnimationFrame(update);
+}
+
+const counterObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      animateCounter(e.target);
+      counterObserver.unobserve(e.target);
+    }
+  });
+},{threshold:0.5});
+document.querySelectorAll('.counter').forEach(el=>counterObserver.observe(el));
+
+// ── MODALS ──
+const MODALS={
+  myjio:`
+    <div class="modal-tag">Product Teardown · MyJio</div>
+    <div class="modal-h">MyJio: Checking Data-Usage Time Reduced from 2 Minutes to 3 Seconds</div>
+    <div class="modal-section"><h4>Problem Statement</h4>
+      <p><strong>Current Journey:</strong> Home → Mobile → Check Usage → Scroll → Read</p>
+      <p style="margin-top:0.6rem"><strong>Friction points:</strong></p>
+      <ul style="margin-top:0.4rem"><li>Ads & Jio Pop-ups on the home screen</li><li>"Rate Us" pop-up while scrolling usage data</li></ul>
+      <p style="margin-top:0.6rem"><strong>User Pain:</strong> 5 taps to reach the desired screen. 2 minutes of time-to-data creates significant friction for daily users on limited data plans.</p>
+    </div>
+    <div class="modal-section"><h4>User Story</h4>
+      <p>As a daily user on a limited daily data plan, I want to see my remaining data at a glance on my home screen so that I can avoid opening the app and navigating through ads just to check a single number.</p>
+    </div>
+    <div class="modal-section"><h4>The Solution — Home Screen Widget</h4>
+      <p>A 4×1 Android home screen widget. Primary focus on Usage data (bold, large text). Right side: Validity display + "Track Usage" deep-link button.</p>
+      <ul style="margin-top:0.6rem">
+        <li>Reads from the same cached data the app already uses — zero new server calls</li>
+        <li>Tapping triggers a Deep Link Intent (myjio://usage/daily) bypassing the ad-heavy home screen</li>
+        <li>On plan expiry: shows "Recharge Needed" in red, button becomes "Recharge Now"</li>
+        <li>On WiFi: displays "On WiFi" instead of data usage</li>
+      </ul>
+    </div>
+    <div class="modal-section"><h4>Technical Feasibility</h4>
+      <p>The Check Usage screen loads instantly even on weak networks — data is cached locally (Android SharedPreferences or local database). The widget reads from this same cache. No new backend infrastructure needed.</p>
+    </div>
+    <div class="modal-section"><h4>Success Metrics</h4>
+      <div class="modal-metric">
+        <div class="metric-pill"><div class="mv">&gt;5%</div><div class="ml">Widget adoption in 30 days</div></div>
+        <div class="metric-pill"><div class="mv">10–15%</div><div class="ml">Drop in daily app opens</div></div>
+        <div class="metric-pill"><div class="mv">20%</div><div class="ml">Fewer support tickets</div></div>
+      </div>
+    </div>
+    <div class="modal-section"><h4>A/B Test Rollout Plan</h4>
+      <ul>
+        <li><strong>Phase 1 (1 week):</strong> 1% of Android users who visited Check Usage 3+ times in past 7 days</li>
+        <li><strong>Phase 2 (2 weeks):</strong> 10% Treatment vs 10% Control — adoption rate, app opens, uninstall rate</li>
+        <li><strong>Phase 3:</strong> Full rollout if Go criteria met</li>
+      </ul>
+    </div>
+    <div class="modal-section"><h4>Go / No-Go Criteria</h4>
+      <div class="modal-outcome">
+        <strong>Go:</strong> &gt;5% adoption in 14 days · Uninstall rate flat · Support tickets down &gt;10% · Ad views decrease &lt;8%<br><br>
+        <strong>No-Go:</strong> &lt;2% adoption · Uninstall rate up &gt;1% · Ad views drop &gt;15%
+      </div>
+    </div>
+    <div class="modal-section"><h4>Alternative Solutions Considered</h4>
+      <ul>
+        <li><strong>Move usage to home screen:</strong> Rejected — conflicts with ad inventory</li>
+        <li><strong>Daily push notifications:</strong> Rejected — notification fatigue</li>
+        <li><strong>Improve in-app navigation:</strong> Rejected — doesn't solve the ad interruption problem</li>
+      </ul>
+    </div>
+    <p style="font-size:0.75rem;color:var(--muted);margin-top:1.5rem;font-style:italic">*Independent product teardown. Not affiliated with Reliance Jio.</p>`,
+
+  zomato:`
+    <div class="modal-tag">Product Teardown · Zomato</div>
+    <div class="modal-h">Hungry. Open Zomato. Scroll. Scroll. Scroll… Still Can't Decide.</div>
+    <div class="modal-section"><h4>Problem Statement</h4>
+      <p>Users browse but don't order. The gap between intent and order is a product opportunity — not a user failure.</p>
+      <ul style="margin-top:0.6rem">
+        <li>500+ options — everything looks the same</li>
+        <li>No signal for "what's best right now"</li>
+        <li>Scroll fatigue leads to app closure, order lost</li>
+      </ul>
+    </div>
+    <div class="modal-section"><h4>Core Friction Analysis</h4>
+      <div class="modal-outcome"><strong>Core Friction:</strong> Too many choices<br><strong>User Behavior:</strong> Browse, not buy<br><strong>Product Gap:</strong> No decision layer exists</div>
+    </div>
+    <div class="modal-section"><h4>User Insight</h4>
+      <p style="font-style:italic;font-size:0.9rem">"Sometimes everything looks good and I can't choose… other times what I like is out of budget."</p>
+      <p style="margin-top:0.5rem;color:var(--muted);font-size:0.8rem">Based on personal experience and user conversations</p>
+      <div class="modal-outcome" style="margin-top:0.75rem">→ Users struggle between too many choices and budget constraints</div>
+    </div>
+    <div class="modal-section"><h4>The Solution — "Help Me Decide"</h4>
+      <p>One tap. Three curated picks. Placed right below the search bar — where intent is highest.</p>
+      <ul style="margin-top:0.6rem">
+        <li><strong>Instant recommendations</strong> — no scrolling required</li>
+        <li><strong>Personalized</strong> to order history and time of day</li>
+        <li><strong>Each pick explains why it's for you</strong></li>
+      </ul>
+      <p style="margin-top:0.75rem">3 choices: <strong>Safe choice</strong> (past orders) · <strong>Best pick</strong> (top-rated + fastest) · <strong>Explore</strong> (new but relevant)</p>
+    </div>
+    <div class="modal-section"><h4>Expected Outcomes</h4>
+      <div class="modal-metric">
+        <div class="metric-pill"><div class="mv">↑ CVR</div><div class="ml">Intent-to-order gap closed</div></div>
+        <div class="metric-pill"><div class="mv">↑ GMV</div><div class="ml">More completed orders</div></div>
+        <div class="metric-pill"><div class="mv">↑ Retention</div><div class="ml">Personalization builds habit</div></div>
+      </div>
+    </div>
+    <div class="modal-section"><h4>Business Impact</h4>
+      <div class="modal-outcome">
+        <strong>Faster decisions</strong> — Browse to order in one tap<br>
+        <strong>Higher CVR (expected)</strong> — Removes the biggest friction point<br>
+        <strong>Stronger retention</strong> — Personalization drives repeat behavior<br>
+        <strong>GMV uplift</strong> — More completed orders = direct revenue impact<br><br>
+        → Less thinking. More ordering.
+      </div>
+    </div>
+    <p style="font-size:0.75rem;color:var(--muted);margin-top:1.5rem;font-style:italic">*Independent product teardown. Not affiliated with Zomato.</p>`
+};
+
+function openModal(id){
+  document.getElementById('modal-content').innerHTML=MODALS[id];
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+function closeModalOutside(e){
+  if(e.target===document.getElementById('modal-overlay')) closeModal();
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape') closeModal();});
+</script>
+</body>
+</html>
