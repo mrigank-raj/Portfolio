@@ -3,7 +3,19 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Mrigank Raj Chouhan — Product</title>
+<title>Mrigank Raj Chouhan — Product Manager</title>
+<meta name="description" content="Mrigank Raj Chouhan — CS undergrad at KIIT, FMVA certified. Building products at the intersection of finance and technology. Product teardowns, case studies, and more."/>
+<meta name="author" content="Mrigank Raj Chouhan"/>
+<meta property="og:title" content="Mrigank Raj Chouhan — Product Manager"/>
+<meta property="og:description" content="Finance brain. Product heart. Business soul. CS undergrad · FMVA certified · Targeting product roles in fintech and beyond."/>
+<meta property="og:url" content="https://mrigankraj.vercel.app/"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mrigank Raj Chouhan — Product Manager"/>
+<meta name="twitter:description" content="Finance brain. Product heart. Business soul."/>
+<meta name="twitter:site" content="@Mrigank_raj22"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -302,16 +314,20 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
   background:var(--cream);
   border-top:1px solid var(--border);
   border-bottom:1px solid var(--border);
+  text-align:center;
 }
-#tools-mobile .tc-eyebrow{font-size:0.63rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem}
+#tools-mobile .tc-eyebrow{font-size:0.63rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-bottom:1rem}
 #tools-mobile .tc-eyebrow::before,#tools-mobile .tc-eyebrow::after{content:'';width:1rem;height:1px;background:var(--border)}
 #tools-mobile h2{font-family:'Playfair Display',serif;font-size:1.6rem;line-height:1.15;margin-bottom:0.6rem;color:var(--text)}
 #tools-mobile h2 em{font-style:italic;color:var(--burg)}
-#tools-mobile p{font-size:0.84rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem}
-.tools-pill-grid{display:flex;flex-wrap:wrap;gap:0.55rem;margin-bottom:1.75rem}
+#tools-mobile p{font-size:0.84rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;max-width:320px;margin-left:auto;margin-right:auto}
+.tools-pill-grid{display:flex;flex-wrap:wrap;gap:0.55rem;margin-bottom:1.75rem;justify-content:center}
 .tool-pill{display:inline-flex;align-items:center;gap:0.45rem;padding:0.5rem 0.9rem;border:1px solid var(--border);border-radius:100px;background:var(--cream2);font-size:0.78rem;font-weight:500;color:var(--text);transition:border-color 0.2s}
 .tool-pill:hover{border-color:var(--burg)}
 .tool-pill img{width:15px;height:15px;object-fit:contain}
+@media(max-width:900px){
+  #tools-mobile{display:block}
+}
 </style>
 </head>
 <body>
@@ -537,10 +553,12 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
   <h2>The toolkit behind<br><em>the thinking</em></h2>
   <p>Every product decision needs the right tools. These are the ones I use to research, wireframe, analyze, and ship.</p>
   <div class="tools-pill-grid" id="tools-pill-grid"></div>
-  <a href="#work" class="btn-twotone">
-    <span class="bt-text">See how I use them</span>
-    <span class="bt-icon">↗</span>
-  </a>
+  <div style="display:flex;justify-content:center">
+    <a href="#work" class="btn-twotone">
+      <span class="bt-text">See how I use them</span>
+      <span class="bt-icon">↗</span>
+    </a>
+  </div>
 </div>
 <section id="about" class="grid-bg">
   <div class="sec-inner" style="padding:6rem 8%">
