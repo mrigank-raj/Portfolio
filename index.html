@@ -251,9 +251,10 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
   .work-grid{grid-template-columns:1fr;gap:1rem}
   .about-grid{grid-template-columns:1fr;gap:2rem}
   .contact-grid{grid-template-columns:1fr;gap:2.5rem}
-  .tools-stage{grid-template-columns:repeat(3,1fr);grid-template-rows:auto}
-  .tools-center-cell{grid-column:1/4;grid-row:auto;min-height:auto}
-  .tools-cell{min-height:100px}
+  /* Tools — completely replaced by JS-rendered pill layout on mobile */
+  .tools-stage{display:none}
+  #tools::before{display:none}
+  #tools-mobile{display:block}
   .photo-card{width:200px}
   .photo-card img{width:200px;height:170px}
   .exp-row{grid-template-columns:1fr;gap:0.5rem}
@@ -279,12 +280,6 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
   .p-desc{font-size:0.78rem}
   #work{padding:3.5rem 5%}
   .case-card{padding:1.25rem}
-  .tools-stage{grid-template-columns:repeat(3,1fr)}
-  .tools-cell{min-height:80px}
-  .tool-logo img{width:24px;height:24px}
-  .tool-logo span{font-size:0.65rem}
-  .tools-center-text h2{font-size:1.2rem}
-  .tools-center-text p{font-size:0.76rem}
   #about{padding:3.5rem 5%}
   .about-grid{gap:1.75rem}
   #experience{padding:3.5rem 5%}
@@ -300,6 +295,23 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
   .fl-name{font-size:0.8rem}
   .footer-socials{justify-content:center}
 }
+/* Tools mobile layout styles */
+#tools-mobile{
+  display:none;
+  padding:3.5rem 6%;
+  background:var(--cream);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+#tools-mobile .tc-eyebrow{font-size:0.63rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem}
+#tools-mobile .tc-eyebrow::before,#tools-mobile .tc-eyebrow::after{content:'';width:1rem;height:1px;background:var(--border)}
+#tools-mobile h2{font-family:'Playfair Display',serif;font-size:1.6rem;line-height:1.15;margin-bottom:0.6rem;color:var(--text)}
+#tools-mobile h2 em{font-style:italic;color:var(--burg)}
+#tools-mobile p{font-size:0.84rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem}
+.tools-pill-grid{display:flex;flex-wrap:wrap;gap:0.55rem;margin-bottom:1.75rem}
+.tool-pill{display:inline-flex;align-items:center;gap:0.45rem;padding:0.5rem 0.9rem;border:1px solid var(--border);border-radius:100px;background:var(--cream2);font-size:0.78rem;font-weight:500;color:var(--text);transition:border-color 0.2s}
+.tool-pill:hover{border-color:var(--burg)}
+.tool-pill img{width:15px;height:15px;object-fit:contain}
 </style>
 </head>
 <body>
@@ -519,7 +531,17 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- TOOLS MOBILE — shown only on small screens via CSS/JS -->
+<div id="tools-mobile">
+  <div class="tc-eyebrow">Tools I think with</div>
+  <h2>The toolkit behind<br><em>the thinking</em></h2>
+  <p>Every product decision needs the right tools. These are the ones I use to research, wireframe, analyze, and ship.</p>
+  <div class="tools-pill-grid" id="tools-pill-grid"></div>
+  <a href="#work" class="btn-twotone">
+    <span class="bt-text">See how I use them</span>
+    <span class="bt-icon">↗</span>
+  </a>
+</div>
 <section id="about" class="grid-bg">
   <div class="sec-inner" style="padding:6rem 8%">
     <div class="sec-label reveal">About me</div>
@@ -639,19 +661,19 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
 // ── PHOTO STRIP ──
 const BASE = 'https://raw.githubusercontent.com/mrigank-raj/Portfolio/main/assets/images/';
 const photos = [
-  {src:'img1.jpeg', cap:'Yes, I clean up well. Occasionally.', pos:'center top'},
-  {src:'img2.jpeg', cap:'Contemplating roadmaps, probably.', pos:'center top'},
-  {src:'img5.jpeg', cap:'The architecture did most of the work.', pos:'center top'},
-  {src:'img6.jpeg', cap:'Asked for clarity. Got this.', pos:'center top'},
-  {src:'img7.jpeg', cap:'Sangam point. Still waiting for my offer letter.', pos:'center top'},
-  {src:'img8.jpeg', cap:'My interview fit. Obviously.', pos:'center center'},
-  {src:'img9.jpeg', cap:'One sunset at a time.', pos:'center top'},
-  {src:'img11.jpeg', cap:'Better product sense than most apps.', pos:'center top'},
-  {src:'img12.jpeg', cap:'Open to work. Closed to bad UX.', pos:'center top'},
-  {src:'img13.jpeg', cap:'Took a detour. Worth it.', pos:'center top'},
-  {src:'img14.jpeg', cap:'This beach had better retention than most apps.', pos:'center top'},
-  {src:'img15.jpeg', cap:'Pangong Tso. No slides. Just vibes.', pos:'center top'},
-  {src:'img16.jpeg', cap:'Available for immediate joining.', pos:'center center'},
+  {src:'img1.jpeg', cap:'Yes, I clean up well. Occasionally.', pos:'center 15%'},
+  {src:'img2.jpeg', cap:'Contemplating roadmaps, probably.', pos:'center 20%'},
+  {src:'img5.jpeg', cap:'The architecture did most of the work.', pos:'center 20%'},
+  {src:'img6.jpeg', cap:'Asked for clarity. Got this.', pos:'center 25%'},
+  {src:'img7.jpeg', cap:'Sangam point. Still waiting for my offer letter.', pos:'center 15%'},
+  {src:'img8.jpeg', cap:'My interview fit. Obviously.', pos:'center 30%'},
+  {src:'img9.jpeg', cap:'One sunset at a time.', pos:'center 10%'},
+  {src:'img11.jpeg', cap:'Better product sense than most apps.', pos:'center 10%'},
+  {src:'img12.jpeg', cap:'Open to work. Closed to bad UX.', pos:'center 10%'},
+  {src:'img13.jpeg', cap:'Took a detour. Worth it.', pos:'center 15%'},
+  {src:'img14.jpeg', cap:'This beach had better retention than most apps.', pos:'center 20%'},
+  {src:'img15.jpeg', cap:'Pangong Tso. No slides. Just vibes.', pos:'center 15%'},
+  {src:'img16.jpeg', cap:'Available for immediate joining.', pos:'center 30%'},
 ];
 const strip = document.getElementById('photo-strip-inner');
 const doubled = [...photos, ...photos];
@@ -660,6 +682,27 @@ strip.innerHTML = doubled.map(p=>`
     <img src="${BASE}${p.src}" alt="${p.cap}" style="object-position:${p.pos}" loading="lazy"/>
     <div class="photo-card-cap"><p>${p.cap}</p></div>
   </div>`).join('');
+
+// ── TOOLS MOBILE PILLS ──
+const TOOLS_CDN = 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/';
+const toolsList = [
+  {name:'Figma', icon:'figma.svg', filter:'invert(40%) sepia(90%) saturate(2000%) hue-rotate(340deg)'},
+  {name:'Notion', icon:'notion.svg', filter:'none'},
+  {name:'Excel', icon:'microsoftexcel.svg', filter:'invert(28%) sepia(80%) saturate(500%) hue-rotate(100deg)'},
+  {name:'Canva', icon:'canva.svg', filter:'invert(60%) sepia(80%) saturate(400%) hue-rotate(140deg)'},
+  {name:'Google Analytics', icon:'googleanalytics.svg', filter:'invert(50%) sepia(90%) saturate(800%) hue-rotate(10deg)'},
+  {name:'Jira', icon:'jira.svg', filter:'invert(20%) sepia(90%) saturate(1500%) hue-rotate(205deg)'},
+  {name:'VS Code', icon:'visualstudiocode.svg', filter:'invert(35%) sepia(80%) saturate(1000%) hue-rotate(180deg)'},
+  {name:'Claude', icon:'anthropic.svg', filter:'invert(55%) sepia(60%) saturate(600%) hue-rotate(340deg)'},
+];
+const pillGrid = document.getElementById('tools-pill-grid');
+if(pillGrid){
+  pillGrid.innerHTML = toolsList.map(t=>`
+    <div class="tool-pill">
+      <img src="${TOOLS_CDN}${t.icon}" alt="${t.name}" style="filter:${t.filter}"/>
+      ${t.name}
+    </div>`).join('');
+}
 
 // ── MARQUEE ──
 const skills=['Product Thinking','User Research','Wireframing','A/B Testing','Financial Modeling','DCF Valuation','Python','SQL','Go-To-Market Strategy','Roadmapping','FMVA Certified'];
