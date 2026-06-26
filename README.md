@@ -47,7 +47,7 @@ This portfolio reflects how I analyze products, identify friction, and propose s
 
 ## 🚀 Live Portfolio
 
-(Will be added after deployment)
+https://mrigankraj.vercel.app/
 
 ---
 
