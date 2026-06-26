@@ -675,6 +675,31 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
 </div>
 
 <script>
+// ── PHOTO STRIP ──
+const BASE = 'https://raw.githubusercontent.com/mrigank-raj/Portfolio/main/assets/images/';
+const photos = [
+  {src:'img1.jpeg', cap:'Yes, I clean up well. Occasionally.', pos:'center 15%'},
+  {src:'img2.jpeg', cap:'Contemplating roadmaps, probably.', pos:'center 20%'},
+  {src:'img5.jpeg', cap:'The architecture did most of the work.', pos:'center 20%'},
+  {src:'img6.jpeg', cap:'Asked for clarity. Got this.', pos:'center 25%'},
+  {src:'img7.jpeg', cap:'Sangam point. Still waiting for my offer letter.', pos:'center 15%'},
+  {src:'img8.jpeg', cap:'My interview fit. Obviously.', pos:'center 30%'},
+  {src:'img9.jpeg', cap:'One sunset at a time.', pos:'center 10%'},
+  {src:'img11.jpeg', cap:'Better product sense than most apps.', pos:'center 10%'},
+  {src:'img12.jpeg', cap:'Open to work. Closed to bad UX.', pos:'center 10%'},
+  {src:'img13.jpeg', cap:'Took a detour. Worth it.', pos:'center 15%'},
+  {src:'img14.jpeg', cap:'This beach had better retention than most apps.', pos:'center 20%'},
+  {src:'img15.jpeg', cap:'Pangong Tso. No slides. Just vibes.', pos:'center 15%'},
+  {src:'img16.jpeg', cap:'Available for immediate joining.', pos:'center 30%'},
+];
+const strip = document.getElementById('photo-strip-inner');
+const doubled = [...photos, ...photos];
+strip.innerHTML = doubled.map(p=>`
+  <div class="photo-card">
+    <img src="${BASE}${p.src}" alt="${p.cap}" style="object-position:${p.pos}" loading="lazy"/>
+    <div class="photo-card-cap"><p>${p.cap}</p></div>
+  </div>`).join('');
+
 // ── MARQUEE ──
 const skills=['Product Thinking','User Research','Wireframing','A/B Testing','Financial Modeling','DCF Valuation','Python','SQL','Go-To-Market Strategy','Roadmapping','FMVA Certified'];
 const mq=document.getElementById('mq-skills');
