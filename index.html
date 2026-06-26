@@ -394,17 +394,28 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
           <div class="outcome"><strong>Proposed:</strong> "Help Me Decide" — one tap, three curated picks, personalized to history and time of day</div>
           <div class="card-read">Read full teardown</div>
         </div>
-        <div class="case-card dim reveal reveal-delay-1">
-          <div class="card-tags"><span class="ctag">Coming Soon</span></div>
-          <h3>Onboarding Friction in Fintech</h3>
-          <p>Drop-off analysis at each onboarding step with redesign proposal.</p>
-          <div class="soon-badge">In progress</div>
+        <div class="case-card live reveal reveal-delay-1" onclick="openModal('chatgpt')">
+          <div class="card-tags">
+            <span class="ctag hi">User Research</span>
+            <span class="ctag">Market Sizing</span>
+            <span class="ctag">Primary Survey</span>
+          </div>
+          <h3>ChatGPT Voice Adoption in India — User Research</h3>
+          <p>Surveyed 34 Indian students (18–24) to identify barriers to voice adoption. Invalidated discoverability as a root cause — validated workflow mismatch and social friction instead.</p>
+          <div class="outcome"><strong>Finding:</strong> 97% knew the feature existed. 71% still preferred typing. The problem was never awareness.</div>
+          <div class="card-read">Read full case study</div>
         </div>
-        <div class="case-card dim reveal reveal-delay-2">
-          <div class="card-tags"><span class="ctag">Coming Soon</span></div>
-          <h3>Growth & Retention Analysis</h3>
-          <p>Retention curve analysis and churn hypothesis for a consumer app.</p>
-          <div class="soon-badge">In progress</div>
+
+        <div class="case-card live reveal reveal-delay-2" onclick="openModal('systems')">
+          <div class="card-tags">
+            <span class="ctag hi">Product Strategy</span>
+            <span class="ctag">KPI Design</span>
+            <span class="ctag">Systems Thinking</span>
+          </div>
+          <h3>Systems Thinking & Outcome Mapping — ChatGPT Voice</h3>
+          <p>Built a KPI tree with North Star Metric (Voice Sessions/DAU), mapped product levers, and identified opportunity spaces — multilingual users, commute context, and habit loops.</p>
+          <div class="outcome"><strong>Output:</strong> Full KPI tree · Competitive UX audit · Go-to-market opportunity sizing for 200M+ non-English users</div>
+          <div class="card-read">Read full case study</div>
         </div>
       </div>
     </div>
@@ -824,6 +835,101 @@ const MODALS={
       </div>
     </div>
     <p style="font-size:0.75rem;color:var(--muted);margin-top:1.5rem;font-style:italic">*Independent product teardown. Not affiliated with Zomato.</p>`,
+
+  chatgpt: `
+    <div class="modal-tag">User Research · Market Sizing</div>
+    <div class="modal-h">ChatGPT Voice Adoption in India — User Research</div>
+    <div class="modal-section"><h4>Research Context</h4>
+      <p>India has 500M+ voice search users and is one of ChatGPT's fastest-growing markets. Yet voice input adoption on ChatGPT remains low. This research set out to find out why — and whether the assumption that users "can't find the feature" was actually true.</p>
+    </div>
+    <div class="modal-section"><h4>Segment Selected — Indian Students 18–24</h4>
+      <p>Among all evaluated segments (tech professionals, freelancers, knowledge workers), students showed the strongest combination of mobile-first behavior, high-frequency ChatGPT usage, and long-term habit formation value. Hinglish and regional language switching also made this a unique localization signal.</p>
+      <div class="modal-metric">
+        <div class="metric-pill"><div class="mv">100M+</div><div class="ml">Weekly ChatGPT users in India</div></div>
+        <div class="metric-pill"><div class="mv">n=34</div><div class="ml">Primary survey respondents</div></div>
+        <div class="metric-pill"><div class="mv">18–24</div><div class="ml">Age bracket surveyed</div></div>
+      </div>
+    </div>
+    <div class="modal-section"><h4>Hypothesis Testing</h4>
+      <div class="modal-outcome">
+        <strong>Discoverability gap</strong> — INVALIDATED. 97% already knew the feature existed.<br><br>
+        <strong>Social discomfort</strong> — VALIDATED. Avg comfort score: 3.82 alone vs 2.06 in library/shared space.<br><br>
+        <strong>Typing preference</strong> — STRONGLY VALIDATED. 71% still preferred typing even when they knew about voice.<br><br>
+        <strong>Privacy concerns</strong> — PARTIAL. Present but secondary to workflow fit.<br><br>
+        <strong>Accent / Hinglish recognition</strong> — PARTIAL. A barrier for some, not universal.
+      </div>
+    </div>
+    <div class="modal-section"><h4>Top Barriers (Q11, multiple select)</h4>
+      <ul>
+        <li><strong>Typing faster</strong> — most cited barrier (12 respondents)</li>
+        <li><strong>More control when typing</strong> — second most cited (10)</li>
+        <li><strong>Public space discomfort</strong> — strong contextual suppressor (8)</li>
+        <li><strong>Privacy concern</strong> — secondary (5)</li>
+        <li><strong>Accent / recognition failures</strong> — minority concern (2)</li>
+      </ul>
+    </div>
+    <div class="modal-section"><h4>What Students Said</h4>
+      <div class="modal-outcome">
+        <em>"I use voice only when my hands are busy."</em> — usage is context-driven, not habitual<br><br>
+        <em>"I don't want people around me hearing my queries."</em> — social friction is real<br><br>
+        <em>"For assignments and coding, I still prefer typing."</em> — workflow mismatch, not awareness
+      </div>
+    </div>
+    <div class="modal-section"><h4>Research Conclusion</h4>
+      <p>Voice is not a universal replacement for typing. It works best in specific, high-intent, low-social-pressure contexts. The problem ChatGPT needs to solve is not discoverability — it's workflow fit and contextual relevance.</p>
+    </div>
+    <p style="font-size:0.75rem;color:var(--muted);margin-top:1.5rem;font-style:italic">*Independent research. Survey n=34 · Indian students 18–24. Not affiliated with OpenAI.</p>`,
+
+  systems: `
+    <div class="modal-tag">Product Strategy · ChatGPT Voice India</div>
+    <div class="modal-h">Systems Thinking & Outcome Mapping — ChatGPT Voice</div>
+    <div class="modal-section"><h4>Why Voice Matters for ChatGPT</h4>
+      <div class="modal-metric">
+        <div class="metric-pill"><div class="mv">↑ Q/Session</div><div class="ml">Voice removes blank-screen friction</div></div>
+        <div class="metric-pill"><div class="mv">+200M</div><div class="ml">Non-English users unlocked</div></div>
+        <div class="metric-pill"><div class="mv">↑ D7/D30</div><div class="ml">Commute habit loops drive return</div></div>
+      </div>
+    </div>
+    <div class="modal-section"><h4>Competitive UX Audit</h4>
+      <ul>
+        <li><strong>Mic icon buried in text field</strong> + Voice Mode behind separate top-right icon → two entry points, zero guidance on which to use</li>
+        <li><strong>No first-launch tooltip</strong> — discoverability is entirely passive</li>
+        <li><strong>Conversational tasks work well</strong> (mock interviews, brainstorming, Q&amp;A)</li>
+        <li><strong>Structured output tasks fail</strong> — no way to correct mid-utterance or edit before sending</li>
+        <li><strong>No contextual trigger</strong> — voice is never suggested based on session behavior, keyboard state, or dwell time</li>
+      </ul>
+      <div class="modal-outcome" style="margin-top:0.75rem"><strong>Key takeaway:</strong> Voice adoption scales when anchored to a specific, repeatable user intent — not when it's a general input option. WhatsApp (100M+ daily voice notes) and Alexa prove this.</div>
+    </div>
+    <div class="modal-section"><h4>KPI Tree</h4>
+      <div class="modal-outcome">
+        <strong>North Star:</strong> Voice Sessions / DAU<br><br>
+        <strong>Input Metrics:</strong><br>
+        · Voice Session Start Rate — % sessions where mic is tapped<br>
+        · Voice Session Completion Rate — % voice inputs sent without cancelling<br>
+        · Voice D7 Repeat Rate — users who use voice again within 7 days<br><br>
+        <strong>Levers:</strong><br>
+        · Hesitation Trigger (2–3s dwell on text field)<br>
+        · Vernacular Keyboard Detection<br>
+        · Rapid Chat Mode Switch (3+ messages in quick succession)
+      </div>
+    </div>
+    <div class="modal-section"><h4>Opportunity Spaces</h4>
+      <ul>
+        <li><strong>Commute context</strong> — avg Indian commuter spends 1.5 hrs/day in transit. Mobile-first country. Highest-leverage moment for voice habit formation.</li>
+        <li><strong>Vernacular & multilingual users</strong> — Hindi/Tamil/Telugu voice queries growing 400% YoY on Google. ChatGPT's biggest untapped voice segment is non-English-first users.</li>
+        <li><strong>Hands-busy tasks</strong> — cooking, commuting, exercising. Low social friction, high intent.</li>
+        <li><strong>Feature phone & rural India GTM</strong> — voice-first positions ChatGPT beyond smartphone power users.</li>
+      </ul>
+    </div>
+    <div class="modal-section"><h4>Outcome Map</h4>
+      <div class="modal-outcome">
+        <strong>User pain:</strong> Voice feels less controllable and skimmable than typing in academic/shared environments<br><br>
+        <strong>Business objective:</strong> Increase voice engagement, session frequency, and long-term conversational AI habit formation<br><br>
+        <strong>Measurable outcome:</strong> Voice Sessions/DAU ↑ · D7 repeat rate ↑ · Multilingual session share ↑<br><br>
+        <strong>Execution priority:</strong> Context-aware voice nudges → own the commute moment → vernacular expansion
+      </div>
+    </div>
+    <p style="font-size:0.75rem;color:var(--muted);margin-top:1.5rem;font-style:italic">*Independent product strategy project. Not affiliated with OpenAI.</p>`,
 
   beyondlabel:`
     <div class="modal-tag">Shipped Product · React · AI</div>
