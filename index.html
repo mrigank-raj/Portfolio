@@ -3,7 +3,21 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Mrigank Raj Chouhan — Product</title>
+<title>Mrigank Raj Chouhan ΓÇö Product Manager</title>
+<meta name="description" content="Mrigank Raj Chouhan ΓÇö CS undergrad at KIIT, FMVA certified. Building products at the intersection of finance and technology. Product teardowns, case studies, and more."/>
+<meta name="author" content="Mrigank Raj Chouhan"/>
+<meta property="og:title" content="Mrigank Raj Chouhan ΓÇö Product Manager"/>
+<meta property="og:description" content="Finance brain. Product heart. Business soul. CS undergrad ┬╖ FMVA certified ┬╖ Targeting product roles in fintech and beyond."/>
+<meta property="og:url" content="https://mrigankraj.vercel.app/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://raw.githubusercontent.com/mrigank-raj/Portfolio/main/assets/images/img16.jpeg"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mrigank Raj Chouhan ΓÇö Product Manager"/>
+<meta name="twitter:description" content="Finance brain. Product heart. Business soul."/>
+<meta name="twitter:site" content="@Mrigank_raj22"/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -33,7 +47,7 @@ a{color:inherit;text-decoration:none}
 .reveal-delay-2{transition-delay:0.2s}
 .reveal-delay-3{transition-delay:0.3s}
 
-/* NAV — 3 column */
+/* NAV */
 .nav-wrap{position:fixed;top:1rem;left:50%;transform:translateX(-50%);z-index:200;width:calc(100% - 3rem);max-width:940px}
 nav{border:1.5px solid var(--border);border-radius:100px;padding:0.6rem 0.7rem 0.6rem 1.4rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;background:rgba(238,234,222,0.93);backdrop-filter:blur(16px)}
 .nav-name{font-family:'Playfair Display',serif;font-size:0.58rem;font-weight:700;line-height:1.3;color:var(--text);letter-spacing:0.02em}
@@ -63,7 +77,7 @@ section{position:relative;overflow:hidden}
 .sec-h2 em{font-style:italic;color:var(--burg);position:relative}
 .sec-h2 em::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:2px;background:var(--burg);opacity:0.4;border-radius:2px}
 
-/* ═══ HERO ═══ */
+/* HERO */
 #hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;text-align:center;padding:7rem 5% 0;background:var(--cream)}
 .hero-eyebrow{font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);display:inline-flex;align-items:center;gap:0.65rem;margin-bottom:1.3rem}
 .hero-eyebrow::before,.hero-eyebrow::after{content:'';width:1.2rem;height:1px;background:var(--border)}
@@ -72,25 +86,26 @@ section{position:relative;overflow:hidden}
 #hero h1 em::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2.5px;background:var(--text);border-radius:2px}
 .hero-sub{font-size:0.88rem;color:var(--muted);max-width:420px;margin:1.75rem auto 1.75rem;line-height:1.8}
 .hero-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
+
 /* PHOTO STRIP */
 .photo-strip{width:100%;overflow:hidden;padding:2rem 0 0;position:relative;z-index:1}
-.photo-strip-inner{display:flex;gap:1rem;width:max-content;animation:stripLeft 50s linear infinite}
+.photo-strip-inner{display:flex;gap:1rem;width:max-content;animation:stripLeft 50s linear infinite;will-change:transform}
 .photo-strip:hover .photo-strip-inner{animation-play-state:paused}
-.photo-card{flex-shrink:0;width:240px;border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 20px rgba(26,20,16,0.08);background:#fff}
+.photo-card{flex-shrink:0;width:240px;border-radius:14px;overflow:hidden;border:1.5px solid #1a1410;box-shadow:0 4px 20px rgba(26,20,16,0.08);background:#fff}
 .photo-card img{width:240px;height:200px;object-fit:cover;object-position:center top;display:block}
 .photo-card-cap{padding:0.55rem 0.85rem 0.65rem;background:#fff;border-top:1px solid var(--border)}
-.photo-card-cap p{font-size:0.71rem;color:var(--muted);font-style:italic;line-height:1.4}
+.photo-card-cap p{font-size:0.71rem;color:var(--text);font-style:normal;font-weight:600;line-height:1.4}
 @keyframes stripLeft{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-/* ═══ MARQUEE ═══ */
+/* MARQUEE */
 .mq-wrap{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:0.85rem 0;overflow:hidden;background:var(--burg);position:relative;z-index:1}
 .mq-inner{display:flex;width:max-content;animation:goLeft 30s linear infinite}
 .mq-wrap:hover .mq-inner{animation-play-state:paused}
 .skill-chip{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.72);white-space:nowrap;display:flex;align-items:center;padding:0 1.2rem}
-.skill-chip::after{content:'·';margin-left:1.2rem;color:rgba(255,255,255,0.35)}
+.skill-chip::after{content:'┬╖';margin-left:1.2rem;color:rgba(255,255,255,0.35)}
 @keyframes goLeft{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-/* ═══ WHAT I BRING ═══ */
+/* WHAT I BRING */
 #bring{background:var(--burg);padding:6rem 8%;position:relative;overflow:hidden}
 #bring::before{content:'MRC';position:absolute;font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:28vw;color:rgba(255,255,255,0.04);line-height:1;bottom:-4vw;right:-2vw;pointer-events:none;z-index:0;letter-spacing:-0.04em;user-select:none}
 #bring::after{content:'';position:absolute;inset:0;
@@ -110,13 +125,22 @@ section{position:relative;overflow:hidden}
 .p-title{font-weight:500;font-size:0.9rem;color:#fff;margin-bottom:0.6rem}
 .p-desc{font-size:0.81rem;color:rgba(255,255,255,0.5);line-height:1.8}
 
-/* ═══ WORK ═══ */
+/* TABS */
+.tab-nav{display:flex;gap:0.75rem;margin-bottom:2rem;border-bottom:1px solid var(--border);padding-bottom:1rem;overflow-x:auto;scrollbar-width:none}
+.tab-nav::-webkit-scrollbar{display:none}
+.tab-btn{background:transparent;border:none;font-family:'Inter',sans-serif;font-size:0.88rem;color:var(--muted);cursor:pointer;padding:0.4rem 0.8rem;border-radius:100px;transition:all 0.2s;white-space:nowrap}
+.tab-btn:hover{color:var(--text);background:rgba(26,20,16,0.05)}
+.tab-btn.active{background:var(--burg);color:#fff;font-weight:500}
+.tab-pane{display:none}
+.tab-pane.active{display:block;animation:fadeIn 0.4s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* WORK */
 #work{padding:6rem 8%;background:var(--cream)}
 .work-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1.5rem}
 .case-card{position:relative;border-radius:16px;padding:1.75rem;transition:transform 0.25s,box-shadow 0.25s;background:rgba(238,234,222,0.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.7);box-shadow:0 4px 24px rgba(26,20,16,0.06)}
 .case-card.live{cursor:pointer}
 .case-card.live:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,20,16,0.12)}
-.case-card.dim{opacity:0.38;cursor:default;pointer-events:none}
 .card-tags{display:flex;gap:0.45rem;flex-wrap:wrap;margin-bottom:1rem}
 .ctag{font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.26rem 0.65rem;border-radius:100px;border:1px solid var(--border);color:var(--muted);background:rgba(238,234,222,0.8)}
 .ctag.hi{border-color:rgba(123,30,74,0.3);color:var(--burg);background:rgba(123,30,74,0.06)}
@@ -124,54 +148,11 @@ section{position:relative;overflow:hidden}
 .case-card p{font-size:0.82rem;color:var(--muted);line-height:1.72;margin-bottom:1rem}
 .outcome{background:rgba(123,30,74,0.06);border-left:2px solid var(--burg);border-radius:0 8px 8px 0;padding:0.65rem 0.9rem;font-size:0.78rem;color:var(--text);line-height:1.65}
 .outcome strong{color:var(--burg);font-weight:500}
-.soon-badge{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-top:0.75rem}
-.soon-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--border)}
 .card-read{display:inline-flex;align-items:center;gap:0.35rem;font-size:0.75rem;color:var(--burg);font-weight:500;margin-top:1rem;letter-spacing:0.03em;transition:gap 0.2s}
-.card-read::after{content:'→';transition:transform 0.2s}
+.card-read::after{content:'ΓåÆ';transition:transform 0.2s}
 .case-card.live:hover .card-read::after{transform:translateX(4px)}
 
-/* ═══ TABS ═══ */
-.tabs-container {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-}
-.tab-btn {
-  background: var(--cream2);
-  border: 1px solid var(--border);
-  color: var(--muted);
-  padding: 0.5rem 1.25rem;
-  border-radius: 100px;
-  font-size: 0.78rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.tab-btn:hover {
-  border-color: var(--burg);
-  color: var(--text);
-}
-.tab-btn.active {
-  background: var(--burg);
-  color: #fff;
-  border-color: var(--burg);
-}
-.tab-pane {
-  display: none;
-}
-.tab-pane.active {
-  display: block;
-}
-.card-tags .ctag.hi-shipped {
-  border-color: rgba(232,129,90,0.3);
-  color: var(--salmon);
-  background: rgba(232,129,90,0.06);
-}
-.case-card.shipped-card {
-  border-left: 3px solid var(--salmon);
-}
-
-/* ═══ MODAL ═══ */
+/* MODAL */
 .modal-overlay{position:fixed;inset:0;background:rgba(26,20,16,0.65);backdrop-filter:blur(6px);z-index:500;display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity 0.3s}
 .modal-overlay.open{opacity:1;pointer-events:all}
 .modal-box{background:var(--cream);border-radius:20px;max-width:780px;width:100%;max-height:85vh;overflow-y:auto;padding:2.5rem;position:relative;transform:translateY(24px);transition:transform 0.3s;box-shadow:0 24px 80px rgba(26,20,16,0.2)}
@@ -192,35 +173,17 @@ section{position:relative;overflow:hidden}
 .metric-pill .mv{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--burg);font-weight:700}
 .metric-pill .ml{font-size:0.68rem;color:var(--muted);letter-spacing:0.05em;text-transform:uppercase;margin-top:0.2rem}
 
-/* ═══ TOOLS — FULL WIDTH ═══ */
+/* TOOLS ΓÇö FULL WIDTH 9-COL GRID */
 #tools{background:var(--cream);position:relative;isolation:isolate;overflow:hidden}
 #tools::before{content:'';position:absolute;inset:0;
   background-image:linear-gradient(#B8B4AA 1px,transparent 1px),linear-gradient(90deg,#B8B4AA 1px,transparent 1px);
   background-size:160px 160px;opacity:0.55;pointer-events:none;z-index:0}
-.tools-stage{
-  position:relative;z-index:1;
-  display:grid;
-  grid-template-columns:repeat(9,1fr);
-  grid-template-rows:repeat(5,160px);
-  width:100%;
-}
-.tools-cell{
-  display:flex;align-items:center;justify-content:center;
-  border:1px solid #B8B4AA;
-  background:var(--cream);
-  min-height:160px;
-}
+.tools-stage{position:relative;z-index:1;display:grid;grid-template-columns:repeat(9,1fr);grid-template-rows:repeat(5,160px);width:100%}
+.tools-cell{display:flex;align-items:center;justify-content:center;border:1px solid #B8B4AA;background:var(--cream);min-height:160px}
 .tool-logo{display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center}
 .tool-logo img{width:32px;height:32px;object-fit:contain}
 .tool-logo span{font-size:0.75rem;font-weight:600;font-family:'Inter',sans-serif;white-space:nowrap}
-/* center text block spans 3 cols × 3 rows */
-.tools-center-cell{
-  grid-column:4/7;grid-row:2/5;
-  background:var(--cream);
-  border:1.5px solid #B8B4AA;
-  display:flex;align-items:center;justify-content:center;
-  z-index:2;
-}
+.tools-center-cell{grid-column:4/7;grid-row:2/5;background:var(--cream);border:1.5px solid #B8B4AA;display:flex;align-items:center;justify-content:center;z-index:2}
 .tools-center-text{text-align:center;padding:2.5rem 2rem}
 .tc-eyebrow{font-size:0.63rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-bottom:1rem}
 .tc-eyebrow::before,.tc-eyebrow::after{content:'';width:1rem;height:1px;background:var(--border)}
@@ -229,7 +192,7 @@ section{position:relative;overflow:hidden}
 .tools-center-text h2 em::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:2px;background:var(--burg);opacity:0.4;border-radius:2px}
 .tools-center-text p{font-size:0.82rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;max-width:240px;margin-left:auto;margin-right:auto}
 
-/* ═══ ABOUT ═══ */
+/* ABOUT */
 #about{padding:6rem 8%;background:var(--cream2)}
 .about-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:6rem;align-items:center;margin-top:1rem}
 .about-text p{color:var(--muted);line-height:1.88;margin-bottom:1rem;font-size:0.9rem}
@@ -240,11 +203,9 @@ section{position:relative;overflow:hidden}
 .stat-card:last-child{border-bottom:1px solid var(--border);border-radius:0 0 12px 12px}
 .sc-label{font-size:0.67rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--muted)}
 .sc-val{font-family:'Playfair Display',serif;font-size:0.9rem;color:var(--burg);font-weight:700}
-
-/* COUNTER */
 .counter{display:inline-block}
 
-/* ═══ EXPERIENCE ═══ */
+/* EXPERIENCE */
 #experience{padding:6rem 8%;background:var(--cream)}
 .exp-list{border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:1.5rem}
 .exp-row{background:var(--cream);border-bottom:1px solid var(--border);padding:1.4rem 1.75rem;display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:start;transition:background 0.2s}
@@ -256,7 +217,7 @@ section{position:relative;overflow:hidden}
 .exp-date{font-size:0.73rem;color:var(--muted);text-align:right;white-space:nowrap}
 .exp-type{font-size:0.63rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);margin-top:0.3rem;text-align:right}
 
-/* ═══ CONTACT ═══ */
+/* CONTACT */
 #contact{padding:6rem 8%;background:var(--cream2)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
 .contact-left p{color:var(--muted);font-size:0.9rem;line-height:1.88;margin-bottom:2rem}
@@ -266,7 +227,7 @@ section{position:relative;overflow:hidden}
 .cl-label{font-size:0.65rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--muted);margin-bottom:0.12rem}
 .cl-val{color:var(--text);font-size:0.83rem}
 
-/* ═══ FOOTER ═══ */
+/* FOOTER */
 footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify-content:space-between;align-items:center;background:var(--cream)}
 .fl{display:flex;flex-direction:column}
 .fl-name{font-family:'Playfair Display',serif;font-size:0.88rem;font-weight:700}
@@ -277,16 +238,76 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
 .social-icon:hover{border-color:var(--burg);color:var(--burg)}
 .social-icon svg{width:15px;height:15px}
 
+/* TOOLS MOBILE */
+#tools-mobile{display:none;padding:3.5rem 6%;background:var(--cream);border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center}
+#tools-mobile .tc-eyebrow{font-size:0.63rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-bottom:1rem}
+#tools-mobile .tc-eyebrow::before,#tools-mobile .tc-eyebrow::after{content:'';width:1rem;height:1px;background:var(--border)}
+#tools-mobile h2{font-family:'Playfair Display',serif;font-size:1.6rem;line-height:1.15;margin-bottom:0.6rem;color:var(--text)}
+#tools-mobile h2 em{font-style:italic;color:var(--burg)}
+#tools-mobile p{font-size:0.84rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;max-width:320px;margin-left:auto;margin-right:auto}
+.tools-pill-grid{display:flex;flex-wrap:wrap;gap:0.55rem;margin-bottom:1.75rem;justify-content:center}
+.tool-pill{display:inline-flex;align-items:center;gap:0.45rem;padding:0.5rem 0.9rem;border:1px solid var(--border);border-radius:100px;background:var(--cream2);font-size:0.78rem;font-weight:500;color:var(--text);transition:border-color 0.2s}
+.tool-pill:hover{border-color:var(--burg)}
+.tool-pill img{width:15px;height:15px;object-fit:contain}
+
+/* RESPONSIVE */
 @media(max-width:900px){
+  .nav-wrap{width:calc(100% - 2rem);top:0.75rem}
   .nav-links{display:none}
-  nav{grid-template-columns:1fr 1fr}
+  nav{grid-template-columns:1fr 1fr;padding:0.55rem 0.6rem 0.55rem 1.1rem}
   .nav-right{grid-column:2;justify-content:flex-end}
-  .pillars,.work-grid{grid-template-columns:1fr}
-  .about-grid,.contact-grid{grid-template-columns:1fr;gap:2.5rem}
-  .tools-stage{grid-template-columns:repeat(3,1fr);grid-template-rows:auto}
-  .tools-center-cell{grid-column:1/4;grid-row:auto}
-  footer{flex-direction:column;gap:1rem;text-align:center}
+  #hero{padding:5.5rem 5% 0}
+  #hero h1{font-size:clamp(1.8rem,6vw,2.6rem)}
+  #bring{padding:4rem 6%}
+  #work{padding:4rem 6%}
+  #about{padding:4rem 6%}
+  #experience{padding:4rem 6%}
+  .pillars{grid-template-columns:1fr;gap:1rem}
+  .work-grid{grid-template-columns:1fr;gap:1rem}
+  .about-grid{grid-template-columns:1fr;gap:2rem}
+  .contact-grid{grid-template-columns:1fr;gap:2.5rem}
+  .tools-stage{display:none}
+  #tools::before{display:none}
+  #tools-mobile{display:block}
+  .photo-card{width:200px}
+  .photo-card img{width:200px;height:170px}
+  .exp-row{grid-template-columns:1fr;gap:0.5rem}
+  .exp-date{text-align:left}
+  .exp-type{text-align:left}
   .modal-metric{grid-template-columns:1fr}
+  .modal-box{padding:1.5rem;border-radius:14px}
+  footer{flex-direction:column;gap:1rem;text-align:center;padding:1.5rem 6%}
+}
+@media(max-width:640px){
+  .nav-wrap{width:calc(100% - 1.5rem);top:0.6rem}
+  nav{padding:0.5rem 0.6rem 0.5rem 1rem}
+  .nav-name{font-size:0.52rem}
+  .nav-cta{font-size:0.7rem;padding:0.4rem 0.85rem}
+  #hero{padding:5rem 5% 0}
+  #hero h1{font-size:clamp(1.6rem,7vw,2.2rem)}
+  .hero-sub{font-size:0.82rem;margin:1.25rem auto}
+  .hero-btns{flex-direction:column;align-items:center;gap:0.6rem}
+  .btn-burg,.btn-outline{width:100%;max-width:280px;justify-content:center}
+  .sec-h2{font-size:clamp(1.6rem,7vw,2.2rem)}
+  #bring{padding:3.5rem 5%}
+  .bring-sub{font-size:0.82rem}
+  .p-desc{font-size:0.78rem}
+  #work{padding:3.5rem 5%}
+  .case-card{padding:1.25rem}
+  #about{padding:3.5rem 5%}
+  .about-grid{gap:1.75rem}
+  #experience{padding:3.5rem 5%}
+  .exp-list{border-radius:10px}
+  .exp-row{padding:1.1rem}
+  .exp-desc{font-size:0.77rem}
+  .contact-left p{font-size:0.84rem}
+  .photo-card{width:170px}
+  .photo-card img{width:170px;height:145px}
+  .modal-overlay{padding:1rem}
+  .modal-box{padding:1.25rem;max-height:90vh}
+  footer{padding:1.25rem 5%}
+  .fl-name{font-size:0.8rem}
+  .footer-socials{justify-content:center}
 }
 </style>
 </head>
@@ -294,7 +315,7 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
 
 <!-- NAV -->
 <div class="nav-wrap">
-  <nav>
+  <nav aria-label="Main navigation">
     <div class="nav-name">Mrigank<br>Raj<br><em>Chouhan</em></div>
     <div class="nav-links">
       <a href="#bring">About</a>
@@ -303,48 +324,50 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
       <a href="#contact">Contact</a>
     </div>
     <div class="nav-right">
-      <a href="mailto:mrigankrajchouhan@gmail.com" class="nav-cta">Hire me ↗</a>
+      <a href="mailto:mrigankrajchouhan@gmail.com?subject=Hiring%20Inquiry%20%E2%80%94%20Product%20Role&body=Hi%20Mrigank%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20wanted%20to%20connect." class="nav-cta">Hire me Γåù</a>
     </div>
   </nav>
 </div>
 
+<main>
+
 <!-- HERO -->
 <section id="hero" class="grid-bg">
   <div class="sec-inner" style="display:flex;flex-direction:column;align-items:center;text-align:center">
-    <div class="hero-eyebrow reveal">Product · Finance · Business</div>
+    <div class="hero-eyebrow reveal">Product ┬╖ Finance ┬╖ Business</div>
     <h1 class="reveal reveal-delay-1">Finance brain. Product heart.<br><em>Business soul.</em></h1>
-    <p class="hero-sub reveal reveal-delay-2">CS undergrad · FMVA certified · Building products that solve real problems for real people.</p>
+    <p class="hero-sub reveal reveal-delay-2">CS undergrad ┬╖ FMVA certified ┬╖ Building products that solve real problems for real people.</p>
     <div class="hero-btns reveal reveal-delay-3">
-      <a href="#work" class="btn-burg">See my work ↗</a>
+      <a href="#work" class="btn-burg">See my work Γåù</a>
       <a href="#contact" class="btn-outline">Let's connect</a>
     </div>
   </div>
-  <div class="photo-strip">
+  <div class="photo-strip" aria-hidden="true">
     <div class="photo-strip-inner" id="photo-strip-inner"></div>
   </div>
 </section>
 
 <!-- MARQUEE -->
-<div class="mq-wrap">
+<div class="mq-wrap" aria-hidden="true">
   <div class="mq-inner" id="mq-skills"></div>
 </div>
 
 <!-- WHAT I BRING -->
-<section id="bring">
+<section id="bring" aria-labelledby="bring-heading">
   <div class="sec-inner">
     <div class="sec-label reveal">What I bring</div>
-    <h2 class="sec-h2 reveal reveal-delay-1">Three lenses.<br><em>One product mind.</em></h2>
+    <h2 class="sec-h2 reveal reveal-delay-1" id="bring-heading">Three lenses.<br><em>One product mind.</em></h2>
     <p class="bring-sub reveal reveal-delay-2">Most PM candidates pick one strength. I refused to. Here's what I bring to every product decision.</p>
     <div class="pillars">
       <div class="pillar reveal reveal-delay-1">
         <div class="p-num">01</div>
         <div class="p-title">Business & Finance</div>
-        <div class="p-desc">FMVA certified. Built DCF models, read annual reports as case studies, worked inside a CA firm. I connect product decisions to revenue impact — not just engagement numbers.</div>
+        <div class="p-desc">FMVA certified. Built DCF models, read annual reports as case studies, worked inside a CA firm. I connect product decisions to revenue impact ΓÇö not just engagement numbers.</div>
       </div>
       <div class="pillar reveal reveal-delay-2">
         <div class="p-num">02</div>
         <div class="p-title">Product & UX</div>
-        <div class="p-desc">I study apps the way most people just use them. Friction mapping, user journey analysis, wireframing — then writing feature proposals a real PM would actually ship.</div>
+        <div class="p-desc">I study apps the way most people just use them. Friction mapping, user journey analysis, wireframing ΓÇö then writing feature proposals a real PM would actually ship.</div>
       </div>
       <div class="pillar reveal reveal-delay-3">
         <div class="p-num">03</div>
@@ -356,91 +379,37 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
 </section>
 
 <!-- WORK -->
-<section id="work" class="grid-bg">
+<section id="work" class="grid-bg" aria-labelledby="work-heading">
   <div class="sec-inner" style="padding:6rem 8%">
     <div class="sec-label reveal">Work</div>
-    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; margin-bottom:0.75rem;">
-      <h2 class="sec-h2 reveal reveal-delay-1" style="margin-bottom:0">Things I've<br><em>built & analyzed</em></h2>
-      <div class="tabs-container reveal reveal-delay-1" style="margin-bottom:0.5rem">
-        <button class="tab-btn active" onclick="switchTab('teardowns', this)">Teardowns</button>
-        <button class="tab-btn" onclick="switchTab('projects', this)">Live Projects</button>
-      </div>
-    </div>
-    
-    <!-- TEARDOWNS TAB -->
-    <div id="tab-teardowns" class="tab-pane active">
-      <div class="work-grid" style="margin-top:1.5rem">
-        <div class="case-card live reveal reveal-delay-1" onclick="openModal('myjio')">
-          <div class="card-tags">
-            <span class="ctag hi">Product Teardown</span>
-            <span class="ctag">UX</span>
-            <span class="ctag">Feature Proposal</span>
-            <span class="ctag">A/B Testing</span>
-          </div>
-          <h3>MyJio: Data Usage in 3 Seconds</h3>
-          <p>Identified 5-tap friction causing 2-minute time-to-data. Proposed a home screen widget using Android deep-link intent and cached data — zero new server calls.</p>
-          <div class="outcome"><strong>Target:</strong> &gt;5% widget adoption · 10–15% drop in app opens · 20% fewer support tickets</div>
-          <div class="card-read">Read full teardown</div>
-        </div>
-        <div class="case-card live reveal reveal-delay-2" onclick="openModal('zomato')">
-          <div class="card-tags">
-            <span class="ctag hi">Product Teardown</span>
-            <span class="ctag">UX</span>
-            <span class="ctag">Feature Proposal</span>
-            <span class="ctag">Decision Design</span>
-          </div>
-          <h3>Zomato: Hungry. Open Zomato. Still Can't Decide.</h3>
-          <p>Teardown of decision paralysis in food discovery. 500+ options, no signal for "what's best right now" — a product gap, not a user failure.</p>
-          <div class="outcome"><strong>Proposed:</strong> "Help Me Decide" — one tap, three curated picks, personalized to history and time of day</div>
-          <div class="card-read">Read full teardown</div>
-        </div>
-        <div class="case-card live reveal reveal-delay-1" onclick="openModal('chatgpt')">
-          <div class="card-tags">
-            <span class="ctag hi">User Research</span>
-            <span class="ctag">Market Sizing</span>
-            <span class="ctag">Primary Survey</span>
-          </div>
-          <h3>ChatGPT Voice Adoption in India — User Research</h3>
-          <p>Surveyed 34 Indian students (18–24) to identify barriers to voice adoption. Invalidated discoverability as a root cause — validated workflow mismatch and social friction instead.</p>
-          <div class="outcome"><strong>Finding:</strong> 97% knew the feature existed. 71% still preferred typing. The problem was never awareness.</div>
-          <div class="card-read">Read full case study</div>
-        </div>
-
-        <div class="case-card live reveal reveal-delay-2" onclick="openModal('systems')">
-          <div class="card-tags">
-            <span class="ctag hi">Product Strategy</span>
-            <span class="ctag">KPI Design</span>
-            <span class="ctag">Systems Thinking</span>
-          </div>
-          <h3>Systems Thinking & Outcome Mapping — ChatGPT Voice</h3>
-          <p>Built a KPI tree with North Star Metric (Voice Sessions/DAU), mapped product levers, and identified opportunity spaces — multilingual users, commute context, and habit loops.</p>
-          <div class="outcome"><strong>Output:</strong> Full KPI tree · Competitive UX audit · Go-to-market opportunity sizing for 200M+ non-English users</div>
-          <div class="card-read">Read full case study</div>
-        </div>
-      </div>
+    <h2 class="sec-h2 reveal reveal-delay-1" id="work-heading">Case studies &<br><em>teardowns</em></h2>
+    <!-- TAB NAV -->
+    <div class="tab-nav reveal reveal-delay-2" role="tablist">
+      <button class="tab-btn active" role="tab" onclick="switchTab('projects', this)">Live Projects</button>
+      <button class="tab-btn" role="tab" onclick="switchTab('teardowns', this)">Product Teardowns</button>
     </div>
 
     <!-- PROJECTS TAB -->
-    <div id="tab-projects" class="tab-pane">
+    <div id="tab-projects" class="tab-pane active">
       <div class="work-grid" style="margin-top:1.5rem">
-        <div class="case-card live shipped-card reveal reveal-delay-1" onclick="openModal('beyondlabel')">
+        <div class="case-card live shipped-card reveal reveal-delay-1" role="button" tabindex="0" onclick="openModal('beyondlabel')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('beyondlabel')">
           <div class="card-tags">
-            <span class="ctag hi-shipped">Shipped Product</span>
-            <span class="ctag">AI</span>
+            <span class="ctag hi">Shipped Product</span>
             <span class="ctag">React</span>
+            <span class="ctag">AI</span>
           </div>
-          <h3>BeyondLabel: See Through <em>Food Labels</em></h3>
-          <p>AI-powered food label analyzer for Indian consumers. Upload a label photo or type a product name, pick your health goal, and get an honest plain-English verdict.</p>
-          <div class="outcome">✅ <strong>Trustworthy</strong> &nbsp;⚠️ <strong>Question It</strong> &nbsp;❌ <strong>Avoid</strong></div>
+          <h3>BeyondLabel: <em>See Through Food Labels</em></h3>
+          <p>A web app that analyzes FMCG food ingredients to expose deceptive marketing (like "no refined sugar" claims using jaggery) and highlights hidden allergens using AI.</p>
+          <div class="outcome">✅ <strong>Built & Deployed</strong> &nbsp;🧠 <strong>AI Powered</strong></div>
           <div class="card-read">View live demo & read the story</div>
         </div>
         
-        <div class="case-card live shipped-card reveal reveal-delay-2" onclick="openModal('zomatobuild')">
+        <div class="case-card live shipped-card reveal reveal-delay-1" role="button" tabindex="0" onclick="openModal('zomatobuild')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('zomatobuild')">
           <div class="card-tags">
-            <span class="ctag hi-shipped">Shipped Product</span>
-            <span class="ctag">AI</span>
+            <span class="ctag hi">Shipped Product</span>
             <span class="ctag">FastAPI</span>
             <span class="ctag">React</span>
+            <span class="ctag">AI</span>
           </div>
           <h3>Zomato AI Engine: <em>Smart Dining</em></h3>
           <p>An end-to-end fullstack AI recommender. Uses a 30,000+ restaurant dataset and Llama 3 to suggest personalized dining spots based on hyper-specific user intents.</p>
@@ -449,38 +418,97 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
         </div>
       </div>
     </div>
+
+    <!-- TEARDOWNS TAB -->
+    <div id="tab-teardowns" class="tab-pane">
+      <div class="work-grid" style="margin-top:1.5rem">
+
+      <!-- MyJio -->
+      <div class="case-card live reveal reveal-delay-1" role="button" tabindex="0" aria-label="Open MyJio case study" onclick="openModal('myjio')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('myjio')">
+        <div class="card-tags">
+          <span class="ctag hi">Product Teardown</span>
+          <span class="ctag">UX</span>
+          <span class="ctag">Feature Proposal</span>
+          <span class="ctag">A/B Testing</span>
+        </div>
+        <h3>MyJio: Data Usage in 3 Seconds</h3>
+        <p>Identified 5-tap friction causing 2-minute time-to-data. Proposed a home screen widget using Android deep-link intent and cached data ΓÇö zero new server calls.</p>
+        <div class="outcome"><strong>Target:</strong> &gt;5% widget adoption ┬╖ 10ΓÇô15% drop in app opens ┬╖ 20% fewer support tickets</div>
+        <div class="card-read">Read full teardown</div>
+      </div>
+
+      <!-- Zomato -->
+      <div class="case-card live reveal reveal-delay-2" role="button" tabindex="0" aria-label="Open Zomato case study" onclick="openModal('zomato')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('zomato')">
+        <div class="card-tags">
+          <span class="ctag hi">Product Teardown</span>
+          <span class="ctag">UX</span>
+          <span class="ctag">Feature Proposal</span>
+          <span class="ctag">Decision Design</span>
+        </div>
+        <h3>Zomato: Hungry. Open Zomato. Still Can't Decide.</h3>
+        <p>Teardown of decision paralysis in food discovery. 500+ options, no signal for "what's best right now" ΓÇö a product gap, not a user failure.</p>
+        <div class="outcome"><strong>Proposed:</strong> "Help Me Decide" ΓÇö one tap, three curated picks, personalized to history and time of day</div>
+        <div class="card-read">Read full teardown</div>
+      </div>
+
+      <!-- ChatGPT Voice ΓÇö User Research -->
+      <div class="case-card live reveal reveal-delay-1" role="button" tabindex="0" aria-label="Open ChatGPT Voice user research case study" onclick="openModal('chatgpt')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('chatgpt')">
+        <div class="card-tags">
+          <span class="ctag hi">User Research</span>
+          <span class="ctag">Market Sizing</span>
+          <span class="ctag">Primary Survey</span>
+        </div>
+        <h3>ChatGPT Voice Adoption in India ΓÇö User Research</h3>
+        <p>Surveyed 34 Indian students (18ΓÇô24) to identify barriers to voice adoption. Invalidated discoverability as a root cause ΓÇö validated workflow mismatch and social friction instead.</p>
+        <div class="outcome"><strong>Finding:</strong> 97% knew the feature existed. 71% still preferred typing. The problem was never awareness.</div>
+        <div class="card-read">Read full case study</div>
+      </div>
+
+      <!-- Systems Thinking & Outcome Mapping -->
+      <div class="case-card live reveal reveal-delay-2" role="button" tabindex="0" aria-label="Open Systems Thinking and Outcome Mapping case study" onclick="openModal('systems')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('systems')">
+        <div class="card-tags">
+          <span class="ctag hi">Product Strategy</span>
+          <span class="ctag">KPI Design</span>
+          <span class="ctag">Systems Thinking</span>
+        </div>
+        <h3>Systems Thinking & Outcome Mapping ΓÇö ChatGPT Voice</h3>
+        <p>Built a KPI tree with North Star Metric (Voice Sessions/DAU), mapped product levers, and identified opportunity spaces ΓÇö multilingual users, commute context, and habit loops.</p>
+        <div class="outcome"><strong>Output:</strong> Full KPI tree ┬╖ Competitive UX audit ┬╖ Go-to-market opportunity sizing for 200M+ non-English users</div>
+        <div class="card-read">Read full case study</div>
+      </div>
+
+    </div>
+    </div>
   </div>
 </section>
 
-<!-- TOOLS — FULL WIDTH 9-COL GRID -->
-<section id="tools">
+<!-- TOOLS ΓÇö FULL WIDTH 9-COL GRID -->
+<section id="tools" aria-label="Tools">
   <div class="tools-stage">
-
-    <!-- ROW 1: 9 cells -->
+    <!-- ROW 1 -->
     <div class="tools-cell"></div>
     <div class="tools-cell">
       <div class="tool-logo reveal">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/figma.svg" style="filter:invert(40%) sepia(90%) saturate(2000%) hue-rotate(340deg)" alt="Figma"/>
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/figma.svg" style="filter:invert(40%) sepia(90%) saturate(2000%) hue-rotate(340deg)" alt="" aria-hidden="true" loading="lazy"/>
         <span style="color:#F24E1E">Figma</span>
       </div>
     </div>
     <div class="tools-cell"></div>
-    <div class="tools-cell"></div><!-- center col 4 row 1 -->
-    <div class="tools-cell"></div><!-- center col 5 row 1 -->
-    <div class="tools-cell"></div><!-- center col 6 row 1 -->
+    <div class="tools-cell"></div>
+    <div class="tools-cell"></div>
+    <div class="tools-cell"></div>
     <div class="tools-cell">
       <div class="tool-logo reveal">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg" alt="Notion"/>
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg" alt="" aria-hidden="true" loading="lazy"/>
         <span style="color:#000">Notion</span>
       </div>
     </div>
     <div class="tools-cell"></div>
     <div class="tools-cell"></div>
-
-    <!-- ROW 2: cols 1-3, center cell (4-6), cols 7-9 -->
+    <!-- ROW 2 -->
     <div class="tools-cell">
       <div class="tool-logo reveal">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftexcel.svg" style="filter:invert(28%) sepia(80%) saturate(500%) hue-rotate(100deg)" alt="Excel"/>
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftexcel.svg" style="filter:invert(28%) sepia(80%) saturate(500%) hue-rotate(100deg)" alt="" aria-hidden="true" loading="lazy"/>
         <span style="color:#217346">Excel</span>
       </div>
     </div>
@@ -494,121 +522,132 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
         <p>Every product decision needs the right tools. These are the ones I use to research, wireframe, analyze, and ship.</p>
         <a href="#work" class="btn-twotone">
           <span class="bt-text">See how I use them</span>
-          <span class="bt-icon">↗</span>
+          <span class="bt-icon">Γåù</span>
         </a>
       </div>
     </div>
     <div class="tools-cell"></div>
     <div class="tools-cell">
       <div class="tool-logo reveal">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/canva.svg" style="filter:invert(60%) sepia(80%) saturate(400%) hue-rotate(140deg)" alt="Canva"/>
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/canva.svg" style="filter:invert(60%) sepia(80%) saturate(400%) hue-rotate(140deg)" alt="" aria-hidden="true" loading="lazy"/>
         <span style="color:#00C4CC">Canva</span>
       </div>
     </div>
     <div class="tools-cell"></div>
-
-    <!-- ROW 3: cols 1-3, center continues, cols 7-9 -->
+    <!-- ROW 3 -->
     <div class="tools-cell"></div>
     <div class="tools-cell">
       <div class="tool-logo reveal">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googleanalytics.svg" style="filter:invert(50%) sepia(90%) saturate(800%) hue-rotate(10deg)" alt="Google Analytics"/>
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googleanalytics.svg" style="filter:invert(50%) sepia(90%) saturate(800%) hue-rotate(10deg)" alt="" aria-hidden="true" loading="lazy"/>
         <span style="color:#E37400">Google Analytics</span>
       </div>
     </div>
     <div class="tools-cell"></div>
-    <!-- center continues (no new cells needed for col 4-6) -->
     <div class="tools-cell">
       <div class="tool-logo reveal">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jira.svg" style="filter:invert(20%) sepia(90%) saturate(1500%) hue-rotate(205deg)" alt="Jira"/>
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jira.svg" style="filter:invert(20%) sepia(90%) saturate(1500%) hue-rotate(205deg)" alt="" aria-hidden="true" loading="lazy"/>
         <span style="color:#0052CC">Jira</span>
       </div>
     </div>
     <div class="tools-cell"></div>
-
-    <!-- ROW 4: cols 1-3, center continues, cols 7-9 -->
+    <!-- ROW 4 -->
     <div class="tools-cell">
       <div class="tool-logo reveal">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/visualstudiocode.svg" style="filter:invert(35%) sepia(80%) saturate(1000%) hue-rotate(180deg)" alt="VS Code"/>
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/visualstudiocode.svg" style="filter:invert(35%) sepia(80%) saturate(1000%) hue-rotate(180deg)" alt="" aria-hidden="true" loading="lazy"/>
         <span style="color:#007ACC">VS Code</span>
       </div>
     </div>
     <div class="tools-cell"></div>
     <div class="tools-cell"></div>
-    <!-- center continues -->
     <div class="tools-cell"></div>
     <div class="tools-cell">
       <div class="tool-logo reveal">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anthropic.svg" style="filter:invert(55%) sepia(60%) saturate(600%) hue-rotate(340deg)" alt="Claude"/>
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anthropic.svg" style="filter:invert(55%) sepia(60%) saturate(600%) hue-rotate(340deg)" alt="" aria-hidden="true" loading="lazy"/>
         <span style="color:#D97757">Claude</span>
       </div>
     </div>
     <div class="tools-cell"></div>
-
-    <!-- ROW 5: 9 cells all empty -->
-    <div class="tools-cell"></div>
-    <div class="tools-cell"></div>
-    <div class="tools-cell"></div>
-    <div class="tools-cell"></div>
-    <div class="tools-cell"></div>
-    <div class="tools-cell"></div>
-    <div class="tools-cell"></div>
-    <div class="tools-cell"></div>
-    <div class="tools-cell"></div>
-
+    <!-- ROW 5 -->
+    <div class="tools-cell"></div><div class="tools-cell"></div><div class="tools-cell"></div>
+    <div class="tools-cell"></div><div class="tools-cell"></div><div class="tools-cell"></div>
+    <div class="tools-cell"></div><div class="tools-cell"></div><div class="tools-cell"></div>
   </div>
 </section>
 
+<!-- TOOLS MOBILE -->
+<div id="tools-mobile" aria-label="Tools">
+  <div class="tc-eyebrow">Tools I think with</div>
+  <h2>The toolkit behind<br><em>the thinking</em></h2>
+  <p>Every product decision needs the right tools. These are the ones I use to research, wireframe, analyze, and ship.</p>
+  <div class="tools-pill-grid">
+    <div class="tool-pill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/figma.svg" style="filter:invert(40%) sepia(90%) saturate(2000%) hue-rotate(340deg)" alt="" loading="lazy"/>Figma</div>
+    <div class="tool-pill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg" alt="" loading="lazy"/>Notion</div>
+    <div class="tool-pill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftexcel.svg" style="filter:invert(28%) sepia(80%) saturate(500%) hue-rotate(100deg)" alt="" loading="lazy"/>Excel</div>
+    <div class="tool-pill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/canva.svg" style="filter:invert(60%) sepia(80%) saturate(400%) hue-rotate(140deg)" alt="" loading="lazy"/>Canva</div>
+    <div class="tool-pill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googleanalytics.svg" style="filter:invert(50%) sepia(90%) saturate(800%) hue-rotate(10deg)" alt="" loading="lazy"/>Google Analytics</div>
+    <div class="tool-pill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jira.svg" style="filter:invert(20%) sepia(90%) saturate(1500%) hue-rotate(205deg)" alt="" loading="lazy"/>Jira</div>
+    <div class="tool-pill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/visualstudiocode.svg" style="filter:invert(35%) sepia(80%) saturate(1000%) hue-rotate(180deg)" alt="" loading="lazy"/>VS Code</div>
+    <div class="tool-pill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anthropic.svg" style="filter:invert(55%) sepia(60%) saturate(600%) hue-rotate(340deg)" alt="" loading="lazy"/>Claude</div>
+  </div>
+  <div style="display:flex;justify-content:center">
+    <a href="#work" class="btn-twotone">
+      <span class="bt-text">See how I use them</span>
+      <span class="bt-icon">Γåù</span>
+    </a>
+  </div>
+</div>
+
 <!-- ABOUT -->
-<section id="about" class="grid-bg">
+<section id="about" class="grid-bg" aria-labelledby="about-heading">
   <div class="sec-inner" style="padding:6rem 8%">
     <div class="sec-label reveal">About me</div>
-    <h2 class="sec-h2 reveal reveal-delay-1">The story<br><em>behind the work</em></h2>
+    <h2 class="sec-h2 reveal reveal-delay-1" id="about-heading">The story<br><em>behind the work</em></h2>
     <div class="about-grid">
       <div class="about-text reveal reveal-delay-1">
-        <p>I'm a third-year CS student at <strong>KIIT Bhubaneswar</strong> who got obsessed with why some products stick and others don't. That curiosity led me deep into both sides — financial modeling, DCF valuations, equity research on one hand, and user flows, friction mapping, and feature proposals on the other.</p>
+        <p>I'm a third-year CS student at <strong>KIIT Bhubaneswar</strong> who got obsessed with why some products stick and others don't. That curiosity led me deep into both sides ΓÇö financial modeling, DCF valuations, equity research on one hand, and user flows, friction mapping, and feature proposals on the other.</p>
         <p>My <strong>FMVA certification</strong> and hands-on experience at a CA firm gave me a rare lens: I can read a P&L and translate it into product decisions that move revenue metrics, not just engagement numbers.</p>
-        <p>I'm currently seeking <strong>product roles</strong> — with a strong pull toward fintech, but equally excited about any product with a complex business model, real user pain, and room to think.</p>
+        <p>I'm currently seeking <strong>product roles</strong> ΓÇö with a strong pull toward fintech, but equally excited about any product with a complex business model, real user pain, and room to think.</p>
       </div>
       <div class="stat-cards reveal reveal-delay-2">
         <div class="stat-card"><span class="sc-label">Institution</span><span class="sc-val">KIIT Bhubaneswar</span></div>
         <div class="stat-card"><span class="sc-label">Degree</span><span class="sc-val">B.Tech CSE</span></div>
-        <div class="stat-card"><span class="sc-label">CGPA</span><span class="sc-val"><span class="counter" data-target="8.32" data-decimal="2">0</span> / 10</span></div>
-        <div class="stat-card"><span class="sc-label">Certification</span><span class="sc-val">FMVA — CFI</span></div>
-        <div class="stat-card"><span class="sc-label">Graduating</span><span class="sc-val"><span class="counter" data-target="2027" data-decimal="0">2023</span></span></div>
+        <div class="stat-card"><span class="sc-label">CGPA</span><span class="sc-val"><span class="counter" data-target="8.32" data-decimal="2" data-start="0">0</span> / 10</span></div>
+        <div class="stat-card"><span class="sc-label">Certification</span><span class="sc-val">FMVA ΓÇö CFI</span></div>
+        <div class="stat-card"><span class="sc-label">Graduating</span><span class="sc-val"><span class="counter" data-target="2027" data-decimal="0" data-start="2027">2027</span></span></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience">
+<section id="experience" aria-labelledby="experience-heading">
   <div class="sec-inner" style="padding:6rem 8%">
     <div class="sec-label reveal">Experience</div>
-    <h2 class="sec-h2 reveal reveal-delay-1">Where I've<br><em>learned by doing</em></h2>
+    <h2 class="sec-h2 reveal reveal-delay-1" id="experience-heading">Where I've<br><em>learned by doing</em></h2>
     <div class="exp-list reveal reveal-delay-2">
       <div class="exp-row">
         <div>
           <div class="exp-role">Finance Intern</div>
-          <div class="exp-co">Rahul Singh & Associates · CA Firm</div>
-          <div class="exp-desc">Worked on client financial records, invoice reconciliation, and compliance documentation. First-hand exposure to SME financial workflows — the exact pain points fintech products are built to solve.</div>
+          <div class="exp-co">Rahul Singh & Associates ┬╖ CA Firm</div>
+          <div class="exp-desc">Worked on client financial records, invoice reconciliation, and compliance documentation. First-hand exposure to SME financial workflows ΓÇö the exact pain points fintech products are built to solve.</div>
         </div>
-        <div><div class="exp-date">2023</div><div class="exp-type">Finance · Ops</div></div>
+        <div><div class="exp-date">Jun 2025 ΓÇô Dec 2025</div><div class="exp-type">Finance ┬╖ Ops</div></div>
       </div>
       <div class="exp-row">
         <div>
-          <div class="exp-role">Equity Research · Valuation</div>
-          <div class="exp-co">Independent · HDFC, Reliance Industries</div>
-          <div class="exp-desc">Built DCF models and sensitivity tables for Reliance. Wrote equity research notes on HDFC — structured thinking PMs need for business-case roadmap arguments.</div>
+          <div class="exp-role">Equity Research ┬╖ Valuation</div>
+          <div class="exp-co">Independent ┬╖ HDFC, Reliance Industries</div>
+          <div class="exp-desc">Built DCF models and sensitivity tables for Reliance. Wrote equity research notes on HDFC ΓÇö structured thinking PMs need for business-case roadmap arguments.</div>
         </div>
-        <div><div class="exp-date">2024</div><div class="exp-type">Finance · Research</div></div>
+        <div><div class="exp-date">Jan 2026</div><div class="exp-type">Finance ┬╖ Research</div></div>
       </div>
       <div class="exp-row">
         <div>
           <div class="exp-role">B.Tech Computer Science Engineering</div>
-          <div class="exp-co">KIIT Bhubaneswar · CGPA 8.32</div>
+          <div class="exp-co">KIIT Bhubaneswar ┬╖ CGPA 8.32</div>
           <div class="exp-desc">Coursework in data structures, ML, and software engineering. Projects at the intersection of NLP and finance. Graduating 2027.</div>
         </div>
-        <div><div class="exp-date">2023–2027</div><div class="exp-type">Education</div></div>
+        <div><div class="exp-date">Jul 2023 ΓÇô 2027</div><div class="exp-type">Education</div></div>
       </div>
       <div class="exp-row">
         <div>
@@ -616,66 +655,68 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
           <div class="exp-co">Corporate Finance Institute (CFI)</div>
           <div class="exp-desc">Financial Modeling & Valuation Analyst. Covers DCF modeling, comparable company analysis, LBO, and financial statement analysis.</div>
         </div>
-        <div><div class="exp-date">2024</div><div class="exp-type">Certification</div></div>
+        <div><div class="exp-date">Jun 2025 ΓÇô Feb 2026</div><div class="exp-type">Certification</div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="grid-bg">
+<section id="contact" class="grid-bg" aria-labelledby="contact-heading">
   <div class="sec-inner" style="padding:6rem 8%">
     <div class="sec-label reveal">Get in touch</div>
     <div class="contact-grid">
       <div class="contact-left reveal reveal-delay-1">
-        <h2 class="sec-h2">Let's build<br><em>something real</em></h2>
-        <p>If you made it here, you're probably the kind of person I want to work with. I'm actively looking for product roles — fintech, SaaS, consumer, anything with a hard problem at its core.</p>
-        <a href="mailto:mrigankrajchouhan@gmail.com" class="btn-burg">Send me an email ↗</a>
+        <h2 class="sec-h2" id="contact-heading">Let's build<br><em>something real</em></h2>
+        <p>If you made it here, you're probably the kind of person I want to work with. I'm actively looking for product roles ΓÇö fintech, SaaS, consumer, anything with a hard problem at its core.</p>
+        <a href="mailto:mrigankrajchouhan@gmail.com?subject=Hiring%20Inquiry%20%E2%80%94%20Product%20Role&body=Hi%20Mrigank%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20wanted%20to%20connect." class="btn-burg">Send me an email Γåù</a>
       </div>
       <div class="clinks reveal reveal-delay-2">
-        <a href="https://www.linkedin.com/in/mrigankraj" target="_blank" class="clink">
-          <div><div class="cl-label">LinkedIn</div><div class="cl-val">linkedin.com/in/mrigankraj</div></div><span>↗</span>
+        <a href="https://www.linkedin.com/in/mrigankraj" target="_blank" rel="noopener noreferrer" class="clink">
+          <div><div class="cl-label">LinkedIn</div><div class="cl-val">linkedin.com/in/mrigankraj</div></div><span>Γåù</span>
         </a>
-        <a href="mailto:mrigankrajchouhan@gmail.com" class="clink">
-          <div><div class="cl-label">Email</div><div class="cl-val">mrigankrajchouhan@gmail.com</div></div><span>↗</span>
+        <a href="mailto:mrigankrajchouhan@gmail.com?subject=Hiring%20Inquiry%20%E2%80%94%20Product%20Role&body=Hi%20Mrigank%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20wanted%20to%20connect." class="clink">
+          <div><div class="cl-label">Email</div><div class="cl-val">mrigankrajchouhan@gmail.com</div></div><span>Γåù</span>
         </a>
-        <a href="#" class="clink">
-          <div><div class="cl-label">Resume</div><div class="cl-val">Download PDF</div></div><span>↗</span>
+        <a href="https://drive.google.com/file/d/1kYIBCZMYXZphIYV6SnHEAYW18jt6zmbJ/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="clink">
+          <div><div class="cl-label">Resume</div><div class="cl-val">Download PDF</div></div><span>Γåù</span>
         </a>
       </div>
     </div>
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer>
   <div class="fl">
     <div class="fl-name">Mrigank Raj <em>Chouhan</em></div>
-    <div class="fl-note">KIIT · B.Tech CSE · Product × Finance × Business</div>
+    <div class="fl-note">KIIT ┬╖ B.Tech CSE ┬╖ Product ├ù Finance ├ù Business</div>
   </div>
   <div class="footer-socials">
-    <a href="#" class="social-icon" title="LinkedIn">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    <a href="https://www.linkedin.com/in/mrigankraj" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
     </a>
-    <a href="https://www.instagram.com/mrigankk.raj/" target="_blank" class="social-icon" title="Instagram">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+    <a href="https://www.instagram.com/mrigankk.raj/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
     </a>
-    <a href="#" class="social-icon" title="X / Twitter">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    <a href="https://x.com/Mrigank_raj22" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
     </a>
   </div>
 </footer>
 
 <!-- MODAL -->
-<div class="modal-overlay" id="modal-overlay" onclick="closeModalOutside(event)">
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="modal-box" id="modal-box">
-    <button class="modal-close" onclick="closeModal()">✕ Close</button>
+    <button class="modal-close" id="modal-close-btn" aria-label="Close modal">Γ£ò Close</button>
     <div id="modal-content"></div>
   </div>
 </div>
 
 <script>
-// ── PHOTO STRIP ──
+// ΓöÇΓöÇ PHOTO STRIP ΓöÇΓöÇ
 const BASE = 'https://raw.githubusercontent.com/mrigank-raj/Portfolio/main/assets/images/';
 const photos = [
   {src:'img1.jpeg', cap:'Yes, I clean up well. Occasionally.', pos:'center 15%'},
@@ -694,57 +735,56 @@ const photos = [
 ];
 const strip = document.getElementById('photo-strip-inner');
 const doubled = [...photos, ...photos];
-strip.innerHTML = doubled.map(p=>`
+strip.innerHTML = doubled.map(p => `
   <div class="photo-card">
     <img src="${BASE}${p.src}" alt="${p.cap}" style="object-position:${p.pos}" loading="lazy"/>
     <div class="photo-card-cap"><p>${p.cap}</p></div>
   </div>`).join('');
 
-// ── MARQUEE ──
-const skills=['Product Thinking','User Research','Wireframing','A/B Testing','Financial Modeling','DCF Valuation','Python','SQL','Go-To-Market Strategy','Roadmapping','FMVA Certified'];
-const mq=document.getElementById('mq-skills');
-mq.innerHTML=[...skills,...skills].map(s=>`<div class="skill-chip">${s}</div>`).join('');
+// ΓöÇΓöÇ MARQUEE ΓöÇΓöÇ
+const skills = ['Product Thinking','User Research','Wireframing','A/B Testing','Financial Modeling','DCF Valuation','Python','SQL','Go-To-Market Strategy','Roadmapping','FMVA Certified'];
+const mq = document.getElementById('mq-skills');
+mq.innerHTML = [...skills, ...skills].map(s => `<div class="skill-chip">${s}</div>`).join('');
 
-// ── SCROLL REVEAL ──
-const revealObserver = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
+// ΓöÇΓöÇ SCROLL REVEAL ΓöÇΓöÇ
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
       e.target.classList.add('visible');
       revealObserver.unobserve(e.target);
     }
   });
-},{threshold:0.12});
-document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+}, {threshold: 0.12});
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// ── COUNTER ANIMATION ──
-function animateCounter(el){
+// ΓöÇΓöÇ COUNTER ANIMATION ΓöÇΓöÇ
+function animateCounter(el) {
   const target = parseFloat(el.dataset.target);
-  const decimals = parseInt(el.dataset.decimal||0);
-  const start = parseFloat(el.dataset.start||0);
+  const decimals = parseInt(el.dataset.decimal || 0);
+  const start = parseFloat(el.dataset.start || 0);
   const duration = 1800;
+  el.textContent = start.toFixed(decimals);
   const startTime = performance.now();
-  function update(now){
+  function update(now) {
     const elapsed = now - startTime;
-    const progress = Math.min(elapsed/duration, 1);
-    // ease out cubic
-    const eased = 1 - Math.pow(1-progress, 3);
-    const current = start + (target-start)*eased;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = start + (target - start) * eased;
     el.textContent = current.toFixed(decimals);
-    if(progress<1) requestAnimationFrame(update);
+    if (progress < 1) requestAnimationFrame(update);
     else el.textContent = target.toFixed(decimals);
   }
   requestAnimationFrame(update);
 }
-
-const counterObserver = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
       animateCounter(e.target);
       counterObserver.unobserve(e.target);
     }
   });
-},{threshold:0.5});
-document.querySelectorAll('.counter').forEach(el=>counterObserver.observe(el));
+}, {threshold: 0.5});
+document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
 
 // ── TABS ──
 function switchTab(tabId, btn) {
@@ -761,228 +801,19 @@ function switchTab(tabId, btn) {
 }
 
 // ── MODALS ──
-const MODALS={
-  myjio:`
-    <div class="modal-tag">Product Teardown · MyJio</div>
-    <div class="modal-h">MyJio: Checking Data-Usage Time Reduced from 2 Minutes to 3 Seconds</div>
-    <div class="modal-section"><h4>Problem Statement</h4>
-      <p><strong>Current Journey:</strong> Home → Mobile → Check Usage → Scroll → Read</p>
-      <p style="margin-top:0.6rem"><strong>Friction points:</strong></p>
-      <ul style="margin-top:0.4rem"><li>Ads & Jio Pop-ups on the home screen</li><li>"Rate Us" pop-up while scrolling usage data</li></ul>
-      <p style="margin-top:0.6rem"><strong>User Pain:</strong> 5 taps to reach the desired screen. 2 minutes of time-to-data creates significant friction for daily users on limited data plans.</p>
-    </div>
-    <div class="modal-section"><h4>User Story</h4>
-      <p>As a daily user on a limited daily data plan, I want to see my remaining data at a glance on my home screen so that I can avoid opening the app and navigating through ads just to check a single number.</p>
-    </div>
-    <div class="modal-section"><h4>The Solution — Home Screen Widget</h4>
-      <p>A 4×1 Android home screen widget. Primary focus on Usage data (bold, large text). Right side: Validity display + "Track Usage" deep-link button.</p>
-      <ul style="margin-top:0.6rem">
-        <li>Reads from the same cached data the app already uses — zero new server calls</li>
-        <li>Tapping triggers a Deep Link Intent (myjio://usage/daily) bypassing the ad-heavy home screen</li>
-        <li>On plan expiry: shows "Recharge Needed" in red, button becomes "Recharge Now"</li>
-        <li>On WiFi: displays "On WiFi" instead of data usage</li>
-      </ul>
-    </div>
-    <div class="modal-section"><h4>Technical Feasibility</h4>
-      <p>The Check Usage screen loads instantly even on weak networks — data is cached locally (Android SharedPreferences or local database). The widget reads from this same cache. No new backend infrastructure needed.</p>
-    </div>
-    <div class="modal-section"><h4>Success Metrics</h4>
-      <div class="modal-metric">
-        <div class="metric-pill"><div class="mv">&gt;5%</div><div class="ml">Widget adoption in 30 days</div></div>
-        <div class="metric-pill"><div class="mv">10–15%</div><div class="ml">Drop in daily app opens</div></div>
-        <div class="metric-pill"><div class="mv">20%</div><div class="ml">Fewer support tickets</div></div>
+const MODAL_DATA = {
+  beyondlabel: {
+    tag: 'Shipped Product · React · AI',
+    title: 'BeyondLabel: See Through Food Labels',
+    body: `
+      <img src="assets/projects/beyondlabel_app.png" alt="BeyondLabel App Screenshot" style="width:100%; border-radius:12px; border:1px solid var(--border); box-shadow:0 8px 30px rgba(26,20,16,0.06); margin-bottom:1.5rem;">
+      <div class="modal-section"><h4>The Problem</h4>
+        <p>FSSAI's weak labeling regulations in India let brands deceive consumers through tactics like soy protein inflation, "no refined sugar" claims for jaggery, and unrealistic serving sizes. Consumers struggle to make informed choices.</p>
+        <p style="font-style:italic;font-size:0.9rem;margin-top:0.5rem">"I kept buying 'protein bars' that were just sugar with marketing."</p>
       </div>
-    </div>
-    <div class="modal-section"><h4>A/B Test Rollout Plan</h4>
-      <ul>
-        <li><strong>Phase 1 (1 week):</strong> 1% of Android users who visited Check Usage 3+ times in past 7 days</li>
-        <li><strong>Phase 2 (2 weeks):</strong> 10% Treatment vs 10% Control — adoption rate, app opens, uninstall rate</li>
-        <li><strong>Phase 3:</strong> Full rollout if Go criteria met</li>
-      </ul>
-    </div>
-    <div class="modal-section"><h4>Go / No-Go Criteria</h4>
-      <div class="modal-outcome">
-        <strong>Go:</strong> &gt;5% adoption in 14 days · Uninstall rate flat · Support tickets down &gt;10% · Ad views decrease &lt;8%<br><br>
-        <strong>No-Go:</strong> &lt;2% adoption · Uninstall rate up &gt;1% · Ad views drop &gt;15%
+      <div class="modal-section"><h4>The Solution</h4>
+        <p>A web app where users upload a photo of an ingredients list. The AI (Llama 3 Vision) extracts the text and cross-references it against a database of hidden sugars, allergens, and misleading marketing terms, returning a transparent health score.</p>
       </div>
-    </div>
-    <div class="modal-section"><h4>Alternative Solutions Considered</h4>
-      <ul>
-        <li><strong>Move usage to home screen:</strong> Rejected — conflicts with ad inventory</li>
-        <li><strong>Daily push notifications:</strong> Rejected — notification fatigue</li>
-        <li><strong>Improve in-app navigation:</strong> Rejected — doesn't solve the ad interruption problem</li>
-      </ul>
-    </div>
-    <p style="font-size:0.75rem;color:var(--muted);margin-top:1.5rem;font-style:italic">*Independent product teardown. Not affiliated with Reliance Jio.</p>`,
-
-  zomato:`
-    <div class="modal-tag">Product Teardown · Zomato</div>
-    <div class="modal-h">Hungry. Open Zomato. Scroll. Scroll. Scroll… Still Can't Decide.</div>
-    <div class="modal-section"><h4>Problem Statement</h4>
-      <p>Users browse but don't order. The gap between intent and order is a product opportunity — not a user failure.</p>
-      <ul style="margin-top:0.6rem">
-        <li>500+ options — everything looks the same</li>
-        <li>No signal for "what's best right now"</li>
-        <li>Scroll fatigue leads to app closure, order lost</li>
-      </ul>
-    </div>
-    <div class="modal-section"><h4>Core Friction Analysis</h4>
-      <div class="modal-outcome"><strong>Core Friction:</strong> Too many choices<br><strong>User Behavior:</strong> Browse, not buy<br><strong>Product Gap:</strong> No decision layer exists</div>
-    </div>
-    <div class="modal-section"><h4>User Insight</h4>
-      <p style="font-style:italic;font-size:0.9rem">"Sometimes everything looks good and I can't choose… other times what I like is out of budget."</p>
-      <p style="margin-top:0.5rem;color:var(--muted);font-size:0.8rem">Based on personal experience and user conversations</p>
-      <div class="modal-outcome" style="margin-top:0.75rem">→ Users struggle between too many choices and budget constraints</div>
-    </div>
-    <div class="modal-section"><h4>The Solution — "Help Me Decide"</h4>
-      <p>One tap. Three curated picks. Placed right below the search bar — where intent is highest.</p>
-      <ul style="margin-top:0.6rem">
-        <li><strong>Instant recommendations</strong> — no scrolling required</li>
-        <li><strong>Personalized</strong> to order history and time of day</li>
-        <li><strong>Each pick explains why it's for you</strong></li>
-      </ul>
-      <p style="margin-top:0.75rem">3 choices: <strong>Safe choice</strong> (past orders) · <strong>Best pick</strong> (top-rated + fastest) · <strong>Explore</strong> (new but relevant)</p>
-    </div>
-    <div class="modal-section"><h4>Expected Outcomes</h4>
-      <div class="modal-metric">
-        <div class="metric-pill"><div class="mv">↑ CVR</div><div class="ml">Intent-to-order gap closed</div></div>
-        <div class="metric-pill"><div class="mv">↑ GMV</div><div class="ml">More completed orders</div></div>
-        <div class="metric-pill"><div class="mv">↑ Retention</div><div class="ml">Personalization builds habit</div></div>
-      </div>
-    </div>
-    <div class="modal-section"><h4>Business Impact</h4>
-      <div class="modal-outcome">
-        <strong>Faster decisions</strong> — Browse to order in one tap<br>
-        <strong>Higher CVR (expected)</strong> — Removes the biggest friction point<br>
-        <strong>Stronger retention</strong> — Personalization drives repeat behavior<br>
-        <strong>GMV uplift</strong> — More completed orders = direct revenue impact<br><br>
-        → Less thinking. More ordering.
-      </div>
-    </div>
-    <p style="font-size:0.75rem;color:var(--muted);margin-top:1.5rem;font-style:italic">*Independent product teardown. Not affiliated with Zomato.</p>`,
-
-  chatgpt: `
-    <div class="modal-tag">User Research · Market Sizing</div>
-    <div class="modal-h">ChatGPT Voice Adoption in India — User Research</div>
-    <div class="modal-section"><h4>Research Context</h4>
-      <p>India has 500M+ voice search users and is one of ChatGPT's fastest-growing markets. Yet voice input adoption on ChatGPT remains low. This research set out to find out why — and whether the assumption that users "can't find the feature" was actually true.</p>
-    </div>
-    <div class="modal-section"><h4>Segment Selected — Indian Students 18–24</h4>
-      <p>Among all evaluated segments (tech professionals, freelancers, knowledge workers), students showed the strongest combination of mobile-first behavior, high-frequency ChatGPT usage, and long-term habit formation value. Hinglish and regional language switching also made this a unique localization signal.</p>
-      <div class="modal-metric">
-        <div class="metric-pill"><div class="mv">100M+</div><div class="ml">Weekly ChatGPT users in India</div></div>
-        <div class="metric-pill"><div class="mv">n=34</div><div class="ml">Primary survey respondents</div></div>
-        <div class="metric-pill"><div class="mv">18–24</div><div class="ml">Age bracket surveyed</div></div>
-      </div>
-    </div>
-    <div class="modal-section"><h4>Hypothesis Testing</h4>
-      <div class="modal-outcome">
-        <strong>Discoverability gap</strong> — INVALIDATED. 97% already knew the feature existed.<br><br>
-        <strong>Social discomfort</strong> — VALIDATED. Avg comfort score: 3.82 alone vs 2.06 in library/shared space.<br><br>
-        <strong>Typing preference</strong> — STRONGLY VALIDATED. 71% still preferred typing even when they knew about voice.<br><br>
-        <strong>Privacy concerns</strong> — PARTIAL. Present but secondary to workflow fit.<br><br>
-        <strong>Accent / Hinglish recognition</strong> — PARTIAL. A barrier for some, not universal.
-      </div>
-    </div>
-    <div class="modal-section"><h4>Top Barriers (Q11, multiple select)</h4>
-      <ul>
-        <li><strong>Typing faster</strong> — most cited barrier (12 respondents)</li>
-        <li><strong>More control when typing</strong> — second most cited (10)</li>
-        <li><strong>Public space discomfort</strong> — strong contextual suppressor (8)</li>
-        <li><strong>Privacy concern</strong> — secondary (5)</li>
-        <li><strong>Accent / recognition failures</strong> — minority concern (2)</li>
-      </ul>
-    </div>
-    <div class="modal-section"><h4>What Students Said</h4>
-      <div class="modal-outcome">
-        <em>"I use voice only when my hands are busy."</em> — usage is context-driven, not habitual<br><br>
-        <em>"I don't want people around me hearing my queries."</em> — social friction is real<br><br>
-        <em>"For assignments and coding, I still prefer typing."</em> — workflow mismatch, not awareness
-      </div>
-    </div>
-    <div class="modal-section"><h4>Research Conclusion</h4>
-      <p>Voice is not a universal replacement for typing. It works best in specific, high-intent, low-social-pressure contexts. The problem ChatGPT needs to solve is not discoverability — it's workflow fit and contextual relevance.</p>
-    </div>
-    <p style="font-size:0.75rem;color:var(--muted);margin-top:1.5rem;font-style:italic">*Independent research. Survey n=34 · Indian students 18–24. Not affiliated with OpenAI.</p>`,
-
-  systems: `
-    <div class="modal-tag">Product Strategy · ChatGPT Voice India</div>
-    <div class="modal-h">Systems Thinking & Outcome Mapping — ChatGPT Voice</div>
-    <div class="modal-section"><h4>Why Voice Matters for ChatGPT</h4>
-      <div class="modal-metric">
-        <div class="metric-pill"><div class="mv">↑ Q/Session</div><div class="ml">Voice removes blank-screen friction</div></div>
-        <div class="metric-pill"><div class="mv">+200M</div><div class="ml">Non-English users unlocked</div></div>
-        <div class="metric-pill"><div class="mv">↑ D7/D30</div><div class="ml">Commute habit loops drive return</div></div>
-      </div>
-    </div>
-    <div class="modal-section"><h4>Competitive UX Audit</h4>
-      <ul>
-        <li><strong>Mic icon buried in text field</strong> + Voice Mode behind separate top-right icon → two entry points, zero guidance on which to use</li>
-        <li><strong>No first-launch tooltip</strong> — discoverability is entirely passive</li>
-        <li><strong>Conversational tasks work well</strong> (mock interviews, brainstorming, Q&amp;A)</li>
-        <li><strong>Structured output tasks fail</strong> — no way to correct mid-utterance or edit before sending</li>
-        <li><strong>No contextual trigger</strong> — voice is never suggested based on session behavior, keyboard state, or dwell time</li>
-      </ul>
-      <div class="modal-outcome" style="margin-top:0.75rem"><strong>Key takeaway:</strong> Voice adoption scales when anchored to a specific, repeatable user intent — not when it's a general input option. WhatsApp (100M+ daily voice notes) and Alexa prove this.</div>
-    </div>
-    <div class="modal-section"><h4>KPI Tree</h4>
-      <div class="modal-outcome">
-        <strong>North Star:</strong> Voice Sessions / DAU<br><br>
-        <strong>Input Metrics:</strong><br>
-        · Voice Session Start Rate — % sessions where mic is tapped<br>
-        · Voice Session Completion Rate — % voice inputs sent without cancelling<br>
-        · Voice D7 Repeat Rate — users who use voice again within 7 days<br><br>
-        <strong>Levers:</strong><br>
-        · Hesitation Trigger (2–3s dwell on text field)<br>
-        · Vernacular Keyboard Detection<br>
-        · Rapid Chat Mode Switch (3+ messages in quick succession)
-      </div>
-    </div>
-    <div class="modal-section"><h4>Opportunity Spaces</h4>
-      <ul>
-        <li><strong>Commute context</strong> — avg Indian commuter spends 1.5 hrs/day in transit. Mobile-first country. Highest-leverage moment for voice habit formation.</li>
-        <li><strong>Vernacular & multilingual users</strong> — Hindi/Tamil/Telugu voice queries growing 400% YoY on Google. ChatGPT's biggest untapped voice segment is non-English-first users.</li>
-        <li><strong>Hands-busy tasks</strong> — cooking, commuting, exercising. Low social friction, high intent.</li>
-        <li><strong>Feature phone & rural India GTM</strong> — voice-first positions ChatGPT beyond smartphone power users.</li>
-      </ul>
-    </div>
-    <div class="modal-section"><h4>Outcome Map</h4>
-      <div class="modal-outcome">
-        <strong>User pain:</strong> Voice feels less controllable and skimmable than typing in academic/shared environments<br><br>
-        <strong>Business objective:</strong> Increase voice engagement, session frequency, and long-term conversational AI habit formation<br><br>
-        <strong>Measurable outcome:</strong> Voice Sessions/DAU ↑ · D7 repeat rate ↑ · Multilingual session share ↑<br><br>
-        <strong>Execution priority:</strong> Context-aware voice nudges → own the commute moment → vernacular expansion
-      </div>
-    </div>
-    <p style="font-size:0.75rem;color:var(--muted);margin-top:1.5rem;font-style:italic">*Independent product strategy project. Not affiliated with OpenAI.</p>`,
-
-  beyondlabel:`
-    <div class="modal-tag">Shipped Product · React · AI</div>
-    <div class="modal-h">BeyondLabel: See Through <em>Food Labels</em></div>
-    <img src="assets/projects/beyondlabel_app.png" alt="BeyondLabel App Screenshot" style="width:100%; border-radius:12px; border:1px solid var(--border); box-shadow:0 8px 30px rgba(26,20,16,0.06); margin-bottom:1.5rem;">
-    <div class="modal-section"><h4>The Problem</h4>
-      <p>FSSAI's weak labeling regulations in India let brands deceive consumers through tactics like soy protein inflation, "no refined sugar" claims for jaggery, and unrealistic serving sizes. Consumers struggle to make informed choices.</p>
-      <p style="font-style:italic;font-size:0.9rem;margin-top:0.5rem">"I kept buying 'protein bars' that were just sugar with marketing."</p>
-    </div>
-    <div class="modal-section"><h4>The Hypothesis</h4>
-      <div class="modal-outcome">If users could get instant, goal-specific verdicts on food products, they would make healthier choices and avoid deceptive marketing.</div>
-    </div>
-    <div class="modal-section"><h4>The Solution</h4>
-      <p>An AI-powered web app that provides plain-English verdicts based on the user's specific health goal.</p>
-      <ul style="margin-top:0.6rem">
-        <li><strong>3 Input Methods:</strong> Type product name, upload label photo, or use camera.</li>
-        <li><strong>4 Health Goals:</strong> Muscle Gain, Fat Loss, General Health, Diabetes Management.</li>
-        <li><strong>Clear Verdicts:</strong> ✅ Trustworthy, ⚠️ Question It, ❌ Avoid.</li>
-      </ul>
-    </div>
-    <div class="modal-section"><h4>Tech Decisions (The PM Lens)</h4>
-      <ul>
-        <li><strong>Groq API (Llama 3.1):</strong> Chosen for ultra-fast text analysis, crucial for a snappy user experience.</li>
-        <li><strong>Gemini Vision API:</strong> Chosen for its robust OCR and image understanding capabilities to analyze label photos.</li>
-        <li><strong>No Backend (MVP):</strong> Kept architecture simple by calling APIs directly from the frontend to accelerate time-to-market.</li>
-      </ul>
-    </div>
-    <div class="modal-section"><h4>Project Scope & Links</h4>
       <div class="modal-metric">
         <div class="metric-pill"><div class="mv">3</div><div class="ml">Input Methods</div></div>
         <div class="metric-pill"><div class="mv">4</div><div class="ml">Health Goals</div></div>
@@ -992,27 +823,28 @@ const MODALS={
         <a href="https://beyondlabel.vercel.app" target="_blank" class="btn-burg">View Live App ↗</a>
         <a href="https://github.com/mrigank-raj/BeyondLabel" target="_blank" class="btn-outline">View GitHub ↗</a>
       </div>
-    </div>`,
-  zomatobuild:`
-    <div class="modal-tag">Shipped Product · FastAPI · React · AI</div>
-    <div class="modal-h">Zomato Recommender: AI Dining Engine</div>
-    <img src="assets/projects/zomato.png" alt="Zomato App Screenshot" style="width:100%; border-radius:12px; border:1px solid var(--border); box-shadow:0 8px 30px rgba(26,20,16,0.06); margin-bottom:1.5rem;">
-    <div class="modal-section"><h4>The Problem</h4>
-      <p>Standard restaurant discovery relies on simple filters (price, cuisine, rating). This fails when a user has a complex, nuanced intent like <em>"a quiet place for a date night with good vegan options under ₹1500."</em></p>
-    </div>
-    <div class="modal-section"><h4>The Architecture</h4>
-      <p>I built a fullstack solution to bridge this gap using modern AI infrastructure:</p>
-      <ul style="margin-top:0.6rem">
-        <li><strong>Data Layer:</strong> Cleaned and cached a 30,000+ restaurant dataset from Hugging Face for instant retrieval.</li>
-        <li><strong>Backend (FastAPI):</strong> A high-performance Python backend handles search heuristics and formats tabular data for the LLM context window.</li>
-        <li><strong>AI Engine (Groq + Llama 3):</strong> Ingests the filtered restaurant data and the user's natural language query to return highly personalized, reasoning-backed recommendations.</li>
-        <li><strong>Frontend (React + Vite):</strong> A clean, responsive chat interface.</li>
-      </ul>
-    </div>
-    <div class="modal-section"><h4>Deployment Strategy & PM Reality</h4>
-      <p>While the frontend lives permanently on Vercel, the Python/Pandas backend requires a dedicated server (like Railway). <strong>As a PM, part of the job is managing maintenance overhead.</strong> Instead of continuously paying for server uptime for a portfolio piece, the codebase is fully open-sourced with a detailed deployment pipeline.</p>
-    </div>
-    <div class="modal-section"><h4>Project Links</h4>
+    `
+  },
+  zomatobuild: {
+    tag: 'Shipped Product · FastAPI · React · AI',
+    title: 'Zomato Recommender: AI Dining Engine',
+    body: `
+      <img src="assets/projects/zomato.png" alt="Zomato App Screenshot" style="width:100%; border-radius:12px; border:1px solid var(--border); box-shadow:0 8px 30px rgba(26,20,16,0.06); margin-bottom:1.5rem;">
+      <div class="modal-section"><h4>The Problem</h4>
+        <p>Standard restaurant discovery relies on simple filters (price, cuisine, rating). This fails when a user has a complex, nuanced intent like <em>"a quiet place for a date night with good vegan options under ₹1500."</em></p>
+      </div>
+      <div class="modal-section"><h4>The Architecture</h4>
+        <p>I built a fullstack solution to bridge this gap using modern AI infrastructure:</p>
+        <ul style="margin-top:0.6rem">
+          <li><strong>Data Layer:</strong> Cleaned and cached a 30,000+ restaurant dataset from Hugging Face for instant retrieval.</li>
+          <li><strong>Backend (FastAPI):</strong> A high-performance Python backend handles search heuristics and formats tabular data for the LLM context window.</li>
+          <li><strong>AI Engine (Groq + Llama 3):</strong> Ingests the filtered restaurant data and the user's natural language query to return highly personalized, reasoning-backed recommendations.</li>
+          <li><strong>Frontend (React + Vite):</strong> A clean, responsive chat interface.</li>
+        </ul>
+      </div>
+      <div class="modal-section"><h4>Deployment Strategy & PM Reality</h4>
+        <p>While the frontend lives permanently on Vercel, the Python/Pandas backend requires a dedicated server (like Railway). <strong>As a PM, part of the job is managing maintenance overhead.</strong> Instead of continuously paying for server uptime for a portfolio piece, the codebase is fully open-sourced with a detailed deployment pipeline.</p>
+      </div>
       <div class="modal-metric" style="margin-bottom: 1.5rem">
         <div class="metric-pill"><div class="mv">30k+</div><div class="ml">Restaurants</div></div>
         <div class="metric-pill"><div class="mv">FastAPI</div><div class="ml">Backend</div></div>
@@ -1022,23 +854,248 @@ const MODALS={
         <a href="https://zomato-milestone1-9ep8.vercel.app/" target="_blank" class="btn-burg">View Live App ↗</a>
         <a href="https://github.com/mrigank-raj/Zomato-milestone1" target="_blank" class="btn-outline">View GitHub ↗</a>
       </div>
-    </div>
-  `
+    `
+  },
+  myjio: {
+    tag: 'Product Teardown ┬╖ MyJio',
+    title: 'MyJio: Checking Data-Usage Time Reduced from 2 Minutes to 3 Seconds',
+    body: `
+      <div class="modal-section"><h4>Problem Statement</h4>
+        <p><strong>Current Journey:</strong> Home ΓåÆ Mobile ΓåÆ Check Usage ΓåÆ Scroll ΓåÆ Read</p>
+        <p style="margin-top:0.6rem"><strong>Friction points:</strong></p>
+        <ul style="margin-top:0.4rem"><li>Ads & Jio Pop-ups on the home screen</li><li>"Rate Us" pop-up while scrolling usage data</li></ul>
+        <p style="margin-top:0.6rem"><strong>User Pain:</strong> 5 taps to reach the desired screen. 2 minutes of time-to-data creates significant friction for daily users on limited data plans.</p>
+      </div>
+      <div class="modal-section"><h4>User Story</h4>
+        <p>As a daily user on a limited daily data plan, I want to see my remaining data at a glance on my home screen so that I can avoid opening the app and navigating through ads just to check a single number.</p>
+      </div>
+      <div class="modal-section"><h4>The Solution ΓÇö Home Screen Widget</h4>
+        <p>A 4├ù1 Android home screen widget. Primary focus on Usage data (bold, large text). Right side: Validity display + "Track Usage" deep-link button.</p>
+        <ul style="margin-top:0.6rem">
+          <li>Reads from the same cached data the app already uses ΓÇö zero new server calls</li>
+          <li>Tapping triggers a Deep Link Intent (myjio://usage/daily) bypassing the ad-heavy home screen</li>
+          <li>On plan expiry: shows "Recharge Needed" in red, button becomes "Recharge Now"</li>
+          <li>On WiFi: displays "On WiFi" instead of data usage</li>
+        </ul>
+      </div>
+      <div class="modal-section"><h4>Technical Feasibility</h4>
+        <p>The Check Usage screen loads instantly even on weak networks ΓÇö data is cached locally (Android SharedPreferences or local database). The widget reads from this same cache. No new backend infrastructure needed.</p>
+      </div>
+      <div class="modal-section"><h4>Success Metrics</h4>
+        <div class="modal-metric">
+          <div class="metric-pill"><div class="mv">&gt;5%</div><div class="ml">Widget adoption in 30 days</div></div>
+          <div class="metric-pill"><div class="mv">10ΓÇô15%</div><div class="ml">Drop in daily app opens</div></div>
+          <div class="metric-pill"><div class="mv">20%</div><div class="ml">Fewer support tickets</div></div>
+        </div>
+      </div>
+      <div class="modal-section"><h4>A/B Test Rollout Plan</h4>
+        <ul>
+          <li><strong>Phase 1 (1 week):</strong> 1% of Android users who visited Check Usage 3+ times in past 7 days</li>
+          <li><strong>Phase 2 (2 weeks):</strong> 10% Treatment vs 10% Control ΓÇö adoption rate, app opens, uninstall rate</li>
+          <li><strong>Phase 3:</strong> Full rollout if Go criteria met</li>
+        </ul>
+      </div>
+      <div class="modal-section"><h4>Go / No-Go Criteria</h4>
+        <div class="modal-outcome">
+          <strong>Go:</strong> &gt;5% adoption in 14 days ┬╖ Uninstall rate flat ┬╖ Support tickets down &gt;10% ┬╖ Ad views decrease &lt;8%<br><br>
+          <strong>No-Go:</strong> &lt;2% adoption ┬╖ Uninstall rate up &gt;1% ┬╖ Ad views drop &gt;15%
+        </div>
+      </div>
+      <div class="modal-section"><h4>Alternative Solutions Considered</h4>
+        <ul>
+          <li><strong>Move usage to home screen:</strong> Rejected ΓÇö conflicts with ad inventory</li>
+          <li><strong>Daily push notifications:</strong> Rejected ΓÇö notification fatigue</li>
+          <li><strong>Improve in-app navigation:</strong> Rejected ΓÇö doesn't solve the ad interruption problem</li>
+        </ul>
+      </div>
+      <p style="font-size:0.75rem;color:var(--muted);margin-top:1.5rem;font-style:italic">*Independent product teardown. Not affiliated with Reliance Jio.</p>`
+  },
+  chatgpt: {
+    tag: 'User Research ┬╖ ChatGPT Voice India',
+    title: 'ChatGPT Voice Adoption in India ΓÇö User Research',
+    body: `
+      <div class="modal-section"><h4>Research Context</h4>
+        <p>India has 500M+ voice search users and is one of ChatGPT's fastest-growing markets. Yet voice input adoption on ChatGPT remains low. This research set out to find out why ΓÇö and whether the assumption that users "can't find the feature" was actually true.</p>
+      </div>
+      <div class="modal-section"><h4>Segment Selected ΓÇö Indian Students 18ΓÇô24</h4>
+        <p>Among all evaluated segments (tech professionals, freelancers, knowledge workers), students showed the strongest combination of mobile-first behavior, high-frequency ChatGPT usage, and long-term habit formation value. Hinglish and regional language switching also made this a unique localization signal.</p>
+        <div class="modal-metric">
+          <div class="metric-pill"><div class="mv">100M+</div><div class="ml">Weekly ChatGPT users in India</div></div>
+          <div class="metric-pill"><div class="mv">n=34</div><div class="ml">Primary survey respondents</div></div>
+          <div class="metric-pill"><div class="mv">18ΓÇô24</div><div class="ml">Age bracket surveyed</div></div>
+        </div>
+      </div>
+      <div class="modal-section"><h4>Hypothesis Testing</h4>
+        <div class="modal-outcome">
+          <strong>Discoverability gap</strong> ΓÇö INVALIDATED. 97% already knew the feature existed.<br><br>
+          <strong>Social discomfort</strong> ΓÇö VALIDATED. Avg comfort score: 3.82 alone vs 2.06 in library/shared space.<br><br>
+          <strong>Typing preference</strong> ΓÇö STRONGLY VALIDATED. 71% still preferred typing even when they knew about voice.<br><br>
+          <strong>Privacy concerns</strong> ΓÇö PARTIAL. Present but secondary to workflow fit.<br><br>
+          <strong>Accent / Hinglish recognition</strong> ΓÇö PARTIAL. A barrier for some, not universal.
+        </div>
+      </div>
+      <div class="modal-section"><h4>Top Barriers (Q11, multiple select)</h4>
+        <ul>
+          <li><strong>Typing faster</strong> ΓÇö most cited barrier (12 respondents)</li>
+          <li><strong>More control when typing</strong> ΓÇö second most cited (10)</li>
+          <li><strong>Public space discomfort</strong> ΓÇö strong contextual suppressor (8)</li>
+          <li><strong>Privacy concern</strong> ΓÇö secondary (5)</li>
+          <li><strong>Accent / recognition failures</strong> ΓÇö minority concern (2)</li>
+        </ul>
+      </div>
+      <div class="modal-section"><h4>What Students Said</h4>
+        <div class="modal-outcome">
+          <em>"I use voice only when my hands are busy."</em> ΓÇö usage is context-driven, not habitual<br><br>
+          <em>"I don't want people around me hearing my queries."</em> ΓÇö social friction is real<br><br>
+          <em>"For assignments and coding, I still prefer typing."</em> ΓÇö workflow mismatch, not awareness
+        </div>
+      </div>
+      <div class="modal-section"><h4>Research Conclusion</h4>
+        <p>Voice is not a universal replacement for typing. It works best in specific, high-intent, low-social-pressure contexts. The problem ChatGPT needs to solve is not discoverability ΓÇö it's workflow fit and contextual relevance.</p>
+      </div>
+      <p style="font-size:0.75rem;color:var(--muted);margin-top:1.5rem;font-style:italic">*Independent research. Survey n=34 ┬╖ Indian students 18ΓÇô24. Not affiliated with OpenAI.</p>`
+  },
+  systems: {
+    tag: 'Product Strategy ┬╖ ChatGPT Voice India',
+    title: 'Systems Thinking & Outcome Mapping ΓÇö ChatGPT Voice',
+    body: `
+      <div class="modal-section"><h4>Why Voice Matters for ChatGPT</h4>
+        <div class="modal-metric">
+          <div class="metric-pill"><div class="mv">Γåæ Q/Session</div><div class="ml">Voice removes blank-screen friction</div></div>
+          <div class="metric-pill"><div class="mv">+200M</div><div class="ml">Non-English users unlocked</div></div>
+          <div class="metric-pill"><div class="mv">Γåæ D7/D30</div><div class="ml">Commute habit loops drive return</div></div>
+        </div>
+      </div>
+      <div class="modal-section"><h4>Competitive UX Audit</h4>
+        <ul>
+          <li><strong>Mic icon buried in text field</strong> + Voice Mode behind separate top-right icon ΓåÆ two entry points, zero guidance on which to use</li>
+          <li><strong>No first-launch tooltip</strong> ΓÇö discoverability is entirely passive</li>
+          <li><strong>Conversational tasks work well</strong> (mock interviews, brainstorming, Q&amp;A)</li>
+          <li><strong>Structured output tasks fail</strong> ΓÇö no way to correct mid-utterance or edit before sending</li>
+          <li><strong>No contextual trigger</strong> ΓÇö voice is never suggested based on session behavior, keyboard state, or dwell time</li>
+        </ul>
+        <div class="modal-outcome" style="margin-top:0.75rem"><strong>Key takeaway:</strong> Voice adoption scales when anchored to a specific, repeatable user intent ΓÇö not when it's a general input option. WhatsApp (100M+ daily voice notes) and Alexa prove this.</div>
+      </div>
+      <div class="modal-section"><h4>KPI Tree</h4>
+        <div class="modal-outcome">
+          <strong>North Star:</strong> Voice Sessions / DAU<br><br>
+          <strong>Input Metrics:</strong><br>
+          ┬╖ Voice Session Start Rate ΓÇö % sessions where mic is tapped<br>
+          ┬╖ Voice Session Completion Rate ΓÇö % voice inputs sent without cancelling<br>
+          ┬╖ Voice D7 Repeat Rate ΓÇö users who use voice again within 7 days<br><br>
+          <strong>Levers:</strong><br>
+          ┬╖ Hesitation Trigger (2ΓÇô3s dwell on text field)<br>
+          ┬╖ Vernacular Keyboard Detection<br>
+          ┬╖ Rapid Chat Mode Switch (3+ messages in quick succession)
+        </div>
+      </div>
+      <div class="modal-section"><h4>Opportunity Spaces</h4>
+        <ul>
+          <li><strong>Commute context</strong> ΓÇö avg Indian commuter spends 1.5 hrs/day in transit. Mobile-first country. Highest-leverage moment for voice habit formation.</li>
+          <li><strong>Vernacular & multilingual users</strong> ΓÇö Hindi/Tamil/Telugu voice queries growing 400% YoY on Google. ChatGPT's biggest untapped voice segment is non-English-first users.</li>
+          <li><strong>Hands-busy tasks</strong> ΓÇö cooking, commuting, exercising. Low social friction, high intent.</li>
+          <li><strong>Feature phone & rural India GTM</strong> ΓÇö voice-first positions ChatGPT beyond smartphone power users.</li>
+        </ul>
+      </div>
+      <div class="modal-section"><h4>Outcome Map</h4>
+        <div class="modal-outcome">
+          <strong>User pain:</strong> Voice feels less controllable and skimmable than typing in academic/shared environments<br><br>
+          <strong>Business objective:</strong> Increase voice engagement, session frequency, and long-term conversational AI habit formation<br><br>
+          <strong>Measurable outcome:</strong> Voice Sessions/DAU Γåæ ┬╖ D7 repeat rate Γåæ ┬╖ Multilingual session share Γåæ<br><br>
+          <strong>Execution priority:</strong> Context-aware voice nudges ΓåÆ own the commute moment ΓåÆ vernacular expansion
+        </div>
+      </div>
+      <p style="font-size:0.75rem;color:var(--muted);margin-top:1.5rem;font-style:italic">*Independent product strategy project. Not affiliated with OpenAI.</p>`
+  },
+  zomato: {
+    tag: 'Product Teardown ┬╖ Zomato',
+    title: 'Hungry. Open Zomato. Scroll. Scroll. ScrollΓÇª Still Can\'t Decide.',
+    body: `
+      <div class="modal-section"><h4>Problem Statement</h4>
+        <p>Users browse but don't order. The gap between intent and order is a product opportunity ΓÇö not a user failure.</p>
+        <ul style="margin-top:0.6rem">
+          <li>500+ options ΓÇö everything looks the same</li>
+          <li>No signal for "what's best right now"</li>
+          <li>Scroll fatigue leads to app closure, order lost</li>
+        </ul>
+      </div>
+      <div class="modal-section"><h4>Core Friction Analysis</h4>
+        <div class="modal-outcome"><strong>Core Friction:</strong> Too many choices<br><strong>User Behavior:</strong> Browse, not buy<br><strong>Product Gap:</strong> No decision layer exists</div>
+      </div>
+      <div class="modal-section"><h4>User Insight</h4>
+        <p style="font-style:italic;font-size:0.9rem">"Sometimes everything looks good and I can't chooseΓÇª other times what I like is out of budget."</p>
+        <p style="margin-top:0.5rem;color:var(--muted);font-size:0.8rem">Based on personal experience and user conversations</p>
+        <div class="modal-outcome" style="margin-top:0.75rem">ΓåÆ Users struggle between too many choices and budget constraints</div>
+      </div>
+      <div class="modal-section"><h4>The Solution ΓÇö "Help Me Decide"</h4>
+        <p>One tap. Three curated picks. Placed right below the search bar ΓÇö where intent is highest.</p>
+        <ul style="margin-top:0.6rem">
+          <li><strong>Instant recommendations</strong> ΓÇö no scrolling required</li>
+          <li><strong>Personalized</strong> to order history and time of day</li>
+          <li><strong>Each pick explains why it's for you</strong></li>
+        </ul>
+        <p style="margin-top:0.75rem">3 choices: <strong>Safe choice</strong> (past orders) ┬╖ <strong>Best pick</strong> (top-rated + fastest) ┬╖ <strong>Explore</strong> (new but relevant)</p>
+      </div>
+      <div class="modal-section"><h4>Expected Outcomes</h4>
+        <div class="modal-metric">
+          <div class="metric-pill"><div class="mv">Γåæ CVR</div><div class="ml">Intent-to-order gap closed</div></div>
+          <div class="metric-pill"><div class="mv">Γåæ GMV</div><div class="ml">More completed orders</div></div>
+          <div class="metric-pill"><div class="mv">Γåæ Retention</div><div class="ml">Personalization builds habit</div></div>
+        </div>
+      </div>
+      <div class="modal-section"><h4>Business Impact</h4>
+        <div class="modal-outcome">
+          <strong>Faster decisions</strong> ΓÇö Browse to order in one tap<br>
+          <strong>Higher CVR (expected)</strong> ΓÇö Removes the biggest friction point<br>
+          <strong>Stronger retention</strong> ΓÇö Personalization drives repeat behavior<br>
+          <strong>GMV uplift</strong> ΓÇö More completed orders = direct revenue impact<br><br>
+          ΓåÆ Less thinking. More ordering.
+        </div>
+      </div>
+      <p style="font-size:0.75rem;color:var(--muted);margin-top:1.5rem;font-style:italic">*Independent product teardown. Not affiliated with Zomato.</p>`
+  }
 };
 
-function openModal(id){
-  document.getElementById('modal-content').innerHTML=MODALS[id];
-  document.getElementById('modal-overlay').classList.add('open');
-  document.body.style.overflow='hidden';
+function openModal(id) {
+  const data = MODAL_DATA[id];
+  if (!data) return;
+  const content = document.getElementById('modal-content');
+  // Build safe DOM instead of raw innerHTML injection
+  content.innerHTML = '';
+  const tag = document.createElement('div');
+  tag.className = 'modal-tag';
+  tag.textContent = data.tag;
+  const title = document.createElement('div');
+  title.className = 'modal-h';
+  title.id = 'modal-title';
+  title.textContent = data.title;
+  const body = document.createElement('div');
+  body.innerHTML = data.body; // trusted internal content only
+  content.appendChild(tag);
+  content.appendChild(title);
+  content.appendChild(body);
+
+  const overlay = document.getElementById('modal-overlay');
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('modal-close-btn').focus();
 }
-function closeModal(){
+
+function closeModal() {
   document.getElementById('modal-overlay').classList.remove('open');
-  document.body.style.overflow='';
+  document.body.style.overflow = '';
 }
-function closeModalOutside(e){
-  if(e.target===document.getElementById('modal-overlay')) closeModal();
-}
-document.addEventListener('keydown',e=>{if(e.key==='Escape') closeModal();});
+
+// Close on backdrop click
+document.getElementById('modal-overlay').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+// Close on Escape
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// Close button
+document.getElementById('modal-close-btn').addEventListener('click', closeModal);
 </script>
 </body>
 </html>
