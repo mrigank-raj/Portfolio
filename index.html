@@ -382,15 +382,16 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
 <section id="work" class="grid-bg" aria-labelledby="work-heading">
   <div class="sec-inner" style="padding:6rem 8%">
     <div class="sec-label reveal">Work</div>
-    <h2 class="sec-h2 reveal reveal-delay-1" id="work-heading">Case studies &<br><em>teardowns</em></h2>
-    <!-- TAB NAV -->
-    <div class="tab-nav reveal reveal-delay-2" role="tablist">
-      <button class="tab-btn active" role="tab" onclick="switchTab('projects', this)">Live Projects</button>
-      <button class="tab-btn" role="tab" onclick="switchTab('teardowns', this)">Product Teardowns</button>
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; margin-bottom:0.75rem;">
+      <h2 class="sec-h2 reveal reveal-delay-1" style="margin-bottom:0">Things I've<br><em>built & analyzed</em></h2>
+      <div class="tab-nav reveal reveal-delay-2" role="tablist" style="margin-bottom:0.5rem; border-bottom:none; padding-bottom:0;">
+        <button class="tab-btn active" role="tab" onclick="switchTab('teardowns', this)">Teardowns</button>
+        <button class="tab-btn" role="tab" onclick="switchTab('projects', this)">Live Projects</button>
+      </div>
     </div>
 
     <!-- PROJECTS TAB -->
-    <div id="tab-projects" class="tab-pane active">
+    <div id="tab-projects" class="tab-pane">
       <div class="work-grid" style="margin-top:1.5rem">
         <div class="case-card live shipped-card reveal reveal-delay-1" role="button" tabindex="0" onclick="openModal('beyondlabel')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('beyondlabel')">
           <div class="card-tags">
@@ -420,7 +421,7 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
     </div>
 
     <!-- TEARDOWNS TAB -->
-    <div id="tab-teardowns" class="tab-pane">
+    <div id="tab-teardowns" class="tab-pane active">
       <div class="work-grid" style="margin-top:1.5rem">
 
       <!-- MyJio -->
