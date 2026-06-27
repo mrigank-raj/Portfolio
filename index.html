@@ -78,7 +78,7 @@ section{position:relative;overflow:hidden}
 .sec-h2 em::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:2px;background:var(--burg);opacity:0.4;border-radius:2px}
 
 /* HERO */
-#hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;text-align:center;padding:7rem 5% 0;background:var(--cream)}
+#hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;text-align:center;padding:7rem 0 0;background:var(--cream)}
 .hero-eyebrow{font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);display:inline-flex;align-items:center;gap:0.65rem;margin-bottom:1.3rem}
 .hero-eyebrow::before,.hero-eyebrow::after{content:'';width:1.2rem;height:1px;background:var(--border)}
 #hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.2vw,3rem);line-height:1.12;margin-bottom:0.5rem}
@@ -256,7 +256,7 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
   .nav-links{display:none}
   nav{grid-template-columns:1fr 1fr;padding:0.55rem 0.6rem 0.55rem 1.1rem}
   .nav-right{grid-column:2;justify-content:flex-end}
-  #hero{padding:5.5rem 5% 0}
+  #hero{padding:5.5rem 0 0}
   #hero h1{font-size:clamp(1.8rem,6vw,2.6rem)}
   #bring{padding:4rem 6%}
   #work{padding:4rem 6%}
@@ -283,7 +283,7 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
   nav{padding:0.5rem 0.6rem 0.5rem 1rem}
   .nav-name{font-size:0.52rem}
   .nav-cta{font-size:0.7rem;padding:0.4rem 0.85rem}
-  #hero{padding:5rem 5% 0}
+  #hero{padding:5rem 0 2.5rem; min-height: auto;}
   #hero h1{font-size:clamp(1.6rem,7vw,2.2rem)}
   .hero-sub{font-size:0.82rem;margin:1.25rem auto}
   .hero-btns{flex-direction:column;align-items:center;gap:0.6rem}
@@ -333,7 +333,7 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
 
 <!-- HERO -->
 <section id="hero" class="grid-bg">
-  <div class="sec-inner" style="display:flex;flex-direction:column;align-items:center;text-align:center">
+  <div class="sec-inner" style="display:flex;flex-direction:column;align-items:center;text-align:center; padding:0 5%; width:100%; box-sizing:border-box;">
     <div class="hero-eyebrow reveal">Product · Finance · Business</div>
     <h1 class="reveal reveal-delay-1">Finance brain. Product heart.<br><em>Business soul.</em></h1>
     <p class="hero-sub reveal reveal-delay-2">CS undergrad · FMVA certified · Building products that solve real problems for real people.</p>
