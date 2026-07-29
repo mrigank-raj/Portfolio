@@ -152,216 +152,207 @@ section{position:relative;overflow:hidden}
 .card-read::after{content:'→';transition:transform 0.2s}
 .case-card.live:hover .card-read::after{transform:translateX(4px)}
 
-/* PROJECTS BURGUNDY SHOWCASE GRID & CARDS */
+/* PROJECTS BURGUNDY SHOWCASE - UI/UX DESIGNER POSTER CARDS */
 #projects {
-  background: linear-gradient(135deg, #6B1840 0%, #521130 50%, #3B0B20 100%);
+  background-color: #611638;
+  background-image: 
+    radial-gradient(circle at 50% 30%, #7B1E4A 0%, #4D102C 60%, #35091E 100%),
+    url("data:image/svg+xml,%3Csvg width='1200' height='600' viewBox='0 0 1200 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.09' stroke-width='1.5'%3E%3Cpath d='M80 150 L200 150 L260 250 L200 350 L80 350 L20 250 Z'/%3E%3Cpath d='M100 175 L190 175 L235 250 L190 325 L100 325 L55 250 Z'/%3E%3Cpath d='M1000 150 L1120 150 L1180 250 L1120 350 L1000 350 L940 250 Z'/%3E%3Cpath d='M1010 175 L1100 175 L1145 250 L1100 325 L1010 325 L965 250 Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover, 1200px 600px;
+  background-position: center, center;
+  background-repeat: no-repeat, repeat;
   position: relative;
   overflow: hidden;
-  padding: 6.5rem 6%;
+  padding: 6.5rem 4%;
   border-top: 1px solid rgba(255,255,255,0.15);
   border-bottom: 1px solid rgba(255,255,255,0.15);
 }
-#projects::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: 
-    radial-gradient(circle at 15% 50%, rgba(255,255,255,0.04) 0%, transparent 40%),
-    radial-gradient(circle at 85% 50%, rgba(255,255,255,0.04) 0%, transparent 40%);
-  pointer-events: none;
-}
 .projects-showcase-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.75rem;
-  max-width: 1240px;
-  margin: 2.5rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  max-width: 1380px;
+  margin: 3rem auto 0;
   position: relative;
   z-index: 2;
 }
 .showcase-card {
-  width: calc(33.333% - 1.2rem);
-  min-width: 320px;
-  max-width: 390px;
-  background: #141118;
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 20px;
-  padding: 1.6rem;
+  height: 280px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.14);
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
-  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.28s, border-color 0.28s;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
   cursor: pointer;
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-  position: relative;
-  overflow: hidden;
+  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.28s, border-color 0.28s;
 }
 .showcase-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(255,255,255,0.3);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.55);
+  transform: translateY(-8px);
+  border-color: rgba(255,255,255,0.35);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.55);
 }
-.sc-visual {
-  height: 155px;
-  border-radius: 14px;
-  margin-top: 0.85rem;
-  margin-bottom: 1.25rem;
+
+/* Card Background Themes */
+.theme-emerald {
+  background: 
+    radial-gradient(circle at 85% 20%, rgba(34,197,94,0.3) 0%, transparent 55%),
+    linear-gradient(145deg, #0b2219 0%, #050f0b 100%);
+}
+.theme-sapphire {
+  background: 
+    radial-gradient(circle at 85% 20%, rgba(59,130,246,0.3) 0%, transparent 55%),
+    linear-gradient(145deg, #0e1c36 0%, #060c18 100%);
+}
+.theme-orange {
+  background: 
+    radial-gradient(circle at 85% 20%, rgba(249,115,22,0.3) 0%, transparent 55%),
+    linear-gradient(145deg, #2b1307 0%, #130703 100%);
+}
+.theme-violet {
+  background: 
+    radial-gradient(circle at 85% 20%, rgba(168,85,247,0.3) 0%, transparent 55%),
+    linear-gradient(145deg, #22103b 0%, #0e051a 100%);
+}
+.theme-crimson {
+  background: 
+    radial-gradient(circle at 85% 20%, rgba(244,63,94,0.3) 0%, transparent 55%),
+    linear-gradient(145deg, #300d14 0%, #160407 100%);
+}
+
+/* Subtle pattern overlay inside card */
+.showcase-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255,255,255,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Top Right Badge */
+.sc-card-top {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  text-align: center;
   position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 1rem;
-}
-.theme-emerald .sc-visual {
-  background: linear-gradient(135deg, #0d291e 0%, #06150e 100%);
-  border-color: rgba(34,197,94,0.3);
-}
-.theme-sapphire .sc-visual {
-  background: linear-gradient(135deg, #0e1e38 0%, #070f1d 100%);
-  border-color: rgba(59,130,246,0.3);
-}
-.theme-orange .sc-visual {
-  background: linear-gradient(135deg, #38160a 0%, #1c0a04 100%);
-  border-color: rgba(249,115,22,0.3);
-}
-.theme-violet .sc-visual {
-  background: linear-gradient(135deg, #24103d 0%, #11061e 100%);
-  border-color: rgba(168,85,247,0.3);
-}
-.theme-crimson .sc-visual {
-  background: linear-gradient(135deg, #380e14 0%, #1e0609 100%);
-  border-color: rgba(244,63,94,0.3);
-}
-.sc-visual-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.65rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-.sc-visual-title span {
-  color: #FACC15;
-}
-.sc-visual-sub {
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: rgba(255,255,255,0.65);
-  margin-top: 0.4rem;
-  font-weight: 500;
-}
-.sc-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
+  z-index: 2;
 }
 .sc-badge {
-  font-size: 0.66rem;
+  font-size: 0.64rem;
   font-weight: 600;
-  padding: 0.28rem 0.65rem;
+  padding: 0.24rem 0.6rem;
   border-radius: 100px;
   background: rgba(255,255,255,0.08);
   color: rgba(255,255,255,0.9);
   border: 1px solid rgba(255,255,255,0.15);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
 }
 .live-badge {
   background: rgba(22,163,74,0.15);
   color: #4ade80;
   border-color: rgba(34,197,94,0.35);
 }
-.sc-category {
-  font-size: 0.65rem;
-  color: rgba(255,255,255,0.5);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-.sc-body h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.22rem;
+
+/* Center Typography Art */
+.sc-poster-title {
+  position: relative;
+  z-index: 2;
+  margin: auto 0;
   color: #FFFFFF;
-  margin-bottom: 0.6rem;
-  line-height: 1.25;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.45rem;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
 }
-.sc-body p {
-  font-size: 0.82rem;
+.sc-poster-title strong {
+  font-weight: 800;
+  color: #FFFFFF;
+}
+.sc-poster-eyebrow {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FACC15;
+  margin-bottom: 0.35rem;
+}
+.sc-poster-sub {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
   color: rgba(255,255,255,0.7);
-  line-height: 1.65;
-  margin-bottom: 1.1rem;
+  margin-top: 0.4rem;
+  letter-spacing: 0.02em;
 }
-.sc-tech-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 1.4rem;
-}
-.sc-tech-row span {
-  font-size: 0.65rem;
-  color: rgba(255,255,255,0.7);
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12);
-  padding: 0.2rem 0.55rem;
-  border-radius: 100px;
-}
-.sc-footer {
-  margin-top: auto;
+
+/* Bottom Left Button (Exact yellow split pill from image!) */
+.sc-card-bottom {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 2;
 }
 .sc-btn-pill {
   display: inline-flex;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: transform 0.22s, box-shadow 0.22s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 .showcase-card:hover .sc-btn-pill {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(250, 204, 21, 0.4);
+  box-shadow: 0 6px 18px rgba(250, 204, 21, 0.45);
 }
 .sc-btn-text {
   background: #FACC15;
   color: #1A1410;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  padding: 0.55rem 1.1rem;
+  padding: 0.45rem 0.95rem;
   letter-spacing: 0.02em;
+  font-family: 'Inter', sans-serif;
 }
 .sc-btn-icon {
   background: #FFFFFF;
   color: #1A1410;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  padding: 0.55rem 0.85rem;
+  padding: 0.45rem 0.75rem;
   border-left: 1px solid rgba(0,0,0,0.08);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Inter', sans-serif;
   transition: background 0.2s;
 }
 .showcase-card:hover .sc-btn-icon {
   background: #FFFBEB;
 }
-@media (max-width: 1024px) {
-  .showcase-card {
-    width: calc(50% - 0.9rem);
+
+/* Responsiveness for 1 line on desktop, wrap on smaller screens */
+@media (max-width: 1100px) {
+  .projects-showcase-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (max-width: 640px) {
-  .showcase-card {
-    width: 100%;
-    min-width: unset;
+@media (max-width: 768px) {
+  .projects-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  #projects {
-    padding: 4.5rem 5%;
+}
+@media (max-width: 560px) {
+  .projects-showcase-grid {
+    grid-template-columns: 1fr;
+    max-width: 340px;
   }
 }
 
@@ -596,46 +587,39 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
   </div>
 </section>
 
-<!-- PROJECTS & PRODUCTS (RICH BURGUNDY SHOWCASE) -->
+<!-- PROJECTS & PRODUCTS (RICH BURGUNDY SHOWCASE - UI/UX DESIGNER POSTER CARDS) -->
 <section id="projects" aria-labelledby="projects-heading">
   <div class="sec-inner">
     <!-- Top Center Pill Label -->
     <div class="reveal" style="display:flex; justify-content:center; margin-bottom:1rem;">
       <span style="font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#EEEADE; background:rgba(238,234,222,0.12); border:1px solid rgba(238,234,222,0.25); padding:0.35rem 0.95rem; border-radius:100px; font-weight:600;">
-        SOFTWARE &amp; AI PRODUCTS
+        WHAT'S BUILT &amp; SHIPPED
       </span>
     </div>
 
-    <!-- Main Section Heading -->
-    <h2 class="sec-h2 reveal reveal-delay-1" id="projects-heading" style="color:#EEEADE; text-align:center; margin-bottom:0.75rem;">
-      What I've <em>built &amp; shipped</em>
+    <!-- Main Section Heading (Exact serif italic #EEEADE font from image!) -->
+    <h2 class="sec-h2 reveal reveal-delay-1" id="projects-heading" style="color:#EEEADE; text-align:center; margin-bottom:0.6rem; font-family:'Playfair Display',serif; font-style:italic; font-weight:700;">
+      What I've built &amp; shipped
     </h2>
 
     <!-- Subtitle -->
-    <p class="reveal reveal-delay-2" style="color:rgba(238,234,222,0.75); text-align:center; max-width:620px; margin:0 auto; font-size:0.92rem; line-height:1.6;">
+    <p class="reveal reveal-delay-2" style="color:rgba(238,234,222,0.85); text-align:center; max-width:580px; margin:0 auto; font-size:0.88rem; line-height:1.6; font-family:'Inter',sans-serif;">
       End-to-end AI applications, RAG pipelines, and autonomous agent systems designed to solve real user problems.
     </p>
 
-    <!-- 5-CARD SHOWCASE GRID (ROW 1: 3 CARDS, ROW 2: 2 CENTERED CARDS) -->
+    <!-- 5-CARD POSTER SHOWCASE (ALL 5 IN ONE HORIZONTAL LINE ON DESKTOP) -->
     <div class="projects-showcase-grid">
-      <!-- 1. BeyondLabel (LIVE PWA) -->
+      <!-- 1. BeyondLabel -->
       <div class="showcase-card theme-emerald reveal reveal-delay-1" role="button" tabindex="0" onclick="openModal('beyondlabel')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('beyondlabel')">
-        <div class="sc-top">
-          <span class="sc-badge live-badge">🟢 Live Demo</span>
-          <span class="sc-category">Consumer Health · PWA</span>
+        <div class="sc-card-top">
+          <span class="sc-badge live-badge">🟢 Live</span>
         </div>
-        <div class="sc-visual">
-          <div class="sc-visual-title">BEYOND<span>LABEL</span></div>
-          <div class="sc-visual-sub">AI Ingredient Analyzer</div>
+        <div class="sc-poster-title">
+          <span class="sc-poster-eyebrow">AI · PWA · HEALTH</span>
+          BEYOND<br><strong>LABEL</strong>
+          <span class="sc-poster-sub">Ingredient Analyzer</span>
         </div>
-        <div class="sc-body">
-          <h3>BeyondLabel: AI Product Ingredient Analyzer</h3>
-          <p>Scans ingredient labels to instantly uncover "hidden nasties," artificial preservatives, and provide personalized health alignment scores.</p>
-          <div class="sc-tech-row">
-            <span>Gemini 2.0</span><span>Llama 3</span><span>Next.js</span><span>Vercel</span>
-          </div>
-        </div>
-        <div class="sc-footer">
+        <div class="sc-card-bottom">
           <div class="sc-btn-pill">
             <span class="sc-btn-text">Check it out</span>
             <span class="sc-btn-icon">↗</span>
@@ -645,22 +629,15 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
 
       <!-- 2. HDFC Mutual Fund RAG Assistant -->
       <div class="showcase-card theme-sapphire reveal reveal-delay-1" role="button" tabindex="0" onclick="openModal('ragchatbot')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('ragchatbot')">
-        <div class="sc-top">
-          <span class="sc-badge">💻 Docker · CI/CD</span>
-          <span class="sc-category">Fintech · RAG Chatbot</span>
+        <div class="sc-card-top">
+          <span class="sc-badge">💻 CI/CD</span>
         </div>
-        <div class="sc-visual">
-          <div class="sc-visual-title">HDFC <span>RAG</span></div>
-          <div class="sc-visual-sub">Facts-Only Mutual Fund Bot</div>
+        <div class="sc-poster-title">
+          <span class="sc-poster-eyebrow">FINTECH · RAG</span>
+          HDFC<br><strong>RAG BOT</strong>
+          <span class="sc-poster-sub">Facts-Only AI</span>
         </div>
-        <div class="sc-body">
-          <h3>HDFC Mutual Fund: Facts-Only RAG Assistant</h3>
-          <p>An end-to-end RAG chatbot designed exclusively to provide objective, factual information about 5 specific HDFC Mutual Fund schemes without hallucination.</p>
-          <div class="sc-tech-row">
-            <span>LangChain</span><span>ChromaDB</span><span>Groq</span><span>GitHub Actions</span>
-          </div>
-        </div>
-        <div class="sc-footer">
+        <div class="sc-card-bottom">
           <div class="sc-btn-pill">
             <span class="sc-btn-text">Read more</span>
             <span class="sc-btn-icon">↗</span>
@@ -670,22 +647,15 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
 
       <!-- 3. Multi-Agent Travel Planner -->
       <div class="showcase-card theme-orange reveal reveal-delay-2" role="button" tabindex="0" onclick="openModal('multitravel')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('multitravel')">
-        <div class="sc-top">
-          <span class="sc-badge">🔵 Staging Ready</span>
-          <span class="sc-category">Multi-Agent · Travel</span>
+        <div class="sc-card-top">
+          <span class="sc-badge">🔵 Staging</span>
         </div>
-        <div class="sc-visual">
-          <div class="sc-visual-title">MULTI-<span>AGENT</span></div>
-          <div class="sc-visual-sub">Autonomous 5-Agent Planner</div>
+        <div class="sc-poster-title">
+          <span class="sc-poster-eyebrow">5 AGENT AI</span>
+          TRAVEL<br><strong>AGENTS</strong>
+          <span class="sc-poster-sub">Autonomous Planning</span>
         </div>
-        <div class="sc-body">
-          <h3>Multi-Agent Travel: Autonomous 5-Agent Planner</h3>
-          <p>Orchestrates five specialized AI agents in parallel to turn natural-language travel requests into comprehensive, budget-validated itineraries.</p>
-          <div class="sc-tech-row">
-            <span>5 Parallel Agents</span><span>Groq</span><span>Gemini 1.5 Pro</span><span>Route Validator</span>
-          </div>
-        </div>
-        <div class="sc-footer">
+        <div class="sc-card-bottom">
           <div class="sc-btn-pill">
             <span class="sc-btn-text">Read more</span>
             <span class="sc-btn-icon">↗</span>
@@ -695,22 +665,15 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
 
       <!-- 4. App Review Pulse Generator -->
       <div class="showcase-card theme-violet reveal reveal-delay-2" role="button" tabindex="0" onclick="openModal('appreviewmcp')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('appreviewmcp')">
-        <div class="sc-top">
-          <span class="sc-badge">💻 MCP Automation</span>
-          <span class="sc-category">AI PM Agent · Product Ops</span>
+        <div class="sc-card-top">
+          <span class="sc-badge">💻 MCP</span>
         </div>
-        <div class="sc-visual">
-          <div class="sc-visual-title">PULSE <span>MCP</span></div>
-          <div class="sc-visual-sub">App Review Automation</div>
+        <div class="sc-poster-title">
+          <span class="sc-poster-eyebrow">PRODUCT OPS</span>
+          APP REVIEW<br><strong>PULSE</strong>
+          <span class="sc-poster-sub">Automated PM Agent</span>
         </div>
-        <div class="sc-body">
-          <h3>App Review Pulse: Automated MCP PM Agent</h3>
-          <p>Ingests mobile app store reviews, clusters pain points into recurring themes, and delivers actionable pulse reports via Model Context Protocol to Google Docs &amp; Gmail.</p>
-          <div class="sc-tech-row">
-            <span>Model Context Protocol</span><span>Clustering</span><span>Gmail API</span><span>Docs API</span>
-          </div>
-        </div>
-        <div class="sc-footer">
+        <div class="sc-card-bottom">
           <div class="sc-btn-pill">
             <span class="sc-btn-text">Read more</span>
             <span class="sc-btn-icon">↗</span>
@@ -720,22 +683,15 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
 
       <!-- 5. Zomato AI Engine -->
       <div class="showcase-card theme-crimson reveal reveal-delay-1" role="button" tabindex="0" onclick="openModal('zomatobuild')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('zomatobuild')">
-        <div class="sc-top">
-          <span class="sc-badge">🔵 Staging Ready</span>
-          <span class="sc-category">Food Tech · Recommendation</span>
+        <div class="sc-card-top">
+          <span class="sc-badge">🔵 Staging</span>
         </div>
-        <div class="sc-visual">
-          <div class="sc-visual-title">ZOMATO <span>AI</span></div>
-          <div class="sc-visual-sub">30,000+ Dining Recommender</div>
+        <div class="sc-poster-title">
+          <span class="sc-poster-eyebrow">FOOD TECH · AI</span>
+          ZOMATO<br><strong>AI ENGINE</strong>
+          <span class="sc-poster-sub">30,000+ Recommender</span>
         </div>
-        <div class="sc-body">
-          <h3>Zomato AI Engine: 30,000+ Dining Recommender</h3>
-          <p>Combines a 30,000+ restaurant dataset with Groq LLM inference to generate human-like, explainable dining recommendations based on complex user preferences.</p>
-          <div class="sc-tech-row">
-            <span>30,000+ Dataset</span><span>Hybrid Filtering</span><span>Llama 3</span><span>FastAPI</span>
-          </div>
-        </div>
-        <div class="sc-footer">
+        <div class="sc-card-bottom">
           <div class="sc-btn-pill">
             <span class="sc-btn-text">Read more</span>
             <span class="sc-btn-icon">↗</span>
