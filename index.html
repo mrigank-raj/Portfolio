@@ -388,61 +388,91 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
     <div class="sec-label reveal">Work</div>
     <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; margin-bottom:0.75rem;">
       <h2 class="sec-h2 reveal reveal-delay-1" style="margin-bottom:0">Things I've<br><em>built & analyzed</em></h2>
-      <div class="tab-nav reveal reveal-delay-2" role="tablist" style="margin-bottom:0.5rem; border-bottom:none; padding-bottom:0;">
-        <button class="tab-btn active" role="tab" onclick="switchTab('teardowns', this)">Teardowns</button>
-        <button class="tab-btn" role="tab" onclick="switchTab('projects', this)">Live Projects</button>
+      <div class="tab-nav reveal reveal-delay-2" role="tablist" style="margin-bottom:0.5rem; border-bottom:none; padding-bottom:0; flex-wrap:wrap;">
+        <button class="tab-btn active" role="tab" onclick="switchTab('all', this)">All Projects</button>
+        <button class="tab-btn" role="tab" onclick="switchTab('ai_llm', this)">AI &amp; LLM Apps</button>
+        <button class="tab-btn" role="tab" onclick="switchTab('ops_agents', this)">Product Ops &amp; Agents</button>
+        <button class="tab-btn" role="tab" onclick="switchTab('ux_teardowns', this)">UX Case Studies</button>
       </div>
     </div>
 
-    <!-- PROJECTS TAB -->
-    <div id="tab-projects" class="tab-pane">
-      <div class="work-grid" style="margin-top:1.5rem">
-        <div class="case-card live shipped-card reveal reveal-delay-1" role="button" tabindex="0" onclick="openModal('beyondlabel')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('beyondlabel')">
-          <div class="card-tags">
-            <span class="ctag hi">Shipped Product</span>
-            <span class="ctag">React</span>
-            <span class="ctag">AI</span>
-          </div>
-          <h3>BeyondLabel: <em>See Through Food Labels</em></h3>
-          <p>A web app that analyzes FMCG food ingredients to expose deceptive marketing (like "no refined sugar" claims using jaggery) and highlights hidden allergens using AI.</p>
-          <div class="outcome">✅ <strong>Built & Deployed</strong> &nbsp;🧠 <strong>AI Powered</strong></div>
-          <div class="card-read">View live demo & read the story</div>
+    <!-- UNIFIED FILTERABLE GRID -->
+    <div class="work-grid" id="work-grid" style="margin-top:1.5rem">
+      <!-- 1. BeyondLabel -->
+      <div class="case-card live shipped-card reveal reveal-delay-1" data-category="ai_llm" role="button" tabindex="0" onclick="openModal('beyondlabel')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('beyondlabel')">
+        <div class="card-tags">
+          <span class="ctag hi" style="border-color:#16a34a;color:#15803d;background:rgba(22,163,74,0.08)">🟢 Live Demo</span>
+          <span class="ctag">AI/ML</span>
+          <span class="ctag">Consumer Health</span>
+          <span class="ctag">PWA</span>
+          <span class="ctag">Serverless</span>
         </div>
-        
-        <div class="case-card live shipped-card reveal reveal-delay-1" role="button" tabindex="0" onclick="openModal('zomatobuild')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('zomatobuild')">
-          <div class="card-tags">
-            <span class="ctag hi">Shipped Product</span>
-            <span class="ctag">FastAPI</span>
-            <span class="ctag">React</span>
-            <span class="ctag">AI</span>
-          </div>
-          <h3>Zomato AI Engine: <em>Smart Dining</em></h3>
-          <p>An end-to-end fullstack AI recommender. Uses a 30,000+ restaurant dataset and Llama 3 to suggest personalized dining spots based on hyper-specific user intents.</p>
-          <div class="outcome">✅ <strong>Fullstack</strong> &nbsp;🧠 <strong>LLM Pipeline</strong> &nbsp;📊 <strong>Data Eng</strong></div>
-          <div class="card-read">View live demo & read the story</div>
-        </div>
-        
-        <div class="case-card live shipped-card reveal reveal-delay-2" role="button" tabindex="0" onclick="openModal('ragchatbot')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('ragchatbot')">
-          <div class="card-tags">
-            <span class="ctag hi">Shipped Product</span>
-            <span class="ctag">FastAPI</span>
-            <span class="ctag">RAG</span>
-            <span class="ctag">LangChain</span>
-          </div>
-          <h3>RAG Chatbot: <em>HDFC Fund Intelligence</em></h3>
-          <p>An end-to-end RAG chatbot for HDFC Mutual Funds. Uses ChromaDB vector search, Llama 3 reasoning, and automated daily data ingestion via GitHub Actions — with strict hallucination guardrails.</p>
-          <div class="outcome">✅ <strong>Fullstack</strong> &nbsp;🧠 <strong>RAG Pipeline</strong> &nbsp;🔄 <strong>CI/CD Automation</strong></div>
-          <div class="card-read">View demo &amp; read the story</div>
-        </div>
+        <h3>BeyondLabel: <em>AI Product Ingredient Analyzer</em></h3>
+        <p>An AI-powered Progressive Web App (PWA) that scans food and consumer product ingredient labels to instantly uncover "hidden nasties," artificial preservatives, and provide personalized health alignment scores.</p>
+        <div class="outcome">✅ <strong>Live PWA on Vercel</strong> &nbsp;🧠 <strong>Gemini 2.0 + Llama 3</strong> &nbsp;⚡ <strong>Serverless API</strong></div>
+        <div class="card-read">View live demo &amp; read the story</div>
       </div>
-    </div>
+      
+      <!-- 2. HDFC RAG Assistant -->
+      <div class="case-card live shipped-card reveal reveal-delay-1" data-category="ai_llm" role="button" tabindex="0" onclick="openModal('ragchatbot')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('ragchatbot')">
+        <div class="card-tags">
+          <span class="ctag hi" style="border-color:#2563eb;color:#1d4ed8;background:rgba(37,99,235,0.08)">💻 Docker / GitHub CI-CD</span>
+          <span class="ctag">AI/ML</span>
+          <span class="ctag">Fintech</span>
+          <span class="ctag">RAG</span>
+          <span class="ctag">Full Stack</span>
+        </div>
+        <h3>HDFC Mutual Fund: <em>Facts-Only RAG Assistant</em></h3>
+        <p>An end-to-end Retrieval-Augmented Generation (RAG) chatbot designed exclusively to provide objective, factual information about 5 specific HDFC Mutual Fund schemes without hallucination or subjective investment advice.</p>
+        <div class="outcome">✅ <strong>Facts-Only Guardrails</strong> &nbsp;🔄 <strong>Daily GitHub Actions Scraper</strong> &nbsp;🧠 <strong>LangChain + ChromaDB</strong></div>
+        <div class="card-read">View architecture &amp; read the story</div>
+      </div>
 
-    <!-- TEARDOWNS TAB -->
-    <div id="tab-teardowns" class="tab-pane active">
-      <div class="work-grid" style="margin-top:1.5rem">
+      <!-- 3. Multi-Agent Travel Planning System -->
+      <div class="case-card live shipped-card reveal reveal-delay-2" data-category="ai_llm" role="button" tabindex="0" onclick="openModal('multitravel')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('multitravel')">
+        <div class="card-tags">
+          <span class="ctag hi" style="border-color:#2563eb;color:#1d4ed8;background:rgba(37,99,235,0.08)">🔵 Architecture / Staging Ready</span>
+          <span class="ctag">AI/ML</span>
+          <span class="ctag">Multi-Agent Systems</span>
+          <span class="ctag">Logistics</span>
+        </div>
+        <h3>Multi-Agent Travel: <em>Autonomous 5-Agent Planner</em></h3>
+        <p>An autonomous multi-agent AI travel planner that orchestrates five specialized agents in parallel to turn natural-language travel requests into comprehensive, budget-validated, day-by-day itineraries.</p>
+        <div class="outcome">✅ <strong>5 Parallel Agents</strong> &nbsp;⚖️ <strong>Budget &amp; Route Validator</strong> &nbsp;⚡ <strong>Groq + Gemini 1.5 Pro</strong></div>
+        <div class="card-read">View architecture &amp; read the story</div>
+      </div>
 
-      <!-- MyJio -->
-      <div class="case-card live reveal reveal-delay-1" role="button" tabindex="0" aria-label="Open MyJio case study" onclick="openModal('myjio')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('myjio')">
+      <!-- 4. App Review Pulse Generator -->
+      <div class="case-card live shipped-card reveal reveal-delay-2" data-category="ops_agents" role="button" tabindex="0" onclick="openModal('appreviewmcp')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('appreviewmcp')">
+        <div class="card-tags">
+          <span class="ctag hi" style="border-color:#7c3aed;color:#6d28d9;background:rgba(124,58,237,0.08)">💻 Local CLI / MCP Automation</span>
+          <span class="ctag">AI Agent</span>
+          <span class="ctag">MCP Server</span>
+          <span class="ctag">Product Ops</span>
+          <span class="ctag">Automation</span>
+        </div>
+        <h3>App Review Pulse: <em>Automated MCP PM Agent</em></h3>
+        <p>An automated product management AI agent that ingests public mobile app store reviews, clusters user pain points into recurring themes, and delivers actionable weekly pulse reports via Model Context Protocol (MCP) to Google Docs and Gmail.</p>
+        <div class="outcome">✅ <strong>Model Context Protocol (MCP)</strong> &nbsp;📊 <strong>Theme &amp; Sentiment Clustering</strong> &nbsp;📨 <strong>Google Docs + Gmail APIs</strong></div>
+        <div class="card-read">View workflow &amp; read the story</div>
+      </div>
+
+      <!-- 5. Zomato AI Engine -->
+      <div class="case-card live shipped-card reveal reveal-delay-1" data-category="ai_llm" role="button" tabindex="0" onclick="openModal('zomatobuild')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('zomatobuild')">
+        <div class="card-tags">
+          <span class="ctag hi" style="border-color:#2563eb;color:#1d4ed8;background:rgba(37,99,235,0.08)">🔵 Architecture / Staging Ready</span>
+          <span class="ctag">AI/ML</span>
+          <span class="ctag">Recommendation Engine</span>
+          <span class="ctag">Food Tech</span>
+        </div>
+        <h3>Zomato AI Engine: <em>30,000+ Dining Recommender</em></h3>
+        <p>A Zomato-inspired recommendation engine that combines a 30,000+ restaurant dataset with Groq LLM inference to generate human-like, explainable dining recommendations based on complex user preferences.</p>
+        <div class="outcome">✅ <strong>30,000+ Restaurant Dataset</strong> &nbsp;🧠 <strong>Hybrid Filtering + Llama 3</strong> &nbsp;⚡ <strong>FastAPI + React</strong></div>
+        <div class="card-read">View architecture &amp; read the story</div>
+      </div>
+
+      <!-- 6. MyJio -->
+      <div class="case-card live reveal reveal-delay-1" data-category="ux_teardowns" role="button" tabindex="0" aria-label="Open MyJio case study" onclick="openModal('myjio')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('myjio')">
         <div class="card-tags">
           <span class="ctag hi">Product Teardown</span>
           <span class="ctag">UX</span>
@@ -455,8 +485,8 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
         <div class="card-read">Read full teardown</div>
       </div>
 
-      <!-- Zomato -->
-      <div class="case-card live reveal reveal-delay-2" role="button" tabindex="0" aria-label="Open Zomato case study" onclick="openModal('zomato')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('zomato')">
+      <!-- 7. Zomato Teardown -->
+      <div class="case-card live reveal reveal-delay-2" data-category="ux_teardowns" role="button" tabindex="0" aria-label="Open Zomato case study" onclick="openModal('zomato')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('zomato')">
         <div class="card-tags">
           <span class="ctag hi">Product Teardown</span>
           <span class="ctag">UX</span>
@@ -469,8 +499,8 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
         <div class="card-read">Read full teardown</div>
       </div>
 
-      <!-- ChatGPT Voice — User Research -->
-      <div class="case-card live reveal reveal-delay-1" role="button" tabindex="0" aria-label="Open ChatGPT Voice user research case study" onclick="openModal('chatgpt')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('chatgpt')">
+      <!-- 8. ChatGPT Voice -->
+      <div class="case-card live reveal reveal-delay-1" data-category="ux_teardowns" role="button" tabindex="0" aria-label="Open ChatGPT Voice user research case study" onclick="openModal('chatgpt')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('chatgpt')">
         <div class="card-tags">
           <span class="ctag hi">User Research</span>
           <span class="ctag">Market Sizing</span>
@@ -482,20 +512,18 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
         <div class="card-read">Read full case study</div>
       </div>
 
-      <!-- Systems Thinking & Outcome Mapping -->
-      <div class="case-card live reveal reveal-delay-2" role="button" tabindex="0" aria-label="Open Systems Thinking and Outcome Mapping case study" onclick="openModal('systems')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('systems')">
+      <!-- 9. Systems Thinking -->
+      <div class="case-card live reveal reveal-delay-2" data-category="ux_teardowns" role="button" tabindex="0" aria-label="Open Systems Thinking and Outcome Mapping case study" onclick="openModal('systems')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('systems')">
         <div class="card-tags">
           <span class="ctag hi">Product Strategy</span>
           <span class="ctag">KPI Design</span>
           <span class="ctag">Systems Thinking</span>
         </div>
-        <h3>Systems Thinking & Outcome Mapping — ChatGPT Voice</h3>
+        <h3>Systems Thinking &amp; Outcome Mapping — ChatGPT Voice</h3>
         <p>Built a KPI tree with North Star Metric (Voice Sessions/DAU), mapped product levers, and identified opportunity spaces — multilingual users, commute context, and habit loops.</p>
         <div class="outcome"><strong>Output:</strong> Full KPI tree · Competitive UX audit · Go-to-market opportunity sizing for 200M+ non-English users</div>
         <div class="card-read">Read full case study</div>
       </div>
-
-    </div>
     </div>
   </div>
 </section>
@@ -696,7 +724,7 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
         <a href="mailto:mrigankrajchouhan@gmail.com?subject=Hiring%20Inquiry%20%E2%80%94%20Product%20Role&body=Hi%20Mrigank%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20wanted%20to%20connect." class="clink">
           <div><div class="cl-label">Email</div><div class="cl-val">mrigankrajchouhan@gmail.com</div></div><span>↗</span>
         </a>
-        <a href="https://drive.google.com/file/d/1kYIBCZMYXZphIYV6SnHEAYW18jt6zmbJ/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="clink">
+        <a href="https://drive.google.com/file/d/1gmIsDmhPAh5XHuixjQSJWTEz9fLjeQnA/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="clink">
           <div><div class="cl-label">Resume</div><div class="cl-val">Download PDF</div></div><span>↗</span>
         </a>
       </div>
@@ -804,17 +832,21 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, {threshold: 0.5});
 document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
 
-// ── TABS ──
-function switchTab(tabId, btn) {
-  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+// ── TABS / FILTERING ──
+function switchTab(category, btn) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-' + tabId).classList.add('active');
   btn.classList.add('active');
   
-  // Re-trigger scroll reveal for newly visible items
-  document.getElementById('tab-' + tabId).querySelectorAll('.reveal').forEach(el => {
-    el.classList.remove('visible');
-    setTimeout(() => el.classList.add('visible'), 50);
+  const cards = document.querySelectorAll('#work-grid .case-card');
+  cards.forEach(card => {
+    const cardCat = card.getAttribute('data-category');
+    if (category === 'all' || cardCat === category) {
+      card.style.display = '';
+      card.classList.remove('visible');
+      setTimeout(() => card.classList.add('visible'), 50);
+    } else {
+      card.style.display = 'none';
+    }
   });
 }
 
@@ -875,33 +907,125 @@ const MODAL_DATA = {
     `
   },
   ragchatbot: {
-    tag: 'Shipped Product · FastAPI · RAG · LangChain',
-    title: 'RAG Chatbot: HDFC Fund Intelligence',
+    tag: 'AI/ML · Fintech · RAG · Full Stack',
+    title: 'HDFC Mutual Fund: Facts-Only RAG Assistant',
     body: `
       <img src="assets/projects/ragchatbot_app.png" alt="RAG Chatbot App Screenshot" style="width:100%; border-radius:12px; border:1px solid var(--border); box-shadow:0 8px 30px rgba(26,20,16,0.06); margin-bottom:1.5rem;">
       <div class="modal-section"><h4>The Problem</h4>
-        <p>Retail investors struggle to find quick, reliable, and factual information about specific mutual fund schemes. Generic chatbots hallucinate financial data — a dangerous failure mode when real money is at stake.</p>
+        <p>Financial chatbots and generic LLMs frequently hallucinate mutual fund returns, expense ratios, and scheme terms, or offer unauthorized financial advice that violates compliance.</p>
         <p style="font-style:italic;font-size:0.9rem;margin-top:0.5rem">"I just wanted to know the NAV and expense ratio — not a hallucinated sales pitch."</p>
       </div>
       <div class="modal-section"><h4>The Solution</h4>
-        <p>A Retrieval-Augmented Generation chatbot built exclusively for 5 HDFC Mutual Fund schemes. It scrapes official Groww fund pages daily, embeds the data into ChromaDB, and uses Llama 3 to synthesize factual, citation-backed answers — while blocking advisory and out-of-scope queries automatically.</p>
+        <p>A strict <strong>"Facts-Only" RAG architecture</strong> featuring pre-retrieval guardrails that automatically classify and block subjective advisory queries (e.g., <em>"Should I invest in this fund?"</em>) and out-of-scope requests. An automated daily GitHub Actions pipeline scrapes official Groww fund documents to ensure data is always fresh and verifiable.</p>
       </div>
-      <div class="modal-section"><h4>Architecture</h4>
+      <div class="modal-section"><h4>Architecture &amp; Technical Stack</h4>
         <ul style="margin-top:0.6rem">
-          <li><strong>Classifier Layer:</strong> Automatically detects and blocks investment advice requests and out-of-scope queries before they hit the LLM.</li>
-          <li><strong>Data Pipeline:</strong> GitHub Actions cron job (10:30 AM IST daily) scrapes 5 fund pages, chunks content, generates embeddings, and commits updated vectorstore back to the repo.</li>
-          <li><strong>Retriever:</strong> ChromaDB with BAAI/bge-small-en-v1.5 embeddings and scheme-specific metadata filtering for precise retrieval.</li>
-          <li><strong>Generator (Groq + Llama 3):</strong> Synthesizes answers with mandatory source citations and "Last Updated" timestamps.</li>
-          <li><strong>Frontend:</strong> Immersive galaxy-themed React UI with floating chat bubbles, dynamic nebulas, and twinkling star animations.</li>
+          <li><strong>Pipeline Structure:</strong> Query Classifier ➔ Vector Retriever ➔ Groq LLM Synthesizer.</li>
+          <li><strong>Backend &amp; Inference:</strong> FastAPI (Python 3.11+), Groq API (<code>llama-3.3-70b-versatile</code>) for ultra-low latency response generation.</li>
+          <li><strong>Embeddings &amp; Store:</strong> <code>BAAI/bge-small-en-v1.5</code> embeddings stored in <strong>ChromaDB</strong> with scheme-specific metadata filtering; <strong>SQLite</strong> for document ingestion metadata.</li>
+          <li><strong>CI/CD Automation:</strong> Daily GitHub Actions cron workflow (05:00 UTC / 10:30 AM IST) that scrapes 5 official HDFC fund pages on Groww, re-chunks/re-embeds data, and commits database changes back to git.</li>
+          <li><strong>Frontend UI:</strong> React (Vite) + Tailwind CSS featuring a premium "Galaxy Theme" with floating chat bubbles and twinkling star animations.</li>
         </ul>
       </div>
       <div class="modal-metric" style="margin-bottom: 1.5rem">
         <div class="metric-pill"><div class="mv">5</div><div class="ml">Fund Schemes</div></div>
         <div class="metric-pill"><div class="mv">Daily</div><div class="ml">Auto-Refresh</div></div>
-        <div class="metric-pill"><div class="mv">Llama 3</div><div class="ml">70B Reasoning</div></div>
+        <div class="metric-pill"><div class="mv">Llama 3.3</div><div class="ml">70B Reasoning</div></div>
       </div>
       <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
         <a href="https://github.com/mrigank-raj/Rag-Chatbot" target="_blank" class="btn-burg">View GitHub ↗</a>
+      </div>
+    `
+  },
+  multitravel: {
+    tag: 'AI/ML · Multi-Agent Systems (MAS) · Logistics',
+    title: 'Multi-Agent Travel: Autonomous 5-Agent Planning System',
+    body: `
+      <div style="background:var(--cream2); border:1px solid var(--border); border-radius:12px; padding:1.5rem; margin-bottom:1.5rem; text-align:center;">
+        <div style="font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:0.75rem;">Multi-Agent Parallel Execution Pipeline</div>
+        <div style="display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:0.5rem; font-size:0.78rem; font-weight:600; color:var(--burg);">
+          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">1. Orchestrator Agent</span>
+          <span>→</span>
+          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">2. Destination / 3. Logistics / 4. Budget Agents</span>
+          <span>→</span>
+          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">5. Review &amp; Synthesis Agent</span>
+        </div>
+      </div>
+      <div class="modal-section"><h4>The Problem</h4>
+        <p>Planning a multi-day trip involves reconciling fragmented research across attractions, road logistics, altitude acclimatization, and strict budgets — a task where single-prompt LLMs fail due to context overflow or hallucinated costs.</p>
+      </div>
+      <div class="modal-section"><h4>The Solution</h4>
+        <p>A multi-agent system architecture where <strong>5 specialized AI agents</strong> collaborate: an Orchestrator coordinates parallel tasks between a Destination Research Agent, a Logistics/Route Agent, and a Budget Agent, before a Review Agent validates the final itinerary against user constraints (e.g., ₹50,000 Ladakh trip avoiding crowded spots).</p>
+      </div>
+      <div class="modal-section"><h4>The 5-Agent Architecture</h4>
+        <ul style="margin-top:0.6rem">
+          <li><strong>1. Orchestrator Agent:</strong> Parses natural language requests and delegates sub-tasks across specialized agents.</li>
+          <li><strong>2. Destination Research Agent:</strong> Identifies attractions, monasteries, and accommodations tailored to user preferences.</li>
+          <li><strong>3. Logistics Agent:</strong> Calculates routes, road conditions, permits, and acclimatization days (Ladakh v1 specialty focus).</li>
+          <li><strong>4. Budget Agent:</strong> Allocates costs across hotels, transport, and dining within total budget constraints.</li>
+          <li><strong>5. Review &amp; Synthesis Agent:</strong> Merges outputs and automatically audits for constraint violations.</li>
+        </ul>
+      </div>
+      <div class="modal-section"><h4>Technical Stack &amp; Testing</h4>
+        <p>Built with Python 3.11+, FastAPI, and Pydantic for structured JSON schema validation. Dual LLM engines: <strong>Groq</strong> (<code>llama-3.1-70b-versatile</code>) and <strong>Google Gemini</strong> (<code>gemini-1.5-pro</code>). Includes a complete <code>pytest</code> test suite verifying multi-agent state flows and edge cases.</p>
+      </div>
+      <div class="modal-section"><h4>Deployment Strategy</h4>
+        <p>Documented with an extensive production deployment plan (<code>Docs/deployment-plan.md</code>) and configured with <code>Procfile</code> for Railway backend deployment and Vercel frontend hosting.</p>
+      </div>
+      <div class="modal-metric" style="margin-bottom: 1.5rem">
+        <div class="metric-pill"><div class="mv">5</div><div class="ml">Specialized Agents</div></div>
+        <div class="metric-pill"><div class="mv">&lt;60s</div><div class="ml">Parallel Synthesis</div></div>
+        <div class="metric-pill"><div class="mv">Groq + Gemini</div><div class="ml">Dual-LLM Engine</div></div>
+      </div>
+      <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+        <a href="https://github.com/mrigank-raj" target="_blank" class="btn-outline">View GitHub Profile ↗</a>
+      </div>
+    `
+  },
+  appreviewmcp: {
+    tag: 'AI Agent · MCP Server · Product Ops · Automation',
+    title: 'App Review Pulse: Automated MCP PM Agent',
+    body: `
+      <div style="background:var(--cream2); border:1px solid var(--border); border-radius:12px; padding:1.5rem; margin-bottom:1.5rem; text-align:center;">
+        <div style="font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:0.75rem;">Model Context Protocol (MCP) Integration Pipeline</div>
+        <div style="display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:0.5rem; font-size:0.78rem; font-weight:600; color:var(--burg);">
+          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">Reviews CSV / JSON</span>
+          <span>→</span>
+          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">Gemini Clustering</span>
+          <span>→</span>
+          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">Groq Refinement</span>
+          <span>→</span>
+          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">MCP: Google Docs &amp; Gmail</span>
+        </div>
+      </div>
+      <div class="modal-section"><h4>The Problem</h4>
+        <p>Product Managers waste hours manually sifting through thousands of App Store and Google Play reviews to identify emerging bugs, sentiment shifts, and requested features.</p>
+      </div>
+      <div class="modal-section"><h4>The Solution</h4>
+        <p>An automated AI workflow that clusters raw user reviews into thematic pain points, synthesizes an executive summary using Google Gemini and Groq LLMs, and publishes refined weekly reports directly to Google Docs and email via <strong>Model Context Protocol (MCP)</strong>.</p>
+      </div>
+      <div class="modal-section"><h4>Architecture &amp; Technical Stack</h4>
+        <ul style="margin-top:0.6rem">
+          <li><strong>Pipeline:</strong> Reviews CSV/JSON ➔ Ingest ➔ Theme Clustering (Gemini) ➔ Summarize ➔ Refine (Groq) ➔ Publish (Google Docs API via MCP) ➔ Notify (Gmail API via MCP).</li>
+          <li><strong>Core Technology:</strong> Python 3.11+, Model Context Protocol (MCP) servers running via Node.js (<code>npx</code>).</li>
+          <li><strong>LLM Engines:</strong> Google Gemini API (clustering/summarization) and Groq API (document formatting &amp; email refinement).</li>
+          <li><strong>Configuration:</strong> Declarative YAML configuration (<code>config/agent_config.yaml</code>).</li>
+        </ul>
+      </div>
+      <div class="modal-section"><h4>Key Features for PM Workflows</h4>
+        <ul style="margin-top:0.6rem">
+          <li><strong>MCP Server Architecture:</strong> Demonstrates cutting-edge tool-use via standard Model Context Protocol servers.</li>
+          <li><strong>Automated PM Reporting:</strong> Bridges user feedback directly into PM workflow tools (Google Docs + Gmail).</li>
+          <li><strong>Theme &amp; Sentiment Clustering:</strong> Identifies actionable product friction without manual tagging.</li>
+        </ul>
+      </div>
+      <div class="modal-metric" style="margin-bottom: 1.5rem">
+        <div class="metric-pill"><div class="mv">MCP</div><div class="ml">Model Context Protocol</div></div>
+        <div class="metric-pill"><div class="mv">Auto PM</div><div class="ml">Docs + Gmail Push</div></div>
+        <div class="metric-pill"><div class="mv">Gemini + Groq</div><div class="ml">Hybrid LLM Pipeline</div></div>
+      </div>
+      <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+        <a href="https://github.com/mrigank-raj" target="_blank" class="btn-outline">View GitHub Profile ↗</a>
       </div>
     `
   },
