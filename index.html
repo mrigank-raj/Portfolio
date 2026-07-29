@@ -125,6 +125,67 @@ section{position:relative;overflow:hidden}
 .p-title{font-weight:500;font-size:0.9rem;color:#fff;margin-bottom:0.6rem}
 .p-desc{font-size:0.81rem;color:rgba(255,255,255,0.5);line-height:1.8}
 
+/* Merged Bring & About Section Styles */
+.bring-story-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2.5rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  z-index: 2;
+}
+.bring-story-text {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+.bring-story-text strong {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+.bring-story-text p {
+  margin-bottom: 1.1rem;
+}
+.bring-stat-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.bring-stat-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  padding: 1.15rem;
+  backdrop-filter: blur(6px);
+  transition: transform 0.2s, background 0.2s;
+}
+.bring-stat-card:hover {
+  background: rgba(255, 255, 255, 0.13);
+  transform: translateY(-2px);
+}
+.bring-sc-label {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+.bring-sc-val {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  display: block;
+}
+@media (max-width: 900px) {
+  .bring-story-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
 /* TABS */
 .tab-nav{display:flex;gap:0.75rem;margin-bottom:2rem;border-bottom:1px solid var(--border);padding-bottom:1rem;overflow-x:auto;scrollbar-width:none}
 .tab-nav::-webkit-scrollbar{display:none}
@@ -582,27 +643,45 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
   <div class="mq-inner" id="mq-skills"></div>
 </div>
 
-<!-- WHAT I BRING -->
+<!-- MERGED WHAT I BRING & ABOUT ME SECTION -->
 <section id="bring" aria-labelledby="bring-heading">
+  <span id="about" style="position:absolute; top:-80px;"></span>
   <div class="sec-inner">
-    <div class="sec-label reveal">What I bring</div>
-    <h2 class="sec-h2 reveal reveal-delay-1" id="bring-heading">Three lenses.<br><em>One product mind.</em></h2>
-    <p class="bring-sub reveal reveal-delay-2">Most PM candidates pick one strength. I refused to. Here's what I bring to every product decision.</p>
-    <div class="pillars">
-      <div class="pillar reveal reveal-delay-1">
-        <div class="p-num">01</div>
-        <div class="p-title">Business & Finance</div>
-        <div class="p-desc">FMVA certified. Built DCF models, read annual reports as case studies, worked inside a CA firm. I connect product decisions to revenue impact — not just engagement numbers.</div>
+    <div class="sec-label reveal">About me &amp; What I bring</div>
+    <h2 class="sec-h2 reveal reveal-delay-1" id="bring-heading">Three lenses. One story.<br><em>How I think &amp; build.</em></h2>
+    
+    <!-- Top Bio & Story Summary (Punchy, 2 paragraphs + Stat Badges) -->
+    <div class="bring-story-grid reveal reveal-delay-2">
+      <div class="bring-story-text">
+        <p>I'm a <strong>final-year CS student</strong> at <strong>KIIT Bhubaneswar</strong> (CGPA <strong>8.36</strong>) and a <strong>Nextleap Product Management Fellow</strong> who became obsessed with why some products scale while others stall. That curiosity led me to master both sides of the table — <strong>financial modeling &amp; DCF valuations</strong> alongside <strong>user flows, friction mapping, and product strategy</strong>.</p>
+        <p>With an <strong>FMVA certification (CFI)</strong> and hands-on client finance experience at a CA firm, I don't just look at engagement numbers — I design feature roadmaps that directly move unit economics and revenue metrics.</p>
       </div>
-      <div class="pillar reveal reveal-delay-2">
+      
+      <!-- Stat Cards Grid (Right column) -->
+      <div class="bring-stat-cards">
+        <div class="bring-stat-card"><span class="bring-sc-label">Institution</span><span class="bring-sc-val">KIIT Bhubaneswar</span></div>
+        <div class="bring-stat-card"><span class="bring-sc-label">Degree · CGPA</span><span class="bring-sc-val">B.Tech CSE · 8.36</span></div>
+        <div class="bring-stat-card"><span class="bring-sc-label">Fellowship</span><span class="bring-sc-val">Nextleap PM Fellow</span></div>
+        <div class="bring-stat-card"><span class="bring-sc-label">Certification</span><span class="bring-sc-val">FMVA — CFI</span></div>
+      </div>
+    </div>
+
+    <!-- The 3 Pillars of What I Bring (Clean 3-column grid) -->
+    <div class="pillars reveal reveal-delay-3">
+      <div class="pillar">
+        <div class="p-num">01</div>
+        <div class="p-title">The Finance Lens</div>
+        <div class="p-desc">FMVA certified. Built DCF models, read annual reports as case studies, worked inside a CA firm. I connect product decisions to revenue impact — not just engagement metrics.</div>
+      </div>
+      <div class="pillar">
         <div class="p-num">02</div>
-        <div class="p-title">Product & UX</div>
+        <div class="p-title">The Product &amp; UX Lens</div>
         <div class="p-desc">I study apps the way most people just use them. Friction mapping, user journey analysis, wireframing — then writing feature proposals a real PM would actually ship.</div>
       </div>
-      <div class="pillar reveal reveal-delay-3">
+      <div class="pillar">
         <div class="p-num">03</div>
         <div class="p-title">Tech Fluency</div>
-        <div class="p-desc">CS background means I understand what's feasible and what's a three-sprint nightmare. I write specs engineers respect and assess tradeoffs without hand-waving.</div>
+        <div class="p-desc">A final-year CS background means I understand what's feasible and what's a three-sprint nightmare. I write specs engineers respect and assess tradeoffs without hand-waving.</div>
       </div>
     </div>
   </div>
@@ -907,27 +986,7 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
   </div>
 </div>
 
-<!-- ABOUT -->
-<section id="about" class="grid-bg" aria-labelledby="about-heading">
-  <div class="sec-inner" style="padding:6rem 8%">
-    <div class="sec-label reveal">About me</div>
-    <h2 class="sec-h2 reveal reveal-delay-1" id="about-heading">The story<br><em>behind the work</em></h2>
-    <div class="about-grid">
-      <div class="about-text reveal reveal-delay-1">
-        <p>I'm a third-year CS student at <strong>KIIT Bhubaneswar</strong> who got obsessed with why some products stick and others don't. That curiosity led me deep into both sides — financial modeling, DCF valuations, equity research on one hand, and user flows, friction mapping, and feature proposals on the other.</p>
-        <p>My <strong>FMVA certification</strong> and hands-on experience at a CA firm gave me a rare lens: I can read a P&L and translate it into product decisions that move revenue metrics, not just engagement numbers.</p>
-        <p>I'm currently seeking <strong>product roles</strong> — with a strong pull toward fintech, but equally excited about any product with a complex business model, real user pain, and room to think.</p>
-      </div>
-      <div class="stat-cards reveal reveal-delay-2">
-        <div class="stat-card"><span class="sc-label">Institution</span><span class="sc-val">KIIT Bhubaneswar</span></div>
-        <div class="stat-card"><span class="sc-label">Degree</span><span class="sc-val">B.Tech CSE</span></div>
-        <div class="stat-card"><span class="sc-label">CGPA</span><span class="sc-val"><span class="counter" data-target="8.32" data-decimal="2" data-start="0">0</span> / 10</span></div>
-        <div class="stat-card"><span class="sc-label">Certification</span><span class="sc-val">FMVA — CFI</span></div>
-        <div class="stat-card"><span class="sc-label">Graduating</span><span class="sc-val"><span class="counter" data-target="2027" data-decimal="0" data-start="2027">2027</span></span></div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- ABOUT ME HAS BEEN MERGED WITH 'WHAT I BRING' ABOVE -->
 
 <!-- EXPERIENCE -->
 <section id="experience" aria-labelledby="experience-heading">
@@ -935,6 +994,14 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
     <div class="sec-label reveal">Experience</div>
     <h2 class="sec-h2 reveal reveal-delay-1" id="experience-heading">Where I've<br><em>learned by doing</em></h2>
     <div class="exp-list reveal reveal-delay-2">
+      <div class="exp-row">
+        <div>
+          <div class="exp-role">Product Management Fellow</div>
+          <div class="exp-co">Nextleap</div>
+          <div class="exp-desc">Selected for the Nextleap Product Management Fellowship. Learning modern product discovery, PRDs, metrics frameworks, and user research from top Indian startup PMs.</div>
+        </div>
+        <div><div class="exp-date">2026 – Present</div><div class="exp-type">Fellowship</div></div>
+      </div>
       <div class="exp-row">
         <div>
           <div class="exp-role">Finance Intern</div>
@@ -954,8 +1021,8 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
       <div class="exp-row">
         <div>
           <div class="exp-role">B.Tech Computer Science Engineering</div>
-          <div class="exp-co">KIIT Bhubaneswar · CGPA 8.32</div>
-          <div class="exp-desc">Coursework in data structures, ML, and software engineering. Projects at the intersection of NLP and finance. Graduating 2027.</div>
+          <div class="exp-co">KIIT Bhubaneswar · CGPA 8.36</div>
+          <div class="exp-desc">Final-year CS undergrad. Coursework in data structures, ML, and software engineering. Projects at the intersection of AI and fintech. Graduating 2027.</div>
         </div>
         <div><div class="exp-date">Jul 2023 – 2027</div><div class="exp-type">Education</div></div>
       </div>
