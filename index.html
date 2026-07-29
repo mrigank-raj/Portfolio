@@ -154,18 +154,33 @@ section{position:relative;overflow:hidden}
 
 /* PROJECTS BURGUNDY SHOWCASE - UI/UX DESIGNER POSTER CARDS */
 #projects {
-  background-color: #611638;
+  background-color: #55122f;
   background-image: 
-    radial-gradient(circle at 50% 30%, #7B1E4A 0%, #4D102C 60%, #35091E 100%),
-    url("data:image/svg+xml,%3Csvg width='1200' height='600' viewBox='0 0 1200 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.09' stroke-width='1.5'%3E%3Cpath d='M80 150 L200 150 L260 250 L200 350 L80 350 L20 250 Z'/%3E%3Cpath d='M100 175 L190 175 L235 250 L190 325 L100 325 L55 250 Z'/%3E%3Cpath d='M1000 150 L1120 150 L1180 250 L1120 350 L1000 350 L940 250 Z'/%3E%3Cpath d='M1010 175 L1100 175 L1145 250 L1100 325 L1010 325 L965 250 Z'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: cover, 1200px 600px;
-  background-position: center, center;
-  background-repeat: no-repeat, repeat;
+    url("https://cdn.prod.website-files.com/684bf67a638fa90c1418ba7c/69afd282e20f1f9653015e32_Break%20into%20Product%20Management%20(1).avif"),
+    url("data:image/svg+xml,%3Csvg width='1400' height='700' viewBox='0 0 1400 700' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.22' stroke-width='2'%3E%3Cpath d='M100 150 L250 150 L320 270 L250 390 L100 390 L30 270 Z'/%3E%3Cpath d='M130 185 L230 185 L280 270 L230 355 L130 355 L80 270 Z'/%3E%3Cpath d='M1150 150 L1300 150 L1370 270 L1300 390 L1150 390 L1080 270 Z'/%3E%3Cpath d='M1170 185 L1270 185 L1320 270 L1270 355 L1170 355 L1120 270 Z'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(circle at 50% 30%, #7B1E4A 0%, #4D102C 60%, #35091E 100%);
+  background-size: cover, cover, cover;
+  background-position: center top, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
   position: relative;
   overflow: hidden;
   padding: 6.5rem 4%;
   border-top: 1px solid rgba(255,255,255,0.15);
   border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.projects-pattern-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://cdn.prod.website-files.com/684bf67a638fa90c1418ba7c/69afd282e20f1f9653015e32_Break%20into%20Product%20Management%20(1).avif");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  opacity: 0.95;
+  pointer-events: none;
+  z-index: 1;
 }
 .projects-showcase-grid {
   display: grid;
@@ -589,7 +604,9 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
 
 <!-- PROJECTS & PRODUCTS (RICH BURGUNDY SHOWCASE - UI/UX DESIGNER POSTER CARDS) -->
 <section id="projects" aria-labelledby="projects-heading">
-  <div class="sec-inner">
+  <!-- Exact background pattern overlay from The Product Folks -->
+  <div class="projects-pattern-overlay" aria-hidden="true"></div>
+  <div class="sec-inner" style="position:relative; z-index:2;">
     <!-- Top Center Pill Label -->
     <div class="reveal" style="display:flex; justify-content:center; margin-bottom:1rem;">
       <span style="font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#EEEADE; background:rgba(238,234,222,0.12); border:1px solid rgba(238,234,222,0.25); padding:0.35rem 0.95rem; border-radius:100px; font-weight:600;">
@@ -598,7 +615,7 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
     </div>
 
     <!-- Main Section Heading (Exact serif italic #EEEADE font from image!) -->
-    <h2 class="sec-h2 reveal reveal-delay-1" id="projects-heading" style="color:#EEEADE; text-align:center; margin-bottom:0.6rem; font-family:'Playfair Display',serif; font-style:italic; font-weight:700;">
+    <h2 class="sec-h2 reveal reveal-delay-1" id="projects-heading" style="color:#EEEADE; text-align:center; margin-bottom:0.6rem; font-family:'Playfair Display',serif; font-style:italic; font-weight:700; font-size:clamp(2.4rem, 4.5vw, 3.4rem);">
       What I've built &amp; shipped
     </h2>
 
