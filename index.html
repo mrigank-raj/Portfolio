@@ -417,6 +417,19 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
           <div class="outcome">✅ <strong>Fullstack</strong> &nbsp;🧠 <strong>LLM Pipeline</strong> &nbsp;📊 <strong>Data Eng</strong></div>
           <div class="card-read">View live demo & read the story</div>
         </div>
+        
+        <div class="case-card live shipped-card reveal reveal-delay-2" role="button" tabindex="0" onclick="openModal('ragchatbot')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('ragchatbot')">
+          <div class="card-tags">
+            <span class="ctag hi">Shipped Product</span>
+            <span class="ctag">FastAPI</span>
+            <span class="ctag">RAG</span>
+            <span class="ctag">LangChain</span>
+          </div>
+          <h3>RAG Chatbot: <em>HDFC Fund Intelligence</em></h3>
+          <p>An end-to-end RAG chatbot for HDFC Mutual Funds. Uses ChromaDB vector search, Llama 3 reasoning, and automated daily data ingestion via GitHub Actions — with strict hallucination guardrails.</p>
+          <div class="outcome">✅ <strong>Fullstack</strong> &nbsp;🧠 <strong>RAG Pipeline</strong> &nbsp;🔄 <strong>CI/CD Automation</strong></div>
+          <div class="card-read">View demo &amp; read the story</div>
+        </div>
       </div>
     </div>
 
@@ -854,6 +867,37 @@ const MODAL_DATA = {
       <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
         <a href="https://zomato-milestone1-9ep8.vercel.app/" target="_blank" class="btn-burg">View Live App ↗</a>
         <a href="https://github.com/mrigank-raj/Zomato-milestone1" target="_blank" class="btn-outline">View GitHub ↗</a>
+      </div>
+    `
+  },
+  ragchatbot: {
+    tag: 'Shipped Product · FastAPI · RAG · LangChain',
+    title: 'RAG Chatbot: HDFC Fund Intelligence',
+    body: `
+      <img src="assets/projects/ragchatbot_app.png" alt="RAG Chatbot App Screenshot" style="width:100%; border-radius:12px; border:1px solid var(--border); box-shadow:0 8px 30px rgba(26,20,16,0.06); margin-bottom:1.5rem;">
+      <div class="modal-section"><h4>The Problem</h4>
+        <p>Retail investors struggle to find quick, reliable, and factual information about specific mutual fund schemes. Generic chatbots hallucinate financial data — a dangerous failure mode when real money is at stake.</p>
+        <p style="font-style:italic;font-size:0.9rem;margin-top:0.5rem">"I just wanted to know the NAV and expense ratio — not a hallucinated sales pitch."</p>
+      </div>
+      <div class="modal-section"><h4>The Solution</h4>
+        <p>A Retrieval-Augmented Generation chatbot built exclusively for 5 HDFC Mutual Fund schemes. It scrapes official Groww fund pages daily, embeds the data into ChromaDB, and uses Llama 3 to synthesize factual, citation-backed answers — while blocking advisory and out-of-scope queries automatically.</p>
+      </div>
+      <div class="modal-section"><h4>Architecture</h4>
+        <ul style="margin-top:0.6rem">
+          <li><strong>Classifier Layer:</strong> Automatically detects and blocks investment advice requests and out-of-scope queries before they hit the LLM.</li>
+          <li><strong>Data Pipeline:</strong> GitHub Actions cron job (10:30 AM IST daily) scrapes 5 fund pages, chunks content, generates embeddings, and commits updated vectorstore back to the repo.</li>
+          <li><strong>Retriever:</strong> ChromaDB with BAAI/bge-small-en-v1.5 embeddings and scheme-specific metadata filtering for precise retrieval.</li>
+          <li><strong>Generator (Groq + Llama 3):</strong> Synthesizes answers with mandatory source citations and "Last Updated" timestamps.</li>
+          <li><strong>Frontend:</strong> Immersive galaxy-themed React UI with floating chat bubbles, dynamic nebulas, and twinkling star animations.</li>
+        </ul>
+      </div>
+      <div class="modal-metric" style="margin-bottom: 1.5rem">
+        <div class="metric-pill"><div class="mv">5</div><div class="ml">Fund Schemes</div></div>
+        <div class="metric-pill"><div class="mv">Daily</div><div class="ml">Auto-Refresh</div></div>
+        <div class="metric-pill"><div class="mv">Llama 3</div><div class="ml">70B Reasoning</div></div>
+      </div>
+      <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+        <a href="https://github.com/mrigank-raj/Rag-Chatbot" target="_blank" class="btn-burg">View GitHub ↗</a>
       </div>
     `
   },
