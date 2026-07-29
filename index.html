@@ -135,8 +135,8 @@ section{position:relative;overflow:hidden}
 .tab-pane.active{display:block;animation:fadeIn 0.4s ease}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
-/* WORK */
-#work{padding:6rem 8%;background:var(--cream)}
+/* PROJECTS & TEARDOWNS */
+#projects, #teardowns{padding:6rem 8%;background:var(--cream)}
 .work-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1.5rem}
 .case-card{position:relative;border-radius:16px;padding:1.75rem;transition:transform 0.25s,box-shadow 0.25s;background:rgba(238,234,222,0.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.7);box-shadow:0 4px 24px rgba(26,20,16,0.06)}
 .case-card.live{cursor:pointer}
@@ -292,7 +292,7 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
   #bring{padding:3.5rem 5%}
   .bring-sub{font-size:0.82rem}
   .p-desc{font-size:0.78rem}
-  #work{padding:3.5rem 5%}
+  #projects, #teardowns{padding:3.5rem 5%}
   .case-card{padding:1.25rem}
   #about{padding:3.5rem 5%}
   .about-grid{gap:1.75rem}
@@ -323,7 +323,8 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
     <div class="nav-name">Mrigank<br>Raj<br><em>Chouhan</em></div>
     <div class="nav-links">
       <a href="#bring">About</a>
-      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#teardowns">Case Studies</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </div>
@@ -342,7 +343,7 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
     <h1 class="reveal reveal-delay-1">Finance brain. Product heart.<br><em>Business soul.</em></h1>
     <p class="hero-sub reveal reveal-delay-2">CS undergrad · FMVA certified · Building products that solve real problems for real people.</p>
     <div class="hero-btns reveal reveal-delay-3">
-      <a href="#work" class="btn-burg">See my work ↗</a>
+      <a href="#projects" class="btn-burg">See my work ↗</a>
       <a href="#contact" class="btn-outline">Let's connect</a>
     </div>
   </div>
@@ -382,22 +383,21 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
   </div>
 </section>
 
-<!-- WORK -->
-<section id="work" class="grid-bg" aria-labelledby="work-heading">
+<!-- PROJECTS & PRODUCTS -->
+<section id="projects" class="grid-bg" aria-labelledby="projects-heading" style="background:var(--cream2); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
   <div class="sec-inner" style="padding:6rem 8%">
-    <div class="sec-label reveal">Work</div>
+    <div class="sec-label reveal">Software &amp; AI Products</div>
     <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; margin-bottom:0.75rem;">
-      <h2 class="sec-h2 reveal reveal-delay-1" style="margin-bottom:0">Things I've<br><em>built & analyzed</em></h2>
+      <h2 class="sec-h2 reveal reveal-delay-1" id="projects-heading" style="margin-bottom:0">Things I've<br><em>built &amp; shipped</em></h2>
       <div class="tab-nav reveal reveal-delay-2" role="tablist" style="margin-bottom:0.5rem; border-bottom:none; padding-bottom:0; flex-wrap:wrap;">
-        <button class="tab-btn active" role="tab" onclick="switchTab('all', this)">All Projects</button>
-        <button class="tab-btn" role="tab" onclick="switchTab('ai_llm', this)">AI &amp; LLM Apps</button>
-        <button class="tab-btn" role="tab" onclick="switchTab('ops_agents', this)">Product Ops &amp; Agents</button>
-        <button class="tab-btn" role="tab" onclick="switchTab('ux_teardowns', this)">UX Case Studies</button>
+        <button class="tab-btn active" role="tab" onclick="filterProjects('all', this)">All Projects</button>
+        <button class="tab-btn" role="tab" onclick="filterProjects('ai_llm', this)">AI &amp; LLM Apps</button>
+        <button class="tab-btn" role="tab" onclick="filterProjects('ops_agents', this)">Product Ops &amp; Agents</button>
       </div>
     </div>
 
-    <!-- UNIFIED FILTERABLE GRID -->
-    <div class="work-grid" id="work-grid" style="margin-top:1.5rem">
+    <!-- PROJECTS GRID (5 cards) -->
+    <div class="work-grid" id="projects-grid" style="margin-top:1.5rem">
       <!-- 1. BeyondLabel -->
       <div class="case-card live shipped-card reveal reveal-delay-1" data-category="ai_llm" role="button" tabindex="0" onclick="openModal('beyondlabel')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('beyondlabel')">
         <div class="card-tags">
@@ -470,9 +470,22 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
         <div class="outcome">✅ <strong>30,000+ Restaurant Dataset</strong> &nbsp;🧠 <strong>Hybrid Filtering + Llama 3</strong> &nbsp;⚡ <strong>FastAPI + React</strong></div>
         <div class="card-read">View architecture &amp; read the story</div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <!-- 6. MyJio -->
-      <div class="case-card live reveal reveal-delay-1" data-category="ux_teardowns" role="button" tabindex="0" aria-label="Open MyJio case study" onclick="openModal('myjio')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('myjio')">
+<!-- UX CASE STUDIES & TEARDOWNS -->
+<section id="teardowns" aria-labelledby="teardowns-heading" style="background:var(--cream);">
+  <div class="sec-inner" style="padding:6rem 8%">
+    <div class="sec-label reveal">UX &amp; Product Strategy</div>
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; margin-bottom:0.75rem;">
+      <h2 class="sec-h2 reveal reveal-delay-1" id="teardowns-heading" style="margin-bottom:0">Products I've<br><em>teardowned &amp; analyzed</em></h2>
+    </div>
+
+    <!-- TEARDOWNS GRID (4 cards) -->
+    <div class="work-grid" style="margin-top:1.5rem">
+      <!-- 1. MyJio -->
+      <div class="case-card live reveal reveal-delay-1" role="button" tabindex="0" aria-label="Open MyJio case study" onclick="openModal('myjio')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('myjio')">
         <div class="card-tags">
           <span class="ctag hi">Product Teardown</span>
           <span class="ctag">UX</span>
@@ -485,8 +498,8 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
         <div class="card-read">Read full teardown</div>
       </div>
 
-      <!-- 7. Zomato Teardown -->
-      <div class="case-card live reveal reveal-delay-2" data-category="ux_teardowns" role="button" tabindex="0" aria-label="Open Zomato case study" onclick="openModal('zomato')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('zomato')">
+      <!-- 2. Zomato Teardown -->
+      <div class="case-card live reveal reveal-delay-2" role="button" tabindex="0" aria-label="Open Zomato case study" onclick="openModal('zomato')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('zomato')">
         <div class="card-tags">
           <span class="ctag hi">Product Teardown</span>
           <span class="ctag">UX</span>
@@ -499,8 +512,8 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
         <div class="card-read">Read full teardown</div>
       </div>
 
-      <!-- 8. ChatGPT Voice -->
-      <div class="case-card live reveal reveal-delay-1" data-category="ux_teardowns" role="button" tabindex="0" aria-label="Open ChatGPT Voice user research case study" onclick="openModal('chatgpt')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('chatgpt')">
+      <!-- 3. ChatGPT Voice -->
+      <div class="case-card live reveal reveal-delay-1" role="button" tabindex="0" aria-label="Open ChatGPT Voice user research case study" onclick="openModal('chatgpt')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('chatgpt')">
         <div class="card-tags">
           <span class="ctag hi">User Research</span>
           <span class="ctag">Market Sizing</span>
@@ -512,8 +525,8 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
         <div class="card-read">Read full case study</div>
       </div>
 
-      <!-- 9. Systems Thinking -->
-      <div class="case-card live reveal reveal-delay-2" data-category="ux_teardowns" role="button" tabindex="0" aria-label="Open Systems Thinking and Outcome Mapping case study" onclick="openModal('systems')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('systems')">
+      <!-- 4. Systems Thinking -->
+      <div class="case-card live reveal reveal-delay-2" role="button" tabindex="0" aria-label="Open Systems Thinking and Outcome Mapping case study" onclick="openModal('systems')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('systems')">
         <div class="card-tags">
           <span class="ctag hi">Product Strategy</span>
           <span class="ctag">KPI Design</span>
@@ -566,7 +579,7 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
         <div class="tc-eyebrow">Tools I think with</div>
         <h2>The toolkit behind<br><em>the thinking</em></h2>
         <p>Every product decision needs the right tools. These are the ones I use to research, wireframe, analyze, and ship.</p>
-        <a href="#work" class="btn-twotone">
+        <a href="#projects" class="btn-twotone">
           <span class="bt-text">See how I use them</span>
           <span class="bt-icon">↗</span>
         </a>
@@ -636,7 +649,7 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
     <div class="tool-pill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anthropic.svg" style="filter:invert(55%) sepia(60%) saturate(600%) hue-rotate(340deg)" alt="" loading="lazy"/>Claude</div>
   </div>
   <div style="display:flex;justify-content:center">
-    <a href="#work" class="btn-twotone">
+    <a href="#projects" class="btn-twotone">
       <span class="bt-text">See how I use them</span>
       <span class="bt-icon">↗</span>
     </a>
@@ -832,12 +845,13 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, {threshold: 0.5});
 document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
 
-// ── TABS / FILTERING ──
-function switchTab(category, btn) {
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+// ── PROJECTS FILTERING ──
+function filterProjects(category, btn) {
+  const nav = btn.closest('.tab-nav');
+  if (nav) nav.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   
-  const cards = document.querySelectorAll('#work-grid .case-card');
+  const cards = document.querySelectorAll('#projects-grid .case-card');
   cards.forEach(card => {
     const cardCat = card.getAttribute('data-category');
     if (category === 'all' || cardCat === category) {
