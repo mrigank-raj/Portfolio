@@ -18,7 +18,7 @@
 <link rel="icon" href="/favicon.ico"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -125,64 +125,87 @@ section{position:relative;overflow:hidden}
 .p-title{font-weight:500;font-size:0.9rem;color:#fff;margin-bottom:0.6rem}
 .p-desc{font-size:0.81rem;color:rgba(255,255,255,0.5);line-height:1.8}
 
-/* Merged Bring & About Section Styles */
-.bring-story-grid {
+/* Merged Executive Profile & About Section Styles */
+.bring-executive-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 3rem;
-  align-items: center;
-  margin-top: 2.5rem;
-  margin-bottom: 3.5rem;
+  grid-template-columns: 1.22fr 0.78fr;
+  gap: 3.5rem;
+  align-items: flex-start;
+  margin-top: 2rem;
   position: relative;
   z-index: 2;
 }
+.bring-story-col {
+  display: flex;
+  flex-direction: column;
+}
 .bring-story-text {
   color: rgba(255, 255, 255, 0.78);
-  font-size: 0.94rem;
-  line-height: 1.75;
+  font-size: 0.95rem;
+  line-height: 1.8;
 }
 .bring-story-text strong {
   color: #FFFFFF;
   font-weight: 600;
 }
 .bring-story-text p {
-  margin-bottom: 1.1rem;
+  margin-bottom: 1.25rem;
 }
-.bring-stat-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+.bring-profile-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  padding: 1.85rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 6rem;
 }
-.bring-stat-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 12px;
-  padding: 1.15rem;
-  backdrop-filter: blur(6px);
-  transition: transform 0.2s, background 0.2s;
+.bring-profile-card-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
 }
-.bring-stat-card:hover {
-  background: rgba(255, 255, 255, 0.13);
-  transform: translateY(-2px);
-}
-.bring-sc-label {
-  font-size: 0.65rem;
-  color: rgba(255, 255, 255, 0.5);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  display: block;
-  margin-bottom: 0.35rem;
-}
-.bring-sc-val {
-  font-size: 1.05rem;
+.bring-profile-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
   font-weight: 700;
   color: #FFFFFF;
-  display: block;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
 }
-@media (max-width: 900px) {
-  .bring-story-grid {
+.bring-profile-title {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+.bring-cred-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.78rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.87rem;
+}
+.bring-cred-label {
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+}
+.bring-cred-val {
+  color: #FFFFFF;
+  font-weight: 600;
+  text-align: right;
+}
+.bring-card-footer {
+  margin-top: 1.6rem;
+}
+@media (max-width: 950px) {
+  .bring-executive-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
+  }
+  .bring-profile-card {
+    position: relative;
+    top: 0;
   }
 }
 
@@ -244,19 +267,21 @@ section{position:relative;overflow:hidden}
   z-index: 1;
 }
 .projects-showcase-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.25rem;
-  max-width: 1380px;
-  margin: 3rem auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.2rem 2.5rem;
+  max-width: 1400px;
+  margin: 3.2rem auto 0;
   position: relative;
   z-index: 2;
 }
 .showcase-card {
-  height: 280px;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.14);
-  padding: 1.25rem;
+  width: 100%;
+  height: 250px;
+  border-radius: 16px 16px 16px 0;
+  border: 2.5px solid #000000;
+  padding: 1.4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -264,11 +289,10 @@ section{position:relative;overflow:hidden}
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.28s, border-color 0.28s;
+  transition: box-shadow 0.28s, border-color 0.28s;
 }
-.showcase-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(255,255,255,0.35);
+.showcase-item:hover .showcase-card {
+  border-color: #000000;
   box-shadow: 0 20px 45px rgba(0,0,0,0.55);
 }
 
@@ -290,19 +314,28 @@ section{position:relative;overflow:hidden}
   background-position: center;
 }
 .theme-orange {
-  background: 
-    radial-gradient(circle at 85% 20%, rgba(249,115,22,0.3) 0%, transparent 55%),
-    linear-gradient(145deg, #2b1307 0%, #130703 100%);
+  background-color: #1c0a03;
+  background-image: 
+    linear-gradient(180deg, rgba(28,10,3,0.3) 0%, rgba(28,10,3,0.85) 100%),
+    url("assets/projects/travel_card.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .theme-violet {
-  background: 
-    radial-gradient(circle at 85% 20%, rgba(168,85,247,0.3) 0%, transparent 55%),
-    linear-gradient(145deg, #22103b 0%, #0e051a 100%);
+  background-color: #22103b;
+  background-image: 
+    linear-gradient(180deg, rgba(34,16,59,0.3) 0%, rgba(34,16,59,0.85) 100%),
+    url("assets/projects/app_review_card.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .theme-crimson {
-  background: 
-    radial-gradient(circle at 85% 20%, rgba(244,63,94,0.3) 0%, transparent 55%),
-    linear-gradient(145deg, #300d14 0%, #160407 100%);
+  background-color: #1a0408;
+  background-image: 
+    linear-gradient(180deg, rgba(26,4,8,0.25) 0%, rgba(26,4,8,0.88) 100%),
+    url("assets/projects/zomato_card.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 /* Subtle pattern overlay inside card */
@@ -338,103 +371,128 @@ section{position:relative;overflow:hidden}
   border-color: rgba(34,197,94,0.35);
 }
 
-/* Center Typography Art */
+/* Center Typography Art - Premium Modern Product Fonts */
 .sc-poster-title {
   position: relative;
   z-index: 2;
   margin: auto 0;
   color: #FFFFFF;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.45rem;
-  line-height: 1.15;
-  letter-spacing: 0.01em;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 16px rgba(0,0,0,0.75);
 }
 .sc-poster-title strong {
   font-weight: 800;
   color: #FFFFFF;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.03em;
 }
 .sc-poster-eyebrow {
   display: block;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.64rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #FACC15;
-  margin-bottom: 0.35rem;
+  color: #FCD34D;
+  margin-bottom: 0.45rem;
 }
 .sc-poster-sub {
   display: block;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.72rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.88rem;
   font-weight: 500;
-  color: rgba(255,255,255,0.7);
-  margin-top: 0.4rem;
-  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.9);
+  margin-top: 0.5rem;
+  letter-spacing: 0.01em;
 }
 
-/* Bottom Left Button (Exact yellow split pill from image!) */
-.sc-card-bottom {
+/* Showcase Card Item Wrapper & Connected Neo-Brutalist Bottom-Left Button (Exact Image 1 match) */
+.showcase-item {
+  flex: 0 0 calc(30% - 1.5rem);
+  width: calc(30% - 1.5rem);
+  min-width: 340px;
+  max-width: 390px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.showcase-item:hover {
+  transform: translateY(-8px);
+}
+.sc-ext-footer {
+  display: flex;
   justify-content: flex-start;
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  margin-top: -2.5px;
 }
-.sc-btn-pill {
+.sc-ext-btn {
   display: inline-flex;
-  align-items: center;
-  border-radius: 6px;
+  align-items: stretch;
+  border-radius: 0 0 12px 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.showcase-card:hover .sc-btn-pill {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(250, 204, 21, 0.45);
-}
-.sc-btn-text {
-  background: #FACC15;
-  color: #1A1410;
-  font-size: 0.75rem;
+  border: 2.5px solid #000000;
   font-weight: 700;
-  padding: 0.45rem 0.95rem;
-  letter-spacing: 0.02em;
-  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  background: transparent;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  transition: box-shadow 0.2s, background 0.2s;
+  padding: 0;
 }
-.sc-btn-icon {
+.showcase-item:hover .sc-ext-btn {
+  box-shadow: 0 12px 26px rgba(0,0,0,0.55);
+}
+.sc-ext-text {
+  background: #FCD34D;
+  color: #000000;
+  padding: 0.7rem 1.15rem;
+  display: flex;
+  align-items: center;
+  border-right: 2.5px solid #000000;
+  white-space: nowrap;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+}
+.sc-ext-icon {
   background: #FFFFFF;
-  color: #1A1410;
-  font-size: 0.82rem;
-  font-weight: 700;
-  padding: 0.45rem 0.75rem;
-  border-left: 1px solid rgba(0,0,0,0.08);
+  color: #000000;
+  padding: 0.7rem 0.95rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Inter', sans-serif;
-  transition: background 0.2s;
-}
-.showcase-card:hover .sc-btn-icon {
-  background: #FFFBEB;
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
 }
 
 /* Responsiveness for 1 line on desktop, wrap on smaller screens */
-@media (max-width: 1100px) {
-  .projects-showcase-grid {
-    grid-template-columns: repeat(3, 1fr);
+/* Responsive Wide Showcase Cards */
+@media (max-width: 1250px) {
+  .showcase-item {
+    width: calc(50% - 1.5rem);
+    min-width: 340px;
+    max-width: 480px;
   }
 }
 @media (max-width: 768px) {
   .projects-showcase-grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 1.5rem;
   }
-}
-@media (max-width: 560px) {
-  .projects-showcase-grid {
-    grid-template-columns: 1fr;
-    max-width: 340px;
+  .showcase-item {
+    width: 100%;
+    min-width: 100%;
+    max-width: 480px;
   }
 }
 
@@ -460,12 +518,12 @@ section{position:relative;overflow:hidden}
 .metric-pill .ml{font-size:0.68rem;color:var(--muted);letter-spacing:0.05em;text-transform:uppercase;margin-top:0.2rem}
 
 /* TOOLS — FULL WIDTH 9-COL GRID */
-#tools{background:var(--cream);position:relative;isolation:isolate;overflow:hidden}
+#tools{background:var(--cream);position:relative;isolation:isolate;overflow:hidden !important;contain:paint !important;max-height:800px !important;z-index:1}
 #tools::before{content:'';position:absolute;inset:0;
   background-image:linear-gradient(#B8B4AA 1px,transparent 1px),linear-gradient(90deg,#B8B4AA 1px,transparent 1px);
   background-size:160px 160px;opacity:0.55;pointer-events:none;z-index:0}
-.tools-stage{position:relative;z-index:1;display:grid;grid-template-columns:repeat(9,1fr);grid-template-rows:repeat(5,160px);width:100%}
-.tools-cell{display:flex;align-items:center;justify-content:center;border:1px solid #B8B4AA;background:var(--cream);min-height:160px}
+.tools-stage{position:relative;z-index:1;display:grid;grid-template-columns:repeat(9,1fr);grid-template-rows:repeat(5,160px);grid-auto-rows:0px !important;width:100%;max-height:800px !important;overflow:hidden !important;contain:paint !important}
+.tools-cell{display:flex;align-items:center;justify-content:center;border:1px solid #B8B4AA;background:transparent;min-height:160px;max-height:160px;overflow:hidden}
 .tool-logo{display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center}
 .tool-logo img{width:32px;height:32px;object-fit:contain}
 .tool-logo span{font-size:0.75rem;font-weight:600;font-family:'Inter',sans-serif;white-space:nowrap}
@@ -479,7 +537,7 @@ section{position:relative;overflow:hidden}
 .tools-center-text p{font-size:0.82rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;max-width:240px;margin-left:auto;margin-right:auto}
 
 /* ABOUT */
-#about{padding:6rem 8%;background:var(--cream2)}
+#about{padding:0 !important;background:transparent !important;width:0;height:0;margin:0;border:none;display:block}
 .about-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:6rem;align-items:center;margin-top:1rem}
 .about-text p{color:var(--muted);line-height:1.88;margin-bottom:1rem;font-size:0.9rem}
 .about-text p strong{color:var(--text);font-weight:500}
@@ -513,16 +571,14 @@ section{position:relative;overflow:hidden}
 .cl-label{font-size:0.65rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--muted);margin-bottom:0.12rem}
 .cl-val{color:var(--text);font-size:0.83rem}
 
-/* FOOTER */
-footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify-content:space-between;align-items:center;background:var(--cream)}
-.fl{display:flex;flex-direction:column}
-.fl-name{font-family:'Playfair Display',serif;font-size:0.88rem;font-weight:700}
-.fl-name em{color:var(--burg);font-style:italic}
-.fl-note{font-size:0.7rem;color:var(--muted);margin-top:0.2rem}
-.footer-socials{display:flex;gap:1rem;align-items:center}
-.social-icon{width:34px;height:34px;border:1px solid var(--border);border-radius:100px;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:border-color 0.2s,color 0.2s}
-.social-icon:hover{border-color:var(--burg);color:var(--burg)}
-.social-icon svg{width:15px;height:15px}
+/* FOOTER — EDGE-TO-EDGE TYPOGRAPHIC FOOTER */
+footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direction:column;width:100%;isolation:isolate}
+.footer-giant-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem, 7.6vw, 8.2rem);white-space:nowrap;font-weight:700;letter-spacing:-0.03em;line-height:0.98;color:#1A1410;text-align:center;width:100%;margin-bottom:4rem;user-select:none}
+.footer-bottom-bar{border-top:1px solid #D8D4CA;padding-top:2rem;display:flex;justify-content:space-between;align-items:center;width:100%;flex-wrap:wrap;gap:1.5rem}
+.footer-logo-text{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#3A342D;letter-spacing:-0.01em}
+.footer-nav-links{display:flex;gap:1.75rem;align-items:center;flex-wrap:wrap}
+.footer-nav-link{font-family:'Plus Jakarta Sans','Inter',sans-serif;font-size:0.88rem;font-weight:600;color:#4A443D;text-decoration:none;transition:color 0.2s}
+.footer-nav-link:hover{color:#1A1410}
 
 /* TOOLS MOBILE */
 #tools-mobile{display:none;padding:3.5rem 6%;background:var(--cream);border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center}
@@ -643,49 +699,7 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
   <div class="mq-inner" id="mq-skills"></div>
 </div>
 
-<!-- MERGED WHAT I BRING & ABOUT ME SECTION -->
-<section id="bring" aria-labelledby="bring-heading">
-  <span id="about" style="position:absolute; top:-80px;"></span>
-  <div class="sec-inner">
-    <div class="sec-label reveal">About me &amp; What I bring</div>
-    <h2 class="sec-h2 reveal reveal-delay-1" id="bring-heading">Three lenses. One story.<br><em>How I think &amp; build.</em></h2>
-    
-    <!-- Top Bio & Story Summary (Punchy, 2 paragraphs + Stat Badges) -->
-    <div class="bring-story-grid reveal reveal-delay-2">
-      <div class="bring-story-text">
-        <p>I'm a <strong>final-year CS student</strong> at <strong>KIIT Bhubaneswar</strong> (CGPA <strong>8.36</strong>) and a <strong>Nextleap Product Management Fellow</strong> who became obsessed with why some products scale while others stall. That curiosity led me to master both sides of the table — <strong>financial modeling &amp; DCF valuations</strong> alongside <strong>user flows, friction mapping, and product strategy</strong>.</p>
-        <p>With an <strong>FMVA certification (CFI)</strong> and hands-on client finance experience at a CA firm, I don't just look at engagement numbers — I design feature roadmaps that directly move unit economics and revenue metrics.</p>
-      </div>
-      
-      <!-- Stat Cards Grid (Right column) -->
-      <div class="bring-stat-cards">
-        <div class="bring-stat-card"><span class="bring-sc-label">Institution</span><span class="bring-sc-val">KIIT Bhubaneswar</span></div>
-        <div class="bring-stat-card"><span class="bring-sc-label">Degree · CGPA</span><span class="bring-sc-val">B.Tech CSE · 8.36</span></div>
-        <div class="bring-stat-card"><span class="bring-sc-label">Fellowship</span><span class="bring-sc-val">Nextleap PM Fellow</span></div>
-        <div class="bring-stat-card"><span class="bring-sc-label">Certification</span><span class="bring-sc-val">FMVA — CFI</span></div>
-      </div>
-    </div>
-
-    <!-- The 3 Pillars of What I Bring (Clean 3-column grid) -->
-    <div class="pillars reveal reveal-delay-3">
-      <div class="pillar">
-        <div class="p-num">01</div>
-        <div class="p-title">The Finance Lens</div>
-        <div class="p-desc">FMVA certified. Built DCF models, read annual reports as case studies, worked inside a CA firm. I connect product decisions to revenue impact — not just engagement metrics.</div>
-      </div>
-      <div class="pillar">
-        <div class="p-num">02</div>
-        <div class="p-title">The Product &amp; UX Lens</div>
-        <div class="p-desc">I study apps the way most people just use them. Friction mapping, user journey analysis, wireframing — then writing feature proposals a real PM would actually ship.</div>
-      </div>
-      <div class="pillar">
-        <div class="p-num">03</div>
-        <div class="p-title">Tech Fluency</div>
-        <div class="p-desc">A final-year CS background means I understand what's feasible and what's a three-sprint nightmare. I write specs engineers respect and assess tradeoffs without hand-waving.</div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- WHAT I BRING & ABOUT ME MOVED DOWN BEFORE EXPERIENCE -->
 
 <!-- PROJECTS & PRODUCTS (RICH BURGUNDY SHOWCASE - UI/UX DESIGNER POSTER CARDS) -->
 <section id="projects" aria-labelledby="projects-heading">
@@ -711,93 +725,103 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
 
     <!-- 5-CARD POSTER SHOWCASE (ALL 5 IN ONE HORIZONTAL LINE ON DESKTOP) -->
     <div class="projects-showcase-grid">
-      <!-- 1. BeyondLabel -->
-      <div class="showcase-card theme-emerald reveal reveal-delay-1" role="button" tabindex="0" onclick="openModal('beyondlabel')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('beyondlabel')">
-        <div class="sc-card-top">
-          <span class="sc-badge live-badge">🟢 Live</span>
-        </div>
-        <div class="sc-poster-title">
-          <span class="sc-poster-eyebrow">AI · PWA · HEALTH</span>
-          BEYOND<br><strong>LABEL</strong>
-          <span class="sc-poster-sub">Ingredient Analyzer</span>
-        </div>
-        <div class="sc-card-bottom">
-          <div class="sc-btn-pill">
-            <span class="sc-btn-text">Check it out</span>
-            <span class="sc-btn-icon">↗</span>
+      <!-- 1. BeyondLabel (Deployed Live Project) -->
+      <div class="showcase-item reveal reveal-delay-1">
+        <div class="showcase-card theme-emerald" role="button" tabindex="0" onclick="openModal('beyondlabel')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('beyondlabel')">
+          <div class="sc-card-top">
+            <span class="sc-badge live-badge">🟢 Live</span>
           </div>
+          <div class="sc-poster-title">
+            <span class="sc-poster-eyebrow">AI · PWA · HEALTH</span>
+            BEYOND<br><strong>LABEL</strong>
+            <span class="sc-poster-sub">Ingredient Analyzer</span>
+          </div>
+        </div>
+        <div class="sc-ext-footer">
+          <a href="https://beyondlabel.vercel.app" target="_blank" rel="noopener" class="sc-ext-btn">
+            <span class="sc-ext-text">Check it out</span>
+            <span class="sc-ext-icon">↗</span>
+          </a>
         </div>
       </div>
 
       <!-- 2. HDFC Mutual Fund RAG Assistant -->
-      <div class="showcase-card theme-sapphire reveal reveal-delay-1" role="button" tabindex="0" onclick="openModal('ragchatbot')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('ragchatbot')">
-        <div class="sc-card-top">
-          <span class="sc-badge">💻 CI/CD</span>
-        </div>
-        <div class="sc-poster-title">
-          <span class="sc-poster-eyebrow">FINTECH · RAG</span>
-          HDFC<br><strong>RAG BOT</strong>
-          <span class="sc-poster-sub">Facts-Only AI</span>
-        </div>
-        <div class="sc-card-bottom">
-          <div class="sc-btn-pill">
-            <span class="sc-btn-text">Read more</span>
-            <span class="sc-btn-icon">↗</span>
+      <div class="showcase-item reveal reveal-delay-1">
+        <div class="showcase-card theme-sapphire" role="button" tabindex="0" onclick="openModal('ragchatbot')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('ragchatbot')">
+          <div class="sc-card-top">
+            <span class="sc-badge">💻 CI/CD</span>
           </div>
+          <div class="sc-poster-title">
+            <span class="sc-poster-eyebrow">FINTECH · RAG</span>
+            HDFC<br><strong>RAG BOT</strong>
+            <span class="sc-poster-sub">Facts-Only AI</span>
+          </div>
+        </div>
+        <div class="sc-ext-footer">
+          <button type="button" class="sc-ext-btn" onclick="openModal('ragchatbot')">
+            <span class="sc-ext-text">Read more</span>
+            <span class="sc-ext-icon">↗</span>
+          </button>
         </div>
       </div>
 
       <!-- 3. Multi-Agent Travel Planner -->
-      <div class="showcase-card theme-orange reveal reveal-delay-2" role="button" tabindex="0" onclick="openModal('multitravel')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('multitravel')">
-        <div class="sc-card-top">
-          <span class="sc-badge">🔵 Staging</span>
-        </div>
-        <div class="sc-poster-title">
-          <span class="sc-poster-eyebrow">5 AGENT AI</span>
-          TRAVEL<br><strong>AGENTS</strong>
-          <span class="sc-poster-sub">Autonomous Planning</span>
-        </div>
-        <div class="sc-card-bottom">
-          <div class="sc-btn-pill">
-            <span class="sc-btn-text">Read more</span>
-            <span class="sc-btn-icon">↗</span>
+      <div class="showcase-item reveal reveal-delay-2">
+        <div class="showcase-card theme-orange" role="button" tabindex="0" onclick="openModal('multitravel')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('multitravel')">
+          <div class="sc-card-top">
+            <span class="sc-badge">🔵 Staging</span>
           </div>
+          <div class="sc-poster-title">
+            <span class="sc-poster-eyebrow">5 AGENT AI</span>
+            TRAVEL<br><strong>AGENTS</strong>
+            <span class="sc-poster-sub">Autonomous Planning</span>
+          </div>
+        </div>
+        <div class="sc-ext-footer">
+          <button type="button" class="sc-ext-btn" onclick="openModal('multitravel')">
+            <span class="sc-ext-text">Read more</span>
+            <span class="sc-ext-icon">↗</span>
+          </button>
         </div>
       </div>
 
       <!-- 4. App Review Pulse Generator -->
-      <div class="showcase-card theme-violet reveal reveal-delay-2" role="button" tabindex="0" onclick="openModal('appreviewmcp')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('appreviewmcp')">
-        <div class="sc-card-top">
-          <span class="sc-badge">💻 MCP</span>
-        </div>
-        <div class="sc-poster-title">
-          <span class="sc-poster-eyebrow">PRODUCT OPS</span>
-          APP REVIEW<br><strong>PULSE</strong>
-          <span class="sc-poster-sub">Automated PM Agent</span>
-        </div>
-        <div class="sc-card-bottom">
-          <div class="sc-btn-pill">
-            <span class="sc-btn-text">Read more</span>
-            <span class="sc-btn-icon">↗</span>
+      <div class="showcase-item reveal reveal-delay-2">
+        <div class="showcase-card theme-violet" role="button" tabindex="0" onclick="openModal('appreviewmcp')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('appreviewmcp')">
+          <div class="sc-card-top">
+            <span class="sc-badge">💻 MCP</span>
           </div>
+          <div class="sc-poster-title">
+            <span class="sc-poster-eyebrow">PRODUCT OPS</span>
+            APP REVIEW<br><strong>PULSE</strong>
+            <span class="sc-poster-sub">Automated PM Agent</span>
+          </div>
+        </div>
+        <div class="sc-ext-footer">
+          <button type="button" class="sc-ext-btn" onclick="openModal('appreviewmcp')">
+            <span class="sc-ext-text">Read more</span>
+            <span class="sc-ext-icon">↗</span>
+          </button>
         </div>
       </div>
 
-      <!-- 5. Zomato AI Engine -->
-      <div class="showcase-card theme-crimson reveal reveal-delay-1" role="button" tabindex="0" onclick="openModal('zomatobuild')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('zomatobuild')">
-        <div class="sc-card-top">
-          <span class="sc-badge">🔵 Staging</span>
-        </div>
-        <div class="sc-poster-title">
-          <span class="sc-poster-eyebrow">FOOD TECH · AI</span>
-          ZOMATO<br><strong>AI ENGINE</strong>
-          <span class="sc-poster-sub">30,000+ Recommender</span>
-        </div>
-        <div class="sc-card-bottom">
-          <div class="sc-btn-pill">
-            <span class="sc-btn-text">Read more</span>
-            <span class="sc-btn-icon">↗</span>
+      <!-- 5. Zomato AI Engine (Deployed Live Project) -->
+      <div class="showcase-item reveal reveal-delay-1">
+        <div class="showcase-card theme-crimson" role="button" tabindex="0" onclick="openModal('zomatobuild')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('zomatobuild')">
+          <div class="sc-card-top">
+            <span class="sc-badge live-badge">🟢 Live</span>
           </div>
+          <div class="sc-poster-title">
+            <span class="sc-poster-eyebrow">FOOD TECH · AI</span>
+            ZOMATO<br><strong>AI ENGINE</strong>
+            <span class="sc-poster-sub">30,000+ Recommender</span>
+          </div>
+        </div>
+        <div class="sc-ext-footer">
+          <a href="https://zomato-milestone1-9ep8.vercel.app/" target="_blank" rel="noopener" class="sc-ext-btn">
+            <span class="sc-ext-text">Check it out</span>
+            <span class="sc-ext-icon">↗</span>
+          </a>
         </div>
       </div>
     </div>
@@ -939,7 +963,9 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
       </div>
     </div>
     <div class="tools-cell"></div>
+    <div class="tools-cell"></div>
     <!-- ROW 4 -->
+    <div class="tools-cell"></div>
     <div class="tools-cell">
       <div class="tool-logo reveal">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/visualstudiocode.svg" style="filter:invert(35%) sepia(80%) saturate(1000%) hue-rotate(180deg)" alt="" aria-hidden="true" loading="lazy"/>
@@ -947,14 +973,13 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
       </div>
     </div>
     <div class="tools-cell"></div>
-    <div class="tools-cell"></div>
-    <div class="tools-cell"></div>
     <div class="tools-cell">
       <div class="tool-logo reveal">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anthropic.svg" style="filter:invert(55%) sepia(60%) saturate(600%) hue-rotate(340deg)" alt="" aria-hidden="true" loading="lazy"/>
         <span style="color:#D97757">Claude</span>
       </div>
     </div>
+    <div class="tools-cell"></div>
     <div class="tools-cell"></div>
     <!-- ROW 5 -->
     <div class="tools-cell"></div><div class="tools-cell"></div><div class="tools-cell"></div>
@@ -986,7 +1011,97 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
   </div>
 </div>
 
-<!-- ABOUT ME HAS BEEN MERGED WITH 'WHAT I BRING' ABOVE -->
+<!-- MERGED WHAT I BRING & ABOUT ME SECTION (PLACED WHERE ABOUT ME WAS) -->
+<section id="bring" aria-labelledby="bring-heading" style="background:var(--burg); padding:6rem 8%; position:relative; overflow:hidden; isolation:isolate; z-index:5; border-top:1px solid rgba(255,255,255,0.08); clear:both; display:block; width:100%;">
+  <span id="about" style="position:absolute; top:-80px; width:0; height:0; padding:0 !important; margin:0; background:transparent !important; border:none; display:block; pointer-events:none;"></span>
+  <!-- Signature MRC Watermark -->
+  <div style="position:absolute; font-family:'Playfair Display',serif; font-style:italic; font-weight:700; font-size:28vw; color:rgba(255,255,255,0.04); line-height:1; bottom:-4vw; right:-2vw; pointer-events:none; z-index:0; letter-spacing:-0.04em; user-select:none;">MRC</div>
+  
+  <div class="sec-inner" style="position:relative; z-index:1;">
+    <div class="sec-label reveal" style="background:transparent !important; color:rgba(255,255,255,0.65) !important; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; border:none !important; padding:0 !important; margin-bottom:1.5rem;">The person behind the product</div>
+    
+    <div class="bring-executive-grid">
+      <!-- LEFT COLUMN: Story & The 3 Lenses -->
+      <div class="bring-story-col reveal reveal-delay-1">
+        <h2 class="sec-h2" id="bring-heading" style="color:#fff; margin-bottom:1.5rem;">Three lenses. One story.<br><em style="color:rgba(255,255,255,0.65);">How I think &amp; build.</em></h2>
+        
+        <div class="bring-story-text" style="margin-bottom:2.5rem; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.95rem; line-height:1.75; color:rgba(255,255,255,0.85);">
+          <p style="margin-bottom:1.1rem;">Great products aren’t born from frameworks alone—they’re forged by relentless curiosity and the discipline to execute when the novelty wears off. Out on the cricket field as a <strong>right-handed pace all-rounder</strong>, or grinding toward a <strong>100kg bench press</strong>, I’ve learned that timing, stamina, and handling pressure under fire win games. That same hunger drives how I build: obsessive over details, resilient through roadblocks, and never settling for average.</p>
+          <p>When I’m not shipping code or mapping user journeys, you’ll find me immersed in the lore of a lifelong <strong>Potterhead</strong>, finding rhythm in evocative <strong>Hindi poetry</strong>, or studying the <strong>biographies</strong> of founders who defied impossible odds. I don’t just manage products; I craft stories that resonate, backed by the technical depth and financial rigor to make them real.</p>
+        </div>
+
+        <!-- The 3 Core Lenses Stack -->
+        <div class="bring-pillars-stack" style="display:flex; flex-direction:column; gap:1rem;">
+          <div class="pillar" style="margin:0;">
+            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.4rem;">
+              <span class="p-num" style="font-size:1.4rem; margin:0; color:rgba(255,255,255,0.25);">01</span>
+              <span class="p-title" style="margin:0; font-size:1rem;">The Finance Lens</span>
+            </div>
+            <div class="p-desc">FMVA certified (CFI) · Built DCF models, read annual reports as case studies, worked inside a CA firm. I connect product decisions to revenue impact — not just engagement metrics.</div>
+          </div>
+          <div class="pillar" style="margin:0;">
+            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.4rem;">
+              <span class="p-num" style="font-size:1.4rem; margin:0; color:rgba(255,255,255,0.25);">02</span>
+              <span class="p-title" style="margin:0; font-size:1rem;">The Product &amp; UX Lens</span>
+            </div>
+            <div class="p-desc">Nextleap PM Fellow · I study apps the way most people just use them. Friction mapping, user journey analysis, wireframing — then writing feature proposals a real PM would actually ship.</div>
+          </div>
+          <div class="pillar" style="margin:0;">
+            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.4rem;">
+              <span class="p-num" style="font-size:1.4rem; margin:0; color:rgba(255,255,255,0.25);">03</span>
+              <span class="p-title" style="margin:0; font-size:1rem;">Tech Fluency</span>
+            </div>
+            <div class="p-desc">Final-year CS undergrad (CGPA 8.36) means I understand what's feasible and what's a three-sprint nightmare. I write specs engineers respect and assess tradeoffs without hand-waving.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Executive Credential Side Card -->
+      <div class="bring-profile-card reveal reveal-delay-2">
+        <div class="bring-profile-card-header">
+          <div class="bring-profile-name">MRIGANK RAJ CHOUHAN</div>
+          <div class="bring-profile-title">Product Manager · Fintech, RAG AI &amp; SaaS</div>
+        </div>
+
+        <!-- Scannable Credential Table -->
+        <div class="bring-cred-list">
+          <div class="bring-cred-row">
+            <span class="bring-cred-label">Institution</span>
+            <span class="bring-cred-val">KIIT Bhubaneswar</span>
+          </div>
+          <div class="bring-cred-row">
+            <span class="bring-cred-label">Degree</span>
+            <span class="bring-cred-val">B.Tech CSE (Final Year)</span>
+          </div>
+          <div class="bring-cred-row">
+            <span class="bring-cred-label">Academic CGPA</span>
+            <span class="bring-cred-val" style="color:#EEEADE;">8.36 / 10</span>
+          </div>
+          <div class="bring-cred-row">
+            <span class="bring-cred-label">Fellowship</span>
+            <span class="bring-cred-val" style="color:#FBBF24;">Nextleap PM Fellow</span>
+          </div>
+          <div class="bring-cred-row">
+            <span class="bring-cred-label">Finance Cert.</span>
+            <span class="bring-cred-val">FMVA — CFI</span>
+          </div>
+          <div class="bring-cred-row" style="border-bottom:none;">
+            <span class="bring-cred-label">Graduating</span>
+            <span class="bring-cred-val">2027</span>
+          </div>
+        </div>
+
+        <!-- Action Footer -->
+        <div class="bring-card-footer">
+          <a href="#contact" class="btn-twotone" style="width:100%;">
+            <span class="bt-text" style="flex:1; justify-content:center;">Let's talk product</span>
+            <span class="bt-icon">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- EXPERIENCE -->
 <section id="experience" aria-labelledby="experience-heading">
@@ -1065,22 +1180,17 @@ footer{border-top:1px solid var(--border);padding:1.5rem 8%;display:flex;justify
 
 </main>
 
-<!-- FOOTER -->
+<!-- FOOTER — EDGE-TO-EDGE TYPOGRAPHIC FOOTER -->
 <footer>
-  <div class="fl">
-    <div class="fl-name">Mrigank Raj <em>Chouhan</em></div>
-    <div class="fl-note">KIIT · B.Tech CSE · Product × Finance × Business</div>
-  </div>
-  <div class="footer-socials">
-    <a href="https://www.linkedin.com/in/mrigankraj" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-    </a>
-    <a href="https://www.instagram.com/mrigankk.raj/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-    </a>
-    <a href="https://x.com/Mrigank_raj22" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X / Twitter">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-    </a>
+  <div class="footer-giant-title">Mrigank Raj Chouhan</div>
+  <div class="footer-bottom-bar">
+    <div class="footer-logo-text">Mrigank Raj Chouhan</div>
+    <div class="footer-nav-links">
+      <a href="https://www.linkedin.com/in/mrigankraj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">LinkedIn</a>
+      <a href="https://x.com/Mrigank_raj22" target="_blank" rel="noopener noreferrer" class="footer-nav-link">X / Twitter</a>
+      <a href="https://www.instagram.com/mrigankk.raj/" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Instagram</a>
+      <a href="https://github.com/mrigank-raj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">GitHub</a>
+    </div>
   </div>
 </footer>
 
