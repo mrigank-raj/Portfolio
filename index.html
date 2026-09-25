@@ -87,15 +87,17 @@ section{position:relative;overflow:hidden}
 .hero-sub{font-size:0.88rem;color:var(--muted);max-width:420px;margin:1.75rem auto 1.75rem;line-height:1.8}
 .hero-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
 
-/* PHOTO STRIP */
-.photo-strip{width:100%;overflow:hidden;padding:2rem 0 0;position:relative;z-index:1}
-.photo-strip-inner{display:flex;gap:1rem;width:max-content;animation:stripLeft 50s linear infinite;will-change:transform}
-.photo-strip:hover .photo-strip-inner{animation-play-state:paused}
-.photo-card{flex-shrink:0;width:240px;border-radius:14px;overflow:hidden;border:1.5px solid #1a1410;box-shadow:0 4px 20px rgba(26,20,16,0.08);background:#fff}
-.photo-card img{width:240px;height:200px;object-fit:cover;object-position:center top;display:block}
-.photo-card-cap{padding:0.55rem 0.85rem 0.65rem;background:#fff;border-top:1px solid var(--border)}
-.photo-card-cap p{font-size:0.71rem;color:var(--text);font-style:normal;font-weight:600;line-height:1.4}
-@keyframes stripLeft{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+/* HERO POLAROID FAN */
+.fan{display:flex;justify-content:center;align-items:flex-start;padding:3.5rem 1rem 4rem;position:relative;z-index:1;width:100%}
+.fan-card{--w:clamp(112px,12vw,190px);flex:0 0 var(--w);width:var(--w);margin-left:0.6rem;background:#fff;padding:0.5rem 0.5rem 0;border:1.5px solid #1a1410;border-radius:6px;
+  box-shadow:0 10px 28px rgba(26,20,16,0.16);transform:translateY(var(--y)) rotate(var(--rot));transition:transform 0.35s cubic-bezier(.2,.8,.2,1),box-shadow 0.35s;
+  opacity:0;animation:fanIn 0.7s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(0.25s + var(--i) * 0.09s)}
+.fan-card:first-child{margin-left:0}
+.fan-card:hover{transform:translateY(calc(var(--y) - 18px)) rotate(0deg) scale(1.06);box-shadow:0 22px 44px rgba(26,20,16,0.26);z-index:5}
+.fan-card img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+.fan-card p{font-size:0.66rem;font-weight:600;line-height:1.35;color:var(--text);padding:0.55rem 0.7rem 0.65rem;min-height:2.9rem;text-align:center}
+@keyframes fanIn{from{opacity:0;transform:translateY(calc(var(--y) + 40px)) rotate(0deg)}to{opacity:1;transform:translateY(var(--y)) rotate(var(--rot))}}
+@media (prefers-reduced-motion:reduce){.fan-card{animation:none;opacity:1}}
 
 /* MARQUEE */
 .mq-wrap{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:0.85rem 0;overflow:hidden;background:var(--burg);position:relative;z-index:1}
@@ -336,6 +338,12 @@ section{position:relative;overflow:hidden}
     url("assets/projects/zomato_card.jpg");
   background-size: cover;
   background-position: center;
+}
+.theme-teal {
+  background-color: #041a1c;
+  background-image:
+    radial-gradient(circle at 82% 12%, rgba(252,211,77,0.30) 0%, transparent 46%),
+    linear-gradient(160deg, #0d4247 0%, #062a2d 45%, #041a1c 100%);
 }
 
 /* Subtle pattern overlay inside card */
@@ -600,6 +608,9 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
   .nav-right{grid-column:2;justify-content:flex-end}
   #hero{padding:5.5rem 0 0}
   #hero h1{font-size:clamp(1.8rem,6vw,2.6rem)}
+  .fan{padding:2.5rem 1rem 3rem}
+  .fan-card{--w:clamp(105px,17vw,140px)}
+  .fan-card:nth-child(n+6){display:none}
   #bring{padding:4rem 6%}
   #work{padding:4rem 6%}
   #about{padding:4rem 6%}
@@ -611,8 +622,6 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
   .tools-stage{display:none}
   #tools::before{display:none}
   #tools-mobile{display:block}
-  .photo-card{width:200px}
-  .photo-card img{width:200px;height:170px}
   .exp-row{grid-template-columns:1fr;gap:0.5rem}
   .exp-date{text-align:left}
   .exp-type{text-align:left}
@@ -625,12 +634,15 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
   nav{padding:0.5rem 0.6rem 0.5rem 1rem}
   .nav-name{font-size:0.52rem}
   .nav-cta{font-size:0.7rem;padding:0.4rem 0.85rem}
+  .btn-burg,.btn-outline{width:100%;max-width:280px;justify-content:center}
+  .sec-h2{font-size:clamp(1.6rem,7vw,2.2rem)}
   #hero{padding:5rem 0 2.5rem; min-height: auto;}
   #hero h1{font-size:clamp(1.6rem,7vw,2.2rem)}
   .hero-sub{font-size:0.82rem;margin:1.25rem auto}
   .hero-btns{flex-direction:column;align-items:center;gap:0.6rem}
-  .btn-burg,.btn-outline{width:100%;max-width:280px;justify-content:center}
-  .sec-h2{font-size:clamp(1.6rem,7vw,2.2rem)}
+  .fan-card{--w:96px}
+  .fan-card:nth-child(n+5){display:none}
+  .fan-card p{font-size:0.58rem;min-height:2.5rem}
   #bring{padding:3.5rem 5%}
   .bring-sub{font-size:0.82rem}
   .p-desc{font-size:0.78rem}
@@ -643,8 +655,6 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
   .exp-row{padding:1.1rem}
   .exp-desc{font-size:0.77rem}
   .contact-left p{font-size:0.84rem}
-  .photo-card{width:170px}
-  .photo-card img{width:170px;height:145px}
   .modal-overlay{padding:1rem}
   .modal-box{padding:1.25rem;max-height:90vh}
   footer{padding:1.25rem 5%}
@@ -689,9 +699,7 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
       <a href="#contact" class="btn-outline">Let's connect</a>
     </div>
   </div>
-  <div class="photo-strip" aria-hidden="true">
-    <div class="photo-strip-inner" id="photo-strip-inner"></div>
-  </div>
+  <div class="fan" id="fan" aria-hidden="true"></div>
 </section>
 
 <!-- MARQUEE -->
@@ -720,10 +728,10 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
 
     <!-- Subtitle -->
     <p class="reveal reveal-delay-2" style="color:rgba(238,234,222,0.85); text-align:center; max-width:580px; margin:0 auto; font-size:0.88rem; line-height:1.6; font-family:'Inter',sans-serif;">
-      End-to-end AI applications, RAG pipelines, and autonomous agent systems designed to solve real user problems.
+      End-to-end products — AI applications, RAG pipelines, agent systems, and B2B SaaS — designed to solve real user problems.
     </p>
 
-    <!-- 5-CARD POSTER SHOWCASE (ALL 5 IN ONE HORIZONTAL LINE ON DESKTOP) -->
+    <!-- 6-CARD POSTER SHOWCASE (3 x 2 ON DESKTOP) -->
     <div class="projects-showcase-grid">
       <!-- 1. BeyondLabel (Deployed Live Project) -->
       <div class="showcase-item reveal reveal-delay-1">
@@ -819,6 +827,26 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
         </div>
         <div class="sc-ext-footer">
           <a href="https://zomato-milestone1-9ep8.vercel.app/" target="_blank" rel="noopener" class="sc-ext-btn">
+            <span class="sc-ext-text">Check it out</span>
+            <span class="sc-ext-icon">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 6. Kudos Rewards (Deployed Live Project) -->
+      <div class="showcase-item reveal reveal-delay-2">
+        <div class="showcase-card theme-teal" role="button" tabindex="0" onclick="openModal('kudos')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('kudos')">
+          <div class="sc-card-top">
+            <span class="sc-badge live-badge">🟢 Live</span>
+          </div>
+          <div class="sc-poster-title">
+            <span class="sc-poster-eyebrow">B2B SAAS · GAMIFIED</span>
+            KUDOS<br><strong>REWARDS</strong>
+            <span class="sc-poster-sub">Employee Recognition Platform</span>
+          </div>
+        </div>
+        <div class="sc-ext-footer">
+          <a href="https://kudos-rewards.vercel.app" target="_blank" rel="noopener" class="sc-ext-btn">
             <span class="sc-ext-text">Check it out</span>
             <span class="sc-ext-icon">↗</span>
           </a>
@@ -1203,30 +1231,21 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
 </div>
 
 <script>
-// ── PHOTO STRIP ──
-const BASE = 'https://raw.githubusercontent.com/mrigank-raj/Portfolio/main/assets/images/';
+// ── HERO POLAROID FAN ──
 const photos = [
-  {src:'img1.jpeg', cap:'Yes, I clean up well. Occasionally.', pos:'center 15%'},
-  {src:'img2.jpeg', cap:'Contemplating roadmaps, probably.', pos:'center 20%'},
-  {src:'img5.jpeg', cap:'The architecture did most of the work.', pos:'center 20%'},
-  {src:'img6.jpeg', cap:'Asked for clarity. Got this.', pos:'center 25%'},
-  {src:'img7.jpeg', cap:'Sangam point. Still waiting for my offer letter.', pos:'center 15%'},
-  {src:'img8.jpeg', cap:'My interview fit. Obviously.', pos:'center 30%'},
-  {src:'img9.jpeg', cap:'One sunset at a time.', pos:'center 10%'},
-  {src:'img11.jpeg', cap:'Better product sense than most apps.', pos:'center 10%'},
-  {src:'img12.jpeg', cap:'Open to work. Closed to bad UX.', pos:'center 10%'},
-  {src:'img13.jpeg', cap:'Took a detour. Worth it.', pos:'center 15%'},
-  {src:'img14.jpeg', cap:'This beach had better retention than most apps.', pos:'center 20%'},
-  {src:'img15.jpeg', cap:'Pangong Tso. No slides. Just vibes.', pos:'center 15%'},
-  {src:'img16.jpeg', cap:'Available for immediate joining.', pos:'center 30%'},
+  {src:'img1.jpeg',  cap:'Yes, I clean up well. Occasionally.',  pos:'center 15%', rot:-6, y:14},
+  {src:'img2.jpeg',  cap:'Contemplating roadmaps, probably.',    pos:'center 20%', rot:3,  y:0},
+  {src:'img8.jpeg',  cap:'My interview fit. Obviously.',         pos:'center 30%', rot:-3, y:20},
+  {src:'img15.jpeg', cap:'Pangong Tso. No slides. Just vibes.',  pos:'center 15%', rot:5,  y:2},
+  {src:'img12.jpeg', cap:'Open to work. Closed to bad UX.',      pos:'center 10%', rot:-4, y:18},
+  {src:'img13.jpeg', cap:'Took a detour. Worth it.',             pos:'center 15%', rot:4,  y:0},
+  {src:'img16.jpeg', cap:'Available for immediate joining.',     pos:'center 30%', rot:-5, y:14},
 ];
-const strip = document.getElementById('photo-strip-inner');
-const doubled = [...photos, ...photos];
-strip.innerHTML = doubled.map(p => `
-  <div class="photo-card">
-    <img src="${BASE}${p.src}" alt="${p.cap}" style="object-position:${p.pos}" loading="lazy"/>
-    <div class="photo-card-cap"><p>${p.cap}</p></div>
-  </div>`).join('');
+document.getElementById('fan').innerHTML = photos.map((p, i) => `
+  <figure class="fan-card" style="--i:${i};--rot:${p.rot}deg;--y:${p.y}px">
+    <img src="assets/images/${p.src}" alt="" style="object-position:${p.pos}"/>
+    <p>${p.cap}</p>
+  </figure>`).join('');
 
 // ── MARQUEE ──
 const skills = ['Product Thinking','User Research','Wireframing','A/B Testing','Financial Modeling','DCF Valuation','Python','SQL','Go-To-Market Strategy','Roadmapping','FMVA Certified'];
@@ -1314,6 +1333,57 @@ const MODAL_DATA = {
       <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
         <a href="https://beyondlabel.vercel.app" target="_blank" class="btn-burg">View Live App ↗</a>
         <a href="https://github.com/mrigank-raj/BeyondLabel" target="_blank" class="btn-outline">View GitHub ↗</a>
+      </div>
+    `
+  },
+  kudos: {
+    tag: 'Shipped Product · React · Supabase · B2B SaaS',
+    title: 'Kudos: Employee Recognition & Rewards Platform',
+    body: `
+      <div style="background:var(--cream2); border:1px solid var(--border); border-radius:12px; padding:1.5rem; margin-bottom:1.5rem; text-align:center;">
+        <div style="font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:0.75rem;">Points Flow — Every Transfer Is Atomic</div>
+        <div style="display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:0.5rem; font-size:0.78rem; font-weight:600; color:var(--burg);">
+          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">Admin Issues / Peer Sends Kudos</span>
+          <span>→</span>
+          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">Postgres RPC Ledger</span>
+          <span>→</span>
+          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">Realtime Balance &amp; Feed</span>
+          <span>→</span>
+          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">Redeem &amp; Fulfil</span>
+        </div>
+      </div>
+      <div class="modal-section"><h4>The Problem</h4>
+        <p>Recognition programs stall when they are purely top-down: managers become the bottleneck, peers who actually see the work stay invisible, and any glitch in the points balance quietly erodes trust in the whole program.</p>
+      </div>
+      <div class="modal-section"><h4>The Solution</h4>
+        <p>A full-stack rewards platform where organizations distribute points and employees earn, give, and redeem them. Admins get a dashboard to issue spot bonuses, manage the reward catalog, and work a fulfilment queue. Employees get a social feed for peer-to-peer shout-outs with company-value tags and emoji reactions, plus a leaderboard and auto-awarded badges (First Kudos, Team Player, Top Earner).</p>
+      </div>
+      <div class="modal-section"><h4>Product &amp; Engineering Decisions</h4>
+        <ul style="margin-top:0.6rem">
+          <li><strong>Peer-to-peer Kudos feed:</strong> Manager-only recognition creates bottlenecks. Letting anyone send points creates a horizontal engagement loop and organic data on cross-functional collaboration.</li>
+          <li><strong>Atomic transfers in Postgres RPC (<code>send_kudos</code>):</strong> A client-side, multi-call transfer can fail halfway and lose points. Moving it into one stored procedure prevents race conditions, double-spends, and negative balances.</li>
+          <li><strong>Onboarding via database trigger (<code>handle_new_user</code>):</strong> Email confirmation blocked the client from creating the profile under Row-Level Security. A backend trigger provisions the profile and starting balance instantly, cutting time-to-first-value.</li>
+          <li><strong>Realtime balance sync:</strong> A stale balance on screen after the database had already deducted points would cause "insufficient funds" surprises and support tickets. A global <code>refreshProfile</code> keeps UI and ledger in step across tabs.</li>
+        </ul>
+      </div>
+      <div class="modal-section"><h4>Edge Cases Handled</h4>
+        <ul style="margin-top:0.6rem">
+          <li><strong>Double-spend:</strong> Database-level constraints reject a redemption if the balance drops below cost mid-request.</li>
+          <li><strong>Pending members:</strong> Admin-configured members are promoted automatically when they sign up.</li>
+          <li><strong>Null states:</strong> Empty feeds and first-time logins get encouraging empty states instead of blank screens.</li>
+        </ul>
+      </div>
+      <div class="modal-section"><h4>Technical Stack</h4>
+        <p>React (Vite), Tailwind CSS, TanStack React Query, Supabase (PostgreSQL, Auth, Realtime, Row-Level Security), custom PL/pgSQL stored procedures. Deployed on Vercel with a documented decision log, architecture, edge-case, and evals docs in the repo.</p>
+      </div>
+      <div class="modal-metric" style="margin-bottom: 1.5rem">
+        <div class="metric-pill"><div class="mv">2 Roles</div><div class="ml">Admin &amp; Recipient</div></div>
+        <div class="metric-pill"><div class="mv">Atomic</div><div class="ml">Postgres RPC Ledger</div></div>
+        <div class="metric-pill"><div class="mv">Realtime</div><div class="ml">Balance &amp; Feed Sync</div></div>
+      </div>
+      <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+        <a href="https://kudos-rewards.vercel.app" target="_blank" rel="noopener" class="btn-burg">View Live App ↗</a>
+        <a href="https://github.com/mrigank-raj/Kudos-Rewards" target="_blank" rel="noopener" class="btn-outline">View GitHub ↗</a>
       </div>
     `
   },
