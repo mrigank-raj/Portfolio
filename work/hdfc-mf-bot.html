@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>HDFC Fund Facts · Mrigank Raj Chouhan</title>
+<meta name="description" content="A RAG assistant for five HDFC mutual funds that cites a source for every answer and refuses anything that sounds like advice."/>
+<link rel="canonical" href="https://mrigankraj.vercel.app/work/hdfc-mf-bot"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://mrigankraj.vercel.app/work/hdfc-mf-bot"/>
+<meta property="og:title" content="HDFC Fund Facts · Mrigank Raj Chouhan"/>
+<meta property="og:description" content="A RAG assistant for five HDFC mutual funds that cites a source for every answer and refuses anything that sounds like advice."/>
+<meta property="og:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/main.css?v=27"/>
+<link rel="stylesheet" href="/assets/css/case.css?v=5"/>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav aria-label="Main navigation">
+    <a class="nav-name" href="/">Mrigank<br>Raj<br><em>Chouhan</em></a>
+    <div class="nav-links">
+      <a href="/#bring">About</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#teardowns">Case Studies</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:mrigankrajchouhan@gmail.com?subject=Product%20internship" class="nav-cta">Hire me ↗</a>
+    </div>
+  </nav>
+</div>
+<header class="case-hero grid-bg"><div class="case-wrap sec-inner"><a class="case-back" href="/#projects">← All projects</a><div class="sec-label">Project</div><h1 class="case-title">HDFC Fund Facts</h1><p class="case-lede">A RAG assistant for five HDFC mutual funds that cites a source for every answer and refuses anything that sounds like advice.</p><dl class="case-facts"><div><dt>Role</dt><dd>Solo, from a brief</dd></div><div><dt>When</dt><dd>Jul to Sep 2026</dd></div><div><dt>Status</dt><dd>Live</dd></div><div><dt>Links</dt><dd><a href="https://hdfc-mf-rag-chat.vercel.app/" target="_blank" rel="noopener">Live app</a>, <a href="https://github.com/mrigank-raj/Rag-Chatbot" target="_blank" rel="noopener">code</a></dd></div></dl></div></header>
+<main class="case-body"><div class="case-wrap"><div class="glance"><div><span>The obvious version</span><p><span class="cut">A bot that compares funds and calculates returns</span></p></div><div><span>What I built</span><p>Short, sourced answers and polite refusals</p></div><div><span>Left out</span><p><span class="cut">Return calculations</span> <span class="cut">Fund comparisons</span></p></div><div><span>It's working if</span><p><b>0</b> unsupported answers on the test set</p></div></div><section class="case-sec"><h2><span>01</span>Where it started</h2><div class="body"><p>The brief: a facts-only assistant for five HDFC mutual funds, with Groww's fund pages as the only source. Retail investors ask the same questions again and again: expense ratio, exit load, minimum SIP, lock-in, benchmark.</p></div></section><section class="case-sec"><h2><span>02</span>What changed my mind</h2><div class="body"><p>Refusing investment advice was a given, so that isn't the interesting decision. The harder one was refusing the questions that make a finance bot feel smart: what were the returns over five years, which fund is better.</p><p>Any number the bot calculates is a number no source page contains, and an investor has no way to check it. In finance, an answer you can't verify is worse than no answer.</p><p class="signal">How strong is this? Facts-only came from the brief. Drawing the line at calculations and comparisons was my call.</p></div></section><section class="case-sec"><h2><span>03</span>What I built</h2><div class="body"><p>A retrieval pipeline over the five fund pages. A classifier first sorts each question into factual, advice-seeking or out of scope. Factual questions get an answer of three sentences or fewer, with exactly one source link and the date the data was last refreshed. Advice-seeking questions get a polite refusal and a link to investor education from AMFI or SEBI.</p><p>A scheduled job re-reads the pages every day so the facts stay current, and anything that looks like a PAN, phone number or account number is blocked.</p><figure class="shot"><img src="/assets/projects/ragchatbot_app.png" alt="HDFC Fund Facts answering a question with a source link" loading="lazy"></figure></div></section><section class="case-sec"><h2><span>04</span>What I left out, and why</h2><div class="body"><ul class="reasons"><li><span class="cut wrapok">Return calculations</span><span class="why">A computed return isn't in any source, so it can't be cited.</span></li><li><span class="cut wrapok">Fund comparisons</span><span class="why">"Which is better" is advice dressed up as a fact.</span></li><li><span class="cut wrapok">Sources beyond the five pages</span><span class="why">More sources mean more answers, and more ways for them to contradict each other. One source per answer keeps every claim checkable.</span></li></ul></div></section><section class="case-sec"><h2><span>05</span>How I'll know it's working</h2><div class="body"><div class="metric"><div class="main"><span class="k">Main metric <span class="tag">target</span></span><p class="figure">0</p><p>answers on the test set say something the source pages don't.</p></div><div><span class="k">What moves it</span><ul><li>Advice-seeking questions caught: above 95%</li><li>Right passage among the top three retrieved: above 85%</li><li>Answers within the length and citation rules: 100%</li></ul></div><div><span class="k">What must not get worse</span><p>No personal data stored, ever.</p></div></div></div></section><section class="case-sec"><h2><span>06</span>Trade-offs I accepted</h2><div class="body"><ul class="plain"><li>Answers are short by rule, which sometimes feels curt. Accuracy over cleverness was the point.</li><li>Mixed questions, like "what's the exit load, and should I invest?", are refused entirely. Erring towards refusal costs one annoyed user; erring the other way costs trust.</li></ul></div></section><section class="case-sec"><h2><span>07</span>What I'd do next</h2><div class="body"><p>Log real questions for a month and look at what gets refused. If people mostly ask about returns, the next build is a link to the official factsheet, not a calculator.</p></div></section>
+<div class="case-next"><span>Next</span><a href="/work/beyondlabel.html" class="btn-twotone"><span class="bt-text">BeyondLabel</span><span class="bt-icon">↗</span></a></div></div></main>
+
+<footer>
+  <div class="footer-giant-title">Mrigank Raj Chouhan</div>
+  <div class="footer-bottom-bar">
+    <div class="footer-logo-text">Mrigank Raj Chouhan</div>
+    <div class="footer-nav-links">
+      <a href="https://www.linkedin.com/in/mrigankraj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">LinkedIn</a>
+      <a href="https://x.com/Mrigank_raj22" target="_blank" rel="noopener noreferrer" class="footer-nav-link">X / Twitter</a>
+      <a href="https://github.com/mrigank-raj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">GitHub</a>
+      <a href="https://drive.google.com/file/d/1gmIsDmhPAh5XHuixjQSJWTEz9fLjeQnA/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Resume</a>
+    </div>
+  </div>
+</footer>
+<script defer src="/assets/js/site.js?v=6"></script>
+</body>
+</html>

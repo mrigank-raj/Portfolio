@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>A/B Decision Engine · Mrigank Raj Chouhan</title>
+<meta name="description" content="An experimentation engine with an uplift model that tells a team whether to ship, kill or keep testing, and whether to trust the result."/>
+<link rel="canonical" href="https://mrigankraj.vercel.app/work/ab-testing-engine"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://mrigankraj.vercel.app/work/ab-testing-engine"/>
+<meta property="og:title" content="A/B Decision Engine · Mrigank Raj Chouhan"/>
+<meta property="og:description" content="An experimentation engine with an uplift model that tells a team whether to ship, kill or keep testing, and whether to trust the result."/>
+<meta property="og:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/main.css?v=27"/>
+<link rel="stylesheet" href="/assets/css/case.css?v=5"/>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav aria-label="Main navigation">
+    <a class="nav-name" href="/">Mrigank<br>Raj<br><em>Chouhan</em></a>
+    <div class="nav-links">
+      <a href="/#bring">About</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#teardowns">Case Studies</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:mrigankrajchouhan@gmail.com?subject=Product%20internship" class="nav-cta">Hire me ↗</a>
+    </div>
+  </nav>
+</div>
+<header class="case-hero grid-bg"><div class="case-wrap sec-inner"><a class="case-back" href="/#projects">← All projects</a><div class="sec-label">Project</div><h1 class="case-title">A/B Decision Engine</h1><p class="case-lede">An experimentation engine with an uplift model that tells a team whether to ship, kill or keep testing, and whether to trust the result.</p><dl class="case-facts"><div><dt>Role</dt><dd>Solo</dd></div><div><dt>When</dt><dd>Sep to Oct 2026</dd></div><div><dt>Status</dt><dd>Live API and dashboard</dd></div><div><dt>Links</dt><dd><a href="https://ab-testing-decision-engine.vercel.app/" target="_blank" rel="noopener">Live app</a>, <a href="https://github.com/mrigank-raj/ab-testing-engine" target="_blank" rel="noopener">code</a></dd></div></dl></div></header>
+<main class="case-body"><div class="case-wrap"><div class="glance"><div><span>The obvious version</span><p><span class="cut">A p-value calculator</span></p></div><div><span>What I built</span><p>A ship / kill / hold verdict that checks trust first</p></div><div><span>Left out</span><p><span class="cut">A dashboard before the maths was proven</span></p></div><div><span>What I measured</span><p><b>22.7% → 1%</b> false positives from peeking</p></div></div><section class="case-sec"><h2><span>01</span>Where it started</h2><div class="body"><p>Most A/B testing work stops at one question: is the p-value below 0.05? That's the obvious tool to build, and plenty of calculators already do it.</p></div></section><section class="case-sec"><h2><span>02</span>What changed my mind</h2><div class="body"><p>That question comes too late. Experiments mislead teams in three ways before significance even matters. A broken redirect skews the traffic split and quietly invalidates the test. Teams check the dashboard every day and stop at the first good-looking result. And an average can hide a change that helps one group while hurting another.</p><p class="signal">How strong is this? Each failure is well documented in experimentation research, and each one was reproduced here with a simulator whose true effect is known, so every method could be checked against the right answer.</p></div></section><section class="case-sec"><h2><span>03</span>What I built</h2><div class="body"><p>An engine that runs four checks and returns one verdict: ship, kill or hold.</p><p>It detects a mismatched traffic split and finds which platform the imbalance comes from. It uses sequential testing, which stays valid however often you peek. It uses CUPED, which borrows pre-experiment data to cut noise. And an uplift model shows who the change actually worked for. It all runs behind a FastAPI service with a small dashboard.</p></div></section><section class="case-sec"><h2><span>04</span>What I left out, and why</h2><div class="body"><ul class="reasons"><li><span class="cut wrapok">A single p-value verdict</span><span class="why">It's the answer people expect, and the one that misleads them. The verdict only comes after the trust checks pass.</span></li><li><span class="cut wrapok">A dashboard before the maths was proven</span><span class="why">The first eight steps were statistics, each validated against simulated ground truth. The API and dashboard came last, so there was nothing to make look good until it was right.</span></li><li><span class="cut wrapok">A full Qini curve</span><span class="why">A simpler ranking check confirms the uplift model orders users sensibly. Publication-grade evaluation would have taken longer than it would have changed any decision.</span></li></ul></div></section><section class="case-sec"><h2><span>05</span>What I measured</h2><div class="body"><div class="metric"><div class="main"><span class="k">Main metric <span class="tag m">measured</span></span><p class="figure">22.7% → 1%</p><p>false-positive rate when a team peeks at results every day, without and then with sequential testing. The promised rate is 5%.</p></div><div><span class="k">What moves it</span><ul><li>CUPED narrowed confidence intervals by 11.6%, matching the theoretical prediction</li><li>On Criteo's 13.9 million-row dataset, only about 44% of targeted users showed a positive response, so the rest of that ad spend is plausibly wasted</li><li>An injected iOS-only split bug (58% against an expected 50%) was isolated, while Android and web were correctly cleared</li></ul></div><div><span class="k">What must not get worse</span><p>The error rate stays at or below the 5% it promises.</p></div></div></div></section><section class="case-sec"><h2><span>06</span>Trade-offs I accepted</h2><div class="body"><ul class="plain"><li>Sequential testing came in conservative, at 1% rather than exactly 5%. That's safer but less sensitive, and a tuning parameter can trade some of it back.</li><li>CUPED helps much less on yes-or-no outcomes like conversion than on revenue. That's a property of the method, so the tool says so rather than overselling it.</li></ul></div></section><section class="case-sec"><h2><span>07</span>What I'd do next</h2><div class="body"><p>Put it in front of a team running real tests and track one thing: how many "ship" decisions it changes to "hold". That's the number that says it saved someone from a bad launch.</p></div></section>
+<div class="case-next"><span>Next</span><a href="/work/plutus.html" class="btn-twotone"><span class="bt-text">Plutus</span><span class="bt-icon">↗</span></a></div></div></main>
+
+<footer>
+  <div class="footer-giant-title">Mrigank Raj Chouhan</div>
+  <div class="footer-bottom-bar">
+    <div class="footer-logo-text">Mrigank Raj Chouhan</div>
+    <div class="footer-nav-links">
+      <a href="https://www.linkedin.com/in/mrigankraj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">LinkedIn</a>
+      <a href="https://x.com/Mrigank_raj22" target="_blank" rel="noopener noreferrer" class="footer-nav-link">X / Twitter</a>
+      <a href="https://github.com/mrigank-raj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">GitHub</a>
+      <a href="https://drive.google.com/file/d/1gmIsDmhPAh5XHuixjQSJWTEz9fLjeQnA/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Resume</a>
+    </div>
+  </div>
+</footer>
+<script defer src="/assets/js/site.js?v=6"></script>
+</body>
+</html>

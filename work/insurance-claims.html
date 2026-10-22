@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>AI-First Cashless Claims · Mrigank Raj Chouhan</title>
+<meta name="description" content="Cashless health claims stall at discharge, even when every document is in. I designed an AI layer that has the claim ready before the patient is."/>
+<link rel="canonical" href="https://mrigankraj.vercel.app/work/insurance-claims"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://mrigankraj.vercel.app/work/insurance-claims"/>
+<meta property="og:title" content="AI-First Cashless Claims · Mrigank Raj Chouhan"/>
+<meta property="og:description" content="Cashless health claims stall at discharge, even when every document is in. I designed an AI layer that has the claim ready before the patient is."/>
+<meta property="og:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/main.css?v=27"/>
+<link rel="stylesheet" href="/assets/css/case.css?v=5"/>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav aria-label="Main navigation">
+    <a class="nav-name" href="/">Mrigank<br>Raj<br><em>Chouhan</em></a>
+    <div class="nav-links">
+      <a href="/#bring">About</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#teardowns">Case Studies</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:mrigankrajchouhan@gmail.com?subject=Product%20internship" class="nav-cta">Hire me ↗</a>
+    </div>
+  </nav>
+</div>
+<header class="case-hero grid-bg"><div class="case-wrap sec-inner"><a class="case-back" href="/#teardowns">← All case studies</a><div class="sec-label">Case study</div><h1 class="case-title">AI-First Cashless Claims</h1><p class="case-lede">Cashless health claims stall at discharge, even when every document is in. I designed an AI layer that has the claim ready before the patient is.</p><dl class="case-facts"><div><dt>Type</dt><dd>AI product case study</dd></div><div><dt>Scope</dt><dd>Health insurance, India</dd></div><div><dt>Stage</dt><dd>Concept, reviewed, pilot plan</dd></div><div><dt>Note</dt><dd>Independent, not affiliated with any insurer</dd></div></dl></div></header>
+<main class="case-body"><div class="case-wrap"><div class="glance"><div><span>Problem</span><p>Cashless claims stall at discharge, after the paperwork is done</p></div><div><span>Proposed</span><p>An AI layer that builds the claim from admission, so it's ready at discharge</p></div><div><span>Rejected</span><p><span class="cut">A policyholder-only app</span> <span class="cut">Shipping without a hospital</span></p></div><div><span>Decides it</span><p>Settled within <b>10 min</b> of discharge, approval rates unchanged</p></div></div><section class="case-sec"><h2><span>01</span>The brief</h2><div class="body"><p>Design an AI-first product that simplifies the post-purchase insurance experience for Indian households: find the biggest problems after purchase, decide where AI genuinely helps, and pick one problem worth an MVP.</p></div></section><section class="case-sec"><h2><span>02</span>What I found</h2><div class="body"><ul class="reasons"><li><span class="cut wrapok">Claims rejected or delayed</span><span class="why">Undisclosed pre-existing conditions, coverage gaps, missing documents and lapsed policies cause partial or full rejections.</span></li><li><span class="cut wrapok">Premium hikes at renewal</span><span class="why">Sudden jumps, and steady increases with age, make a policy feel worse value every year.</span></li><li><span class="cut wrapok">Cashless claims delayed at discharge</span><span class="why">Back and forth between hospital and insurer over the final bill, partial payouts, and last-minute rejections.</span></li><li><span class="cut wrapok">Renewal reminders that never arrive</span><span class="why">Outdated contact details lead to lapsed policies, and the changes at renewal are hard to understand.</span></li><li><span class="cut wrapok">Dark patterns on insurance platforms</span><span class="why">Real, but a pre-purchase problem, so I ruled it out of scope.</span></li></ul></div></section><section class="case-sec"><h2><span>03</span>The problem I picked</h2><div class="body"><p>Cashless claims at discharge. The policyholder has done everything right and still waits, because the delay is a coordination failure between the hospital and the insurer that they have no control over: documents go back and forth, hospital tariffs get negotiated, and one pending report pauses everything.</p><p>The cost lands on the family. In my secondary research, 76% of policyholders take a loan or break an investment to cover the bill while they wait, and 3 in 5 now choose reimbursement over cashless just to avoid the delay.</p><p class="signal">Root causes: coordination failure, tariff disputes, document bottlenecks, no real-time escalation path, and fragmented infrastructure. Of these, coordination costs the most time. My working assumption: about 30 minutes per document check, which turns a one-hour job into six.</p></div></section><section class="case-sec"><h2><span>04</span>What I'd build</h2><div class="body"><p>An AI layer between hospitals and insurers (or their TPAs), built on NHCX, India's national health-claims exchange.</p><p>When a patient is admitted, it matches their phone number or Aadhaar on NHCX and checks whether they hold an eligible policy. If they do, it opens the claim straight away and reads every document and report as the hospital adds it, using standard tariffs so there's nothing to negotiate at the end. The insurer approves or rejects the case as it builds, not after discharge.</p><p>The family doesn't need to do anything. They see where the claim stands, and if it's rejected or only partly approved, they can escalate it to a person.</p></div></section><section class="case-sec"><h2><span>05</span>What changed after review</h2><div class="body"><p>Three questions from reviewers changed the plan.</p><p><b>Why would insurers adopt this, when slower payouts suit them?</b> Because a failed cashless claim breaks trust. Even if the family pays out of pocket, they are unlikely to renew or buy another policy from that insurer.</p><p><b>What could ship in 8 weeks without hospital integration?</b> An AI document checker for insurers that gives a go or no-go on what the customer uploads. Useful, but it leaves the slowest part, the hospital-to-insurer loop, untouched.</p><p><b>Which root cause matters most?</b> Coordination. So the plan became a pilot with one hospital chain, because only the hospital can push documents for verification, and nothing gets paid until they're verified.</p></div></section><section class="case-sec"><h2><span>06</span>What I rejected, and why</h2><div class="body"><ul class="reasons"><li><span class="cut wrapok">A policyholder-only app</span><span class="why">The hospital holds the documents. An app on the family's phone can show the delay, but it can't remove it.</span></li><li><span class="cut wrapok">Shipping without a hospital partner</span><span class="why">The 8-week document checker is a fallback, not the product. The time is lost between hospital and insurer.</span></li><li><span class="cut wrapok">Solving all five problems</span><span class="why">An MVP solves one. Cashless delay hits families at their worst moment and has the clearest fix.</span></li></ul></div></section><section class="case-sec"><h2><span>07</span>How I'd measure it</h2><div class="body"><div class="metric"><div class="main"><span class="k">Main metric <span class="tag">target</span></span><p class="figure">10 min</p><p>from discharge papers being signed to the claim being settled, meaning payment has reached the hospital.</p></div><div><span class="k">What moves it</span><ul><li>Time from admission to claim case opened</li><li>Share of documents verified before discharge</li><li>Share of cases that need a person to step in</li></ul></div><div><span class="k">What must not get worse</span><p>Approval, partial and rejection rates stay at their baseline. If approvals jumped from 80% to 89% in two weeks, that's a red flag, not a win: the AI would be building cases too strongly, and one side loses either way.</p></div></div></div></section><section class="case-sec"><h2><span>08</span>Pilot plan</h2><div class="body"><ul class="plain"><li><b>Who:</b> one multi-speciality hospital chain with high claim volume, health insurance only. Hospitals gain faster turnaround on payments, so I'd expect medium to high willingness.</li><li><b>What kills it:</b> a major shift in approval, partial or rejection rates against the pre-pilot baseline.</li><li><b>What the family sees:</b> almost nothing, by design. Status updates, and an escalation button if they need it.</li></ul></div></section>
+<div class="case-next"><span>Next</span><a href="/work/chatgpt-voice.html" class="btn-twotone"><span class="bt-text">ChatGPT Voice in India</span><span class="bt-icon">↗</span></a></div></div></main>
+
+<footer>
+  <div class="footer-giant-title">Mrigank Raj Chouhan</div>
+  <div class="footer-bottom-bar">
+    <div class="footer-logo-text">Mrigank Raj Chouhan</div>
+    <div class="footer-nav-links">
+      <a href="https://www.linkedin.com/in/mrigankraj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">LinkedIn</a>
+      <a href="https://x.com/Mrigank_raj22" target="_blank" rel="noopener noreferrer" class="footer-nav-link">X / Twitter</a>
+      <a href="https://github.com/mrigank-raj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">GitHub</a>
+      <a href="https://drive.google.com/file/d/1gmIsDmhPAh5XHuixjQSJWTEz9fLjeQnA/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Resume</a>
+    </div>
+  </div>
+</footer>
+<script defer src="/assets/js/site.js?v=6"></script>
+</body>
+</html>

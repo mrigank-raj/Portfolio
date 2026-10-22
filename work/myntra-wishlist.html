@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Myntra: closing the price-confidence gap · Mrigank Raj Chouhan</title>
+<meta name="description" content="People wishlist things they&#x27;ve already decided to buy. They just can&#x27;t tell if now is the right price."/>
+<link rel="canonical" href="https://mrigankraj.vercel.app/work/myntra-wishlist"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://mrigankraj.vercel.app/work/myntra-wishlist"/>
+<meta property="og:title" content="Myntra: closing the price-confidence gap · Mrigank Raj Chouhan"/>
+<meta property="og:description" content="People wishlist things they&#x27;ve already decided to buy. They just can&#x27;t tell if now is the right price."/>
+<meta property="og:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/main.css?v=27"/>
+<link rel="stylesheet" href="/assets/css/case.css?v=5"/>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav aria-label="Main navigation">
+    <a class="nav-name" href="/">Mrigank<br>Raj<br><em>Chouhan</em></a>
+    <div class="nav-links">
+      <a href="/#bring">About</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#teardowns">Case Studies</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:mrigankrajchouhan@gmail.com?subject=Product%20internship" class="nav-cta">Hire me ↗</a>
+    </div>
+  </nav>
+</div>
+<header class="case-hero grid-bg"><div class="case-wrap sec-inner"><a class="case-back" href="/#teardowns">← All case studies</a><div class="sec-label">Case study</div><h1 class="case-title">Myntra: closing the price-confidence gap</h1><p class="case-lede">People wishlist things they've already decided to buy. They just can't tell if now is the right price.</p><dl class="case-facts"><div><dt>Type</dt><dd>Nextleap graduation project</dd></div><div><dt>Research</dt><dd>4 interviews, 44 survey responses, AI review scan</dd></div><div><dt>Built</dt><dd>Deployed WhatsApp price-drop prototype</dd></div><div><dt>Links</dt><dd><a href="https://myntra-wishlist-mvp.vercel.app" target="_blank" rel="noopener">Live prototype</a>, <a href="https://github.com/mrigank-raj/myntra-wishlist-mvp" target="_blank" rel="noopener">code</a></dd></div></dl></div></header>
+<main class="case-body"><div class="case-wrap"><div class="glance"><div><span>Problem</span><p>Wishlisted, wanted, but unsure if the price is right</p></div><div><span>Built</span><p>WhatsApp price-drop alerts based on real price history</p></div><div><span>Rejected</span><p><span class="cut">Price-history card</span> <span class="cut">Auto-buying agent</span> <span class="cut">One-tap ordering</span></p></div><div><span>Decides it</span><p>Purchase rate after a verdict, <b>per zone</b></p></div></div><section class="case-sec"><h2><span>01</span>The brief</h2><div class="body"><p>The business metric: the share of wishlisted items bought within 30 days of being added. Why don't they convert?</p></div></section><section class="case-sec"><h2><span>02</span>Breaking the metric down</h2><div class="body"><p>Between adding to a wishlist and buying, an item can leak in three places. The user never comes back to it (attention leakage). They come back and decide no (intent resolution). Or they still want it but something blocks them (decision leakage).</p><p>I scoped out intent resolution: someone consciously deciding no is healthy self-filtering, not a failure to fix. Within decision leakage, some blockers are outside Myntra's control, like waiting for a paycheck. One isn't: not knowing whether the price will drop.</p></div></section><section class="case-sec"><h2><span>03</span>What the research showed</h2><div class="body"><p>An AI engine I built scanned Play Store, App Store and YouTube reviews. It found a real fit-and-size signal that matched my interviews, but almost nothing about pre-purchase hesitation, because people review after buying or complaining, not while quietly waiting. So primary research had to carry the work.</p><p>Across 4 interviews and 44 survey responses, waiting for a price drop was the single largest reason cited: 16 of 35 survey answers mentioned price, and 2 interviewees checked prices across apps before buying.</p><p class="signal">How strong is this? Thin and skewed: 4 interviews (short of my 5 to 6 target), mostly aged 18 to 24. The same person also showed different blockers on different items, so I treated each purchase decision, not each person, as the unit.</p></div></section><section class="case-sec"><h2><span>04</span>The real problem</h2><div class="body"><p>Myntra offers a price-drop toggle, but no context to judge whether today's price is good. So the rational move is to keep waiting. The want is already resolved; price confidence is the only open question. Meanwhile third-party trackers already fill this gap on Myntra's own platform, and Nykaa already messages users on WhatsApp when prices drop.</p></div></section><section class="case-sec"><h2><span>05</span>What I built</h2><div class="body"><p>A WhatsApp message the moment a wishlisted item genuinely drops in price, showing the old and new price. Tapping it opens the product page directly. Every verdict is computed from the product's real price history, never a prediction: more than 15% below average is a "Verified Low Price", around average is "Typical Price".</p><p>Real example: chinos at ₹2,600, their lowest recorded price, against an average of ₹5,062. The verdict reads "Verified Low Price, you're saving ₹2,462". The prototype covers 10 real products, with price data from a third-party tracker; in production it would run on Myntra's own first-party data, which competitors can't copy.</p></div></section><section class="case-sec"><h2><span>06</span>What I rejected, and why</h2><div class="body"><ul class="reasons"><li><span class="cut wrapok">A price-history card on the product page</span><span class="why">Same evidence, but self-serve. It only helps if the user remembers to come back, and attention leakage is half the problem.</span></li><li><span class="cut wrapok">A personal buying agent that auto-purchases</span><span class="why">Directionally right, but very high effort and untested, far beyond this project's real infrastructure.</span></li><li><span class="cut wrapok">One-tap autonomous ordering</span><span class="why">Not one interview pointed to checkout friction as a blocker.</span></li></ul></div></section><section class="case-sec"><h2><span>07</span>How I'd measure it</h2><div class="body"><div class="metric"><div class="main"><span class="k">Main metric <span class="tag">target</span></span><p class="figure">Per zone</p><p>the share of users who take a purchase action after seeing a price verdict, tracked separately for each verdict zone rather than blended into one number.</p></div><div><span class="k">What moves it</span><ul><li>Share of users who engage with the price card itself</li><li>WhatsApp message to product page click-through</li><li>30-day wishlist conversion, Group A vs Group B in a randomised test</li></ul></div><div><span class="k">What must not get worse</span><p>Purchases are net-new, not the same purchase a few days earlier. Return rates don't rise, which would mean the nudge came too early. And items without a good-deal badge don't get abandoned more.</p></div></div></div></section><section class="case-sec"><h2><span>08</span>Risks</h2><div class="body"><ul class="plain"><li><b>People think in sale events, not averages.</b> So it's scoped as price transparency, not price prediction.</li><li><b>It only helps people who are waiting for the wrong reason.</b> So results are reported by zone, not blended.</li><li><b>The lift could just be purchases pulled forward.</b> The randomised test isolates real lift.</li></ul></div></section>
+<div class="case-next"><span>Next</span><a href="/work/insurance-claims.html" class="btn-twotone"><span class="bt-text">AI-First Cashless Claims</span><span class="bt-icon">↗</span></a></div></div></main>
+
+<footer>
+  <div class="footer-giant-title">Mrigank Raj Chouhan</div>
+  <div class="footer-bottom-bar">
+    <div class="footer-logo-text">Mrigank Raj Chouhan</div>
+    <div class="footer-nav-links">
+      <a href="https://www.linkedin.com/in/mrigankraj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">LinkedIn</a>
+      <a href="https://x.com/Mrigank_raj22" target="_blank" rel="noopener noreferrer" class="footer-nav-link">X / Twitter</a>
+      <a href="https://github.com/mrigank-raj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">GitHub</a>
+      <a href="https://drive.google.com/file/d/1gmIsDmhPAh5XHuixjQSJWTEz9fLjeQnA/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Resume</a>
+    </div>
+  </div>
+</footer>
+<script defer src="/assets/js/site.js?v=6"></script>
+</body>
+</html>

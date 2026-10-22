@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Google Photos: finding a photo by scrolling · Mrigank Raj Chouhan</title>
+<meta name="description" content="Most people don&#x27;t search for old photos. They scroll. So instead of making them search, I made scrolling find the photo."/>
+<link rel="canonical" href="https://mrigankraj.vercel.app/work/google-photos"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://mrigankraj.vercel.app/work/google-photos"/>
+<meta property="og:title" content="Google Photos: finding a photo by scrolling · Mrigank Raj Chouhan"/>
+<meta property="og:description" content="Most people don&#x27;t search for old photos. They scroll. So instead of making them search, I made scrolling find the photo."/>
+<meta property="og:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/main.css?v=27"/>
+<link rel="stylesheet" href="/assets/css/case.css?v=5"/>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav aria-label="Main navigation">
+    <a class="nav-name" href="/">Mrigank<br>Raj<br><em>Chouhan</em></a>
+    <div class="nav-links">
+      <a href="/#bring">About</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#teardowns">Case Studies</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:mrigankrajchouhan@gmail.com?subject=Product%20internship" class="nav-cta">Hire me ↗</a>
+    </div>
+  </nav>
+</div>
+<header class="case-hero grid-bg"><div class="case-wrap sec-inner"><a class="case-back" href="/#teardowns">← All case studies</a><div class="sec-label">Case study</div><h1 class="case-title">Google Photos: finding a photo by scrolling</h1><p class="case-lede">Most people don't search for old photos. They scroll. So instead of making them search, I made scrolling find the photo.</p><dl class="case-facts"><div><dt>Type</dt><dd>Nextleap graduation project</dd></div><div><dt>Research</dt><dd>5,640 posts, survey of 25, 2 live sessions</dd></div><div><dt>Built</dt><dd>Prototype, tested with 10 people</dd></div><div><dt>Links</dt><dd><a href="https://photos-timeline-concept.vercel.app" target="_blank" rel="noopener">Prototype</a>, <a href="https://photo-retrieval-discovery-engine.streamlit.app" target="_blank" rel="noopener">discovery engine</a></dd></div></dl></div></header>
+<main class="case-body"><div class="case-wrap"><div class="glance"><div><span>The brief assumed</span><p>People search for old photos</p></div><div><span>Found</span><p><b>0 of 15</b> searched first. 11 scrolled.</p></div><div><span>Rejected</span><p><span class="cut">Better date jumping</span> <span class="cut">Better search</span></p></div><div><span>Tested</span><p>Wrong photos on everyday tasks: <b>8 → 0</b></p></div></div><section class="case-sec"><h2><span>01</span>The brief</h2><div class="body"><p>Help people find a photo they remember but can't describe. The brief's questions assumed people search. Most never get that far.</p></div></section><section class="case-sec"><h2><span>02</span>What people post online</h2><div class="body"><p>I built a discovery engine that pulled 5,640 public posts from the Play Store, App Store, Reddit, Google Photos Help, YouTube, Hacker News and Stack Exchange. An AI model read every post: 740 were about finding a photo, and 287 were real "can't find it" failures. The top-scoring problem was search showing nothing or the wrong photos.</p><p>But the people who post are the people who search. And only 7% of failure posts mentioned any workaround: most people just got stuck.</p><p class="signal">How strong is this? I checked the engine against 100 AI-made reference labels, and about 3 in 4 matched. Good enough to find patterns, not to quote as exact counts.</p></div></section><section class="case-sec"><h2><span>03</span>What people actually do</h2><div class="body"><p>I asked 25 people about the last time they looked for an old photo, not their opinions, and watched 2 of them search live.</p><p><b>0 of 15</b> Google Photos users searched first. 11 scrolled and 4 browsed albums. 7 of 15 took over 5 minutes, against 1 of 10 on other photo apps. What they remembered most was who was in the photo (16 of 25), ahead of where (14), what was happening (12) and roughly when (11).</p><p>The sharpest group: people with 5,000+ photos who scroll. <b>5 of 6</b> took over 5 minutes, against 2 of 9 for everyone else.</p></div></section><section class="case-sec"><h2><span>04</span>The real gap</h2><div class="body"><p>Photos already knows who is in your photos, where they were taken and what was happening. It uses that in search and on People pages, but the timeline, where my segment spends all its time, only shows dates.</p><p>The moment I designed for: finding a photo of specific people, more than a month old, in a big library.</p></div></section><section class="case-sec"><h2><span>05</span>What I built</h2><div class="body"><p>A timeline that knows people. Flick fast and it shows whole moments instead of single photos. Tap a face and marks light up on the scroll bar wherever that person appears. Open a photo and you can jump to the same people in other years.</p><p>Where AI does the work: recognising the same person across years, and grouping photos into moments. In the prototype the face signals are simulated; the grouping runs live.</p></div></section><section class="case-sec"><h2><span>06</span>What I rejected, and why</h2><div class="body"><ul class="reasons"><li><span class="cut wrapok">Better date jumping</span><span class="why">Month markers and hiding screenshots are cheap to ship, but Google and Apple already have them, and testers still opened 8 wrong photos.</span></li><li><span class="cut wrapok">Photos that notices you hunting</span><span class="why">It could solve more, but it has to learn how people hunt first, which means data collection and a privacy review. Months away, not this year.</span></li><li><span class="cut wrapok">Improving search</span><span class="why">It's the loudest complaint online, but 0 of 15 users I asked started there.</span></li></ul></div></section><section class="case-sec"><h2><span>07</span>What the test showed</h2><div class="body"><p><b>Everyday photos:</b> wrong photos opened fell from 8 to 0, and median time to the right moment fell from 31.6 to 23.5 seconds.</p><p><b>Similar events, like two Diwalis:</b> worse. 9 of 10 found it on the plain timeline, 6 of 10 on mine, and it took longer. Still unsolved.</p><p><b>The "same people, other times" strip:</b> tapped 2 times in 100. It needs a redesign.</p><p class="signal">The catch: my testers weren't my segment. They were 10 friends, 7 had seen an earlier version, and the test library had 2,517 photos, not 5,000+. Next: time real hunts with 5 to 6 people who have 5,000+ photos, then a 1% in-app test.</p></div></section><section class="case-sec"><h2><span>08</span>How I'd measure it</h2><div class="body"><div class="metric"><div class="main"><span class="k">Main metric <span class="tag">target</span></span><p class="figure">Under 2 min</p><p>share of hunts by users with 5,000+ photos that end with the photo found within 2 minutes. A hunt starts when someone goes back more than a month; found means they open a photo for 3+ seconds, share, download or edit it.</p></div><div><span class="k">What moves it</span><ul><li>Wrong photos opened per hunt (8 plain vs 4 new in testing)</li><li>Time to reach the right moment</li><li>Face taps and moment taps that lead to the photo</li></ul></div><div><span class="k">What must not get worse</span><p>Everyday scrolling and Memories don't get worse. Exact targets come after a 1% test sets the baseline.</p></div></div></div></section><section class="case-sec"><h2><span>09</span>Risks</h2><div class="body"><ul class="plain"><li><b>People hate a changed timeline.</b> My engine found 39 posts about updates that moved browsing features. Fix: opt-in first, and slow scrolling stays exactly as it is.</li><li><b>Moments pop up while people just browse.</b> Fix: a higher speed trigger and an easy off switch.</li><li><b>Old photos sit under the wrong date.</b> 5 of 23 people wanted childhood photos, likely scanned years later. Fix: spot scanned prints and let people fix a date in one tap.</li><li><b>Faces send people to the wrong place.</b> Face groups were 35 of 161 Google failures in my engine. Fix: "Not this person", already in v2.</li></ul></div></section>
+<div class="case-next"><span>Next</span><a href="/work/myntra-wishlist.html" class="btn-twotone"><span class="bt-text">Myntra: closing the price-confidence gap</span><span class="bt-icon">↗</span></a></div></div></main>
+
+<footer>
+  <div class="footer-giant-title">Mrigank Raj Chouhan</div>
+  <div class="footer-bottom-bar">
+    <div class="footer-logo-text">Mrigank Raj Chouhan</div>
+    <div class="footer-nav-links">
+      <a href="https://www.linkedin.com/in/mrigankraj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">LinkedIn</a>
+      <a href="https://x.com/Mrigank_raj22" target="_blank" rel="noopener noreferrer" class="footer-nav-link">X / Twitter</a>
+      <a href="https://github.com/mrigank-raj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">GitHub</a>
+      <a href="https://drive.google.com/file/d/1gmIsDmhPAh5XHuixjQSJWTEz9fLjeQnA/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Resume</a>
+    </div>
+  </div>
+</footer>
+<script defer src="/assets/js/site.js?v=6"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>BeyondLabel · Mrigank Raj Chouhan</title>
+<meta name="description" content="An LLM that reads a food label and tells you what it does to your body, and what to eat instead."/>
+<link rel="canonical" href="https://mrigankraj.vercel.app/work/beyondlabel"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://mrigankraj.vercel.app/work/beyondlabel"/>
+<meta property="og:title" content="BeyondLabel · Mrigank Raj Chouhan"/>
+<meta property="og:description" content="An LLM that reads a food label and tells you what it does to your body, and what to eat instead."/>
+<meta property="og:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/main.css?v=27"/>
+<link rel="stylesheet" href="/assets/css/case.css?v=5"/>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav aria-label="Main navigation">
+    <a class="nav-name" href="/">Mrigank<br>Raj<br><em>Chouhan</em></a>
+    <div class="nav-links">
+      <a href="/#bring">About</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#teardowns">Case Studies</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:mrigankrajchouhan@gmail.com?subject=Product%20internship" class="nav-cta">Hire me ↗</a>
+    </div>
+  </nav>
+</div>
+<header class="case-hero grid-bg"><div class="case-wrap sec-inner"><a class="case-back" href="/#projects">← All projects</a><div class="sec-label">Project</div><h1 class="case-title">BeyondLabel</h1><p class="case-lede">An LLM that reads a food label and tells you what it does to your body, and what to eat instead.</p><dl class="case-facts"><div><dt>Role</dt><dd>Solo: research, product and build</dd></div><div><dt>When</dt><dd>Jun to Aug 2026</dd></div><div><dt>Status</dt><dd>Live web app</dd></div><div><dt>Links</dt><dd><a href="https://beyondlabel.vercel.app" target="_blank" rel="noopener">Live app</a>, <a href="https://github.com/mrigank-raj/BeyondLabel" target="_blank" rel="noopener">code</a></dd></div></dl></div></header>
+<main class="case-body"><div class="case-wrap"><div class="glance"><div><span>The obvious version</span><p><span class="cut">An AI that simplifies the nutrition label</span></p></div><div><span>What I built</span><p>What the food does to your body, plus a swap for the same craving</p></div><div><span>Left out</span><p><span class="cut">Live barcode scanner</span> <span class="cut">WhatsApp bot</span> <span class="cut">Calorie logging</span></p></div><div><span>It's working if</span><p><b>1 in 4</b> scans end in a swap</p></div></div><section class="case-sec"><h2><span>01</span>Where it started</h2><div class="body"><p>Packaged food in India sells on front-of-pack claims: high protein, no refined sugar, natural. Labelling rules are weak, and the fine print is written for nutritionists.</p><p>My first idea was the obvious one: point your phone at a label and get a simpler version of it.</p></div></section><section class="case-sec"><h2><span>02</span>What changed my mind</h2><div class="body"><p>Talking it through with friends and family, the label wasn't what tripped people up. They fell into two groups. Some thought a food was healthy when it wasn't: digestive biscuits, muesli, protein bars. Others knew chips were unhealthy but had no feel for how unhealthy.</p><p>A cleaner label fixes neither. Both groups needed the consequence, not the data.</p><p class="signal">How strong is this? Informal, untracked conversations. Enough to choose a direction, not enough to prove it, which is why the success metric below is the one that would show me I'm wrong fastest.</p></div></section><section class="case-sec"><h2><span>03</span>What I built</h2><div class="body"><p>Scan or upload a label and pick a goal: general health, muscle gain, fat loss or managing blood sugar. BeyondLabel returns a plain verdict, explains what the product does to your body for that goal, and calls out tricks common on Indian labels, like soy passed off as premium protein, jaggery sold as "no refined sugar" and shrunken serving sizes. When a product fails, it suggests a swap that satisfies the same craving.</p><figure class="shot"><img src="/assets/projects/beyondlabel_app.png" alt="BeyondLabel showing a verdict for a scanned product" loading="lazy"></figure></div></section><section class="case-sec"><h2><span>04</span>What I left out, and why</h2><div class="body"><ul class="reasons"><li><span class="cut wrapok">Live barcode scanner</span><span class="why">I built it, then removed it. The live camera feed failed inside Instagram and WhatsApp's in-app browsers and crashed on multi-lens Android phones. A scanner that fails some of the time teaches people not to trust it, so the app now hands the camera to the phone's own picker.</span></li><li><span class="cut wrapok">WhatsApp bot version</span><span class="why">The lowest-friction option of all, but Meta's API costs grow with every message, and a chat thread can't hold the history and streaks that bring people back.</span></li><li><span class="cut wrapok">Calorie logging</span><span class="why">Logging every gram is the chore that makes people quit tracking apps. BeyondLabel asks for one photo, not a diary.</span></li><li><span class="cut wrapok">Choosing a goal before the first scan</span><span class="why">New users start on general health, so the first verdict arrives within seconds. Goals live in the profile for people who want them.</span></li></ul></div></section><section class="case-sec"><h2><span>05</span>How I'll know it's working</h2><div class="body"><div class="metric"><div class="main"><span class="k">Main metric <span class="tag">target</span></span><p class="figure">1 in 4</p><p>scans end with the person choosing the suggested swap. Awareness alone isn't the goal; a different choice is.</p></div><div><span class="k">What moves it</span><ul><li>Time from opening the app to first scan: under 5 seconds</li><li>Scans per session: more than 3</li><li>People returning within 7 days: more than 30%</li></ul></div><div><span class="k">What must not get worse</span><p>Verdicts arrive in under 10 seconds, with timeout errors under 1%.</p></div></div></div></section><section class="case-sec"><h2><span>06</span>Trade-offs I accepted</h2><div class="body"><ul class="plain"><li>Images are compressed to 800px and run on a lighter model so verdicts fit inside the hosting time limit. I gave up some image detail for an app that doesn't time out.</li><li>There are no accounts at first. History lives on the device, so trying it costs nothing.</li></ul></div></section><section class="case-sec"><h2><span>07</span>What I'd do next</h2><div class="body"><p>Run the swap metric with 20 people for two weeks. If fewer than 1 in 10 scans lead to a swap, the problem isn't awareness either, and the product needs rethinking, not polishing.</p></div></section>
+<div class="case-next"><span>Next</span><a href="/work/app-review-pulse.html" class="btn-twotone"><span class="bt-text">App Review Pulse</span><span class="bt-icon">↗</span></a></div></div></main>
+
+<footer>
+  <div class="footer-giant-title">Mrigank Raj Chouhan</div>
+  <div class="footer-bottom-bar">
+    <div class="footer-logo-text">Mrigank Raj Chouhan</div>
+    <div class="footer-nav-links">
+      <a href="https://www.linkedin.com/in/mrigankraj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">LinkedIn</a>
+      <a href="https://x.com/Mrigank_raj22" target="_blank" rel="noopener noreferrer" class="footer-nav-link">X / Twitter</a>
+      <a href="https://github.com/mrigank-raj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">GitHub</a>
+      <a href="https://drive.google.com/file/d/1gmIsDmhPAh5XHuixjQSJWTEz9fLjeQnA/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Resume</a>
+    </div>
+  </div>
+</footer>
+<script defer src="/assets/js/site.js?v=6"></script>
+</body>
+</html>

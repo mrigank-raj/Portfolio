@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Plutus · Mrigank Raj Chouhan</title>
+<meta name="description" content="A money app where we deliberately left AI out, so every number is arithmetic you can check."/>
+<link rel="canonical" href="https://mrigankraj.vercel.app/work/plutus"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://mrigankraj.vercel.app/work/plutus"/>
+<meta property="og:title" content="Plutus · Mrigank Raj Chouhan"/>
+<meta property="og:description" content="A money app where we deliberately left AI out, so every number is arithmetic you can check."/>
+<meta property="og:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/main.css?v=27"/>
+<link rel="stylesheet" href="/assets/css/case.css?v=5"/>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav aria-label="Main navigation">
+    <a class="nav-name" href="/">Mrigank<br>Raj<br><em>Chouhan</em></a>
+    <div class="nav-links">
+      <a href="/#bring">About</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#teardowns">Case Studies</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:mrigankrajchouhan@gmail.com?subject=Product%20internship" class="nav-cta">Hire me ↗</a>
+    </div>
+  </nav>
+</div>
+<header class="case-hero grid-bg"><div class="case-wrap sec-inner"><a class="case-back" href="/#projects">← All projects</a><div class="sec-label">Project</div><h1 class="case-title">Plutus</h1><p class="case-lede">A money app where we deliberately left AI out, so every number is arithmetic you can check.</p><dl class="case-facts"><div><dt>Role</dt><dd>Product. Designed and built with <a href="https://github.com/Kaustubh-gaurav" target="_blank" rel="noopener">Kaustubh Gaurav</a>, product designer</dd></div><div><dt>When</dt><dd>Aug 2026</dd></div><div><dt>Status</dt><dd>Live, installable on a phone</dd></div><div><dt>Links</dt><dd><a href="https://kaustubh-gaurav.github.io/Plutus/" target="_blank" rel="noopener">Live app</a>, <a href="https://github.com/Kaustubh-gaurav/Plutus" target="_blank" rel="noopener">code</a></dd></div></dl></div></header>
+<main class="case-body"><div class="case-wrap"><div class="glance"><div><span>The obvious version</span><p><span class="cut">Bank sync and an AI advisor</span></p></div><div><span>What we built</span><p>Seconds-fast logging, a budget at a glance, a clear IOU ledger</p></div><div><span>Left out</span><p><span class="cut">Bank sync</span> <span class="cut">AI advisor</span> <span class="cut">Forecasting</span> <span class="cut">Accounts</span></p></div><div><span>It's working if</span><p>Logging on <b>5 of 7</b> days in week one</p></div></div><section class="case-sec"><h2><span>01</span>Where it started</h2><div class="body"><p>Two everyday money problems. People know roughly what they should spend, but lose track of small daily purchases: halfway through a ₹30,000 month they're at ₹22,000 and don't know it. And money between friends, like loans, splits and partial repayments, lives in WhatsApp threads and memory.</p></div></section><section class="case-sec"><h2><span>02</span>What changed my mind</h2><div class="body"><p>The obvious answer is a full finance app: connect your bank, add an AI advisor, forecast the month. But neither problem is about missing data. Both are about not looking.</p><p>So the product had to be fast enough to use every day and simple enough to trust at a glance. That ruled out most of what a finance app usually adds.</p><p class="signal">How strong is this? It came from our own habits and the people around us, not a study. The first-week logging metric below is the test.</p></div></section><section class="case-sec"><h2><span>03</span>What I built</h2><div class="body"><p>An offline app you can install on your phone. Adding an expense takes seconds: the amount field is ready when the sheet opens, and the last category is preselected. Home shows this month's spending against your budget and changes colour as you near the limit. A People tab keeps money owed to you and money you owe clearly apart, with full repayment history. Budgets, goals and recurring expenses round it out.</p><p>Kaustubh designed the app and ran the build. I owned the product: the problem, the scope, what we cut, and how we'd measure it.</p></div></section><section class="case-sec"><h2><span>04</span>What we left out, and why</h2><div class="body"><ul class="reasons"><li><span class="cut wrapok">Bank sync</span><span class="why">It would make the numbers effortless, and it would also mean nobody looks at them. Typing an expense is the moment you notice it.</span></li><li><span class="cut wrapok">AI advisor and forecasting</span><span class="why">Every number in Plutus is plain arithmetic you can check yourself. A forecast you can't verify is a number people learn to ignore.</span></li><li><span class="cut wrapok">Accounts and a server</span><span class="why">No sign-up. Everything stays on the phone, so the first expense can be logged in the first minute.</span></li></ul></div></section><section class="case-sec"><h2><span>05</span>How I'll know it's working</h2><div class="body"><div class="metric"><div class="main"><span class="k">Main metric <span class="tag">target</span></span><p class="figure">5 of 7</p><p>days in a new user's first week have at least one expense logged. If logging isn't a habit by day seven, nothing downstream matters.</p></div><div><span class="k">What moves it</span><ul><li>Seconds from opening the app to a saved expense</li><li>Share of new users who set a budget during onboarding</li><li>Debts marked settled compared with debts opened</li></ul></div><div><span class="k">What must not get worse</span><p>No number on screen that can't be traced to a saved record.</p></div></div></div></section><section class="case-sec"><h2><span>06</span>Trade-offs we accepted</h2><div class="body"><ul class="plain"><li>Home leads with what you've spent, not what's left, because spent is the number that moves when you act.</li><li>The safe daily allowance is rounded down, never up. Rounding up would put someone over budget if they followed it exactly.</li><li>With no server there's no sync between devices. Export and import cover backups for now.</li></ul></div></section><section class="case-sec"><h2><span>07</span>What I'd do next</h2><div class="body"><p>Package it for the Play Store (it was built to wrap without a rewrite) and measure the first-week logging rate with real users.</p></div></section>
+<div class="case-next"><span>Next</span><a href="/work/kudos.html" class="btn-twotone"><span class="bt-text">Kudos</span><span class="bt-icon">↗</span></a></div></div></main>
+
+<footer>
+  <div class="footer-giant-title">Mrigank Raj Chouhan</div>
+  <div class="footer-bottom-bar">
+    <div class="footer-logo-text">Mrigank Raj Chouhan</div>
+    <div class="footer-nav-links">
+      <a href="https://www.linkedin.com/in/mrigankraj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">LinkedIn</a>
+      <a href="https://x.com/Mrigank_raj22" target="_blank" rel="noopener noreferrer" class="footer-nav-link">X / Twitter</a>
+      <a href="https://github.com/mrigank-raj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">GitHub</a>
+      <a href="https://drive.google.com/file/d/1gmIsDmhPAh5XHuixjQSJWTEz9fLjeQnA/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Resume</a>
+    </div>
+  </div>
+</footer>
+<script defer src="/assets/js/site.js?v=6"></script>
+</body>
+</html>

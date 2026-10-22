@@ -3,665 +3,30 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Mrigank Raj Chouhan — Product Manager</title>
-<meta name="description" content="Mrigank Raj Chouhan — CS undergrad at KIIT, FMVA certified. Building products at the intersection of finance and technology. Product teardowns, case studies, and more."/>
+<title>Mrigank Raj Chouhan · AI Product Builder</title>
+<meta name="description" content="Mrigank Raj Chouhan, final-year CS student and Nextleap PM Fellow building AI products. RAG, LLM and agent products shipped with evals, guardrails and a clear call on where AI doesn't belong."/>
 <meta name="author" content="Mrigank Raj Chouhan"/>
-<meta property="og:title" content="Mrigank Raj Chouhan — Product Manager"/>
-<meta property="og:description" content="Finance brain. Product heart. Business soul. CS undergrad · FMVA certified · Targeting product roles in fintech and beyond."/>
+<link rel="canonical" href="https://mrigankraj.vercel.app/"/>
+<meta property="og:title" content="Mrigank Raj Chouhan · AI Product Builder"/>
+<meta property="og:description" content="Start with the user. Add AI only where it helps."/>
 <meta property="og:url" content="https://mrigankraj.vercel.app/"/>
 <meta property="og:type" content="website"/>
-<meta property="og:image" content="https://raw.githubusercontent.com/mrigank-raj/Portfolio/main/assets/images/img16.jpeg"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Mrigank Raj Chouhan — Product Manager"/>
-<meta name="twitter:description" content="Finance brain. Product heart. Business soul."/>
+<meta property="og:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Mrigank Raj Chouhan · AI Product Builder"/>
+<meta name="twitter:description" content="Start with the user. Add AI only where it helps."/>
+<meta name="twitter:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
 <meta name="twitter:site" content="@Mrigank_raj22"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Mrigank Raj Chouhan","url":"https://mrigankraj.vercel.app/","alumniOf":{"@type":"CollegeOrUniversity","name":"KIIT Bhubaneswar"},"email":"mailto:mrigankrajchouhan@gmail.com","sameAs":["https://www.linkedin.com/in/mrigankraj","https://github.com/mrigank-raj","https://x.com/Mrigank_raj22"]}
+</script>
 <link rel="icon" href="/favicon.ico"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --cream:#EEEADE;
-  --cream2:#E5E1D5;
-  --burg:#7B1E4A;
-  --text:#1A1410;
-  --muted:#6B6560;
-  --border:#D0CCC0;
-  --salmon:#E8815A;
-}
-html{scroll-behavior:smooth}
-body{background:var(--cream);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-
-/* GRID TEXTURE */
-.grid-bg{position:relative}
-.grid-bg::before{content:'';position:absolute;inset:0;
-  background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);
-  background-size:80px 80px;opacity:0.45;pointer-events:none;z-index:0}
-
-/* SCROLL REVEAL */
-.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.65s cubic-bezier(.4,0,.2,1),transform 0.65s cubic-bezier(.4,0,.2,1)}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:0.1s}
-.reveal-delay-2{transition-delay:0.2s}
-.reveal-delay-3{transition-delay:0.3s}
-
-/* NAV */
-.nav-wrap{position:fixed;top:1rem;left:50%;transform:translateX(-50%);z-index:200;width:calc(100% - 3rem);max-width:940px}
-nav{border:1.5px solid var(--border);border-radius:100px;padding:0.6rem 0.7rem 0.6rem 1.4rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;background:rgba(238,234,222,0.93);backdrop-filter:blur(16px)}
-.nav-name{font-family:'Playfair Display',serif;font-size:0.58rem;font-weight:700;line-height:1.3;color:var(--text);letter-spacing:0.02em}
-.nav-name em{font-style:italic;color:var(--burg)}
-.nav-links{display:flex;gap:1.6rem;justify-content:center}
-.nav-links a{font-size:0.78rem;color:var(--muted);letter-spacing:0.03em;transition:color 0.2s}
-.nav-links a:hover{color:var(--text)}
-.nav-right{display:flex;justify-content:flex-end}
-.nav-cta{background:var(--burg);color:#fff;font-size:0.76rem;font-weight:500;padding:0.45rem 1.1rem;border-radius:100px;transition:opacity 0.2s;white-space:nowrap}
-.nav-cta:hover{opacity:0.85}
-
-/* BUTTONS */
-.btn-burg{background:var(--burg);color:#fff;font-size:0.82rem;font-weight:500;padding:0.65rem 1.5rem;border-radius:100px;display:inline-flex;align-items:center;gap:0.4rem;transition:opacity 0.2s}
-.btn-burg:hover{opacity:0.85}
-.btn-outline{border:1.5px solid rgba(26,20,16,0.25);color:var(--text);font-size:0.82rem;padding:0.65rem 1.5rem;border-radius:100px;display:inline-flex;align-items:center;gap:0.4rem;transition:border-color 0.2s;background:transparent}
-.btn-outline:hover{border-color:var(--muted)}
-.btn-twotone{display:inline-flex;align-items:stretch;border-radius:10px;overflow:hidden;border:2.5px solid var(--text);font-weight:600;font-size:0.85rem;cursor:pointer;text-decoration:none;line-height:1}
-.btn-twotone .bt-text{background:var(--salmon);color:var(--text);padding:0.78rem 1.4rem;display:flex;align-items:center;border-right:2.5px solid var(--text);white-space:nowrap}
-.btn-twotone .bt-icon{background:var(--text);color:#fff;padding:0.78rem 1rem;display:flex;align-items:center;justify-content:center;font-size:1rem;min-width:44px}
-.btn-twotone:hover{opacity:0.88}
-
-section{position:relative;overflow:hidden}
-.sec-inner{position:relative;z-index:1}
-.sec-label{font-size:0.68rem;letter-spacing:0.14em;color:var(--muted);text-transform:uppercase;display:flex;align-items:center;gap:0.6rem;margin-bottom:1.25rem}
-.sec-label::before{content:'';width:1.2rem;height:1px;background:var(--muted)}
-.sec-h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3rem);line-height:1.1;margin-bottom:0.75rem}
-.sec-h2 em{font-style:italic;color:var(--burg);position:relative}
-.sec-h2 em::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:2px;background:var(--burg);opacity:0.4;border-radius:2px}
-
-/* HERO */
-#hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;text-align:center;padding:7rem 0 0;background:var(--cream)}
-.hero-eyebrow{font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);display:inline-flex;align-items:center;gap:0.65rem;margin-bottom:1.3rem}
-.hero-eyebrow::before,.hero-eyebrow::after{content:'';width:1.2rem;height:1px;background:var(--border)}
-#hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.2vw,3rem);line-height:1.12;margin-bottom:0.5rem}
-#hero h1 em{font-style:italic;position:relative}
-#hero h1 em::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2.5px;background:var(--text);border-radius:2px}
-.hero-sub{font-size:0.88rem;color:var(--muted);max-width:420px;margin:1.75rem auto 1.75rem;line-height:1.8}
-.hero-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
-
-/* HERO POLAROID FAN */
-.fan{display:flex;justify-content:center;align-items:flex-start;padding:3.5rem 1rem 4rem;position:relative;z-index:1;width:100%}
-.fan-card{--w:clamp(112px,12vw,190px);flex:0 0 var(--w);width:var(--w);margin-left:0.6rem;background:#fff;padding:0.5rem 0.5rem 0;border:1.5px solid #1a1410;border-radius:6px;
-  box-shadow:0 10px 28px rgba(26,20,16,0.16);transform:translateY(var(--y)) rotate(var(--rot));transition:transform 0.35s cubic-bezier(.2,.8,.2,1),box-shadow 0.35s;
-  opacity:0;animation:fanIn 0.7s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(0.25s + var(--i) * 0.09s)}
-.fan-card:first-child{margin-left:0}
-.fan-card:hover{transform:translateY(calc(var(--y) - 18px)) rotate(0deg) scale(1.06);box-shadow:0 22px 44px rgba(26,20,16,0.26);z-index:5}
-.fan-card img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
-.fan-card p{font-size:0.66rem;font-weight:600;line-height:1.35;color:var(--text);padding:0.55rem 0.7rem 0.65rem;min-height:2.9rem;text-align:center}
-@keyframes fanIn{from{opacity:0;transform:translateY(calc(var(--y) + 40px)) rotate(0deg)}to{opacity:1;transform:translateY(var(--y)) rotate(var(--rot))}}
-@media (prefers-reduced-motion:reduce){.fan-card{animation:none;opacity:1}}
-
-/* MARQUEE */
-.mq-wrap{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:0.85rem 0;overflow:hidden;background:var(--burg);position:relative;z-index:1}
-.mq-inner{display:flex;width:max-content;animation:goLeft 30s linear infinite}
-.mq-wrap:hover .mq-inner{animation-play-state:paused}
-.skill-chip{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.72);white-space:nowrap;display:flex;align-items:center;padding:0 1.2rem}
-.skill-chip::after{content:'·';margin-left:1.2rem;color:rgba(255,255,255,0.35)}
-@keyframes goLeft{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
-/* WHAT I BRING */
-#bring{background:var(--burg);padding:6rem 8%;position:relative;overflow:hidden}
-#bring::before{content:'MRC';position:absolute;font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:28vw;color:rgba(255,255,255,0.04);line-height:1;bottom:-4vw;right:-2vw;pointer-events:none;z-index:0;letter-spacing:-0.04em;user-select:none}
-#bring::after{content:'';position:absolute;inset:0;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='104'%3E%3Cpolygon points='60,2 118,32 118,72 60,102 2,72 2,32' fill='none' stroke='rgba(255,255,255,0.055)' stroke-width='1.5'/%3E%3C/svg%3E");
-  background-size:120px 104px;pointer-events:none;z-index:0}
-#bring .sec-inner{position:relative;z-index:1}
-#bring .sec-label{color:rgba(255,255,255,0.45)}
-#bring .sec-label::before{background:rgba(255,255,255,0.2)}
-#bring .sec-h2{color:#fff}
-#bring .sec-h2 em{color:rgba(255,255,255,0.65)}
-#bring .sec-h2 em::after{background:rgba(255,255,255,0.35)}
-.bring-sub{color:rgba(255,255,255,0.5);font-size:0.88rem;max-width:440px;margin-bottom:2.75rem;line-height:1.8}
-.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.pillar{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.75rem;transition:background 0.2s;backdrop-filter:blur(4px)}
-.pillar:hover{background:rgba(255,255,255,0.11)}
-.p-num{font-family:'Playfair Display',serif;font-size:2rem;color:rgba(255,255,255,0.08);line-height:1;margin-bottom:1rem;font-weight:700}
-.p-title{font-weight:500;font-size:0.9rem;color:#fff;margin-bottom:0.6rem}
-.p-desc{font-size:0.81rem;color:rgba(255,255,255,0.5);line-height:1.8}
-
-/* Merged Executive Profile & About Section Styles */
-.bring-executive-grid {
-  display: grid;
-  grid-template-columns: 1.22fr 0.78fr;
-  gap: 3.5rem;
-  align-items: flex-start;
-  margin-top: 2rem;
-  position: relative;
-  z-index: 2;
-}
-.bring-story-col {
-  display: flex;
-  flex-direction: column;
-}
-.bring-story-text {
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 0.95rem;
-  line-height: 1.8;
-}
-.bring-story-text strong {
-  color: #FFFFFF;
-  font-weight: 600;
-}
-.bring-story-text p {
-  margin-bottom: 1.25rem;
-}
-.bring-profile-card {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 16px;
-  padding: 1.85rem;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
-  position: sticky;
-  top: 6rem;
-}
-.bring-profile-card-header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  padding-bottom: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-.bring-profile-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  line-height: 1.2;
-  margin-bottom: 0.25rem;
-}
-.bring-profile-title {
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.65);
-}
-.bring-cred-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.78rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 0.87rem;
-}
-.bring-cred-label {
-  color: rgba(255, 255, 255, 0.55);
-  font-weight: 500;
-}
-.bring-cred-val {
-  color: #FFFFFF;
-  font-weight: 600;
-  text-align: right;
-}
-.bring-card-footer {
-  margin-top: 1.6rem;
-}
-@media (max-width: 950px) {
-  .bring-executive-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-  .bring-profile-card {
-    position: relative;
-    top: 0;
-  }
-}
-
-/* TABS */
-.tab-nav{display:flex;gap:0.75rem;margin-bottom:2rem;border-bottom:1px solid var(--border);padding-bottom:1rem;overflow-x:auto;scrollbar-width:none}
-.tab-nav::-webkit-scrollbar{display:none}
-.tab-btn{background:transparent;border:none;font-family:'Inter',sans-serif;font-size:0.88rem;color:var(--muted);cursor:pointer;padding:0.4rem 0.8rem;border-radius:100px;transition:all 0.2s;white-space:nowrap}
-.tab-btn:hover{color:var(--text);background:rgba(26,20,16,0.05)}
-.tab-btn.active{background:var(--burg);color:#fff;font-weight:500}
-.tab-pane{display:none}
-.tab-pane.active{display:block;animation:fadeIn 0.4s ease}
-@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-
-/* PROJECTS & TEARDOWNS */
-#projects, #teardowns{padding:6rem 8%;background:var(--cream)}
-.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1.5rem}
-.case-card{position:relative;border-radius:16px;padding:1.75rem;transition:transform 0.25s,box-shadow 0.25s;background:rgba(238,234,222,0.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.7);box-shadow:0 4px 24px rgba(26,20,16,0.06)}
-.case-card.live{cursor:pointer}
-.case-card.live:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,20,16,0.12)}
-.card-tags{display:flex;gap:0.45rem;flex-wrap:wrap;margin-bottom:1rem}
-.ctag{font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.26rem 0.65rem;border-radius:100px;border:1px solid var(--border);color:var(--muted);background:rgba(238,234,222,0.8)}
-.ctag.hi{border-color:rgba(123,30,74,0.3);color:var(--burg);background:rgba(123,30,74,0.06)}
-.case-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:0.6rem;line-height:1.25}
-.case-card p{font-size:0.82rem;color:var(--muted);line-height:1.72;margin-bottom:1rem}
-.outcome{background:rgba(123,30,74,0.06);border-left:2px solid var(--burg);border-radius:0 8px 8px 0;padding:0.65rem 0.9rem;font-size:0.78rem;color:var(--text);line-height:1.65}
-.outcome strong{color:var(--burg);font-weight:500}
-.card-read{display:inline-flex;align-items:center;gap:0.35rem;font-size:0.75rem;color:var(--burg);font-weight:500;margin-top:1rem;letter-spacing:0.03em;transition:gap 0.2s}
-.card-read::after{content:'→';transition:transform 0.2s}
-.case-card.live:hover .card-read::after{transform:translateX(4px)}
-
-/* PROJECTS BURGUNDY SHOWCASE - UI/UX DESIGNER POSTER CARDS */
-#projects {
-  background-color: #55122f;
-  background-image: 
-    url("https://cdn.prod.website-files.com/684bf67a638fa90c1418ba7c/69afd282e20f1f9653015e32_Break%20into%20Product%20Management%20(1).avif"),
-    url("data:image/svg+xml,%3Csvg width='1400' height='700' viewBox='0 0 1400 700' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.22' stroke-width='2'%3E%3Cpath d='M100 150 L250 150 L320 270 L250 390 L100 390 L30 270 Z'/%3E%3Cpath d='M130 185 L230 185 L280 270 L230 355 L130 355 L80 270 Z'/%3E%3Cpath d='M1150 150 L1300 150 L1370 270 L1300 390 L1150 390 L1080 270 Z'/%3E%3Cpath d='M1170 185 L1270 185 L1320 270 L1270 355 L1170 355 L1120 270 Z'/%3E%3C/g%3E%3C/svg%3E"),
-    radial-gradient(circle at 50% 30%, #7B1E4A 0%, #4D102C 60%, #35091E 100%);
-  background-size: cover, cover, cover;
-  background-position: center top, center, center;
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  position: relative;
-  overflow: hidden;
-  padding: 6.5rem 4%;
-  border-top: 1px solid rgba(255,255,255,0.15);
-  border-bottom: 1px solid rgba(255,255,255,0.15);
-}
-.projects-pattern-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("https://cdn.prod.website-files.com/684bf67a638fa90c1418ba7c/69afd282e20f1f9653015e32_Break%20into%20Product%20Management%20(1).avif");
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  opacity: 0.95;
-  pointer-events: none;
-  z-index: 1;
-}
-.projects-showcase-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3.2rem 2.5rem;
-  max-width: 1400px;
-  margin: 3.2rem auto 0;
-  position: relative;
-  z-index: 2;
-}
-.showcase-card {
-  width: 100%;
-  height: 250px;
-  border-radius: 16px 16px 16px 0;
-  border: 2.5px solid #000000;
-  padding: 1.4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-  transition: box-shadow 0.28s, border-color 0.28s;
-}
-.showcase-item:hover .showcase-card {
-  border-color: #000000;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.55);
-}
-
-/* Card Background Themes */
-.theme-emerald {
-  background-color: #050f0b;
-  background-image: 
-    linear-gradient(180deg, rgba(5,15,11,0.25) 0%, rgba(5,15,11,0.85) 100%),
-    url("assets/projects/beyondlabel_card.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.theme-sapphire {
-  background-color: #060c18;
-  background-image: 
-    linear-gradient(180deg, rgba(6,12,24,0.25) 0%, rgba(6,12,24,0.85) 100%),
-    url("assets/projects/hdfc_rag_card.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.theme-orange {
-  background-color: #1c0a03;
-  background-image: 
-    linear-gradient(180deg, rgba(28,10,3,0.3) 0%, rgba(28,10,3,0.85) 100%),
-    url("assets/projects/travel_card.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.theme-violet {
-  background-color: #22103b;
-  background-image: 
-    linear-gradient(180deg, rgba(34,16,59,0.3) 0%, rgba(34,16,59,0.85) 100%),
-    url("assets/projects/app_review_card.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.theme-crimson {
-  background-color: #1a0408;
-  background-image: 
-    linear-gradient(180deg, rgba(26,4,8,0.25) 0%, rgba(26,4,8,0.88) 100%),
-    url("assets/projects/zomato_card.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.theme-teal {
-  background-color: #041a1c;
-  background-image:
-    radial-gradient(circle at 82% 12%, rgba(252,211,77,0.30) 0%, transparent 46%),
-    linear-gradient(160deg, #0d4247 0%, #062a2d 45%, #041a1c 100%);
-}
-
-/* Subtle pattern overlay inside card */
-.showcase-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top right, rgba(255,255,255,0.06) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-/* Top Right Badge */
-.sc-card-top {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-}
-.sc-badge {
-  font-size: 0.64rem;
-  font-weight: 600;
-  padding: 0.24rem 0.6rem;
-  border-radius: 100px;
-  background: rgba(255,255,255,0.08);
-  color: rgba(255,255,255,0.9);
-  border: 1px solid rgba(255,255,255,0.15);
-  letter-spacing: 0.04em;
-}
-.live-badge {
-  background: rgba(22,163,74,0.15);
-  color: #4ade80;
-  border-color: rgba(34,197,94,0.35);
-}
-
-/* Center Typography Art - Premium Modern Product Fonts */
-.sc-poster-title {
-  position: relative;
-  z-index: 2;
-  margin: auto 0;
-  color: #FFFFFF;
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.85rem;
-  font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  text-shadow: 0 4px 16px rgba(0,0,0,0.75);
-}
-.sc-poster-title strong {
-  font-weight: 800;
-  color: #FFFFFF;
-  font-family: 'Outfit', sans-serif;
-  letter-spacing: -0.03em;
-}
-.sc-poster-eyebrow {
-  display: block;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #FCD34D;
-  margin-bottom: 0.45rem;
-}
-.sc-poster-sub {
-  display: block;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: rgba(255,255,255,0.9);
-  margin-top: 0.5rem;
-  letter-spacing: 0.01em;
-}
-
-/* Showcase Card Item Wrapper & Connected Neo-Brutalist Bottom-Left Button (Exact Image 1 match) */
-.showcase-item {
-  flex: 0 0 calc(30% - 1.5rem);
-  width: calc(30% - 1.5rem);
-  min-width: 340px;
-  max-width: 390px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  align-items: flex-start;
-  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-.showcase-item:hover {
-  transform: translateY(-8px);
-}
-.sc-ext-footer {
-  display: flex;
-  justify-content: flex-start;
-  position: relative;
-  z-index: 3;
-  margin-top: -2.5px;
-}
-.sc-ext-btn {
-  display: inline-flex;
-  align-items: stretch;
-  border-radius: 0 0 12px 12px;
-  overflow: hidden;
-  border: 2.5px solid #000000;
-  font-weight: 700;
-  font-size: 0.85rem;
-  cursor: pointer;
-  text-decoration: none;
-  line-height: 1;
-  background: transparent;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
-  transition: box-shadow 0.2s, background 0.2s;
-  padding: 0;
-}
-.showcase-item:hover .sc-ext-btn {
-  box-shadow: 0 12px 26px rgba(0,0,0,0.55);
-}
-.sc-ext-text {
-  background: #FCD34D;
-  color: #000000;
-  padding: 0.7rem 1.15rem;
-  display: flex;
-  align-items: center;
-  border-right: 2.5px solid #000000;
-  white-space: nowrap;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-  font-size: 0.9rem;
-  letter-spacing: 0.01em;
-}
-.sc-ext-icon {
-  background: #FFFFFF;
-  color: #000000;
-  padding: 0.7rem 0.95rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.05rem;
-  font-weight: 700;
-  font-family: 'Outfit', sans-serif;
-}
-
-/* Responsiveness for 1 line on desktop, wrap on smaller screens */
-/* Responsive Wide Showcase Cards */
-@media (max-width: 1250px) {
-  .showcase-item {
-    width: calc(50% - 1.5rem);
-    min-width: 340px;
-    max-width: 480px;
-  }
-}
-@media (max-width: 768px) {
-  .projects-showcase-grid {
-    gap: 2.5rem 1.5rem;
-  }
-  .showcase-item {
-    width: 100%;
-    min-width: 100%;
-    max-width: 480px;
-  }
-}
-
-/* MODAL */
-.modal-overlay{position:fixed;inset:0;background:rgba(26,20,16,0.65);backdrop-filter:blur(6px);z-index:500;display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity 0.3s}
-.modal-overlay.open{opacity:1;pointer-events:all}
-.modal-box{background:var(--cream);border-radius:20px;max-width:780px;width:100%;max-height:85vh;overflow-y:auto;padding:2.5rem;position:relative;transform:translateY(24px);transition:transform 0.3s;box-shadow:0 24px 80px rgba(26,20,16,0.2)}
-.modal-overlay.open .modal-box{transform:translateY(0)}
-.modal-close{position:sticky;top:0;float:right;background:var(--text);color:#fff;border:none;border-radius:100px;padding:0.4rem 0.9rem;font-size:0.78rem;cursor:pointer;font-family:'Inter',sans-serif;margin-bottom:1.5rem;z-index:10}
-.modal-tag{font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--burg);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem}
-.modal-tag::before{content:'';width:1rem;height:1px;background:var(--burg)}
-.modal-h{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,2rem);line-height:1.15;margin-bottom:1.25rem;color:var(--text)}
-.modal-section{margin-bottom:1.5rem}
-.modal-section h4{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.6rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}
-.modal-section p,.modal-section li{font-size:0.86rem;color:var(--muted);line-height:1.8}
-.modal-section ul{padding-left:1.2rem}
-.modal-section li{margin-bottom:0.35rem}
-.modal-outcome{background:rgba(123,30,74,0.06);border-left:2px solid var(--burg);border-radius:0 8px 8px 0;padding:0.75rem 1rem;font-size:0.83rem;color:var(--text);line-height:1.7}
-.modal-outcome strong{color:var(--burg)}
-.modal-metric{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-top:0.75rem}
-.metric-pill{background:var(--cream2);border:1px solid var(--border);border-radius:10px;padding:0.75rem;text-align:center}
-.metric-pill .mv{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--burg);font-weight:700}
-.metric-pill .ml{font-size:0.68rem;color:var(--muted);letter-spacing:0.05em;text-transform:uppercase;margin-top:0.2rem}
-
-/* TOOLS — FULL WIDTH 9-COL GRID */
-#tools{background:var(--cream);position:relative;isolation:isolate;overflow:hidden !important;contain:paint !important;max-height:800px !important;z-index:1}
-#tools::before{content:'';position:absolute;inset:0;
-  background-image:linear-gradient(#B8B4AA 1px,transparent 1px),linear-gradient(90deg,#B8B4AA 1px,transparent 1px);
-  background-size:160px 160px;opacity:0.55;pointer-events:none;z-index:0}
-.tools-stage{position:relative;z-index:1;display:grid;grid-template-columns:repeat(9,1fr);grid-template-rows:repeat(5,160px);grid-auto-rows:0px !important;width:100%;max-height:800px !important;overflow:hidden !important;contain:paint !important}
-.tools-cell{display:flex;align-items:center;justify-content:center;border:1px solid #B8B4AA;background:transparent;min-height:160px;max-height:160px;overflow:hidden}
-.tool-logo{display:flex;flex-direction:column;align-items:center;gap:0.5rem;text-align:center}
-.tool-logo img{width:32px;height:32px;object-fit:contain}
-.tool-logo span{font-size:0.75rem;font-weight:600;font-family:'Inter',sans-serif;white-space:nowrap}
-.tools-center-cell{grid-column:4/7;grid-row:2/5;background:var(--cream);border:1.5px solid #B8B4AA;display:flex;align-items:center;justify-content:center;z-index:2}
-.tools-center-text{text-align:center;padding:2.5rem 2rem}
-.tc-eyebrow{font-size:0.63rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-bottom:1rem}
-.tc-eyebrow::before,.tc-eyebrow::after{content:'';width:1rem;height:1px;background:var(--border)}
-.tools-center-text h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,1.8vw,1.9rem);line-height:1.15;margin-bottom:0.75rem;color:var(--text)}
-.tools-center-text h2 em{font-style:italic;color:var(--burg);position:relative}
-.tools-center-text h2 em::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:2px;background:var(--burg);opacity:0.4;border-radius:2px}
-.tools-center-text p{font-size:0.82rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;max-width:240px;margin-left:auto;margin-right:auto}
-
-/* ABOUT */
-#about{padding:0 !important;background:transparent !important;width:0;height:0;margin:0;border:none;display:block}
-.about-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:6rem;align-items:center;margin-top:1rem}
-.about-text p{color:var(--muted);line-height:1.88;margin-bottom:1rem;font-size:0.9rem}
-.about-text p strong{color:var(--text);font-weight:500}
-.stat-cards{display:flex;flex-direction:column}
-.stat-card{border:1px solid var(--border);border-bottom:none;padding:0.88rem 1.2rem;display:flex;justify-content:space-between;align-items:center;background:var(--cream)}
-.stat-card:first-child{border-radius:12px 12px 0 0}
-.stat-card:last-child{border-bottom:1px solid var(--border);border-radius:0 0 12px 12px}
-.sc-label{font-size:0.67rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--muted)}
-.sc-val{font-family:'Playfair Display',serif;font-size:0.9rem;color:var(--burg);font-weight:700}
-.counter{display:inline-block}
-
-/* EXPERIENCE */
-#experience{padding:6rem 8%;background:var(--cream)}
-.exp-list{border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:1.5rem}
-.exp-row{background:var(--cream);border-bottom:1px solid var(--border);padding:1.4rem 1.75rem;display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:start;transition:background 0.2s}
-.exp-row:last-child{border-bottom:none}
-.exp-row:hover{background:var(--cream2)}
-.exp-role{font-weight:500;font-size:0.9rem;margin-bottom:0.2rem;color:var(--text)}
-.exp-co{font-size:0.78rem;color:var(--burg);margin-bottom:0.45rem}
-.exp-desc{font-size:0.8rem;color:var(--muted);line-height:1.72;max-width:560px}
-.exp-date{font-size:0.73rem;color:var(--muted);text-align:right;white-space:nowrap}
-.exp-type{font-size:0.63rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);margin-top:0.3rem;text-align:right}
-
-/* CONTACT */
-#contact{padding:6rem 8%;background:var(--cream2)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
-.contact-left p{color:var(--muted);font-size:0.9rem;line-height:1.88;margin-bottom:2rem}
-.clinks{display:flex;flex-direction:column;gap:0.7rem}
-.clink{display:flex;justify-content:space-between;align-items:center;padding:0.95rem 1.2rem;border:1px solid var(--border);border-radius:10px;background:var(--cream);transition:border-color 0.2s,background 0.2s}
-.clink:hover{border-color:var(--muted);background:var(--cream2)}
-.cl-label{font-size:0.65rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--muted);margin-bottom:0.12rem}
-.cl-val{color:var(--text);font-size:0.83rem}
-
-/* FOOTER — EDGE-TO-EDGE TYPOGRAPHIC FOOTER */
-footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direction:column;width:100%;isolation:isolate}
-.footer-giant-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem, 7.6vw, 8.2rem);white-space:nowrap;font-weight:700;letter-spacing:-0.03em;line-height:0.98;color:#1A1410;text-align:center;width:100%;margin-bottom:4rem;user-select:none}
-.footer-bottom-bar{border-top:1px solid #D8D4CA;padding-top:2rem;display:flex;justify-content:space-between;align-items:center;width:100%;flex-wrap:wrap;gap:1.5rem}
-.footer-logo-text{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#3A342D;letter-spacing:-0.01em}
-.footer-nav-links{display:flex;gap:1.75rem;align-items:center;flex-wrap:wrap}
-.footer-nav-link{font-family:'Plus Jakarta Sans','Inter',sans-serif;font-size:0.88rem;font-weight:600;color:#4A443D;text-decoration:none;transition:color 0.2s}
-.footer-nav-link:hover{color:#1A1410}
-
-/* TOOLS MOBILE */
-#tools-mobile{display:none;padding:3.5rem 6%;background:var(--cream);border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center}
-#tools-mobile .tc-eyebrow{font-size:0.63rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-bottom:1rem}
-#tools-mobile .tc-eyebrow::before,#tools-mobile .tc-eyebrow::after{content:'';width:1rem;height:1px;background:var(--border)}
-#tools-mobile h2{font-family:'Playfair Display',serif;font-size:1.6rem;line-height:1.15;margin-bottom:0.6rem;color:var(--text)}
-#tools-mobile h2 em{font-style:italic;color:var(--burg)}
-#tools-mobile p{font-size:0.84rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;max-width:320px;margin-left:auto;margin-right:auto}
-.tools-pill-grid{display:flex;flex-wrap:wrap;gap:0.55rem;margin-bottom:1.75rem;justify-content:center}
-.tool-pill{display:inline-flex;align-items:center;gap:0.45rem;padding:0.5rem 0.9rem;border:1px solid var(--border);border-radius:100px;background:var(--cream2);font-size:0.78rem;font-weight:500;color:var(--text);transition:border-color 0.2s}
-.tool-pill:hover{border-color:var(--burg)}
-.tool-pill img{width:15px;height:15px;object-fit:contain}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .nav-wrap{width:calc(100% - 2rem);top:0.75rem}
-  .nav-links{display:none}
-  nav{grid-template-columns:1fr 1fr;padding:0.55rem 0.6rem 0.55rem 1.1rem}
-  .nav-right{grid-column:2;justify-content:flex-end}
-  #hero{padding:5.5rem 0 0}
-  #hero h1{font-size:clamp(1.8rem,6vw,2.6rem)}
-  .fan{padding:2.5rem 1rem 3rem}
-  .fan-card{--w:clamp(105px,17vw,140px)}
-  .fan-card:nth-child(n+6){display:none}
-  #bring{padding:4rem 6%}
-  #work{padding:4rem 6%}
-  #about{padding:4rem 6%}
-  #experience{padding:4rem 6%}
-  .pillars{grid-template-columns:1fr;gap:1rem}
-  .work-grid{grid-template-columns:1fr;gap:1rem}
-  .about-grid{grid-template-columns:1fr;gap:2rem}
-  .contact-grid{grid-template-columns:1fr;gap:2.5rem}
-  .tools-stage{display:none}
-  #tools::before{display:none}
-  #tools-mobile{display:block}
-  .exp-row{grid-template-columns:1fr;gap:0.5rem}
-  .exp-date{text-align:left}
-  .exp-type{text-align:left}
-  .modal-metric{grid-template-columns:1fr}
-  .modal-box{padding:1.5rem;border-radius:14px}
-  footer{flex-direction:column;gap:1rem;text-align:center;padding:1.5rem 6%}
-}
-@media(max-width:640px){
-  .nav-wrap{width:calc(100% - 1.5rem);top:0.6rem}
-  nav{padding:0.5rem 0.6rem 0.5rem 1rem}
-  .nav-name{font-size:0.52rem}
-  .nav-cta{font-size:0.7rem;padding:0.4rem 0.85rem}
-  .btn-burg,.btn-outline{width:100%;max-width:280px;justify-content:center}
-  .sec-h2{font-size:clamp(1.6rem,7vw,2.2rem)}
-  #hero{padding:5rem 0 2.5rem; min-height: auto;}
-  #hero h1{font-size:clamp(1.6rem,7vw,2.2rem)}
-  .hero-sub{font-size:0.82rem;margin:1.25rem auto}
-  .hero-btns{flex-direction:column;align-items:center;gap:0.6rem}
-  .fan-card{--w:96px}
-  .fan-card:nth-child(n+5){display:none}
-  .fan-card p{font-size:0.58rem;min-height:2.5rem}
-  #bring{padding:3.5rem 5%}
-  .bring-sub{font-size:0.82rem}
-  .p-desc{font-size:0.78rem}
-  #projects, #teardowns{padding:3.5rem 5%}
-  .case-card{padding:1.25rem}
-  #about{padding:3.5rem 5%}
-  .about-grid{gap:1.75rem}
-  #experience{padding:3.5rem 5%}
-  .exp-list{border-radius:10px}
-  .exp-row{padding:1.1rem}
-  .exp-desc{font-size:0.77rem}
-  .contact-left p{font-size:0.84rem}
-  .modal-overlay{padding:1rem}
-  .modal-box{padding:1.25rem;max-height:90vh}
-  footer{padding:1.25rem 5%}
-  .fl-name{font-size:0.8rem}
-  .footer-socials{justify-content:center}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/main.css?v=27"/>
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
@@ -691,9 +56,9 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
 <!-- HERO -->
 <section id="hero" class="grid-bg">
   <div class="sec-inner" style="display:flex;flex-direction:column;align-items:center;text-align:center; padding:0 5%; width:100%; box-sizing:border-box;">
-    <div class="hero-eyebrow reveal">Product · Finance · Business</div>
-    <h1 class="reveal reveal-delay-1">Finance brain. Product heart.<br><em>Business soul.</em></h1>
-    <p class="hero-sub reveal reveal-delay-2">CS undergrad · FMVA certified · Building products that solve real problems for real people.</p>
+    <div class="hero-eyebrow reveal">AI Products · Final-year CS · Nextleap PM Fellow</div>
+    <h1 class="reveal reveal-delay-1">Start with the user.<br><em>Add AI only where it helps.</em></h1>
+    <p class="hero-sub reveal reveal-delay-2">I'm Mrigank, and I build AI products. I figure out what an AI feature should do, where AI shouldn't be used at all, and how to measure whether it's actually helping users.</p>
     <div class="hero-btns reveal reveal-delay-3">
       <a href="#projects" class="btn-burg">See my work ↗</a>
       <a href="#contact" class="btn-outline">Let's connect</a>
@@ -707,218 +72,233 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
   <div class="mq-inner" id="mq-skills"></div>
 </div>
 
-<!-- WHAT I BRING & ABOUT ME MOVED DOWN BEFORE EXPERIENCE -->
-
-<!-- PROJECTS & PRODUCTS (RICH BURGUNDY SHOWCASE - UI/UX DESIGNER POSTER CARDS) -->
+<!-- PROJECTS -->
 <section id="projects" aria-labelledby="projects-heading">
-  <!-- Exact background pattern overlay from The Product Folks -->
+  <!-- Background pattern overlay -->
   <div class="projects-pattern-overlay" aria-hidden="true"></div>
   <div class="sec-inner" style="position:relative; z-index:2;">
-    <!-- Top Center Pill Label -->
     <div class="reveal" style="display:flex; justify-content:center; margin-bottom:1rem;">
       <span style="font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#EEEADE; background:rgba(238,234,222,0.12); border:1px solid rgba(238,234,222,0.25); padding:0.35rem 0.95rem; border-radius:100px; font-weight:600;">
-        WHAT'S BUILT &amp; SHIPPED
+        Selected work
       </span>
     </div>
 
-    <!-- Main Section Heading (Exact serif italic #EEEADE font from image!) -->
     <h2 class="sec-h2 reveal reveal-delay-1" id="projects-heading" style="color:#EEEADE; text-align:center; margin-bottom:0.6rem; font-family:'Playfair Display',serif; font-style:italic; font-weight:700; font-size:clamp(2.4rem, 4.5vw, 3.4rem);">
-      What I've built &amp; shipped
+      What I built, and what I didn't
     </h2>
 
-    <!-- Subtitle -->
-    <p class="reveal reveal-delay-2" style="color:rgba(238,234,222,0.85); text-align:center; max-width:580px; margin:0 auto; font-size:0.88rem; line-height:1.6; font-family:'Inter',sans-serif;">
-      End-to-end products — AI applications, RAG pipelines, agent systems, and B2B SaaS — designed to solve real user problems.
+    <p class="reveal reveal-delay-2" style="color:rgba(238,234,222,0.85); text-align:center; max-width:600px; margin:0 auto; font-size:0.92rem; line-height:1.6; font-family:'Inter',sans-serif;">
+      Six products, AI first. For each one: the obvious version I didn't build, what I built instead, and the number that tells me it's working.
     </p>
 
-    <!-- 6-CARD POSTER SHOWCASE (3 x 2 ON DESKTOP) -->
-    <div class="projects-showcase-grid">
-      <!-- 1. BeyondLabel (Deployed Live Project) -->
-      <div class="showcase-item reveal reveal-delay-1">
-        <div class="showcase-card theme-emerald" role="button" tabindex="0" onclick="openModal('beyondlabel')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('beyondlabel')">
-          <div class="sc-card-top">
-            <span class="sc-badge live-badge">🟢 Live</span>
-          </div>
-          <div class="sc-poster-title">
-            <span class="sc-poster-eyebrow">AI · PWA · HEALTH</span>
-            BEYOND<br><strong>LABEL</strong>
-            <span class="sc-poster-sub">Ingredient Analyzer</span>
-          </div>
-        </div>
-        <div class="sc-ext-footer">
-          <a href="https://beyondlabel.vercel.app" target="_blank" rel="noopener" class="sc-ext-btn">
-            <span class="sc-ext-text">Check it out</span>
-            <span class="sc-ext-icon">↗</span>
-          </a>
-        </div>
-      </div>
+    <div class="dl-rows">
 
-      <!-- 2. HDFC Mutual Fund RAG Assistant -->
-      <div class="showcase-item reveal reveal-delay-1">
-        <div class="showcase-card theme-sapphire" role="button" tabindex="0" onclick="openModal('ragchatbot')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('ragchatbot')">
-          <div class="sc-card-top">
-            <span class="sc-badge">💻 CI/CD</span>
-          </div>
-          <div class="sc-poster-title">
-            <span class="sc-poster-eyebrow">FINTECH · RAG</span>
-            HDFC<br><strong>RAG BOT</strong>
-            <span class="sc-poster-sub">Facts-Only AI</span>
+      <article class="dl-row reveal">
+        <div class="dl-id">
+          <div class="dl-tags"><span class="dl-tag live">Live</span><span class="dl-tag">From a brief</span><span class="dl-tag">RAG</span><span class="dl-tag">Evals</span></div>
+          <h3><a href="/work/hdfc-mf-bot.html">HDFC Fund Facts</a></h3>
+          <p>A RAG assistant for five HDFC mutual funds that cites a source for every answer and refuses anything that sounds like advice.</p>
+        </div>
+        <div class="dl-call">
+          <span class="dl-k">The obvious version</span>
+          <p class="dl-obvious"><span class="cut">A finance chatbot that compares funds and calculates returns</span></p>
+          <p>A calculated return can't be traced to a source document, so nobody can check it. It answers in three sentences or fewer, links exactly one source, and declines anything that sounds like advice.</p>
+          <p class="dl-left"><span class="dl-k">Also left out</span><span class="cut">Return calculations</span><span class="cut">Fund comparisons</span></p>
+        </div>
+        <div class="dl-win">
+          <span class="dl-k">It's working if <em>target</em></span>
+          <p class="dl-fig">0</p>
+          <p>answers on the test set say something the source pages don't.</p>
+          <p class="dl-guard">While catching over 95% of advice-seeking questions.</p>
+          <div class="dl-actions">
+            <a href="/work/hdfc-mf-bot.html" class="btn-twotone dl-btn"><span class="bt-text">Read case study</span><span class="bt-icon">↗</span></a>
+            <a href="https://hdfc-mf-rag-chat.vercel.app/" target="_blank" rel="noopener" class="dl-link">Try it</a>
           </div>
         </div>
-        <div class="sc-ext-footer">
-          <button type="button" class="sc-ext-btn" onclick="openModal('ragchatbot')">
-            <span class="sc-ext-text">Read more</span>
-            <span class="sc-ext-icon">↗</span>
-          </button>
-        </div>
-      </div>
+      </article>
 
-      <!-- 3. Multi-Agent Travel Planner -->
-      <div class="showcase-item reveal reveal-delay-2">
-        <div class="showcase-card theme-orange" role="button" tabindex="0" onclick="openModal('multitravel')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('multitravel')">
-          <div class="sc-card-top">
-            <span class="sc-badge">🔵 Staging</span>
-          </div>
-          <div class="sc-poster-title">
-            <span class="sc-poster-eyebrow">5 AGENT AI</span>
-            TRAVEL<br><strong>AGENTS</strong>
-            <span class="sc-poster-sub">Autonomous Planning</span>
+      <article class="dl-row reveal">
+        <div class="dl-id">
+          <div class="dl-tags"><span class="dl-tag live">Live</span><span class="dl-tag">LLM</span><span class="dl-tag">Vision</span><span class="dl-tag">Health</span></div>
+          <h3><a href="/work/beyondlabel.html">BeyondLabel</a></h3>
+          <p>An LLM that reads a food label and tells you what it does to your body, and what to eat instead.</p>
+        </div>
+        <div class="dl-call">
+          <span class="dl-k">The obvious version</span>
+          <p class="dl-obvious"><span class="cut">An AI that simplifies the nutrition label</span></p>
+          <p>People weren't misreading labels. They thought muesli was healthy, or knew chips were bad without knowing how bad. So it explains the effect on your body, and suggests a swap for the same craving.</p>
+          <p class="dl-left"><span class="dl-k">Also left out</span><span class="cut">Live barcode scanner</span><span class="cut">WhatsApp bot</span><span class="cut">Calorie logging</span></p>
+        </div>
+        <div class="dl-win">
+          <span class="dl-k">It's working if <em>target</em></span>
+          <p class="dl-fig">1 in 4</p>
+          <p>scans end with the person choosing the suggested swap.</p>
+          <p class="dl-guard">Without letting a verdict take longer than 10 seconds.</p>
+          <div class="dl-actions">
+            <a href="/work/beyondlabel.html" class="btn-twotone dl-btn"><span class="bt-text">Read case study</span><span class="bt-icon">↗</span></a>
+            <a href="https://beyondlabel.vercel.app" target="_blank" rel="noopener" class="dl-link">Try it</a>
           </div>
         </div>
-        <div class="sc-ext-footer">
-          <button type="button" class="sc-ext-btn" onclick="openModal('multitravel')">
-            <span class="sc-ext-text">Read more</span>
-            <span class="sc-ext-icon">↗</span>
-          </button>
-        </div>
-      </div>
+      </article>
 
-      <!-- 4. App Review Pulse Generator -->
-      <div class="showcase-item reveal reveal-delay-2">
-        <div class="showcase-card theme-violet" role="button" tabindex="0" onclick="openModal('appreviewmcp')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('appreviewmcp')">
-          <div class="sc-card-top">
-            <span class="sc-badge">💻 MCP</span>
-          </div>
-          <div class="sc-poster-title">
-            <span class="sc-poster-eyebrow">PRODUCT OPS</span>
-            APP REVIEW<br><strong>PULSE</strong>
-            <span class="sc-poster-sub">Automated PM Agent</span>
+      <article class="dl-row reveal">
+        <div class="dl-id">
+          <div class="dl-tags"><span class="dl-tag">From a brief</span><span class="dl-tag">AI agent</span><span class="dl-tag">MCP</span></div>
+          <h3><a href="/work/app-review-pulse.html">App Review Pulse</a></h3>
+          <p>An AI agent that turns hundreds of app-store reviews into a one-page weekly note, delivered through MCP.</p>
+        </div>
+        <div class="dl-call">
+          <span class="dl-k">The obvious version</span>
+          <p class="dl-obvious"><span class="cut">A review dashboard with sentiment charts</span></p>
+          <p>Nobody opens a dashboard on a busy week. A 250-word note with the top three themes, three real quotes and three actions lands where the team already reads: Google Docs and Gmail.</p>
+          <p class="dl-left"><span class="dl-k">Also left out</span><span class="cut">More than five themes</span><span class="cut">Reviewer names</span></p>
+        </div>
+        <div class="dl-win">
+          <span class="dl-k">It's working if <em>target</em></span>
+          <p class="dl-fig">1+</p>
+          <p>action from each weekly note makes it onto the backlog.</p>
+          <p class="dl-guard">With no personal data in any note.</p>
+          <div class="dl-actions">
+            <a href="/work/app-review-pulse.html" class="btn-twotone dl-btn"><span class="bt-text">Read case study</span><span class="bt-icon">↗</span></a>
           </div>
         </div>
-        <div class="sc-ext-footer">
-          <button type="button" class="sc-ext-btn" onclick="openModal('appreviewmcp')">
-            <span class="sc-ext-text">Read more</span>
-            <span class="sc-ext-icon">↗</span>
-          </button>
-        </div>
-      </div>
+      </article>
 
-      <!-- 5. Zomato AI Engine (Deployed Live Project) -->
-      <div class="showcase-item reveal reveal-delay-1">
-        <div class="showcase-card theme-crimson" role="button" tabindex="0" onclick="openModal('zomatobuild')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('zomatobuild')">
-          <div class="sc-card-top">
-            <span class="sc-badge live-badge">🟢 Live</span>
-          </div>
-          <div class="sc-poster-title">
-            <span class="sc-poster-eyebrow">FOOD TECH · AI</span>
-            ZOMATO<br><strong>AI ENGINE</strong>
-            <span class="sc-poster-sub">30,000+ Recommender</span>
+      <article class="dl-row reveal">
+        <div class="dl-id">
+          <div class="dl-tags"><span class="dl-tag live">Live</span><span class="dl-tag">Experimentation</span><span class="dl-tag">ML</span></div>
+          <h3><a href="/work/ab-testing-engine.html">A/B Decision Engine</a></h3>
+          <p>An experimentation engine with an uplift model that tells a team whether to ship, kill or keep testing, and whether to trust the result.</p>
+        </div>
+        <div class="dl-call">
+          <span class="dl-k">The obvious version</span>
+          <p class="dl-obvious"><span class="cut">A calculator that checks if p is below 0.05</span></p>
+          <p>Real tests go wrong before significance matters: a broken traffic split, a team peeking daily, an average that hides who got hurt. It checks all three, then gives one verdict.</p>
+          <p class="dl-left"><span class="dl-k">Also left out</span><span class="cut">A dashboard before the maths was proven</span></p>
+        </div>
+        <div class="dl-win">
+          <span class="dl-k">What I measured <em class="m">measured</em></span>
+          <p class="dl-fig">22.7% → 1%</p>
+          <p>false-positive rate from daily peeking, before and after sequential testing.</p>
+          <p class="dl-guard">Stays under the 5% error rate it promises.</p>
+          <div class="dl-actions">
+            <a href="/work/ab-testing-engine.html" class="btn-twotone dl-btn"><span class="bt-text">Read case study</span><span class="bt-icon">↗</span></a>
+            <a href="https://ab-testing-decision-engine.vercel.app/" target="_blank" rel="noopener" class="dl-link">Try it</a>
           </div>
         </div>
-        <div class="sc-ext-footer">
-          <a href="https://zomato-milestone1-9ep8.vercel.app/" target="_blank" rel="noopener" class="sc-ext-btn">
-            <span class="sc-ext-text">Check it out</span>
-            <span class="sc-ext-icon">↗</span>
-          </a>
-        </div>
-      </div>
+      </article>
 
-      <!-- 6. Kudos Rewards (Deployed Live Project) -->
-      <div class="showcase-item reveal reveal-delay-2">
-        <div class="showcase-card theme-teal" role="button" tabindex="0" onclick="openModal('kudos')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('kudos')">
-          <div class="sc-card-top">
-            <span class="sc-badge live-badge">🟢 Live</span>
-          </div>
-          <div class="sc-poster-title">
-            <span class="sc-poster-eyebrow">B2B SAAS · GAMIFIED</span>
-            KUDOS<br><strong>REWARDS</strong>
-            <span class="sc-poster-sub">Employee Recognition Platform</span>
+      <article class="dl-row reveal">
+        <div class="dl-id">
+          <div class="dl-tags"><span class="dl-tag live">Live</span><span class="dl-tag">Fintech</span><span class="dl-tag">No AI, on purpose</span></div>
+          <h3><a href="/work/plutus.html">Plutus</a></h3>
+          <p>A money app where we deliberately left AI out, so every number is arithmetic you can check.</p>
+          <p class="dl-credit">Team project with <a href="https://github.com/Kaustubh-gaurav" target="_blank" rel="noopener">Kaustubh Gaurav</a>, product designer. I owned product.</p>
+        </div>
+        <div class="dl-call">
+          <span class="dl-k">The obvious version</span>
+          <p class="dl-obvious"><span class="cut">A budgeting app with bank sync and an AI advisor</span></p>
+          <p>The problem was losing track of small daily spends and loans between friends. So logging takes seconds, every number is plain arithmetic, and money owed to you never looks like money you owe.</p>
+          <p class="dl-left"><span class="dl-k">Also left out</span><span class="cut">Bank sync</span><span class="cut">AI advisor</span><span class="cut">Forecasting</span><span class="cut">Accounts</span></p>
+        </div>
+        <div class="dl-win">
+          <span class="dl-k">It's working if <em>target</em></span>
+          <p class="dl-fig">5 of 7</p>
+          <p>days in a new user's first week have at least one expense logged.</p>
+          <p class="dl-guard">With no number on screen that can't be traced to a saved record.</p>
+          <div class="dl-actions">
+            <a href="/work/plutus.html" class="btn-twotone dl-btn"><span class="bt-text">Read case study</span><span class="bt-icon">↗</span></a>
+            <a href="https://kaustubh-gaurav.github.io/Plutus/" target="_blank" rel="noopener" class="dl-link">Try it</a>
           </div>
         </div>
-        <div class="sc-ext-footer">
-          <a href="https://kudos-rewards.vercel.app" target="_blank" rel="noopener" class="sc-ext-btn">
-            <span class="sc-ext-text">Check it out</span>
-            <span class="sc-ext-icon">↗</span>
-          </a>
+      </article>
+
+      <article class="dl-row reveal">
+        <div class="dl-id">
+          <div class="dl-tags"><span class="dl-tag live">Live</span><span class="dl-tag">B2B SaaS</span></div>
+          <h3><a href="/work/kudos.html">Kudos</a></h3>
+          <p>Peer-to-peer recognition and rewards for teams.</p>
         </div>
-      </div>
+        <div class="dl-call">
+          <span class="dl-k">The obvious version</span>
+          <p class="dl-obvious"><span class="cut">An HR console where managers hand out rewards</span></p>
+          <p>When only managers can give recognition, they become the bottleneck and the people who see the work stay silent. So anyone can recognise anyone, on a ledger that can't lose a transfer halfway.</p>
+          <p class="dl-left"><span class="dl-k">Also left out</span><span class="cut">HR system integrations</span><span class="cut">Real gift-card payouts</span><span class="cut">Notifications</span></p>
+        </div>
+        <div class="dl-win">
+          <span class="dl-k">It's working if <em>target</em></span>
+          <p class="dl-fig">40%</p>
+          <p>of a team gives kudos every week by week six.</p>
+          <p class="dl-guard">With zero points-balance mismatches.</p>
+          <div class="dl-actions">
+            <a href="/work/kudos.html" class="btn-twotone dl-btn"><span class="bt-text">Read case study</span><span class="bt-icon">↗</span></a>
+            <a href="https://kudos-rewards.vercel.app" target="_blank" rel="noopener" class="dl-link">Try it</a>
+          </div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
 
-<!-- UX CASE STUDIES & TEARDOWNS -->
+<!-- CASE STUDIES -->
 <section id="teardowns" aria-labelledby="teardowns-heading" style="background:var(--cream);">
-  <div class="sec-inner" style="padding:6rem 8%">
-    <div class="sec-label reveal">UX &amp; Product Strategy</div>
+  <div class="sec-inner">
+    <div class="sec-label reveal">Case studies</div>
     <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; margin-bottom:0.75rem;">
-      <h2 class="sec-h2 reveal reveal-delay-1" id="teardowns-heading" style="margin-bottom:0">Products I've<br><em>teardowned &amp; analyzed</em></h2>
+      <h2 class="sec-h2 reveal reveal-delay-1" id="teardowns-heading" style="margin-bottom:0">Problems I dug into,<br><em>and what I'd build</em></h2>
+      <p class="reveal reveal-delay-2" style="max-width:360px; font-size:0.88rem; color:var(--muted); line-height:1.7;">From user research to tested prototypes: the problem, the fix, what I rejected, and the number that decides.</p>
     </div>
 
-    <!-- TEARDOWNS GRID (4 cards) -->
-    <div class="work-grid" style="margin-top:1.5rem">
-      <!-- 1. MyJio -->
-      <div class="case-card live reveal reveal-delay-1" role="button" tabindex="0" aria-label="Open MyJio case study" onclick="openModal('myjio')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('myjio')">
-        <div class="card-tags">
-          <span class="ctag hi">Product Teardown</span>
-          <span class="ctag">UX</span>
-          <span class="ctag">Feature Proposal</span>
-          <span class="ctag">A/B Testing</span>
-        </div>
-        <h3>MyJio: Data Usage in 3 Seconds</h3>
-        <p>Identified 5-tap friction causing 2-minute time-to-data. Proposed a home screen widget using Android deep-link intent and cached data — zero new server calls.</p>
-        <div class="outcome"><strong>Target:</strong> &gt;5% widget adoption · 10–15% drop in app opens · 20% fewer support tickets</div>
-        <div class="card-read">Read full teardown</div>
-      </div>
+    <div class="cs-grid">
+      <a class="case-card live cs-card reveal reveal-delay-1" href="/work/google-photos.html">
+        <div class="card-tags"><span class="ctag hi">Tested prototype</span><span class="ctag">Nextleap</span></div>
+        <h3>Google Photos: people don't search old photos. They scroll.</h3>
+        <div class="outcome"><strong>Built:</strong> a timeline that knows people. Tap a face to see everywhere they appear.</div>
+        <p class="cs-metric"><span class="cs-k">Tested</span>Wrong photos opened fell from 8 to 0 across 10 testers.</p>
+        <div class="card-read">Read the case study</div>
+      </a>
 
-      <!-- 2. Zomato Teardown -->
-      <div class="case-card live reveal reveal-delay-2" role="button" tabindex="0" aria-label="Open Zomato case study" onclick="openModal('zomato')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('zomato')">
-        <div class="card-tags">
-          <span class="ctag hi">Product Teardown</span>
-          <span class="ctag">UX</span>
-          <span class="ctag">Feature Proposal</span>
-          <span class="ctag">Decision Design</span>
-        </div>
-        <h3>Zomato: Hungry. Open Zomato. Still Can't Decide.</h3>
-        <p>Teardown of decision paralysis in food discovery. 500+ options, no signal for "what's best right now" — a product gap, not a user failure.</p>
-        <div class="outcome"><strong>Proposed:</strong> "Help Me Decide" — one tap, three curated picks, personalized to history and time of day</div>
-        <div class="card-read">Read full teardown</div>
-      </div>
+      <a class="case-card live cs-card reveal reveal-delay-2" href="/work/myntra-wishlist.html">
+        <div class="card-tags"><span class="ctag hi">Live prototype</span><span class="ctag">Nextleap</span></div>
+        <h3>Myntra: they want it. They're unsure about the price.</h3>
+        <div class="outcome"><strong>Built:</strong> a WhatsApp price-drop alert backed by the item's real price history.</div>
+        <p class="cs-metric"><span class="cs-k">Decides it</span>Purchase rate after a price verdict, tracked per zone.</p>
+        <div class="card-read">Read the case study</div>
+      </a>
 
-      <!-- 3. ChatGPT Voice -->
-      <div class="case-card live reveal reveal-delay-1" role="button" tabindex="0" aria-label="Open ChatGPT Voice user research case study" onclick="openModal('chatgpt')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('chatgpt')">
-        <div class="card-tags">
-          <span class="ctag hi">User Research</span>
-          <span class="ctag">Market Sizing</span>
-          <span class="ctag">Primary Survey</span>
-        </div>
-        <h3>ChatGPT Voice Adoption in India — User Research</h3>
-        <p>Surveyed 34 Indian students (18–24) to identify barriers to voice adoption. Invalidated discoverability as a root cause — validated workflow mismatch and social friction instead.</p>
-        <div class="outcome"><strong>Finding:</strong> 97% knew the feature existed. 71% still preferred typing. The problem was never awareness.</div>
-        <div class="card-read">Read full case study</div>
-      </div>
+      <a class="case-card live cs-card reveal reveal-delay-1" href="/work/insurance-claims.html">
+        <div class="card-tags"><span class="ctag hi">AI product</span><span class="ctag">Insurance</span></div>
+        <h3>Cashless claims: the paperwork's done, the family still waits</h3>
+        <div class="outcome"><strong>Proposed:</strong> an AI layer that builds the claim from admission, ready before discharge.</div>
+        <p class="cs-metric"><span class="cs-k">Decides it</span>Settled within 10 minutes of discharge, approval rates unchanged.</p>
+        <div class="card-read">Read the case study</div>
+      </a>
 
-      <!-- 4. Systems Thinking -->
-      <div class="case-card live reveal reveal-delay-2" role="button" tabindex="0" aria-label="Open Systems Thinking and Outcome Mapping case study" onclick="openModal('systems')" onkeydown="if(event.key==='Enter'||event.key===' ')openModal('systems')">
-        <div class="card-tags">
-          <span class="ctag hi">Product Strategy</span>
-          <span class="ctag">KPI Design</span>
-          <span class="ctag">Systems Thinking</span>
-        </div>
-        <h3>Systems Thinking &amp; Outcome Mapping — ChatGPT Voice</h3>
-        <p>Built a KPI tree with North Star Metric (Voice Sessions/DAU), mapped product levers, and identified opportunity spaces — multilingual users, commute context, and habit loops.</p>
-        <div class="outcome"><strong>Output:</strong> Full KPI tree · Competitive UX audit · Go-to-market opportunity sizing for 200M+ non-English users</div>
-        <div class="card-read">Read full case study</div>
-      </div>
+      <a class="case-card live cs-card reveal reveal-delay-1" href="/work/chatgpt-voice.html">
+        <div class="card-tags"><span class="ctag hi">User research</span><span class="ctag">Survey, n=34</span></div>
+        <h3>ChatGPT Voice in India: 97% knew it existed. 71% still typed.</h3>
+        <div class="outcome"><strong>Proposed:</strong> suggest voice where it clearly wins, and let people edit before sending.</div>
+        <p class="cs-metric"><span class="cs-k">Decides it</span>Voice sessions per daily user, total messages held.</p>
+        <div class="card-read">Read the case study</div>
+      </a>
+
+      <a class="case-card live cs-card reveal reveal-delay-1" href="/work/myjio.html">
+        <div class="card-tags"><span class="ctag hi">Teardown</span><span class="ctag">Proposal</span></div>
+        <h3>MyJio: your data balance, without the ads in the way</h3>
+        <div class="outcome"><strong>Proposed:</strong> a home-screen widget built on data the app already caches.</div>
+        <p class="cs-metric"><span class="cs-k">Decides it</span>Over 5% adoption in 14 days, ad views down under 8%.</p>
+        <div class="card-read">Read the case study</div>
+      </a>
+
+      <a class="case-card live cs-card reveal reveal-delay-2" href="/work/zomato.html">
+        <div class="card-tags"><span class="ctag hi">Teardown</span><span class="ctag">Proposal</span></div>
+        <h3>Zomato: hungry, scrolling, still can't decide</h3>
+        <div class="outcome"><strong>Proposed:</strong> "Help me decide": three picks, each with a reason.</div>
+        <p class="cs-metric"><span class="cs-k">Decides it</span>Browse-to-order conversion, order value held.</p>
+        <div class="card-read">Read the case study</div>
+      </a>
+
     </div>
   </div>
 </section>
@@ -936,7 +316,12 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
     </div>
     <div class="tools-cell"></div>
     <div class="tools-cell"></div>
-    <div class="tools-cell"></div>
+    <div class="tools-cell">
+      <div class="tool-logo reveal">
+        <img src="https://cdn.simpleicons.org/vercel/000000" alt="" aria-hidden="true" loading="lazy"/>
+        <span style="color:#000">Vercel</span>
+      </div>
+    </div>
     <div class="tools-cell"></div>
     <div class="tools-cell">
       <div class="tool-logo reveal">
@@ -991,7 +376,12 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
       </div>
     </div>
     <div class="tools-cell"></div>
-    <div class="tools-cell"></div>
+    <div class="tools-cell">
+      <div class="tool-logo reveal">
+        <img src="https://cdn.simpleicons.org/supabase" alt="" aria-hidden="true" loading="lazy"/>
+        <span style="color:#3ECF8E">Supabase</span>
+      </div>
+    </div>
     <!-- ROW 4 -->
     <div class="tools-cell"></div>
     <div class="tools-cell">
@@ -1010,9 +400,30 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
     <div class="tools-cell"></div>
     <div class="tools-cell"></div>
     <!-- ROW 5 -->
-    <div class="tools-cell"></div><div class="tools-cell"></div><div class="tools-cell"></div>
-    <div class="tools-cell"></div><div class="tools-cell"></div><div class="tools-cell"></div>
-    <div class="tools-cell"></div><div class="tools-cell"></div><div class="tools-cell"></div>
+    <div class="tools-cell"></div>
+    <div class="tools-cell"></div>
+    <div class="tools-cell">
+      <div class="tool-logo reveal">
+        <img src="https://cdn.simpleicons.org/posthog/F54E00" alt="" aria-hidden="true" loading="lazy"/>
+        <span style="color:#F54E00">PostHog</span>
+      </div>
+    </div>
+    <div class="tools-cell"></div>
+    <div class="tools-cell">
+      <div class="tool-logo reveal">
+        <img src="https://cdn.simpleicons.org/sentry" alt="" aria-hidden="true" loading="lazy"/>
+        <span style="color:#362D59">Sentry</span>
+      </div>
+    </div>
+    <div class="tools-cell"></div>
+    <div class="tools-cell"></div>
+    <div class="tools-cell">
+      <div class="tool-logo reveal">
+        <img src="/assets/images/tools/apify.svg" alt="" aria-hidden="true" loading="lazy"/>
+        <span style="color:#246DFF">Apify</span>
+      </div>
+    </div>
+    <div class="tools-cell"></div>
   </div>
 </section>
 
@@ -1030,6 +441,11 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
     <div class="tool-pill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jira.svg" style="filter:invert(20%) sepia(90%) saturate(1500%) hue-rotate(205deg)" alt="" loading="lazy"/>Jira</div>
     <div class="tool-pill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/visualstudiocode.svg" style="filter:invert(35%) sepia(80%) saturate(1000%) hue-rotate(180deg)" alt="" loading="lazy"/>VS Code</div>
     <div class="tool-pill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anthropic.svg" style="filter:invert(55%) sepia(60%) saturate(600%) hue-rotate(340deg)" alt="" loading="lazy"/>Claude</div>
+    <div class="tool-pill"><img src="https://cdn.simpleicons.org/supabase" alt="" loading="lazy"/>Supabase</div>
+    <div class="tool-pill"><img src="https://cdn.simpleicons.org/posthog/F54E00" alt="" loading="lazy"/>PostHog</div>
+    <div class="tool-pill"><img src="https://cdn.simpleicons.org/sentry" alt="" loading="lazy"/>Sentry</div>
+    <div class="tool-pill"><img src="/assets/images/tools/apify.svg" alt="" loading="lazy"/>Apify</div>
+    <div class="tool-pill"><img src="https://cdn.simpleicons.org/vercel/000000" alt="" loading="lazy"/>Vercel</div>
   </div>
   <div style="display:flex;justify-content:center">
     <a href="#projects" class="btn-twotone">
@@ -1039,7 +455,7 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
   </div>
 </div>
 
-<!-- MERGED WHAT I BRING & ABOUT ME SECTION (PLACED WHERE ABOUT ME WAS) -->
+<!-- ABOUT -->
 <section id="bring" aria-labelledby="bring-heading" style="background:var(--burg); padding:6rem 8%; position:relative; overflow:hidden; isolation:isolate; z-index:5; border-top:1px solid rgba(255,255,255,0.08); clear:both; display:block; width:100%;">
   <span id="about" style="position:absolute; top:-80px; width:0; height:0; padding:0 !important; margin:0; background:transparent !important; border:none; display:block; pointer-events:none;"></span>
   <!-- Signature MRC Watermark -->
@@ -1049,38 +465,13 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
     <div class="sec-label reveal" style="background:transparent !important; color:rgba(255,255,255,0.65) !important; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; border:none !important; padding:0 !important; margin-bottom:1.5rem;">The person behind the product</div>
     
     <div class="bring-executive-grid">
-      <!-- LEFT COLUMN: Story & The 3 Lenses -->
+      <!-- LEFT COLUMN: story -->
       <div class="bring-story-col reveal reveal-delay-1">
-        <h2 class="sec-h2" id="bring-heading" style="color:#fff; margin-bottom:1.5rem;">Three lenses. One story.<br><em style="color:rgba(255,255,255,0.65);">How I think &amp; build.</em></h2>
-        
-        <div class="bring-story-text" style="margin-bottom:2.5rem; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.95rem; line-height:1.75; color:rgba(255,255,255,0.85);">
-          <p style="margin-bottom:1.1rem;">Great products aren’t born from frameworks alone—they’re forged by relentless curiosity and the discipline to execute when the novelty wears off. Out on the cricket field as a <strong>right-handed pace all-rounder</strong>, or grinding toward a <strong>100kg bench press</strong>, I’ve learned that timing, stamina, and handling pressure under fire win games. That same hunger drives how I build: obsessive over details, resilient through roadblocks, and never settling for average.</p>
-          <p>When I’m not shipping code or mapping user journeys, you’ll find me immersed in the lore of a lifelong <strong>Potterhead</strong>, finding rhythm in evocative <strong>Hindi poetry</strong>, or studying the <strong>biographies</strong> of founders who defied impossible odds. I don’t just manage products; I craft stories that resonate, backed by the technical depth and financial rigor to make them real.</p>
-        </div>
+        <h2 class="sec-h2" id="bring-heading" style="color:#fff; margin-bottom:1.5rem;">A CS student who learned product by shipping AI,<br><em style="color:rgba(255,255,255,0.65);">with a finance habit on the side.</em></h2>
 
-        <!-- The 3 Core Lenses Stack -->
-        <div class="bring-pillars-stack" style="display:flex; flex-direction:column; gap:1rem;">
-          <div class="pillar" style="margin:0;">
-            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.4rem;">
-              <span class="p-num" style="font-size:1.4rem; margin:0; color:rgba(255,255,255,0.25);">01</span>
-              <span class="p-title" style="margin:0; font-size:1rem;">The Finance Lens</span>
-            </div>
-            <div class="p-desc">FMVA certified (CFI) · Built DCF models, read annual reports as case studies, worked inside a CA firm. I connect product decisions to revenue impact — not just engagement metrics.</div>
-          </div>
-          <div class="pillar" style="margin:0;">
-            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.4rem;">
-              <span class="p-num" style="font-size:1.4rem; margin:0; color:rgba(255,255,255,0.25);">02</span>
-              <span class="p-title" style="margin:0; font-size:1rem;">The Product &amp; UX Lens</span>
-            </div>
-            <div class="p-desc">Nextleap PM Fellow · I study apps the way most people just use them. Friction mapping, user journey analysis, wireframing — then writing feature proposals a real PM would actually ship.</div>
-          </div>
-          <div class="pillar" style="margin:0;">
-            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.4rem;">
-              <span class="p-num" style="font-size:1.4rem; margin:0; color:rgba(255,255,255,0.25);">03</span>
-              <span class="p-title" style="margin:0; font-size:1rem;">Tech Fluency</span>
-            </div>
-            <div class="p-desc">Final-year CS undergrad (CGPA 8.36) means I understand what's feasible and what's a three-sprint nightmare. I write specs engineers respect and assess tradeoffs without hand-waving.</div>
-          </div>
+        <div class="bring-story-text" style="font-family:'Plus Jakarta Sans',sans-serif; font-size:0.95rem; line-height:1.75; color:rgba(255,255,255,0.85);">
+          <p style="margin-bottom:1.1rem; font-size:1.08rem; color:#fff;">I learn fastest by building something small, putting it in front of people, and watching what they actually do with it. I'd rather spend a week understanding a messy problem than a day building the wrong thing.</p>
+          <p>Final-year CS at KIIT, with an FMVA and six months at a CA firm on the side.</p>
         </div>
       </div>
 
@@ -1088,9 +479,8 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
       <div class="bring-profile-card reveal reveal-delay-2">
         <div class="bring-profile-card-header">
           <div class="bring-profile-name">MRIGANK RAJ CHOUHAN</div>
-          <div class="bring-profile-title">Product Manager · Fintech, RAG AI &amp; SaaS</div>
+          <div class="bring-profile-title">AI Product Builder · Final-year CS</div>
         </div>
-
         <!-- Scannable Credential Table -->
         <div class="bring-cred-list">
           <div class="bring-cred-row">
@@ -1141,7 +531,7 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
         <div>
           <div class="exp-role">Product Management Fellow</div>
           <div class="exp-co">Nextleap</div>
-          <div class="exp-desc">Selected for the Nextleap Product Management Fellowship. Learning modern product discovery, PRDs, metrics frameworks, and user research from top Indian startup PMs.</div>
+          <div class="exp-desc">Product discovery, PRDs, metric design and user research, taught by product managers from Indian startups.</div>
         </div>
         <div><div class="exp-date">2026 – Present</div><div class="exp-type">Fellowship</div></div>
       </div>
@@ -1149,15 +539,15 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
         <div>
           <div class="exp-role">Finance Intern</div>
           <div class="exp-co">Rahul Singh & Associates · CA Firm</div>
-          <div class="exp-desc">Worked on client financial records, invoice reconciliation, and compliance documentation. First-hand exposure to SME financial workflows — the exact pain points fintech products are built to solve.</div>
+          <div class="exp-desc">Reconciled invoices and prepared compliance documents for small-business clients. Saw first-hand the manual workflows fintech products exist to replace.</div>
         </div>
         <div><div class="exp-date">Jun 2025 – Dec 2025</div><div class="exp-type">Finance · Ops</div></div>
       </div>
       <div class="exp-row">
         <div>
-          <div class="exp-role">Equity Research · Valuation</div>
+          <div class="exp-role">Equity Research</div>
           <div class="exp-co">Independent · HDFC, Reliance Industries</div>
-          <div class="exp-desc">Built DCF models and sensitivity tables for Reliance. Wrote equity research notes on HDFC — structured thinking PMs need for business-case roadmap arguments.</div>
+          <div class="exp-desc">Built a DCF model with sensitivity tables for Reliance Industries, and wrote a research note on HDFC Bank.</div>
         </div>
         <div><div class="exp-date">Jan 2026</div><div class="exp-type">Finance · Research</div></div>
       </div>
@@ -1165,7 +555,7 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
         <div>
           <div class="exp-role">B.Tech Computer Science Engineering</div>
           <div class="exp-co">KIIT Bhubaneswar · CGPA 8.36</div>
-          <div class="exp-desc">Final-year CS undergrad. Coursework in data structures, ML, and software engineering. Projects at the intersection of AI and fintech. Graduating 2027.</div>
+          <div class="exp-desc">Final year. Coursework in data structures, machine learning and software engineering. Graduating 2027.</div>
         </div>
         <div><div class="exp-date">Jul 2023 – 2027</div><div class="exp-type">Education</div></div>
       </div>
@@ -1173,7 +563,7 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
         <div>
           <div class="exp-role">FMVA Certification</div>
           <div class="exp-co">Corporate Finance Institute (CFI)</div>
-          <div class="exp-desc">Financial Modeling & Valuation Analyst. Covers DCF modeling, comparable company analysis, LBO, and financial statement analysis.</div>
+          <div class="exp-desc">Financial Modeling &amp; Valuation Analyst: DCF, comparable company analysis, LBOs and financial statement analysis.</div>
         </div>
         <div><div class="exp-date">Jun 2025 – Feb 2026</div><div class="exp-type">Certification</div></div>
       </div>
@@ -1181,27 +571,53 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
   </div>
 </section>
 
+<!-- OFF THE CLOCK: writing -->
+<section id="writing" aria-labelledby="writing-heading">
+  <div class="sec-inner" style="padding:0 8% 6rem">
+    <div class="sec-label reveal">Off the clock</div>
+    <div class="wr-head">
+      <h2 class="sec-h2 reveal reveal-delay-1" id="writing-heading">Things I'm still<br><em>figuring out</em></h2>
+      <p class="wr-sub reveal reveal-delay-2">Product, tech, and the occasional detour into life. I write to think clearly, and publish it on Medium.</p>
+    </div>
+    <div class="wr-list reveal reveal-delay-2" id="wr-list"></div>
+    <div class="wr-foot reveal">
+      <a id="wr-medium" href="https://medium.com/@mrigankraj" target="_blank" rel="noopener" class="btn-twotone"><span class="bt-text">Read on Medium</span><span class="bt-icon">↗</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
-<section id="contact" class="grid-bg" aria-labelledby="contact-heading">
-  <div class="sec-inner" style="padding:6rem 8%">
-    <div class="sec-label reveal">Get in touch</div>
-    <div class="contact-grid">
-      <div class="contact-left reveal reveal-delay-1">
-        <h2 class="sec-h2" id="contact-heading">Let's build<br><em>something real</em></h2>
-        <p>If you made it here, you're probably the kind of person I want to work with. I'm actively looking for product roles — fintech, SaaS, consumer, anything with a hard problem at its core.</p>
-        <a href="mailto:mrigankrajchouhan@gmail.com?subject=Hiring%20Inquiry%20%E2%80%94%20Product%20Role&body=Hi%20Mrigank%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20wanted%20to%20connect." class="btn-burg">Send me an email ↗</a>
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="ct-wrap">
+    <div class="ct-label reveal">Get in touch</div>
+    <h2 class="ct-h reveal reveal-delay-1" id="contact-heading">Tell me what<br><em>you're building.</em></h2>
+    <p class="ct-sub reveal reveal-delay-2">Hiring for a product role, or working on something with AI? I'd love to hear about it.</p>
+
+    <div class="ct-grid">
+      <div class="ct-left reveal">
+        <div class="ct-k">Write to me</div>
+        <a class="ct-mail" href="mailto:mrigankrajchouhan@gmail.com">mrigankrajchouhan<wbr>@gmail.com</a>
+        <button type="button" class="ct-copy" id="ct-copy" aria-label="Copy email address">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>
+          <span id="ct-copy-text">Copy</span>
+        </button>
+        <div class="ct-rule"></div>
+        <div class="ct-k">Elsewhere</div>
+        <div class="ct-links">
+          <a href="https://www.linkedin.com/in/mrigankraj" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="https://github.com/mrigank-raj" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://drive.google.com/file/d/1gmIsDmhPAh5XHuixjQSJWTEz9fLjeQnA/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume ↗</a>
+        </div>
       </div>
-      <div class="clinks reveal reveal-delay-2">
-        <a href="https://www.linkedin.com/in/mrigankraj" target="_blank" rel="noopener noreferrer" class="clink">
-          <div><div class="cl-label">LinkedIn</div><div class="cl-val">linkedin.com/in/mrigankraj</div></div><span>↗</span>
-        </a>
-        <a href="mailto:mrigankrajchouhan@gmail.com?subject=Hiring%20Inquiry%20%E2%80%94%20Product%20Role&body=Hi%20Mrigank%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20wanted%20to%20connect." class="clink">
-          <div><div class="cl-label">Email</div><div class="cl-val">mrigankrajchouhan@gmail.com</div></div><span>↗</span>
-        </a>
-        <a href="https://drive.google.com/file/d/1gmIsDmhPAh5XHuixjQSJWTEz9fLjeQnA/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="clink">
-          <div><div class="cl-label">Resume</div><div class="cl-val">Download PDF</div></div><span>↗</span>
-        </a>
-      </div>
+
+      <form class="ct-form reveal reveal-delay-1" id="ct-form" novalidate>
+        <h3 class="ct-note">Or send a <em>note.</em></h3>
+        <label class="ct-field"><span>Name</span><input name="name" type="text" placeholder="Your name" autocomplete="name" required></label>
+        <label class="ct-field"><span>Email</span><input name="email" type="email" placeholder="you@example.com" autocomplete="email" required></label>
+        <label class="ct-field"><span>Message</span><textarea name="message" rows="4" placeholder="What are you working on?" required></textarea></label>
+        <p class="ct-err" id="ct-err" role="alert"></p>
+        <button type="submit" class="ct-send">Send message <span aria-hidden="true">↗</span></button>
+      </form>
     </div>
   </div>
 </section>
@@ -1222,14 +638,6 @@ footer{background:var(--cream);padding:7rem 6% 3.5rem 6%;display:flex;flex-direc
   </div>
 </footer>
 
-<!-- MODAL -->
-<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-  <div class="modal-box" id="modal-box">
-    <button class="modal-close" id="modal-close-btn" aria-label="Close modal">✕ Close</button>
-    <div id="modal-content"></div>
-  </div>
-</div>
-
 <script>
 // ── HERO POLAROID FAN ──
 const photos = [
@@ -1248,9 +656,54 @@ document.getElementById('fan').innerHTML = photos.map((p, i) => `
   </figure>`).join('');
 
 // ── MARQUEE ──
-const skills = ['Product Thinking','User Research','Wireframing','A/B Testing','Financial Modeling','DCF Valuation','Python','SQL','Go-To-Market Strategy','Roadmapping','FMVA Certified'];
+const skills = ['LLM Product Design','RAG & Evals','AI Agents & MCP','Guardrails','Prompt Design','Experimentation','Metric Design','User Research','PRDs','Python','Financial Modeling'];
 const mq = document.getElementById('mq-skills');
 mq.innerHTML = [...skills, ...skills].map(s => `<div class="skill-chip">${s}</div>`).join('');
+
+// ── WRITING ──
+// MEDIUM_URL: your Medium profile. Each article gets its own url; leave url empty until it's published.
+const MEDIUM_URL = 'https://medium.com/@mrigankraj';  // placeholder: replace with your real Medium profile link
+const ARTICLES = [
+  {title:'Why 0 of 15 people searched for their old photos', blurb:'What I learned when I stopped asking people what they want and watched what they do.', date:'', read:'', url:''},
+  {title:'The feature I deleted from BeyondLabel', blurb:'Why a working barcode scanner was the wrong thing to ship.', date:'', read:'', url:''},
+  {title:'When not to use AI in a product', blurb:'The calls behind leaving AI out of Plutus, and refusing calculations in Fund Facts.', date:'', read:'', url:''},
+];
+(function(){
+  const list = document.getElementById('wr-list');
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  list.innerHTML = ARTICLES.map(a => {
+    const live = !!a.url;
+    const meta = live ? [a.date, a.read].filter(Boolean).map(esc).join(' · ') + ' <span class="wr-arrow">↗</span>' : 'Coming soon';
+    const inner = `<div><div class="wr-title">${esc(a.title)}</div><div class="wr-blurb">${esc(a.blurb)}</div></div><div class="wr-meta">${meta}</div>`;
+    return live
+      ? `<a class="wr-row" href="${esc(a.url)}" target="_blank" rel="noopener">${inner}</a>`
+      : `<div class="wr-row soon">${inner}</div>`;
+  }).join('');
+  const more = document.getElementById('wr-medium');
+  if (more && MEDIUM_URL) more.href = MEDIUM_URL;
+})();
+
+// ── CONTACT ──
+// Copy email; the note form opens the visitor's email app pre-filled (no server needed).
+(function(){
+  const EMAIL = 'mrigankrajchouhan@gmail.com';
+  const btn = document.getElementById('ct-copy'), label = document.getElementById('ct-copy-text');
+  btn.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(EMAIL); label.textContent = 'Copied'; }
+    catch (e) { label.textContent = EMAIL; }
+    setTimeout(() => { label.textContent = 'Copy'; }, 2000);
+  });
+  const form = document.getElementById('ct-form'), err = document.getElementById('ct-err');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = form.name.value.trim(), from = form.email.value.trim(), msg = form.message.value.trim();
+    if (!name || !msg || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(from)) { err.textContent = 'Add your name, a valid email and a message, then send.'; return; }
+    err.textContent = '';
+    const subject = 'Note from ' + name + ' via your portfolio';
+    const body = msg + '\n\n' + name + '\n' + from;
+    window.location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+})();
 
 // ── SCROLL REVEAL ──
 const revealObserver = new IntersectionObserver((entries) => {
@@ -1263,525 +716,8 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, {threshold: 0.12});
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// ── COUNTER ANIMATION ──
-function animateCounter(el) {
-  const target = parseFloat(el.dataset.target);
-  const decimals = parseInt(el.dataset.decimal || 0);
-  const start = parseFloat(el.dataset.start || 0);
-  const duration = 1800;
-  el.textContent = start.toFixed(decimals);
-  const startTime = performance.now();
-  function update(now) {
-    const elapsed = now - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    const current = start + (target - start) * eased;
-    el.textContent = current.toFixed(decimals);
-    if (progress < 1) requestAnimationFrame(update);
-    else el.textContent = target.toFixed(decimals);
-  }
-  requestAnimationFrame(update);
-}
-const counterObserver = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      animateCounter(e.target);
-      counterObserver.unobserve(e.target);
-    }
-  });
-}, {threshold: 0.5});
-document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
-
-// ── PROJECTS FILTERING ──
-function filterProjects(category, btn) {
-  const nav = btn.closest('.tab-nav');
-  if (nav) nav.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  
-  const cards = document.querySelectorAll('#projects-grid .case-card');
-  cards.forEach(card => {
-    const cardCat = card.getAttribute('data-category');
-    if (category === 'all' || cardCat === category) {
-      card.style.display = '';
-      card.classList.remove('visible');
-      setTimeout(() => card.classList.add('visible'), 50);
-    } else {
-      card.style.display = 'none';
-    }
-  });
-}
-
-// ── MODALS ──
-const MODAL_DATA = {
-  beyondlabel: {
-    tag: 'Shipped Product · React · AI',
-    title: 'BeyondLabel: See Through Food Labels',
-    body: `
-      <img src="assets/projects/beyondlabel_app.png" alt="BeyondLabel App Screenshot" style="width:100%; border-radius:12px; border:1px solid var(--border); box-shadow:0 8px 30px rgba(26,20,16,0.06); margin-bottom:1.5rem;">
-      <div class="modal-section"><h4>The Problem</h4>
-        <p>FSSAI's weak labeling regulations in India let brands deceive consumers through tactics like soy protein inflation, "no refined sugar" claims for jaggery, and unrealistic serving sizes. Consumers struggle to make informed choices.</p>
-        <p style="font-style:italic;font-size:0.9rem;margin-top:0.5rem">"I kept buying 'protein bars' that were just sugar with marketing."</p>
-      </div>
-      <div class="modal-section"><h4>The Solution</h4>
-        <p>A web app where users upload a photo of an ingredients list. The AI (Llama 3 Vision) extracts the text and cross-references it against a database of hidden sugars, allergens, and misleading marketing terms, returning a transparent health score.</p>
-      </div>
-      <div class="modal-metric">
-        <div class="metric-pill"><div class="mv">3</div><div class="ml">Input Methods</div></div>
-        <div class="metric-pill"><div class="mv">4</div><div class="ml">Health Goals</div></div>
-        <div class="metric-pill"><div class="mv">15</div><div class="ml">Commits</div></div>
-      </div>
-      <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
-        <a href="https://beyondlabel.vercel.app" target="_blank" class="btn-burg">View Live App ↗</a>
-        <a href="https://github.com/mrigank-raj/BeyondLabel" target="_blank" class="btn-outline">View GitHub ↗</a>
-      </div>
-    `
-  },
-  kudos: {
-    tag: 'Shipped Product · React · Supabase · B2B SaaS',
-    title: 'Kudos: Employee Recognition & Rewards Platform',
-    body: `
-      <div style="background:var(--cream2); border:1px solid var(--border); border-radius:12px; padding:1.5rem; margin-bottom:1.5rem; text-align:center;">
-        <div style="font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:0.75rem;">Points Flow — Every Transfer Is Atomic</div>
-        <div style="display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:0.5rem; font-size:0.78rem; font-weight:600; color:var(--burg);">
-          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">Admin Issues / Peer Sends Kudos</span>
-          <span>→</span>
-          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">Postgres RPC Ledger</span>
-          <span>→</span>
-          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">Realtime Balance &amp; Feed</span>
-          <span>→</span>
-          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">Redeem &amp; Fulfil</span>
-        </div>
-      </div>
-      <div class="modal-section"><h4>The Problem</h4>
-        <p>Recognition programs stall when they are purely top-down: managers become the bottleneck, peers who actually see the work stay invisible, and any glitch in the points balance quietly erodes trust in the whole program.</p>
-      </div>
-      <div class="modal-section"><h4>The Solution</h4>
-        <p>A full-stack rewards platform where organizations distribute points and employees earn, give, and redeem them. Admins get a dashboard to issue spot bonuses, manage the reward catalog, and work a fulfilment queue. Employees get a social feed for peer-to-peer shout-outs with company-value tags and emoji reactions, plus a leaderboard and auto-awarded badges (First Kudos, Team Player, Top Earner).</p>
-      </div>
-      <div class="modal-section"><h4>Product &amp; Engineering Decisions</h4>
-        <ul style="margin-top:0.6rem">
-          <li><strong>Peer-to-peer Kudos feed:</strong> Manager-only recognition creates bottlenecks. Letting anyone send points creates a horizontal engagement loop and organic data on cross-functional collaboration.</li>
-          <li><strong>Atomic transfers in Postgres RPC (<code>send_kudos</code>):</strong> A client-side, multi-call transfer can fail halfway and lose points. Moving it into one stored procedure prevents race conditions, double-spends, and negative balances.</li>
-          <li><strong>Onboarding via database trigger (<code>handle_new_user</code>):</strong> Email confirmation blocked the client from creating the profile under Row-Level Security. A backend trigger provisions the profile and starting balance instantly, cutting time-to-first-value.</li>
-          <li><strong>Realtime balance sync:</strong> A stale balance on screen after the database had already deducted points would cause "insufficient funds" surprises and support tickets. A global <code>refreshProfile</code> keeps UI and ledger in step across tabs.</li>
-        </ul>
-      </div>
-      <div class="modal-section"><h4>Edge Cases Handled</h4>
-        <ul style="margin-top:0.6rem">
-          <li><strong>Double-spend:</strong> Database-level constraints reject a redemption if the balance drops below cost mid-request.</li>
-          <li><strong>Pending members:</strong> Admin-configured members are promoted automatically when they sign up.</li>
-          <li><strong>Null states:</strong> Empty feeds and first-time logins get encouraging empty states instead of blank screens.</li>
-        </ul>
-      </div>
-      <div class="modal-section"><h4>Technical Stack</h4>
-        <p>React (Vite), Tailwind CSS, TanStack React Query, Supabase (PostgreSQL, Auth, Realtime, Row-Level Security), custom PL/pgSQL stored procedures. Deployed on Vercel with a documented decision log, architecture, edge-case, and evals docs in the repo.</p>
-      </div>
-      <div class="modal-metric" style="margin-bottom: 1.5rem">
-        <div class="metric-pill"><div class="mv">2 Roles</div><div class="ml">Admin &amp; Recipient</div></div>
-        <div class="metric-pill"><div class="mv">Atomic</div><div class="ml">Postgres RPC Ledger</div></div>
-        <div class="metric-pill"><div class="mv">Realtime</div><div class="ml">Balance &amp; Feed Sync</div></div>
-      </div>
-      <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
-        <a href="https://kudos-rewards.vercel.app" target="_blank" rel="noopener" class="btn-burg">View Live App ↗</a>
-        <a href="https://github.com/mrigank-raj/Kudos-Rewards" target="_blank" rel="noopener" class="btn-outline">View GitHub ↗</a>
-      </div>
-    `
-  },
-  zomatobuild: {
-    tag: 'Shipped Product · FastAPI · React · AI',
-    title: 'Zomato Recommender: AI Dining Engine',
-    body: `
-      <img src="assets/projects/zomato.png" alt="Zomato App Screenshot" style="width:100%; border-radius:12px; border:1px solid var(--border); box-shadow:0 8px 30px rgba(26,20,16,0.06); margin-bottom:1.5rem;">
-      <div class="modal-section"><h4>The Problem</h4>
-        <p>Standard restaurant discovery relies on simple filters (price, cuisine, rating). This fails when a user has a complex, nuanced intent like <em>"a quiet place for a date night with good vegan options under ₹1500."</em></p>
-      </div>
-      <div class="modal-section"><h4>The Architecture</h4>
-        <p>I built a fullstack solution to bridge this gap using modern AI infrastructure:</p>
-        <ul style="margin-top:0.6rem">
-          <li><strong>Data Layer:</strong> Cleaned and cached a 30,000+ restaurant dataset from Hugging Face for instant retrieval.</li>
-          <li><strong>Backend (FastAPI):</strong> A high-performance Python backend handles search heuristics and formats tabular data for the LLM context window.</li>
-          <li><strong>AI Engine (Groq + Llama 3):</strong> Ingests the filtered restaurant data and the user's natural language query to return highly personalized, reasoning-backed recommendations.</li>
-          <li><strong>Frontend (React + Vite):</strong> A clean, responsive chat interface.</li>
-        </ul>
-      </div>
-      <div class="modal-section"><h4>Deployment Strategy & PM Reality</h4>
-        <p>While the frontend lives permanently on Vercel, the Python/Pandas backend requires a dedicated server (like Railway). <strong>As a PM, part of the job is managing maintenance overhead.</strong> Instead of continuously paying for server uptime for a portfolio piece, the codebase is fully open-sourced with a detailed deployment pipeline.</p>
-      </div>
-      <div class="modal-metric" style="margin-bottom: 1.5rem">
-        <div class="metric-pill"><div class="mv">30k+</div><div class="ml">Restaurants</div></div>
-        <div class="metric-pill"><div class="mv">FastAPI</div><div class="ml">Backend</div></div>
-        <div class="metric-pill"><div class="mv">Llama 3</div><div class="ml">Reasoning</div></div>
-      </div>
-      <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
-        <a href="https://zomato-milestone1-9ep8.vercel.app/" target="_blank" class="btn-burg">View Live App ↗</a>
-        <a href="https://github.com/mrigank-raj/Zomato-milestone1" target="_blank" class="btn-outline">View GitHub ↗</a>
-      </div>
-    `
-  },
-  ragchatbot: {
-    tag: 'AI/ML · Fintech · RAG · Full Stack',
-    title: 'HDFC Mutual Fund: Facts-Only RAG Assistant',
-    body: `
-      <img src="assets/projects/ragchatbot_app.png" alt="RAG Chatbot App Screenshot" style="width:100%; border-radius:12px; border:1px solid var(--border); box-shadow:0 8px 30px rgba(26,20,16,0.06); margin-bottom:1.5rem;">
-      <div class="modal-section"><h4>The Problem</h4>
-        <p>Financial chatbots and generic LLMs frequently hallucinate mutual fund returns, expense ratios, and scheme terms, or offer unauthorized financial advice that violates compliance.</p>
-        <p style="font-style:italic;font-size:0.9rem;margin-top:0.5rem">"I just wanted to know the NAV and expense ratio — not a hallucinated sales pitch."</p>
-      </div>
-      <div class="modal-section"><h4>The Solution</h4>
-        <p>A strict <strong>"Facts-Only" RAG architecture</strong> featuring pre-retrieval guardrails that automatically classify and block subjective advisory queries (e.g., <em>"Should I invest in this fund?"</em>) and out-of-scope requests. An automated daily GitHub Actions pipeline scrapes official Groww fund documents to ensure data is always fresh and verifiable.</p>
-      </div>
-      <div class="modal-section"><h4>Architecture &amp; Technical Stack</h4>
-        <ul style="margin-top:0.6rem">
-          <li><strong>Pipeline Structure:</strong> Query Classifier ➔ Vector Retriever ➔ Groq LLM Synthesizer.</li>
-          <li><strong>Backend &amp; Inference:</strong> FastAPI (Python 3.11+), Groq API (<code>llama-3.3-70b-versatile</code>) for ultra-low latency response generation.</li>
-          <li><strong>Embeddings &amp; Store:</strong> <code>BAAI/bge-small-en-v1.5</code> embeddings stored in <strong>ChromaDB</strong> with scheme-specific metadata filtering; <strong>SQLite</strong> for document ingestion metadata.</li>
-          <li><strong>CI/CD Automation:</strong> Daily GitHub Actions cron workflow (05:00 UTC / 10:30 AM IST) that scrapes 5 official HDFC fund pages on Groww, re-chunks/re-embeds data, and commits database changes back to git.</li>
-          <li><strong>Frontend UI:</strong> React (Vite) + Tailwind CSS featuring a premium "Galaxy Theme" with floating chat bubbles and twinkling star animations.</li>
-        </ul>
-      </div>
-      <div class="modal-metric" style="margin-bottom: 1.5rem">
-        <div class="metric-pill"><div class="mv">5</div><div class="ml">Fund Schemes</div></div>
-        <div class="metric-pill"><div class="mv">Daily</div><div class="ml">Auto-Refresh</div></div>
-        <div class="metric-pill"><div class="mv">Llama 3.3</div><div class="ml">70B Reasoning</div></div>
-      </div>
-      <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
-        <a href="https://github.com/mrigank-raj/Rag-Chatbot" target="_blank" class="btn-burg">View GitHub ↗</a>
-      </div>
-    `
-  },
-  multitravel: {
-    tag: 'AI/ML · Multi-Agent Systems (MAS) · Logistics',
-    title: 'Multi-Agent Travel: Autonomous 5-Agent Planning System',
-    body: `
-      <div style="background:var(--cream2); border:1px solid var(--border); border-radius:12px; padding:1.5rem; margin-bottom:1.5rem; text-align:center;">
-        <div style="font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:0.75rem;">Multi-Agent Parallel Execution Pipeline</div>
-        <div style="display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:0.5rem; font-size:0.78rem; font-weight:600; color:var(--burg);">
-          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">1. Orchestrator Agent</span>
-          <span>→</span>
-          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">2. Destination / 3. Logistics / 4. Budget Agents</span>
-          <span>→</span>
-          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">5. Review &amp; Synthesis Agent</span>
-        </div>
-      </div>
-      <div class="modal-section"><h4>The Problem</h4>
-        <p>Planning a multi-day trip involves reconciling fragmented research across attractions, road logistics, altitude acclimatization, and strict budgets — a task where single-prompt LLMs fail due to context overflow or hallucinated costs.</p>
-      </div>
-      <div class="modal-section"><h4>The Solution</h4>
-        <p>A multi-agent system architecture where <strong>5 specialized AI agents</strong> collaborate: an Orchestrator coordinates parallel tasks between a Destination Research Agent, a Logistics/Route Agent, and a Budget Agent, before a Review Agent validates the final itinerary against user constraints (e.g., ₹50,000 Ladakh trip avoiding crowded spots).</p>
-      </div>
-      <div class="modal-section"><h4>The 5-Agent Architecture</h4>
-        <ul style="margin-top:0.6rem">
-          <li><strong>1. Orchestrator Agent:</strong> Parses natural language requests and delegates sub-tasks across specialized agents.</li>
-          <li><strong>2. Destination Research Agent:</strong> Identifies attractions, monasteries, and accommodations tailored to user preferences.</li>
-          <li><strong>3. Logistics Agent:</strong> Calculates routes, road conditions, permits, and acclimatization days (Ladakh v1 specialty focus).</li>
-          <li><strong>4. Budget Agent:</strong> Allocates costs across hotels, transport, and dining within total budget constraints.</li>
-          <li><strong>5. Review &amp; Synthesis Agent:</strong> Merges outputs and automatically audits for constraint violations.</li>
-        </ul>
-      </div>
-      <div class="modal-section"><h4>Technical Stack &amp; Testing</h4>
-        <p>Built with Python 3.11+, FastAPI, and Pydantic for structured JSON schema validation. Dual LLM engines: <strong>Groq</strong> (<code>llama-3.1-70b-versatile</code>) and <strong>Google Gemini</strong> (<code>gemini-1.5-pro</code>). Includes a complete <code>pytest</code> test suite verifying multi-agent state flows and edge cases.</p>
-      </div>
-      <div class="modal-section"><h4>Deployment Strategy</h4>
-        <p>Documented with an extensive production deployment plan (<code>Docs/deployment-plan.md</code>) and configured with <code>Procfile</code> for Railway backend deployment and Vercel frontend hosting.</p>
-      </div>
-      <div class="modal-metric" style="margin-bottom: 1.5rem">
-        <div class="metric-pill"><div class="mv">5</div><div class="ml">Specialized Agents</div></div>
-        <div class="metric-pill"><div class="mv">&lt;60s</div><div class="ml">Parallel Synthesis</div></div>
-        <div class="metric-pill"><div class="mv">Groq + Gemini</div><div class="ml">Dual-LLM Engine</div></div>
-      </div>
-      <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
-        <a href="https://github.com/mrigank-raj" target="_blank" class="btn-outline">View GitHub Profile ↗</a>
-      </div>
-    `
-  },
-  appreviewmcp: {
-    tag: 'AI Agent · MCP Server · Product Ops · Automation',
-    title: 'App Review Pulse: Automated MCP PM Agent',
-    body: `
-      <div style="background:var(--cream2); border:1px solid var(--border); border-radius:12px; padding:1.5rem; margin-bottom:1.5rem; text-align:center;">
-        <div style="font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:0.75rem;">Model Context Protocol (MCP) Integration Pipeline</div>
-        <div style="display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:0.5rem; font-size:0.78rem; font-weight:600; color:var(--burg);">
-          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">Reviews CSV / JSON</span>
-          <span>→</span>
-          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">Gemini Clustering</span>
-          <span>→</span>
-          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">Groq Refinement</span>
-          <span>→</span>
-          <span style="background:var(--cream); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--border);">MCP: Google Docs &amp; Gmail</span>
-        </div>
-      </div>
-      <div class="modal-section"><h4>The Problem</h4>
-        <p>Product Managers waste hours manually sifting through thousands of App Store and Google Play reviews to identify emerging bugs, sentiment shifts, and requested features.</p>
-      </div>
-      <div class="modal-section"><h4>The Solution</h4>
-        <p>An automated AI workflow that clusters raw user reviews into thematic pain points, synthesizes an executive summary using Google Gemini and Groq LLMs, and publishes refined weekly reports directly to Google Docs and email via <strong>Model Context Protocol (MCP)</strong>.</p>
-      </div>
-      <div class="modal-section"><h4>Architecture &amp; Technical Stack</h4>
-        <ul style="margin-top:0.6rem">
-          <li><strong>Pipeline:</strong> Reviews CSV/JSON ➔ Ingest ➔ Theme Clustering (Gemini) ➔ Summarize ➔ Refine (Groq) ➔ Publish (Google Docs API via MCP) ➔ Notify (Gmail API via MCP).</li>
-          <li><strong>Core Technology:</strong> Python 3.11+, Model Context Protocol (MCP) servers running via Node.js (<code>npx</code>).</li>
-          <li><strong>LLM Engines:</strong> Google Gemini API (clustering/summarization) and Groq API (document formatting &amp; email refinement).</li>
-          <li><strong>Configuration:</strong> Declarative YAML configuration (<code>config/agent_config.yaml</code>).</li>
-        </ul>
-      </div>
-      <div class="modal-section"><h4>Key Features for PM Workflows</h4>
-        <ul style="margin-top:0.6rem">
-          <li><strong>MCP Server Architecture:</strong> Demonstrates cutting-edge tool-use via standard Model Context Protocol servers.</li>
-          <li><strong>Automated PM Reporting:</strong> Bridges user feedback directly into PM workflow tools (Google Docs + Gmail).</li>
-          <li><strong>Theme &amp; Sentiment Clustering:</strong> Identifies actionable product friction without manual tagging.</li>
-        </ul>
-      </div>
-      <div class="modal-metric" style="margin-bottom: 1.5rem">
-        <div class="metric-pill"><div class="mv">MCP</div><div class="ml">Model Context Protocol</div></div>
-        <div class="metric-pill"><div class="mv">Auto PM</div><div class="ml">Docs + Gmail Push</div></div>
-        <div class="metric-pill"><div class="mv">Gemini + Groq</div><div class="ml">Hybrid LLM Pipeline</div></div>
-      </div>
-      <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
-        <a href="https://github.com/mrigank-raj" target="_blank" class="btn-outline">View GitHub Profile ↗</a>
-      </div>
-    `
-  },
-  myjio: {
-    tag: 'Product Teardown · MyJio',
-    title: 'MyJio: Checking Data-Usage Time Reduced from 2 Minutes to 3 Seconds',
-    body: `
-      <div class="modal-section"><h4>Problem Statement</h4>
-        <p><strong>Current Journey:</strong> Home → Mobile → Check Usage → Scroll → Read</p>
-        <p style="margin-top:0.6rem"><strong>Friction points:</strong></p>
-        <ul style="margin-top:0.4rem"><li>Ads & Jio Pop-ups on the home screen</li><li>"Rate Us" pop-up while scrolling usage data</li></ul>
-        <p style="margin-top:0.6rem"><strong>User Pain:</strong> 5 taps to reach the desired screen. 2 minutes of time-to-data creates significant friction for daily users on limited data plans.</p>
-      </div>
-      <div class="modal-section"><h4>User Story</h4>
-        <p>As a daily user on a limited daily data plan, I want to see my remaining data at a glance on my home screen so that I can avoid opening the app and navigating through ads just to check a single number.</p>
-      </div>
-      <div class="modal-section"><h4>The Solution — Home Screen Widget</h4>
-        <p>A 4×1 Android home screen widget. Primary focus on Usage data (bold, large text). Right side: Validity display + "Track Usage" deep-link button.</p>
-        <ul style="margin-top:0.6rem">
-          <li>Reads from the same cached data the app already uses — zero new server calls</li>
-          <li>Tapping triggers a Deep Link Intent (myjio://usage/daily) bypassing the ad-heavy home screen</li>
-          <li>On plan expiry: shows "Recharge Needed" in red, button becomes "Recharge Now"</li>
-          <li>On WiFi: displays "On WiFi" instead of data usage</li>
-        </ul>
-      </div>
-      <div class="modal-section"><h4>Technical Feasibility</h4>
-        <p>The Check Usage screen loads instantly even on weak networks — data is cached locally (Android SharedPreferences or local database). The widget reads from this same cache. No new backend infrastructure needed.</p>
-      </div>
-      <div class="modal-section"><h4>Success Metrics</h4>
-        <div class="modal-metric">
-          <div class="metric-pill"><div class="mv">&gt;5%</div><div class="ml">Widget adoption in 30 days</div></div>
-          <div class="metric-pill"><div class="mv">10–15%</div><div class="ml">Drop in daily app opens</div></div>
-          <div class="metric-pill"><div class="mv">20%</div><div class="ml">Fewer support tickets</div></div>
-        </div>
-      </div>
-      <div class="modal-section"><h4>A/B Test Rollout Plan</h4>
-        <ul>
-          <li><strong>Phase 1 (1 week):</strong> 1% of Android users who visited Check Usage 3+ times in past 7 days</li>
-          <li><strong>Phase 2 (2 weeks):</strong> 10% Treatment vs 10% Control — adoption rate, app opens, uninstall rate</li>
-          <li><strong>Phase 3:</strong> Full rollout if Go criteria met</li>
-        </ul>
-      </div>
-      <div class="modal-section"><h4>Go / No-Go Criteria</h4>
-        <div class="modal-outcome">
-          <strong>Go:</strong> &gt;5% adoption in 14 days · Uninstall rate flat · Support tickets down &gt;10% · Ad views decrease &lt;8%<br><br>
-          <strong>No-Go:</strong> &lt;2% adoption · Uninstall rate up &gt;1% · Ad views drop &gt;15%
-        </div>
-      </div>
-      <div class="modal-section"><h4>Alternative Solutions Considered</h4>
-        <ul>
-          <li><strong>Move usage to home screen:</strong> Rejected — conflicts with ad inventory</li>
-          <li><strong>Daily push notifications:</strong> Rejected — notification fatigue</li>
-          <li><strong>Improve in-app navigation:</strong> Rejected — doesn't solve the ad interruption problem</li>
-        </ul>
-      </div>
-      <p style="font-size:0.75rem;color:var(--muted);margin-top:1.5rem;font-style:italic">*Independent product teardown. Not affiliated with Reliance Jio.</p>`
-  },
-  chatgpt: {
-    tag: 'User Research · ChatGPT Voice India',
-    title: 'ChatGPT Voice Adoption in India — User Research',
-    body: `
-      <div class="modal-section"><h4>Research Context</h4>
-        <p>India has 500M+ voice search users and is one of ChatGPT's fastest-growing markets. Yet voice input adoption on ChatGPT remains low. This research set out to find out why — and whether the assumption that users "can't find the feature" was actually true.</p>
-      </div>
-      <div class="modal-section"><h4>Segment Selected — Indian Students 18–24</h4>
-        <p>Among all evaluated segments (tech professionals, freelancers, knowledge workers), students showed the strongest combination of mobile-first behavior, high-frequency ChatGPT usage, and long-term habit formation value. Hinglish and regional language switching also made this a unique localization signal.</p>
-        <div class="modal-metric">
-          <div class="metric-pill"><div class="mv">100M+</div><div class="ml">Weekly ChatGPT users in India</div></div>
-          <div class="metric-pill"><div class="mv">n=34</div><div class="ml">Primary survey respondents</div></div>
-          <div class="metric-pill"><div class="mv">18–24</div><div class="ml">Age bracket surveyed</div></div>
-        </div>
-      </div>
-      <div class="modal-section"><h4>Hypothesis Testing</h4>
-        <div class="modal-outcome">
-          <strong>Discoverability gap</strong> — INVALIDATED. 97% already knew the feature existed.<br><br>
-          <strong>Social discomfort</strong> — VALIDATED. Avg comfort score: 3.82 alone vs 2.06 in library/shared space.<br><br>
-          <strong>Typing preference</strong> — STRONGLY VALIDATED. 71% still preferred typing even when they knew about voice.<br><br>
-          <strong>Privacy concerns</strong> — PARTIAL. Present but secondary to workflow fit.<br><br>
-          <strong>Accent / Hinglish recognition</strong> — PARTIAL. A barrier for some, not universal.
-        </div>
-      </div>
-      <div class="modal-section"><h4>Top Barriers (Q11, multiple select)</h4>
-        <ul>
-          <li><strong>Typing faster</strong> — most cited barrier (12 respondents)</li>
-          <li><strong>More control when typing</strong> — second most cited (10)</li>
-          <li><strong>Public space discomfort</strong> — strong contextual suppressor (8)</li>
-          <li><strong>Privacy concern</strong> — secondary (5)</li>
-          <li><strong>Accent / recognition failures</strong> — minority concern (2)</li>
-        </ul>
-      </div>
-      <div class="modal-section"><h4>What Students Said</h4>
-        <div class="modal-outcome">
-          <em>"I use voice only when my hands are busy."</em> — usage is context-driven, not habitual<br><br>
-          <em>"I don't want people around me hearing my queries."</em> — social friction is real<br><br>
-          <em>"For assignments and coding, I still prefer typing."</em> — workflow mismatch, not awareness
-        </div>
-      </div>
-      <div class="modal-section"><h4>Research Conclusion</h4>
-        <p>Voice is not a universal replacement for typing. It works best in specific, high-intent, low-social-pressure contexts. The problem ChatGPT needs to solve is not discoverability — it's workflow fit and contextual relevance.</p>
-      </div>
-      <p style="font-size:0.75rem;color:var(--muted);margin-top:1.5rem;font-style:italic">*Independent research. Survey n=34 · Indian students 18–24. Not affiliated with OpenAI.</p>`
-  },
-  systems: {
-    tag: 'Product Strategy · ChatGPT Voice India',
-    title: 'Systems Thinking & Outcome Mapping — ChatGPT Voice',
-    body: `
-      <div class="modal-section"><h4>Why Voice Matters for ChatGPT</h4>
-        <div class="modal-metric">
-          <div class="metric-pill"><div class="mv">↑ Q/Session</div><div class="ml">Voice removes blank-screen friction</div></div>
-          <div class="metric-pill"><div class="mv">+200M</div><div class="ml">Non-English users unlocked</div></div>
-          <div class="metric-pill"><div class="mv">↑ D7/D30</div><div class="ml">Commute habit loops drive return</div></div>
-        </div>
-      </div>
-      <div class="modal-section"><h4>Competitive UX Audit</h4>
-        <ul>
-          <li><strong>Mic icon buried in text field</strong> + Voice Mode behind separate top-right icon → two entry points, zero guidance on which to use</li>
-          <li><strong>No first-launch tooltip</strong> — discoverability is entirely passive</li>
-          <li><strong>Conversational tasks work well</strong> (mock interviews, brainstorming, Q&amp;A)</li>
-          <li><strong>Structured output tasks fail</strong> — no way to correct mid-utterance or edit before sending</li>
-          <li><strong>No contextual trigger</strong> — voice is never suggested based on session behavior, keyboard state, or dwell time</li>
-        </ul>
-        <div class="modal-outcome" style="margin-top:0.75rem"><strong>Key takeaway:</strong> Voice adoption scales when anchored to a specific, repeatable user intent — not when it's a general input option. WhatsApp (100M+ daily voice notes) and Alexa prove this.</div>
-      </div>
-      <div class="modal-section"><h4>KPI Tree</h4>
-        <div class="modal-outcome">
-          <strong>North Star:</strong> Voice Sessions / DAU<br><br>
-          <strong>Input Metrics:</strong><br>
-          · Voice Session Start Rate — % sessions where mic is tapped<br>
-          · Voice Session Completion Rate — % voice inputs sent without cancelling<br>
-          · Voice D7 Repeat Rate — users who use voice again within 7 days<br><br>
-          <strong>Levers:</strong><br>
-          · Hesitation Trigger (2–3s dwell on text field)<br>
-          · Vernacular Keyboard Detection<br>
-          · Rapid Chat Mode Switch (3+ messages in quick succession)
-        </div>
-      </div>
-      <div class="modal-section"><h4>Opportunity Spaces</h4>
-        <ul>
-          <li><strong>Commute context</strong> — avg Indian commuter spends 1.5 hrs/day in transit. Mobile-first country. Highest-leverage moment for voice habit formation.</li>
-          <li><strong>Vernacular & multilingual users</strong> — Hindi/Tamil/Telugu voice queries growing 400% YoY on Google. ChatGPT's biggest untapped voice segment is non-English-first users.</li>
-          <li><strong>Hands-busy tasks</strong> — cooking, commuting, exercising. Low social friction, high intent.</li>
-          <li><strong>Feature phone & rural India GTM</strong> — voice-first positions ChatGPT beyond smartphone power users.</li>
-        </ul>
-      </div>
-      <div class="modal-section"><h4>Outcome Map</h4>
-        <div class="modal-outcome">
-          <strong>User pain:</strong> Voice feels less controllable and skimmable than typing in academic/shared environments<br><br>
-          <strong>Business objective:</strong> Increase voice engagement, session frequency, and long-term conversational AI habit formation<br><br>
-          <strong>Measurable outcome:</strong> Voice Sessions/DAU ↑ · D7 repeat rate ↑ · Multilingual session share ↑<br><br>
-          <strong>Execution priority:</strong> Context-aware voice nudges → own the commute moment → vernacular expansion
-        </div>
-      </div>
-      <p style="font-size:0.75rem;color:var(--muted);margin-top:1.5rem;font-style:italic">*Independent product strategy project. Not affiliated with OpenAI.</p>`
-  },
-  zomato: {
-    tag: 'Product Teardown · Zomato',
-    title: 'Hungry. Open Zomato. Scroll. Scroll. Scroll… Still Can\'t Decide.',
-    body: `
-      <div class="modal-section"><h4>Problem Statement</h4>
-        <p>Users browse but don't order. The gap between intent and order is a product opportunity — not a user failure.</p>
-        <ul style="margin-top:0.6rem">
-          <li>500+ options — everything looks the same</li>
-          <li>No signal for "what's best right now"</li>
-          <li>Scroll fatigue leads to app closure, order lost</li>
-        </ul>
-      </div>
-      <div class="modal-section"><h4>Core Friction Analysis</h4>
-        <div class="modal-outcome"><strong>Core Friction:</strong> Too many choices<br><strong>User Behavior:</strong> Browse, not buy<br><strong>Product Gap:</strong> No decision layer exists</div>
-      </div>
-      <div class="modal-section"><h4>User Insight</h4>
-        <p style="font-style:italic;font-size:0.9rem">"Sometimes everything looks good and I can't choose… other times what I like is out of budget."</p>
-        <p style="margin-top:0.5rem;color:var(--muted);font-size:0.8rem">Based on personal experience and user conversations</p>
-        <div class="modal-outcome" style="margin-top:0.75rem">→ Users struggle between too many choices and budget constraints</div>
-      </div>
-      <div class="modal-section"><h4>The Solution — "Help Me Decide"</h4>
-        <p>One tap. Three curated picks. Placed right below the search bar — where intent is highest.</p>
-        <ul style="margin-top:0.6rem">
-          <li><strong>Instant recommendations</strong> — no scrolling required</li>
-          <li><strong>Personalized</strong> to order history and time of day</li>
-          <li><strong>Each pick explains why it's for you</strong></li>
-        </ul>
-        <p style="margin-top:0.75rem">3 choices: <strong>Safe choice</strong> (past orders) · <strong>Best pick</strong> (top-rated + fastest) · <strong>Explore</strong> (new but relevant)</p>
-      </div>
-      <div class="modal-section"><h4>Expected Outcomes</h4>
-        <div class="modal-metric">
-          <div class="metric-pill"><div class="mv">↑ CVR</div><div class="ml">Intent-to-order gap closed</div></div>
-          <div class="metric-pill"><div class="mv">↑ GMV</div><div class="ml">More completed orders</div></div>
-          <div class="metric-pill"><div class="mv">↑ Retention</div><div class="ml">Personalization builds habit</div></div>
-        </div>
-      </div>
-      <div class="modal-section"><h4>Business Impact</h4>
-        <div class="modal-outcome">
-          <strong>Faster decisions</strong> — Browse to order in one tap<br>
-          <strong>Higher CVR (expected)</strong> — Removes the biggest friction point<br>
-          <strong>Stronger retention</strong> — Personalization drives repeat behavior<br>
-          <strong>GMV uplift</strong> — More completed orders = direct revenue impact<br><br>
-          → Less thinking. More ordering.
-        </div>
-      </div>
-      <p style="font-size:0.75rem;color:var(--muted);margin-top:1.5rem;font-style:italic">*Independent product teardown. Not affiliated with Zomato.</p>`
-  }
-};
-
-function openModal(id) {
-  const data = MODAL_DATA[id];
-  if (!data) return;
-  const content = document.getElementById('modal-content');
-  // Build safe DOM instead of raw innerHTML injection
-  content.innerHTML = '';
-  const tag = document.createElement('div');
-  tag.className = 'modal-tag';
-  tag.textContent = data.tag;
-  const title = document.createElement('div');
-  title.className = 'modal-h';
-  title.id = 'modal-title';
-  title.textContent = data.title;
-  const body = document.createElement('div');
-  body.innerHTML = data.body; // trusted internal content only
-  content.appendChild(tag);
-  content.appendChild(title);
-  content.appendChild(body);
-
-  const overlay = document.getElementById('modal-overlay');
-  overlay.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  document.getElementById('modal-close-btn').focus();
-}
-
-function closeModal() {
-  document.getElementById('modal-overlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-// Close on backdrop click
-document.getElementById('modal-overlay').addEventListener('click', function(e) {
-  if (e.target === this) closeModal();
-});
-
-// Close on Escape
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-// Close button
-document.getElementById('modal-close-btn').addEventListener('click', closeModal);
 </script>
+<script defer src="/assets/js/site.js?v=6"></script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
 </body>
 </html>

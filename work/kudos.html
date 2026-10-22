@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Kudos · Mrigank Raj Chouhan</title>
+<meta name="description" content="Peer-to-peer recognition and rewards for teams."/>
+<link rel="canonical" href="https://mrigankraj.vercel.app/work/kudos"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://mrigankraj.vercel.app/work/kudos"/>
+<meta property="og:title" content="Kudos · Mrigank Raj Chouhan"/>
+<meta property="og:description" content="Peer-to-peer recognition and rewards for teams."/>
+<meta property="og:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/main.css?v=27"/>
+<link rel="stylesheet" href="/assets/css/case.css?v=5"/>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav aria-label="Main navigation">
+    <a class="nav-name" href="/">Mrigank<br>Raj<br><em>Chouhan</em></a>
+    <div class="nav-links">
+      <a href="/#bring">About</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#teardowns">Case Studies</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:mrigankrajchouhan@gmail.com?subject=Product%20internship" class="nav-cta">Hire me ↗</a>
+    </div>
+  </nav>
+</div>
+<header class="case-hero grid-bg"><div class="case-wrap sec-inner"><a class="case-back" href="/#projects">← All projects</a><div class="sec-label">Project</div><h1 class="case-title">Kudos</h1><p class="case-lede">Peer-to-peer recognition and rewards for teams.</p><dl class="case-facts"><div><dt>Role</dt><dd>Solo</dd></div><div><dt>When</dt><dd>Aug to Sep 2026</dd></div><div><dt>Status</dt><dd>Live web app</dd></div><div><dt>Links</dt><dd><a href="https://kudos-rewards.vercel.app" target="_blank" rel="noopener">Live app</a>, <a href="https://github.com/mrigank-raj/Kudos-Rewards" target="_blank" rel="noopener">code</a></dd></div></dl></div></header>
+<main class="case-body"><div class="case-wrap"><div class="glance"><div><span>The obvious version</span><p><span class="cut">A manager-only HR console</span></p></div><div><span>What I built</span><p>Peer-to-peer kudos on a ledger that can't lose a point</p></div><div><span>Left out</span><p><span class="cut">HR integrations</span> <span class="cut">Real payouts</span> <span class="cut">Notifications</span></p></div><div><span>It's working if</span><p><b>40%</b> of a team gives kudos weekly</p></div></div><section class="case-sec"><h2><span>01</span>Where it started</h2><div class="body"><p>Companies run recognition through spreadsheets, gift cards and email approvals. Platforms like Empuls and Bonusly fix that with an admin console, and my first spec did the same: HR creates programmes, sets rules and hands out points.</p></div></section><section class="case-sec"><h2><span>02</span>What changed my mind</h2><div class="body"><p>Top-down recognition has a ceiling. The manager becomes the bottleneck, and the people who see good work every day, their peers, have no way to say so. A rewards programme only managers can use is just a slower bonus.</p><p class="signal">How strong is this? It's reasoning from how recognition programmes stall, not interviews. The weekly-givers metric tests whether peers actually use it.</p></div></section><section class="case-sec"><h2><span>03</span>What I built</h2><div class="body"><p>A web app with two sides. Employees get a feed where anyone can send points and a shout-out tagged with a company value, plus a catalogue to redeem points. Admins issue spot bonuses, manage the catalogue and work through a fulfilment queue.</p><p>Every transfer runs as a single database transaction, so points can never leave one account without arriving in another.</p></div></section><section class="case-sec"><h2><span>04</span>What I left out, and why</h2><div class="body"><ul class="reasons"><li><span class="cut wrapok">HR system integrations</span><span class="why">Valuable at scale, and irrelevant until the core loop works.</span></li><li><span class="cut wrapok">Real gift-card payouts</span><span class="why">Fulfilment is simulated. Real payouts bring in vendors, tax and fraud before anyone has shown they want to give kudos.</span></li><li><span class="cut wrapok">Notifications</span><span class="why">Email and push are where a recognition app turns into noise. The feed has to be worth opening first.</span></li></ul></div></section><section class="case-sec"><h2><span>05</span>How I'll know it's working</h2><div class="body"><div class="metric"><div class="main"><span class="k">Main metric <span class="tag">target</span></span><p class="figure">40%</p><p>of a team gives kudos at least once a week by week six.</p></div><div><span class="k">What moves it</span><ul><li>Kudos per active giver per week</li><li>Share of kudos that cross team lines</li><li>Share of earned points that get redeemed</li></ul></div><div><span class="k">What must not get worse</span><p>Zero points-balance mismatches. One lost transfer is enough to make people stop trusting the points.</p></div></div></div></section><section class="case-sec"><h2><span>06</span>Trade-offs I accepted</h2><div class="body"><ul class="plain"><li>New accounts are set up by the database, not the app, so a new user gets their profile and starting balance instantly instead of waiting on an email confirmation.</li><li>After every transfer or redemption the balance refreshes from the database. A stale balance leads to "insufficient points" surprises, which is how trust erodes.</li></ul></div></section><section class="case-sec"><h2><span>07</span>What I'd do next</h2><div class="body"><p>Pilot it with one real team for six weeks and watch the cross-team share. If kudos only flow inside teams, the product is mirroring the org chart, not changing it.</p></div></section>
+<div class="case-next"><span>Next</span><a href="/work/google-photos.html" class="btn-twotone"><span class="bt-text">Google Photos: finding a photo by scrolling</span><span class="bt-icon">↗</span></a></div></div></main>
+
+<footer>
+  <div class="footer-giant-title">Mrigank Raj Chouhan</div>
+  <div class="footer-bottom-bar">
+    <div class="footer-logo-text">Mrigank Raj Chouhan</div>
+    <div class="footer-nav-links">
+      <a href="https://www.linkedin.com/in/mrigankraj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">LinkedIn</a>
+      <a href="https://x.com/Mrigank_raj22" target="_blank" rel="noopener noreferrer" class="footer-nav-link">X / Twitter</a>
+      <a href="https://github.com/mrigank-raj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">GitHub</a>
+      <a href="https://drive.google.com/file/d/1gmIsDmhPAh5XHuixjQSJWTEz9fLjeQnA/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Resume</a>
+    </div>
+  </div>
+</footer>
+<script defer src="/assets/js/site.js?v=6"></script>
+</body>
+</html>

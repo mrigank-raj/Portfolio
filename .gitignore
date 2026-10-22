@@ -2,3 +2,5 @@
 .env*
 Portfolio_repo_plan/
 index_*.html
+
+.superpowers/

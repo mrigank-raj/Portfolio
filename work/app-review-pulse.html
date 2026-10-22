@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>App Review Pulse · Mrigank Raj Chouhan</title>
+<meta name="description" content="An AI agent that turns hundreds of app-store reviews into a one-page weekly note, delivered through MCP."/>
+<link rel="canonical" href="https://mrigankraj.vercel.app/work/app-review-pulse"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://mrigankraj.vercel.app/work/app-review-pulse"/>
+<meta property="og:title" content="App Review Pulse · Mrigank Raj Chouhan"/>
+<meta property="og:description" content="An AI agent that turns hundreds of app-store reviews into a one-page weekly note, delivered through MCP."/>
+<meta property="og:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/main.css?v=27"/>
+<link rel="stylesheet" href="/assets/css/case.css?v=5"/>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav aria-label="Main navigation">
+    <a class="nav-name" href="/">Mrigank<br>Raj<br><em>Chouhan</em></a>
+    <div class="nav-links">
+      <a href="/#bring">About</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#teardowns">Case Studies</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:mrigankrajchouhan@gmail.com?subject=Product%20internship" class="nav-cta">Hire me ↗</a>
+    </div>
+  </nav>
+</div>
+<header class="case-hero grid-bg"><div class="case-wrap sec-inner"><a class="case-back" href="/#projects">← All projects</a><div class="sec-label">Project</div><h1 class="case-title">App Review Pulse</h1><p class="case-lede">An AI agent that turns hundreds of app-store reviews into a one-page weekly note, delivered through MCP.</p><dl class="case-facts"><div><dt>Role</dt><dd>Solo, from a brief</dd></div><div><dt>When</dt><dd>Jul 2026</dd></div><div><dt>Status</dt><dd>Working pipeline</dd></div><div><dt>Built with</dt><dd>Python, Gemini, Groq, MCP</dd></div></dl></div></header>
+<main class="case-body"><div class="case-wrap"><div class="glance"><div><span>The obvious version</span><p><span class="cut">A sentiment dashboard</span></p></div><div><span>What I built</span><p>A 250-word weekly note in Docs and Gmail</p></div><div><span>Left out</span><p><span class="cut">More than five themes</span> <span class="cut">Reviewer names</span></p></div><div><span>It's working if</span><p><b>1+</b> backlog action per note</p></div></div><section class="case-sec"><h2><span>01</span>Where it started</h2><div class="body"><p>App-store reviews are public, plentiful and noisy. Product, support and leadership teams either ignore them or lose hours reading them by hand. The usual answer is a dashboard of sentiment scores.</p></div></section><section class="case-sec"><h2><span>02</span>What changed my mind</h2><div class="body"><p>A dashboard waits to be opened, and in a busy week nobody opens it. What the team needs is the reading already done: what people are unhappy about, in their own words, and what to do about it, delivered where they already work.</p><p class="signal">How strong is this? A written note came from the brief. Capping it hard, at three themes, three quotes and three actions, was my call.</p></div></section><section class="case-sec"><h2><span>03</span>What I built</h2><div class="body"><p>A pipeline that imports 8 to 12 weeks of reviews, groups them into at most five themes, and writes a note of 250 words or fewer with the top three themes, three verbatim quotes and three action ideas. A second model tightens the writing, then the note is published to Google Docs and drafted as an email in Gmail.</p><p>Docs and Gmail are reached through MCP servers, so the agent never handles Google credentials directly. Names, emails and device IDs are stripped before anything is written.</p></div></section><section class="case-sec"><h2><span>04</span>What I left out, and why</h2><div class="body"><ul class="reasons"><li><span class="cut wrapok">A dashboard</span><span class="why">People only pull information when they have time. A note gets pushed to them.</span></li><li><span class="cut wrapok">More than five themes</span><span class="why">A long list of themes is a dashboard in disguise. Five is the cap, and the note shows three.</span></li><li><span class="cut wrapok">Reviewer names</span><span class="why">Quotes are anonymous. The note gets shared widely, and no reviewer agreed to that.</span></li></ul></div></section><section class="case-sec"><h2><span>05</span>How I'll know it's working</h2><div class="body"><div class="metric"><div class="main"><span class="k">Main metric <span class="tag">target</span></span><p class="figure">1+</p><p>action from each weekly note makes it onto the backlog. A note nobody acts on is just a nicer way to ignore reviews.</p></div><div><span class="k">What moves it</span><ul><li>Share of recipients who open the note</li><li>Themes that repeat week after week, a sign they aren't being fixed</li></ul></div><div><span class="k">What must not get worse</span><p>No personal data in any note.</p></div></div></div></section><section class="case-sec"><h2><span>06</span>What I got wrong</h2><div class="body"><p>My test run used only 10 reviews, which is too few to trust the themes. The next run needs a few hundred real reviews before the grouping means anything.</p></div></section>
+<div class="case-next"><span>Next</span><a href="/work/ab-testing-engine.html" class="btn-twotone"><span class="bt-text">A/B Decision Engine</span><span class="bt-icon">↗</span></a></div></div></main>
+
+<footer>
+  <div class="footer-giant-title">Mrigank Raj Chouhan</div>
+  <div class="footer-bottom-bar">
+    <div class="footer-logo-text">Mrigank Raj Chouhan</div>
+    <div class="footer-nav-links">
+      <a href="https://www.linkedin.com/in/mrigankraj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">LinkedIn</a>
+      <a href="https://x.com/Mrigank_raj22" target="_blank" rel="noopener noreferrer" class="footer-nav-link">X / Twitter</a>
+      <a href="https://github.com/mrigank-raj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">GitHub</a>
+      <a href="https://drive.google.com/file/d/1gmIsDmhPAh5XHuixjQSJWTEz9fLjeQnA/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Resume</a>
+    </div>
+  </div>
+</footer>
+<script defer src="/assets/js/site.js?v=6"></script>
+</body>
+</html>

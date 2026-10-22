@@ -1,64 +1,38 @@
-# Mrigank Raj — Product Portfolio
+# Mrigank Raj Chouhan — Product Portfolio
 
-A product-focused portfolio showcasing case studies, teardowns, and product thinking across fintech and consumer applications.
+Live: https://mrigankraj.vercel.app/
 
-## 🔍 About
+A portfolio of AI products and product case studies. Every project shows the obvious version I didn't build, what I built instead, and the metric that says whether it's working.
 
-I’m a Computer Science undergraduate with a strong focus on product management, combining:
+## What's inside
 
-- **Business & Finance** (FMVA certified)
-- **Product Thinking & UX**
-- **Technical Understanding**
+- **Projects:** HDFC Fund Facts, BeyondLabel, App Review Pulse, A/B Decision Engine, Plutus, Kudos
+- **Case studies:** Google Photos, Myntra, AI-first cashless claims, ChatGPT Voice in India, MyJio, Zomato
+- **Off the clock:** writing on Medium
 
-This portfolio reflects how I analyze products, identify friction, and propose solutions grounded in real-world impact.
+## Structure
 
----
+```
+index.html            homepage
+work/*.html           one page per project and case study
+assets/css/main.css   site styles
+assets/css/case.css   case study page styles
+assets/js/site.js     shared motion: nav progress ring, count-up metrics, heading underlines, footer reveal
+vercel.json           clean URLs (/work/kudos instead of /work/kudos.html)
+sitemap.xml, robots.txt
+```
 
-## 📂 Featured Work
+Plain HTML, CSS and JavaScript. No build step: open `index.html` through any static server, or push to deploy on Vercel.
 
-### 🟢 MyJio — Data Usage in 3 Seconds
-- Identified 5-tap friction in checking data usage  
-- Proposed a home-screen widget solution  
-- Focus: UX optimization, accessibility, system efficiency  
+## Updating
 
-### 🟢 Zomato — Decision Paralysis in Food Ordering
-- Analyzed user drop-offs due to too many choices  
-- Proposed "Help Me Decide" feature  
-- Focus: decision design, personalization, conversion improvement  
+- **Publish a Medium article:** in `index.html`, find `const ARTICLES` and fill in the `url`, `date` and `read` for that article. Rows without a `url` show "Coming soon".
+- **Medium profile link:** set `const MEDIUM_URL` and the `href` on `#wr-medium` in `index.html`.
+- **After changing CSS or JS:** bump the `?v=` number on its `<link>` / `<script>` tags so browsers fetch the new file.
 
----
+## Contact
 
-## 🛠️ Built With
+- LinkedIn: https://www.linkedin.com/in/mrigankraj
+- Email: mrigankrajchouhan@gmail.com
 
-- HTML  
-- CSS  
-- JavaScript  
-
----
-
-## 🎯 What This Portfolio Demonstrates
-
-- Product teardown skills  
-- User-centric thinking  
-- Ability to connect UX decisions with business impact  
-- Structured problem-solving approach  
-
----
-
-## 🚀 Live Portfolio
-
-https://mrigankraj.vercel.app/
-
----
-
-## 📬 Contact
-
-- LinkedIn: https://www.linkedin.com/in/mrigankraj  
-- Email: mrigankrajchouhan@gmail.com  
-
----
-
-## ⚠️ Disclaimer
-
-This is an independent product portfolio.  
-All product analyses are based on publicly observable behavior and personal insights.
+Independent portfolio. Teardowns are based on publicly observable behaviour and my own research, and are not affiliated with the companies discussed.

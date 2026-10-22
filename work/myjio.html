@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>MyJio · Mrigank Raj Chouhan</title>
+<meta name="description" content="Checking your remaining data shouldn&#x27;t take five taps past ads."/>
+<link rel="canonical" href="https://mrigankraj.vercel.app/work/myjio"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://mrigankraj.vercel.app/work/myjio"/>
+<meta property="og:title" content="MyJio · Mrigank Raj Chouhan"/>
+<meta property="og:description" content="Checking your remaining data shouldn&#x27;t take five taps past ads."/>
+<meta property="og:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://mrigankraj.vercel.app/assets/images/og.png"/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/main.css?v=27"/>
+<link rel="stylesheet" href="/assets/css/case.css?v=5"/>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav aria-label="Main navigation">
+    <a class="nav-name" href="/">Mrigank<br>Raj<br><em>Chouhan</em></a>
+    <div class="nav-links">
+      <a href="/#bring">About</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#teardowns">Case Studies</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:mrigankrajchouhan@gmail.com?subject=Product%20internship" class="nav-cta">Hire me ↗</a>
+    </div>
+  </nav>
+</div>
+<header class="case-hero grid-bg"><div class="case-wrap sec-inner"><a class="case-back" href="/#teardowns">← All case studies</a><div class="sec-label">Case study</div><h1 class="case-title">MyJio</h1><p class="case-lede">Checking your remaining data shouldn't take five taps past ads.</p><dl class="case-facts"><div><dt>Type</dt><dd>Teardown and feature proposal</dd></div><div><dt>Status</dt><dd>Proposal</dd></div><div><dt>Platform</dt><dd>Android</dd></div><div><dt>Note</dt><dd>Independent, not affiliated with Jio</dd></div></dl></div></header>
+<main class="case-body"><div class="case-wrap"><div class="glance"><div><span>Problem</span><p>Five taps past ads to check your data balance</p></div><div><span>Proposed</span><p>A home-screen widget reading cached data</p></div><div><span>Rejected</span><p><span class="cut">Usage on home screen</span> <span class="cut">Daily push alerts</span></p></div><div><span>Decides it</span><p><b>&gt;5%</b> adoption, ad views down &lt;8%</p></div></div><section class="case-sec"><h2><span>01</span>The problem</h2><div class="body"><p>Today's journey: open the app, tap Mobile, tap Check usage, scroll, read. That's five steps past home-screen ads and a "Rate us" pop-up that appears mid-scroll.</p><p>For someone on a daily data plan, this is a number they check several times a day. The friction is small each time and large across a week.</p></div></section><section class="case-sec"><h2><span>02</span>The proposal</h2><div class="body"><p>A 4×1 Android home-screen widget. Data left today in large type, plan validity beside it, and a Track usage button that deep-links straight to the usage screen, skipping the ad-heavy home.</p><p>When the plan expires, the widget says Recharge needed and the button becomes Recharge now. On Wi-Fi it says so instead of showing mobile data.</p><p>It reads the same locally cached data the app already uses for the usage screen, so it needs no new server calls.</p></div></section><section class="case-sec"><h2><span>03</span>What I rejected, and why</h2><div class="body"><ul class="reasons"><li><span class="cut wrapok">Usage on the app's home screen</span><span class="why">It competes with the ad inventory that pays for the app. A proposal the business has to say no to isn't a proposal.</span></li><li><span class="cut wrapok">Daily push alerts</span><span class="why">Notification fatigue. People mute an app that pings them daily.</span></li><li><span class="cut wrapok">Better in-app navigation</span><span class="why">Fewer taps still means going past the ads.</span></li></ul></div></section><section class="case-sec"><h2><span>04</span>How I'd measure it</h2><div class="body"><div class="metric"><div class="main"><span class="k">Main metric <span class="tag">target</span></span><p class="figure">&gt; 5%</p><p>of eligible Android users add the widget within 14 days.</p></div><div><span class="k">What moves it</span><ul><li>Daily app opens fall 10 to 15%, because the widget answers the question</li><li>Usage-related support tickets fall more than 10%</li><li>Uninstall rate stays flat</li></ul></div><div><span class="k">What must not get worse</span><p>Ad views drop less than 8%. If they drop more than 15%, or uninstalls rise more than 1%, it doesn't ship.</p></div></div></div></section><section class="case-sec"><h2><span>05</span>Rollout</h2><div class="body"><ul class="plain"><li>Week 1: 1% of Android users who checked usage three or more times in the past week.</li><li>Weeks 2 and 3: 10% treatment against 10% control, tracking adoption, app opens and uninstalls.</li><li>Then full rollout, if the go criteria hold.</li></ul></div></section>
+<div class="case-next"><span>Next</span><a href="/work/zomato.html" class="btn-twotone"><span class="bt-text">Zomato</span><span class="bt-icon">↗</span></a></div></div></main>
+
+<footer>
+  <div class="footer-giant-title">Mrigank Raj Chouhan</div>
+  <div class="footer-bottom-bar">
+    <div class="footer-logo-text">Mrigank Raj Chouhan</div>
+    <div class="footer-nav-links">
+      <a href="https://www.linkedin.com/in/mrigankraj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">LinkedIn</a>
+      <a href="https://x.com/Mrigank_raj22" target="_blank" rel="noopener noreferrer" class="footer-nav-link">X / Twitter</a>
+      <a href="https://github.com/mrigank-raj" target="_blank" rel="noopener noreferrer" class="footer-nav-link">GitHub</a>
+      <a href="https://drive.google.com/file/d/1gmIsDmhPAh5XHuixjQSJWTEz9fLjeQnA/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Resume</a>
+    </div>
+  </div>
+</footer>
+<script defer src="/assets/js/site.js?v=6"></script>
+</body>
+</html>
